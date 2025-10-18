@@ -1,0 +1,16 @@
+﻿# YAML DSL skeleton for RPA/Flow representation
+version: 0.1
+kinds:
+  - Flow
+  - Step
+  - Variable
+Flow:
+  name: string
+  description: string
+  variables:
+    - name: string
+      type: string
+      default: any
+  steps:
+    - type: string
+      params: map

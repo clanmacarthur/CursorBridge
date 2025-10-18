@@ -1,0 +1,11 @@
+profiles:
+  ufc_events:
+    workbook: "C:\\Users\\j-lot\\Documents\\Power Automate and Spreadsheets\\Excel\\cursor_test_run.xlsm"
+    sheet: "1"  # first sheet
+    database_id: "290c47c61e2180718c6ad0d62e935a52"
+    map:
+      Event: Name
+      Location: Location
+      Date: Date
+      Source: Source
+

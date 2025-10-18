@@ -1,0 +1,4 @@
+﻿flows:
+  example_flow:
+    url: "https://replace-with-your-http-trigger-url"
+    timeout_seconds: 600
