@@ -28,7 +28,23 @@ def find_col(headers: List[str], candidates: List[str]) -> Optional[int]:
 
 def get_events(ws_events) -> List[Tuple[str, str]]:
     hdr = headers_of(ws_events)
-    name_idx = find_col(hdr, ["Event", "Card", "EventName", "Name", "Card Name", "Event Name"])  # display
+    name_idx = find_col(
+        hdr,
+        [
+            "Event",
+            "Card",
+            "EventName",
+            "Name",
+            "Card Name",
+            "Event Name",
+            "Column3",
+            "Column 3",
+            "Card Events",
+            "Card events",
+            "Card Event",
+            "Card event",
+        ],
+    )  # display
     id_idx = find_col(hdr, ["EventId", "Event ID", "EventID", "Event Id", "eventId"])  # id
     if name_idx is None and id_idx is None:
         raise SystemExit("Events sheet must have Event or EventId column")
@@ -51,7 +67,23 @@ def get_events(ws_events) -> List[Tuple[str, str]]:
 
 def get_fighters_by_event(ws_profiles, events: List[Tuple[str, str]]) -> Dict[str, List[str]]:
     hdr = headers_of(ws_profiles)
-    ev_name_idx = find_col(hdr, ["Event", "Card", "EventName", "Name", "Card Name", "Event Name"])  # optional
+    ev_name_idx = find_col(
+        hdr,
+        [
+            "Event",
+            "Card",
+            "EventName",
+            "Name",
+            "Card Name",
+            "Event Name",
+            "Column3",
+            "Column 3",
+            "Card Events",
+            "Card events",
+            "Card Event",
+            "Card event",
+        ],
+    )  # optional
     ev_id_idx = find_col(hdr, ["EventId", "Event ID", "EventID", "Event Id", "eventId"])
     fighter_idx = find_col(hdr, ["Profile", "profile", "Name", "Fighter"])
     if fighter_idx is None:
