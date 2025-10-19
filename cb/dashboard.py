@@ -7,18 +7,29 @@ def _ps_escape(path: str) -> str:
     return path.replace("'", "''")
 
 
-def build_dashboard(workbook_path: str) -> None:
+def build_dashboard(
+    workbook_path: str,
+    visible: bool = False,
+    *,
+    events_sheet: str = "Events",
+    fighters_sheet: str = "fighters",
+    fights_sheet: str = "fights",
+) -> None:
     if not os.path.exists(workbook_path):
         raise FileNotFoundError(workbook_path)
 
     p = _ps_escape(workbook_path)
+    ev = _ps_escape(events_sheet)
+    fi = _ps_escape(fighters_sheet)
+    ft = _ps_escape(fights_sheet)
+    vis = "$true" if visible else "$false"
 
     # PowerShell script builds Dashboard and Lists sheets, dynamic dropdowns,
     # and a placeholder pie chart area wired to dynamic lists.
-    ps = f"$ErrorActionPreference='Stop';$path='{p}';"
+    ps = f"$ErrorActionPreference='Stop';$path='{p}';$vis={vis};$eventsName='{ev}';$fightersName='{fi}';$fightsName='{ft}';"
     ps += r'''
 $xl = New-Object -ComObject Excel.Application
-$xl.Visible = $false
+$xl.Visible = $vis
 $wb = $xl.Workbooks.Open($path)
 
 function Get-ColIndexByHeader($ws, $header) {
@@ -41,21 +52,55 @@ function ColLetter($n) {
   return $s
 }
 
-$wsEvents = $wb.Worksheets.Item('Events') 2>$null
-$wsFighters = $wb.Worksheets.Item('fighters') 2>$null
-$wsFights = $wb.Worksheets.Item('fights') 2>$null
-if (-not $wsEvents -or -not $wsFighters) { throw 'Required sheets: Events and fighters' }
+# Ensure required sheets exist (create if missing)
+$wsEvents = $null
+try { $wsEvents = $wb.Worksheets.Item($eventsName) } catch {}
+if (-not $wsEvents) { $wsEvents = $wb.Worksheets.Add(); $wsEvents.Name = $eventsName }
 
+$wsFighters = $null
+try { $wsFighters = $wb.Worksheets.Item($fightersName) } catch {}
+if (-not $wsFighters) { $wsFighters = $wb.Worksheets.Add(); $wsFighters.Name = $fightersName }
+
+# Optional fights sheet
+$wsFights = $null
+try { $wsFights = $wb.Worksheets.Item($fightsName) } catch {}
+
+### Ensure headers and minimal sample data if sheets are empty
+# Events headers
 $eventIdColIdx = Get-ColIndexByHeader $wsEvents 'EventId'
-if (-not $eventIdColIdx) { throw 'Events: missing EventId header' }
+if (-not $eventIdColIdx) { $wsEvents.Cells.Item(1,1).Value2 = 'EventId'; $eventIdColIdx = 1 }
+$eventsRowCount = $wsEvents.UsedRange.Rows.Count
+if ($eventsRowCount -lt 3 -and -not [string]($wsEvents.Cells.Item(2,1).Value2)) {
+  $wsEvents.Cells.Item(2,1).Value2 = 'E001'
+  $wsEvents.Cells.Item(3,1).Value2 = 'E002'
+}
+
+# fighters headers
 $fightersEventIdColIdx = Get-ColIndexByHeader $wsFighters 'EventId'
 $fightersNameColIdx = (Get-ColIndexByHeader $wsFighters 'Name'); if (-not $fightersNameColIdx) { $fightersNameColIdx = (Get-ColIndexByHeader $wsFighters 'Fighter') }
-if (-not $fightersEventIdColIdx -or -not $fightersNameColIdx) { throw 'fighters: missing EventId or Name/Fighter header' }
+if (-not $fightersEventIdColIdx) { $wsFighters.Cells.Item(1,1).Value2 = 'EventId'; $fightersEventIdColIdx = 1 }
+if (-not $fightersNameColIdx) { $wsFighters.Cells.Item(1,2).Value2 = 'Name'; $fightersNameColIdx = 2 }
+$fightersRowCount = $wsFighters.UsedRange.Rows.Count
+if ($fightersRowCount -lt 3 -and -not [string]($wsFighters.Cells.Item(2,1).Value2)) {
+  $wsFighters.Cells.Item(2,$fightersEventIdColIdx).Value2 = 'E001'
+  $wsFighters.Cells.Item(2,$fightersNameColIdx).Value2 = 'Fighter A'
+  $wsFighters.Cells.Item(3,$fightersEventIdColIdx).Value2 = 'E002'
+  $wsFighters.Cells.Item(3,$fightersNameColIdx).Value2 = 'Fighter B'
+}
 
 $fightsEventIdColIdx = $null; $fightsNameColIdx = $null
 if ($wsFights) {
   $fightsEventIdColIdx = Get-ColIndexByHeader $wsFights 'EventId'
   $fightsNameColIdx = (Get-ColIndexByHeader $wsFights 'FightName'); if (-not $fightsNameColIdx) { $fightsNameColIdx = (Get-ColIndexByHeader $wsFights 'Bout') }
+  if (-not $fightsEventIdColIdx) { $wsFights.Cells.Item(1,1).Value2 = 'EventId'; $fightsEventIdColIdx = 1 }
+  if (-not $fightsNameColIdx) { $wsFights.Cells.Item(1,2).Value2 = 'FightName'; $fightsNameColIdx = 2 }
+  $fightsRowCount = $wsFights.UsedRange.Rows.Count
+  if ($fightsRowCount -lt 3 -and -not [string]($wsFights.Cells.Item(2,1).Value2)) {
+    $wsFights.Cells.Item(2,$fightsEventIdColIdx).Value2 = 'E001'
+    $wsFights.Cells.Item(2,$fightsNameColIdx).Value2 = 'Bout 1'
+    $wsFights.Cells.Item(3,$fightsEventIdColIdx).Value2 = 'E002'
+    $wsFights.Cells.Item(3,$fightsNameColIdx).Value2 = 'Bout 2'
+  }
 }
 
 $eventColL = ColLetter $eventIdColIdx
@@ -63,6 +108,13 @@ $fightersEvColL = ColLetter $fightersEventIdColIdx
 $fightersNameColL = ColLetter $fightersNameColIdx
 if ($fightsEventIdColIdx) { $fightsEvColL = ColLetter $fightsEventIdColIdx }
 if ($fightsNameColIdx) { $fightsNameColL = ColLetter $fightsNameColIdx }
+
+# Quoted sheet names for formulas
+$eventsSheetName = $wsEvents.Name
+$fightersSheetName = $wsFighters.Name
+$qEvents = "'" + $eventsSheetName + "'"
+$qFighters = "'" + $fightersSheetName + "'"
+if ($wsFights) { $fightsSheetName = $wsFights.Name; $qFights = "'" + $fightsSheetName + "'" }
 
 # Ensure Lists sheet
 $wsLists = $null
@@ -73,14 +125,14 @@ $wsLists.Range('A1').Value2 = 'EventIds'
 $wsLists.Range('B1').Value2 = 'FightersByEvent'
 $wsLists.Range('C1').Value2 = 'FightsByEvent'
 
-$formulaEventIds = "=UNIQUE(FILTER(Events!$${eventColL}:$${eventColL}, Events!$${eventColL}:$${eventColL}<>\"\"))"
+$formulaEventIds = "=UNIQUE(FILTER(" + $qEvents + "!$" + $eventColL + ":$" + $eventColL + ", " + $qEvents + "!$" + $eventColL + ":$" + $eventColL + "<>\"\"))"
 $wsLists.Range('A2').Formula = $formulaEventIds
 
-$formulaFighters = "=UNIQUE(FILTER(fighters!$${fightersNameColL}:$${fightersNameColL}, fighters!$${fightersEvColL}:$${fightersEvColL}=Dashboard!$B$2))"
+$formulaFighters = "=UNIQUE(FILTER(" + $qFighters + "!$" + $fightersNameColL + ":$" + $fightersNameColL + ", " + $qFighters + "!$" + $fightersEvColL + ":$" + $fightersEvColL + "=Dashboard!$B$2))"
 $wsLists.Range('B2').Formula = $formulaFighters
 
 if ($wsFights -and $fightsEventIdColIdx -and $fightsNameColIdx) {
-  $formulaFights = "=UNIQUE(FILTER(fights!$${fightsNameColL}:$${fightsNameColL}, fights!$${fightsEvColL}:$${fightsEvColL}=Dashboard!$B$2))"
+  $formulaFights = "=UNIQUE(FILTER(" + $qFights + "!$" + $fightsNameColL + ":$" + $fightsNameColL + ", " + $qFights + "!$" + $fightsEvColL + ":$" + $fightsEvColL + "=Dashboard!$B$2))"
   $wsLists.Range('C2').Formula = $formulaFights
 }
 
@@ -106,15 +158,19 @@ try {
 } catch {}
 
 # Freeze panes (split screen feel)
-$xl.ActiveWindow.SplitColumn = 1
-$xl.ActiveWindow.SplitRow = 1
-$xl.ActiveWindow.FreezePanes = $true
+try {
+  $xl.ActiveWindow.SplitColumn = 1
+  $xl.ActiveWindow.SplitRow = 1
+  $xl.ActiveWindow.FreezePanes = $true
+} catch {}
 
 # Placeholder pie chart using fighter count for selected event
 $wsLists.Range('E1').Value2 = 'Label'
 $wsLists.Range('F1').Value2 = 'Value'
-$wsLists.Range('E2').Formula = '=UNIQUE(fighters!$''' + $fightersNameColL + "''' :$''' + $fightersNameColL + ''' )'
-$wsLists.Range('F2').Formula = '=IF(LEN(INDEX(E2#,ROW(E2:E1048576)-ROW(E2)+1))>0,1,"")'
+# Build label and value formulas using the detected fighters name column
+$formulaLabels = "=UNIQUE(" + $qFighters + "!$" + $fightersNameColL + ":$" + $fightersNameColL + ")"
+$wsLists.Range('E2').Formula = $formulaLabels
+$wsLists.Range('F2').Formula = '=IF(LEN(E2#)>0,1,"")'
 
 # Create chart on Dashboard linked to E2# / F2#
 $charts = $wsDash.ChartObjects()
