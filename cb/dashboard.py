@@ -71,6 +71,9 @@ try { $wsFights = $wb.Worksheets.Item($fightsName) } catch {}
 # Events headers
 $eventIdColIdx = Get-ColIndexByHeader $wsEvents 'EventId'
 if (-not $eventIdColIdx) { $wsEvents.Cells.Item(1,1).Value2 = 'EventId'; $eventIdColIdx = 1 }
+$eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Card'); if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Event') }
+if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'EventName') }
+if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Name') }
 $eventsRowCount = $wsEvents.UsedRange.Rows.Count
 if ($eventsRowCount -lt 3 -and -not [string]($wsEvents.Cells.Item(2,1).Value2)) {
   $wsEvents.Cells.Item(2,1).Value2 = 'E001'
@@ -106,6 +109,7 @@ if ($wsFights) {
 }
 
 $eventColL = ColLetter $eventIdColIdx
+$eventDisplayColL = $null; if ($eventDisplayColIdx) { $eventDisplayColL = (ColLetter $eventDisplayColIdx) }
 $fightersEvColL = ColLetter $fightersEventIdColIdx
 $fightersNameColL = ColLetter $fightersNameColIdx
 if ($fightsEventIdColIdx) { $fightsEvColL = ColLetter $fightsEventIdColIdx }
@@ -123,7 +127,7 @@ $wsDash = $null
 try { $wsDash = $wb.Worksheets.Item('Dashboard') } catch {}
 if (-not $wsDash) { $wsDash = $wb.Worksheets.Add(); $wsDash.Name = 'Dashboard' }
 $wsDash.Cells.Clear()
-$wsDash.Range('B1').Value2 = 'EventId'
+$wsDash.Range('B1').Value2 = 'Event'
 $wsDash.Range('C1').Value2 = 'Fighter'
 $wsDash.Range('D1').Value2 = 'Fight'
 
@@ -135,17 +139,34 @@ $wsLists.Cells.Clear()
 $wsLists.Range('A1').Value2 = 'EventIds'
 $wsLists.Range('B1').Value2 = 'FightersByEvent'
 $wsLists.Range('C1').Value2 = 'FightsByEvent'
+$wsLists.Range('D1').Value2 = 'SelectedEventId'
+$wsLists.Range('G1').Value2 = 'EventNames'
 
 $partsEvent = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventColL, ":$", $eventColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, '<>""', "))")
 $formulaEventIds = ($partsEvent -join "")
 $wsLists.Range('A2').Formula = $formulaEventIds
 
-$partsFighters = @("=UNIQUE(FILTER(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ", ", $qFighters, "!$", $fightersEvColL, ":$", $fightersEvColL, '=Dashboard!$B$2', "))")
+$eventNamesAdded = $false
+if ($eventDisplayColL) {
+  $partsEventNames = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, '<>""', "))")
+  $formulaEventNames = ($partsEventNames -join "")
+  $wsLists.Range('G2').Formula = $formulaEventNames
+  # Selected EventId from chosen Event name
+  $partsSel = @("=IFERROR(XLOOKUP(Dashboard!$B$2, ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, ', ""), "")')
+  $formulaSelected = ($partsSel -join "")
+  $wsLists.Range('D2').Formula = $formulaSelected
+  $eventNamesAdded = $true
+} else {
+  # Fallback: use direct EventId selection
+  $wsLists.Range('D2').Formula = '=Dashboard!$B$2'
+}
+
+$partsFighters = @("=UNIQUE(FILTER(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ", ", $qFighters, "!$", $fightersEvColL, ":$", $fightersEvColL, '=Lists!$D$2', "))")
 $formulaFighters = ($partsFighters -join "")
 $wsLists.Range('B2').Formula = $formulaFighters
 
 if ($wsFights -and $fightsEventIdColIdx -and $fightsNameColIdx) {
-  $partsFights = @("=UNIQUE(FILTER(", $qFights, "!$", $fightsNameColL, ":$", $fightsNameColL, ", ", $qFights, "!$", $fightsEvColL, ":$", $fightsEvColL, '=Dashboard!$B$2', "))")
+  $partsFights = @("=UNIQUE(FILTER(", $qFights, "!$", $fightsNameColL, ":$", $fightsNameColL, ", ", $qFights, "!$", $fightsEvColL, ":$", $fightsEvColL, '=Lists!$D$2', "))")
   $formulaFights = ($partsFights -join "")
   $wsLists.Range('C2').Formula = $formulaFights
 }
@@ -154,7 +175,7 @@ if ($wsFights -and $fightsEventIdColIdx -and $fightsNameColIdx) {
 $xlValidateList = 3
 $xlBetween = 1
 $dv1 = $wsDash.Range('B2').Validation
-$dv1.Delete(); $dv1.Add($xlValidateList, $xlBetween, 1, '=Lists!$A$2#')
+$dv1.Delete(); $dv1.Add($xlValidateList, $xlBetween, 1, '=Lists!$G$2#')
 $dv2 = $wsDash.Range('C2').Validation
 $dv2.Delete(); $dv2.Add($xlValidateList, $xlBetween, 1, '=Lists!$B$2#')
 try {
