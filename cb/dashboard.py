@@ -152,9 +152,15 @@ if ($eventDisplayColL) {
   $formulaEventNames = ($partsEventNames -join "")
   $wsLists.Range('G2').Formula = $formulaEventNames
   # Selected EventId from chosen Event name
-  $partsSel = @("=IFERROR(XLOOKUP(Dashboard!$B$2, ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, ', ""), "")')
+  $partsSel = @(
+    "=IFERROR(XLOOKUP(Dashboard!$B$2,",
+    $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL,
+    ",",
+    $qEvents, "!$", $eventColL, ":$", $eventColL,
+    ',""),"")'
+  )
   $formulaSelected = ($partsSel -join "")
-  $wsLists.Range('D2').Formula = $formulaSelected
+  $wsLists.Range('D2').Formula2 = $formulaSelected
   $eventNamesAdded = $true
 } else {
   # Fallback: use direct EventId selection
@@ -182,6 +188,64 @@ try {
   $dv3 = $wsDash.Range('D2').Validation
   $dv3.Delete(); $dv3.Add($xlValidateList, $xlBetween, 1, '=Lists!$C$2#')
 } catch {}
+
+# Spill selected fighter headers and values for the chosen fighter (by Name + EventId)
+# Determine fighters table width to use entire row references
+$fightersLastColIdx = $wsFighters.UsedRange.Columns.Count
+if ($fightersLastColIdx -lt $fightersNameColIdx) { $fightersLastColIdx = $fightersNameColIdx }
+if ($fightersLastColIdx -lt $fightersEventIdColIdx) { $fightersLastColIdx = $fightersEventIdColIdx }
+$fightersLastColL = ColLetter $fightersLastColIdx
+
+$wsLists.Range('H1').Value2 = 'SelectedFighter'
+# Headers row (spills across columns to used range)
+$partsSelHdr = @('=', $qFighters, '!$A$1:$', $fightersLastColL, '$1')
+$formulaSelHdr = ($partsSelHdr -join '')
+$wsLists.Range('H2').Formula = $formulaSelHdr
+
+# Selected fighter row (spills across columns to used range)
+$partsSelRow = @(
+  '=IFERROR(XLOOKUP(Dashboard!$C$2&Lists!$D$2, ',
+  $qFighters, '!$', $fightersNameColL, ':$', $fightersNameColL,
+  ' & ',
+  $qFighters, '!$', $fightersEvColL, ':$', $fightersEvColL,
+  ', ',
+  $qFighters, '!$A:$', $fightersLastColL, ', ""), "")'
+)
+$formulaSelRow = ($partsSelRow -join '')
+$wsLists.Range('H3').Formula = $formulaSelRow
+
+# Dashboard-friendly label/value view using TRANSPOSE of the spill ranges
+$wsDash.Range('A4').Value2 = 'Selected Fighter Stats'
+$wsDash.Range('A5').Value2 = 'Field'
+$wsDash.Range('B5').Value2 = 'Value'
+$wsDash.Range('A6').Formula = '=TRANSPOSE(Lists!$H$2#)'
+$wsDash.Range('B6').Formula = '=TRANSPOSE(Lists!$H$3#)'
+
+# Grouped sections for key stats
+$wsDash.Range('D5').Value2 = 'STRIKING OFFENSE'
+$wsDash.Range('G5').Value2 = 'STRIKING DEFENSE'
+$wsDash.Range('J5').Value2 = 'GRAPPLING OFFENSE'
+$wsDash.Range('M5').Value2 = 'GRAPPLING DEFENSE'
+
+$strikeOff = @('TSSL','TSSA','STRACC%','SSL/M','SSA/M','DSL/M','DSA/M','KD/15mins')
+$strikeDef = @('TSSA','TSSAT','STRDEF%','TSSA/M','TSSAT/M','DSSA/M','DSSAT/M','KDA/15mins')
+$grapOff   = @('TTD','TTDA','TD%','TDAVG','SUBAVG','CNTL','CNTL%')
+$grapDef   = @('TTD','TTDA','TDDEF%','TDAAVG','SUBAVG','CNTLA','CNTLA%')
+
+function Write-Group([object[]]$labels, [int]$startRow, [int]$labelCol, [int]$valueCol) {
+  for ($i = 0; $i -lt $labels.Count; $i++) {
+    $r = $startRow + $i
+    $lbl = [string]$labels[$i]
+    $wsDash.Cells.Item($r, $labelCol).Value2 = $lbl
+    $partsVal = @('=IFERROR(XLOOKUP("', $lbl, '", Lists!$H$2#, Lists!$H$3#, ""), "")')
+    $wsDash.Cells.Item($r, $valueCol).Formula = ($partsVal -join '')
+  }
+}
+
+Write-Group $strikeOff 6 4 5   # D/E columns
+Write-Group $strikeDef 6 7 8   # G/H columns
+Write-Group $grapOff   6 10 11 # J/K columns
+Write-Group $grapDef   6 13 14 # M/N columns
 
 # Freeze panes (split screen feel)
 try {
