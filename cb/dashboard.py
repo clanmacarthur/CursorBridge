@@ -30,7 +30,9 @@ def build_dashboard(
     ps += r'''
 $xl = New-Object -ComObject Excel.Application
 $xl.Visible = $vis
-$wb = $xl.Workbooks.Open($path)
+$xl.DisplayAlerts = $false
+$xl.AskToUpdateLinks = $false
+$wb = $xl.Workbooks.Open($path, 0)  # UpdateLinks=0
 
 function Get-ColIndexByHeader($ws, $header) {
   $ur = $ws.UsedRange
@@ -116,7 +118,16 @@ $qEvents = "'" + $eventsSheetName + "'"
 $qFighters = "'" + $fightersSheetName + "'"
 if ($wsFights) { $fightsSheetName = $wsFights.Name; $qFights = "'" + $fightsSheetName + "'" }
 
-# Ensure Lists sheet
+# Ensure Dashboard sheet FIRST (to avoid external link prompts when formulas reference it)
+$wsDash = $null
+try { $wsDash = $wb.Worksheets.Item('Dashboard') } catch {}
+if (-not $wsDash) { $wsDash = $wb.Worksheets.Add(); $wsDash.Name = 'Dashboard' }
+$wsDash.Cells.Clear()
+$wsDash.Range('B1').Value2 = 'EventId'
+$wsDash.Range('C1').Value2 = 'Fighter'
+$wsDash.Range('D1').Value2 = 'Fight'
+
+# Now ensure Lists sheet and insert formulas referencing Dashboard
 $wsLists = $null
 try { $wsLists = $wb.Worksheets.Item('Lists') } catch {}
 if (-not $wsLists) { $wsLists = $wb.Worksheets.Add(); $wsLists.Name = 'Lists' }
@@ -125,25 +136,19 @@ $wsLists.Range('A1').Value2 = 'EventIds'
 $wsLists.Range('B1').Value2 = 'FightersByEvent'
 $wsLists.Range('C1').Value2 = 'FightsByEvent'
 
-$formulaEventIds = "=UNIQUE(FILTER(" + $qEvents + "!$" + $eventColL + ":$" + $eventColL + ", " + $qEvents + "!$" + $eventColL + ":$" + $eventColL + "<>\"\"))"
+$partsEvent = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventColL, ":$", $eventColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, '<>""', "))")
+$formulaEventIds = ($partsEvent -join "")
 $wsLists.Range('A2').Formula = $formulaEventIds
 
-$formulaFighters = "=UNIQUE(FILTER(" + $qFighters + "!$" + $fightersNameColL + ":$" + $fightersNameColL + ", " + $qFighters + "!$" + $fightersEvColL + ":$" + $fightersEvColL + "=Dashboard!$B$2))"
+$partsFighters = @("=UNIQUE(FILTER(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ", ", $qFighters, "!$", $fightersEvColL, ":$", $fightersEvColL, '=Dashboard!$B$2', "))")
+$formulaFighters = ($partsFighters -join "")
 $wsLists.Range('B2').Formula = $formulaFighters
 
 if ($wsFights -and $fightsEventIdColIdx -and $fightsNameColIdx) {
-  $formulaFights = "=UNIQUE(FILTER(" + $qFights + "!$" + $fightsNameColL + ":$" + $fightsNameColL + ", " + $qFights + "!$" + $fightsEvColL + ":$" + $fightsEvColL + "=Dashboard!$B$2))"
+  $partsFights = @("=UNIQUE(FILTER(", $qFights, "!$", $fightsNameColL, ":$", $fightsNameColL, ", ", $qFights, "!$", $fightsEvColL, ":$", $fightsEvColL, '=Dashboard!$B$2', "))")
+  $formulaFights = ($partsFights -join "")
   $wsLists.Range('C2').Formula = $formulaFights
 }
-
-# Ensure Dashboard sheet
-$wsDash = $null
-try { $wsDash = $wb.Worksheets.Item('Dashboard') } catch {}
-if (-not $wsDash) { $wsDash = $wb.Worksheets.Add(); $wsDash.Name = 'Dashboard' }
-$wsDash.Cells.Clear()
-$wsDash.Range('B1').Value2 = 'EventId'
-$wsDash.Range('C1').Value2 = 'Fighter'
-$wsDash.Range('D1').Value2 = 'Fight'
 
 # Data validation dropdowns
 $xlValidateList = 3
@@ -168,7 +173,8 @@ try {
 $wsLists.Range('E1').Value2 = 'Label'
 $wsLists.Range('F1').Value2 = 'Value'
 # Build label and value formulas using the detected fighters name column
-$formulaLabels = "=UNIQUE(" + $qFighters + "!$" + $fightersNameColL + ":$" + $fightersNameColL + ")"
+$partsLabels = @("=UNIQUE(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ")")
+$formulaLabels = ($partsLabels -join "")
 $wsLists.Range('E2').Formula = $formulaLabels
 $wsLists.Range('F2').Formula = '=IF(LEN(E2#)>0,1,"")'
 
@@ -192,12 +198,20 @@ $xl.Quit()
 [System.Runtime.InteropServices.Marshal]::ReleaseComObject($xl) | Out-Null
 '''
 
-    subprocess.run(
-        ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps],
-        check=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-    )
+    try:
+        subprocess.run(
+            ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+    except subprocess.CalledProcessError as e:
+        # Surface PowerShell errors to help diagnose sheet/header issues
+        raise RuntimeError(
+            "PowerShell dashboard build failed.\n" +
+            (f"STDOUT:\n{e.stdout}\n" if e.stdout else "") +
+            (f"STDERR:\n{e.stderr}\n" if e.stderr else "")
+        ) from e
 
 
