@@ -1,10 +1,106 @@
 import os
 import shlex
 import subprocess
+from typing import List, Optional
 
 
 def _ps_escape(path: str) -> str:
     return path.replace("'", "''")
+
+
+def _build_dashboard_safe(
+    workbook_path: str,
+    *,
+    events_sheet: str,
+    fighters_sheet: str,
+    fights_sheet: str,
+) -> None:
+    """Safe mode: create a minimal dashboard with a static Event dropdown.
+
+    - No COM, no PowerShell, no dynamic array formulas
+    - Uses openpyxl only; preserves macros via keep_vba=True
+    """
+    try:
+        from openpyxl import load_workbook  # type: ignore
+        from openpyxl.worksheet.datavalidation import DataValidation  # type: ignore
+    except Exception as ex:  # pragma: no cover
+        raise RuntimeError("openpyxl not installed; run: python -m pip install openpyxl") from ex
+
+    def find_col_index_case_insensitive(headers: List[str], candidates: List[str]) -> Optional[int]:
+        lowered = { (h or "").strip().lower(): i for i, h in enumerate(headers) }
+        for cand in candidates:
+            idx = lowered.get(cand.strip().lower())
+            if idx is not None:
+                return idx
+        return None
+
+    wb = load_workbook(workbook_path, keep_vba=True, data_only=False)
+    # Get or create Events sheet
+    if events_sheet in wb.sheetnames:
+        ws_events = wb[events_sheet]
+    else:
+        raise FileNotFoundError(f"Sheet not found: {events_sheet}")
+
+    # Prepare Dashboard and Lists sheets (recreate to avoid lingering validations)
+    if 'Dashboard' in wb.sheetnames:
+        wb.remove(wb['Dashboard'])
+    ws_dash = wb.create_sheet('Dashboard')
+    if 'Lists' in wb.sheetnames:
+        wb.remove(wb['Lists'])
+    ws_lists = wb.create_sheet('Lists')
+
+    # Read headers in Events (first row)
+    headers: List[str] = []
+    for cell in ws_events[1]:
+        headers.append(str(cell.value).strip() if cell.value is not None else "")
+
+    event_name_idx = find_col_index_case_insensitive(headers, [
+        'Event','Card','EventName','Name','CardName','Card Name','Event Name'
+    ])
+    if event_name_idx is None:
+        # fallback to EventId so at least a dropdown appears
+        event_name_idx = find_col_index_case_insensitive(headers, [
+            'EventId','Event ID','EventID','Event Id','eventId'
+        ])
+    if event_name_idx is None:
+        raise RuntimeError("Could not find an Event or EventId column in Events sheet")
+
+    # Collect unique, non-empty values from that column; stop after long blank streak for speed
+    seen = set()
+    unique_vals: List[str] = []
+    consecutive_blanks = 0
+    max_rows_scan = min(ws_events.max_row, 5000)
+    for r in range(2, max_rows_scan + 1):
+        cell = ws_events.cell(row=r, column=event_name_idx + 1)
+        val = cell.value
+        s = str(val).strip() if val is not None else ""
+        if not s:
+            consecutive_blanks += 1
+            if consecutive_blanks > 500:
+                break
+            continue
+        consecutive_blanks = 0
+        if s not in seen:
+            seen.add(s)
+            unique_vals.append(s)
+        if len(unique_vals) >= 2000:
+            break
+
+    # Write Lists!A1 header and values starting A2
+    ws_lists['A1'] = 'EventNames'
+    for i, v in enumerate(unique_vals, start=2):
+        ws_lists.cell(row=i, column=1, value=v)
+
+    # Dashboard headers and data validation
+    ws_dash['B1'] = 'Event'
+    dv = DataValidation(type='list', formula1=f"='Lists'!$A$2:$A${len(unique_vals)+1}", allow_blank=True)
+    ws_dash.add_data_validation(dv)
+    dv.add(ws_dash['B2'])
+
+    # Freeze top row for clarity
+    ws_dash.freeze_panes = 'A2'
+
+    wb.save(workbook_path)
 
 
 def build_dashboard(
@@ -14,7 +110,16 @@ def build_dashboard(
     events_sheet: str = "Events",
     fighters_sheet: str = "fighters",
     fights_sheet: str = "fights",
+    safe: bool = False,
 ) -> None:
+    if safe:
+        _build_dashboard_safe(
+            workbook_path,
+            events_sheet=events_sheet,
+            fighters_sheet=fighters_sheet,
+            fights_sheet=fights_sheet,
+        )
+        return
     if not os.path.exists(workbook_path):
         raise FileNotFoundError(workbook_path)
 
@@ -39,7 +144,15 @@ function Get-ColIndexByHeader($ws, $header) {
   $cols = $ur.Columns.Count
   for ($c = 1; $c -le $cols; $c++) {
     $val = [string]($ws.Cells.Item(1,$c).Value2)
-    if ($val -eq $header) { return $c }
+    if (($val.Trim()) -ieq $header) { return $c }
+  }
+  return $null
+}
+
+function Get-ColIndexByAnyHeader($ws, $headers) {
+  foreach ($h in $headers) {
+    $idx = Get-ColIndexByHeader $ws $h
+    if ($idx) { return $idx }
   }
   return $null
 }
@@ -48,7 +161,8 @@ function ColLetter($n) {
   $s = ""
   while ($n -gt 0) {
     $n = $n - 1
-    $s = [char](65 + ($n % 26)) + $s
+    # Ensure integer before casting to [char] to avoid Double->Char errors
+    $s = [string]([char]([int](65 + ([int]($n % 26))))) + $s
     $n = [math]::Floor($n / 26)
   }
   return $s
@@ -69,11 +183,9 @@ try { $wsFights = $wb.Worksheets.Item($fightsName) } catch {}
 
 ### Ensure headers and minimal sample data if sheets are empty
 # Events headers
-$eventIdColIdx = Get-ColIndexByHeader $wsEvents 'EventId'
+$eventIdColIdx = Get-ColIndexByAnyHeader $wsEvents @('EventId','EventID','Event Id','Event ID','eventId')
 if (-not $eventIdColIdx) { $wsEvents.Cells.Item(1,1).Value2 = 'EventId'; $eventIdColIdx = 1 }
-$eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Card'); if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Event') }
-if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'EventName') }
-if (-not $eventDisplayColIdx) { $eventDisplayColIdx = (Get-ColIndexByHeader $wsEvents 'Name') }
+$eventDisplayColIdx = Get-ColIndexByAnyHeader $wsEvents @('Card','Event','EventName','Name','CardName','Card Name','Event Name')
 $eventsRowCount = $wsEvents.UsedRange.Rows.Count
 if ($eventsRowCount -lt 3 -and -not [string]($wsEvents.Cells.Item(2,1).Value2)) {
   $wsEvents.Cells.Item(2,1).Value2 = 'E001'
@@ -81,8 +193,8 @@ if ($eventsRowCount -lt 3 -and -not [string]($wsEvents.Cells.Item(2,1).Value2)) 
 }
 
 # fighters headers
-$fightersEventIdColIdx = Get-ColIndexByHeader $wsFighters 'EventId'
-$fightersNameColIdx = (Get-ColIndexByHeader $wsFighters 'Name'); if (-not $fightersNameColIdx) { $fightersNameColIdx = (Get-ColIndexByHeader $wsFighters 'Fighter') }
+$fightersEventIdColIdx = Get-ColIndexByAnyHeader $wsFighters @('EventId','EventID','Event Id','Event ID','eventId')
+$fightersNameColIdx = Get-ColIndexByAnyHeader $wsFighters @('Name','Fighter','Profile','profile')
 if (-not $fightersEventIdColIdx) { $wsFighters.Cells.Item(1,1).Value2 = 'EventId'; $fightersEventIdColIdx = 1 }
 if (-not $fightersNameColIdx) { $wsFighters.Cells.Item(1,2).Value2 = 'Name'; $fightersNameColIdx = 2 }
 $fightersRowCount = $wsFighters.UsedRange.Rows.Count
@@ -95,8 +207,8 @@ if ($fightersRowCount -lt 3 -and -not [string]($wsFighters.Cells.Item(2,1).Value
 
 $fightsEventIdColIdx = $null; $fightsNameColIdx = $null
 if ($wsFights) {
-  $fightsEventIdColIdx = Get-ColIndexByHeader $wsFights 'EventId'
-  $fightsNameColIdx = (Get-ColIndexByHeader $wsFights 'FightName'); if (-not $fightsNameColIdx) { $fightsNameColIdx = (Get-ColIndexByHeader $wsFights 'Bout') }
+  $fightsEventIdColIdx = Get-ColIndexByAnyHeader $wsFights @('EventId','EventID','Event Id','Event ID','eventId')
+  $fightsNameColIdx = Get-ColIndexByAnyHeader $wsFights @('FightName','Bout','Fight','Matchup')
   if (-not $fightsEventIdColIdx) { $wsFights.Cells.Item(1,1).Value2 = 'EventId'; $fightsEventIdColIdx = 1 }
   if (-not $fightsNameColIdx) { $wsFights.Cells.Item(1,2).Value2 = 'FightName'; $fightsNameColIdx = 2 }
   $fightsRowCount = $wsFights.UsedRange.Rows.Count
@@ -142,46 +254,80 @@ $wsLists.Range('C1').Value2 = 'FightsByEvent'
 $wsLists.Range('D1').Value2 = 'SelectedEventId'
 $wsLists.Range('G1').Value2 = 'EventNames'
 
-$partsEvent = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventColL, ":$", $eventColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, '<>""', "))")
+$partsEvent = @()
+if (-not $safe) {
+  $partsEvent = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventColL, ":$", $eventColL, ", ", $qEvents, "!$", $eventColL, ":$", $eventColL, '<>""', "))")
+} else {
+  $partsEvent = @("=IFERROR(INDEX(", $qEvents, "!$", $eventColL, ":$", $eventColL, ", MATCH(ROW(A1), ", $qEvents, "!$", $eventColL, ":$", $eventColL, ", 0)), \"\")")
+}
 $formulaEventIds = ($partsEvent -join "")
 $wsLists.Range('A2').Formula = $formulaEventIds
 
 $eventNamesAdded = $false
 if ($eventDisplayColL) {
-  $partsEventNames = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, '<>""', "))")
+  $partsEventNames = @()
+  if (-not $safe) {
+    $partsEventNames = @("=UNIQUE(FILTER(", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, '<>""', "))")
+  } else {
+    $partsEventNames = @("=IFERROR(INDEX(", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", MATCH(ROW(A1), ", $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL, ", 0)), \"\")")
+  }
   $formulaEventNames = ($partsEventNames -join "")
   $wsLists.Range('G2').Formula = $formulaEventNames
   # Selected EventId from chosen Event name
+  # More compatible: INDEX/MATCH instead of XLOOKUP (no dynamic arrays)
   $partsSel = @(
-    "=IFERROR(XLOOKUP(Dashboard!$B$2,",
-    $qEvents, "!$", $eventDisplayColL, ":$", $eventDisplayColL,
-    ",",
-    $qEvents, "!$", $eventColL, ":$", $eventColL,
-    ',""),"")'
+    '=IFERROR(INDEX(',
+    $qEvents, '!$', $eventColL, ':$', $eventColL,
+    ', MATCH(Dashboard!$B$2,',
+    $qEvents, '!$', $eventDisplayColL, ':$', $eventDisplayColL,
+    ', 0)), "")'
   )
   $formulaSelected = ($partsSel -join "")
-  $wsLists.Range('D2').Formula2 = $formulaSelected
+  $wsLists.Range('D2').Formula = $formulaSelected
   $eventNamesAdded = $true
 } else {
   # Fallback: use direct EventId selection
   $wsLists.Range('D2').Formula = '=Dashboard!$B$2'
 }
 
-$partsFighters = @("=UNIQUE(FILTER(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ", ", $qFighters, "!$", $fightersEvColL, ":$", $fightersEvColL, '=Lists!$D$2', "))")
+$partsFighters = @()
+if (-not $safe) {
+  $partsFighters = @("=UNIQUE(FILTER(", $qFighters, "!$", $fightersNameColL, ":$", $fightersNameColL, ", ", $qFighters, "!$", $fightersEvColL, ":$", $fightersEvColL, '=Lists!$D$2', "))")
+} else {
+  # Safe: build a helper filtered list using IF / ROW and INDEX without spills
+  $partsFighters = @(
+    '=IFERROR(INDEX(', $qFighters, '!$', $fightersNameColL, ':$', $fightersNameColL,
+    ', SMALL(IF(', $qFighters, '!$', $fightersEvColL, ':$', $fightersEvColL, '=Lists!$D$2, ROW(', $qFighters, '!$', $fightersEvColL, ':$', $fightersEvColL, ')-ROW(', $qFighters, '!$', $fightersEvColL, '$1)+1), ROW(A1))), "")')
+}
 $formulaFighters = ($partsFighters -join "")
-$wsLists.Range('B2').Formula = $formulaFighters
+$wsLists.Range('B2').FormulaArray = $formulaFighters
 
 if ($wsFights -and $fightsEventIdColIdx -and $fightsNameColIdx) {
-  $partsFights = @("=UNIQUE(FILTER(", $qFights, "!$", $fightsNameColL, ":$", $fightsNameColL, ", ", $qFights, "!$", $fightsEvColL, ":$", $fightsEvColL, '=Lists!$D$2', "))")
-  $formulaFights = ($partsFights -join "")
-  $wsLists.Range('C2').Formula = $formulaFights
+  $partsFights = @()
+  if (-not $safe) {
+    $partsFights = @("=UNIQUE(FILTER(", $qFights, "!$", $fightsNameColL, ":$", $fightsNameColL, ", ", $qFights, "!$", $fightsEvColL, ":$", $fightsEvColL, '=Lists!$D$2', "))")
+    $formulaFights = ($partsFights -join "")
+    $wsLists.Range('C2').Formula = $formulaFights
+  } else {
+    $partsFights = @(
+      '=IFERROR(INDEX(', $qFights, '!$', $fightsNameColL, ':$', $fightsNameColL,
+      ', SMALL(IF(', $qFights, '!$', $fightsEvColL, ':$', $fightsEvColL, '=Lists!$D$2, ROW(', $qFights, '!$', $fightsEvColL, ':$', $fightsEvColL, ')-ROW(', $qFights, '!$', $fightsEvColL, '$1)+1), ROW(A1))), "")')
+    $formulaFights = ($partsFights -join "")
+    $wsLists.Range('C2').FormulaArray = $formulaFights
+  }
 }
 
 # Data validation dropdowns
 $xlValidateList = 3
 $xlBetween = 1
 $dv1 = $wsDash.Range('B2').Validation
-$dv1.Delete(); $dv1.Add($xlValidateList, $xlBetween, 1, '=Lists!$G$2#')
+# Use Event Names if available; otherwise fallback to EventIds
+try { $wsDash.Range('B1').Value2 = if ($eventNamesAdded) { 'Event' } else { 'EventId' } } catch {}
+if ($eventNamesAdded) {
+  $dv1.Delete(); $dv1.Add($xlValidateList, $xlBetween, 1, '=Lists!$G$2#')
+} else {
+  $dv1.Delete(); $dv1.Add($xlValidateList, $xlBetween, 1, '=Lists!$A$2#')
+}
 $dv2 = $wsDash.Range('C2').Validation
 $dv2.Delete(); $dv2.Add($xlValidateList, $xlBetween, 1, '=Lists!$B$2#')
 try {

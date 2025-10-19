@@ -149,6 +149,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_dash.add_argument("--events-sheet", default="Events", help="Sheet name containing EventId (default: Events)")
     p_dash.add_argument("--fighters-sheet", default="fighters", help="Sheet name containing fighters (default: fighters)")
     p_dash.add_argument("--fights-sheet", default="fights", help="Optional sheet name containing fights (default: fights)")
+    p_dash.add_argument("--safe", action="store_true", help="Safe mode: avoid dynamic array formulas (UNIQUE/FILTER/XLOOKUP)")
     def _dash(args: argparse.Namespace) -> None:
         build_dashboard(
             args.workbook,
@@ -156,6 +157,7 @@ def build_parser() -> argparse.ArgumentParser:
             events_sheet=args.events_sheet,
             fighters_sheet=args.fighters_sheet,
             fights_sheet=args.fights_sheet,
+            safe=args.safe,
         )
         print("Dashboard created.")
     p_dash.set_defaults(func=_dash)

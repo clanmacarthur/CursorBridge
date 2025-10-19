@@ -36,6 +36,92 @@ def _read_csv_dicts(csv_path: str) -> Tuple[List[str], List[Dict[str, str]]]:
     return headers, rows
 
 
+def _read_sheet_headers_and_rows(workbook_path: str, sheet: str) -> Tuple[List[str], List[Dict[str, str]]]:
+    """Read headers and rows from an Excel sheet.
+
+    Strategy:
+    1) Try fast path via PowerShell SaveAs CSV
+    2) Fallback to xlwings COM if CSV export fails
+    """
+    # Attempt PowerShell CSV export first
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            csv_path = os.path.join(td, "export.csv")
+            _export_sheet_to_csv_via_powershell(workbook_path, sheet, csv_path)
+            return _read_csv_dicts(csv_path)
+    except subprocess.CalledProcessError:
+        pass  # Fallback to xlwings below
+
+    # Fallback: read via xlwings COM directly (no extra dependency, xlwings is included)
+    try:
+        import xlwings as xw
+    except Exception as e:  # pragma: no cover - defensive: xlwings should be installed per pyproject
+        raise RuntimeError("xlwings import failed; cannot read workbook without PowerShell CSV export") from e
+
+    app = None
+    wb = None
+    try:
+        app = xw.App(visible=False, add_book=False)
+        # Suppress alerts to avoid prompts on open
+        app.api.DisplayAlerts = False
+        wb = app.books.open(workbook_path)
+        # Resolve sheet by name or index (1-based if numeric input)
+        target_sheet = None
+        if str(sheet).strip().isdigit():
+            idx = int(str(sheet).strip()) - 1
+            target_sheet = wb.sheets[idx]
+        else:
+            target_sheet = wb.sheets[str(sheet)]
+
+        used = target_sheet.used_range
+        values = used.value
+        if values is None:
+            return [], []
+        # Normalize to 2D array
+        if not isinstance(values, list) or (values and not isinstance(values[0], list)):
+            values = [values]  # single row or single cell
+
+        if len(values) == 0:
+            return [], []
+
+        # First row = headers
+        raw_headers = values[0]
+        if not isinstance(raw_headers, list):
+            raw_headers = [raw_headers]
+        headers: List[str] = []
+        for i, h in enumerate(raw_headers, start=1):
+            name = (str(h).strip() if h is not None else f"Column{i}")
+            headers.append(name)
+
+        # Remaining rows
+        rows: List[Dict[str, str]] = []
+        for r in values[1:]:
+            if not isinstance(r, list):
+                r = [r]
+            # Pad row to headers length
+            if len(r) < len(headers):
+                r = r + [None] * (len(headers) - len(r))
+            # Trim extra cells beyond headers
+            if len(r) > len(headers):
+                r = r[: len(headers)]
+            # Skip completely empty rows
+            if not any((str(c).strip() if c is not None else "") for c in r):
+                continue
+            row_dict: Dict[str, str] = {}
+            for h, c in zip(headers, r):
+                row_dict[h] = (str(c).strip() if c is not None else "")
+            rows.append(row_dict)
+
+        return headers, rows
+    finally:
+        try:
+            if wb is not None:
+                wb.close()
+        finally:
+            if app is not None:
+                app.quit()
+
+
 def excel_to_notion(
     workbook_path: str,
     sheet: str,
@@ -45,10 +131,7 @@ def excel_to_notion(
     dry_run: bool = False,
 ) -> Dict[str, int]:
     header_to_notion = header_to_notion or {}
-    with tempfile.TemporaryDirectory() as td:
-        csv_path = os.path.join(td, "export.csv")
-        _export_sheet_to_csv_via_powershell(workbook_path, sheet, csv_path)
-        headers, rows = _read_csv_dicts(csv_path)
+    headers, rows = _read_sheet_headers_and_rows(workbook_path, sheet)
 
     created = 0
     skipped = 0
@@ -113,10 +196,7 @@ def excel_to_notion_from_profile(profile: str, max_rows: int | None = None, dry_
 
 
 def excel_preview(workbook_path: str, sheet: str, max_rows: int = 5) -> Dict[str, object]:
-    with tempfile.TemporaryDirectory() as td:
-        csv_path = os.path.join(td, "export.csv")
-        _export_sheet_to_csv_via_powershell(workbook_path, sheet, csv_path)
-        headers, rows = _read_csv_dicts(csv_path)
+    headers, rows = _read_sheet_headers_and_rows(workbook_path, sheet)
     return {
         "headers": headers,
         "rows": rows[:max_rows],
