@@ -70,6 +70,24 @@ def build_parser() -> argparse.ArgumentParser:
     p_excel_append.add_argument("--values", action="append", required=True, help="Value; repeat to add columns")
     p_excel_append.set_defaults(func=lambda a: excel_mod.append_row_openpyxl(a.workbook, a.sheet, a.values))
 
+    p_excel_vba = sub_excel.add_parser("vba", help="VBA module operations")
+    sub_excel_vba = p_excel_vba.add_subparsers(dest="excel_vba_command")
+
+    p_excel_vba_import = sub_excel_vba.add_parser("import", help="Import/replace a VBA module into a workbook")
+    p_excel_vba_import.add_argument("--workbook", required=True, help="Path to workbook (.xlsm)")
+    p_excel_vba_import.add_argument("--module-path", required=True, help="Path to .bas/.cls module file")
+    p_excel_vba_import.add_argument("--module-name", required=False, help="Override module name; default from Attribute VB_Name")
+    p_excel_vba_import.add_argument("--no-replace", action="store_true", help="Do not remove existing module with same name")
+    def _excel_vba_import(args: argparse.Namespace) -> None:
+        excel_mod.vba_import_module(
+            args.workbook,
+            args.module_path,
+            module_name=args.module_name,
+            replace=not args.no_replace,
+        )
+        print("VBA module imported.")
+    p_excel_vba_import.set_defaults(func=_excel_vba_import)
+
     # pad
     p_pad = sub.add_parser("pad", help="Power Automate Desktop via HTTP cloud flow")
     sub_pad = p_pad.add_subparsers(dest="pad_command")

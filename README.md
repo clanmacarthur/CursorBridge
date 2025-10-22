@@ -29,6 +29,37 @@ pip install -e .
 CLI usage
 ---------
 
+Excel VBA: import and run macros headlessly
+-------------------------------------------
+
+You can keep your VBA modules versioned in the repo and run them without manually opening Excel.
+
+Prereqs (one-time in Excel):
+- Trust Center → Macro Settings: select "Enable VBA macros" (you can revert later) and tick "Trust access to the VBA project object model".
+- Trust Center → Trusted Locations: add `C:\code\CursorBridge` (or your repo folder).
+- If Windows blocked the file: right‑click your `.xlsm` → Properties → Unblock.
+
+Import a module into a workbook (Excel must be closed):
+```
+python -m cb.cli excel vba import --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --module-path "C:\code\CursorBridge\vba\CleanDates.bas"
+```
+
+Run the macro headlessly (no UI):
+```
+python -m cb.cli excel run --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --macro CleanDates_Col5_AllSheets
+```
+
+Tips:
+- If Excel shows a yellow bar the first time, run with the UI to approve once:
+  - PowerShell: `$env:XLWINGS_VISIBLE="true"; python -m cb.cli excel run --workbook "...xlsm" --macro CleanDates_Col5_AllSheets`
+- If Alt+F8 shows no macros, re-run the import with Excel closed and confirm `Modules/CleanDates` appears in the VBA editor (Alt+F11).
+
+Zero‑Excel alternative (fast, no macro trust required):
+```
+python -m cb.cli excel run --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --py cb.excel:clean_dates_col5
+```
+This performs the same date clean (column 5: "1st/2nd/3rd/4th" → "1, 2, 3, 4,") without launching Excel.
+
 ```
 cb --help
 cb excel run --workbook "C:\path\file.xlsm" --macro "Module1.DoThing"
