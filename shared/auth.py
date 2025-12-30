@@ -71,3 +71,4 @@ async def optional_jwt(
     except HTTPException:
         return None
 
+

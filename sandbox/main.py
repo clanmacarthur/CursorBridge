@@ -61,16 +61,29 @@ class GenerateSessionRequest(BaseModel):
     duration_min: int = 20
 
 
+class SessionSection(BaseModel):
+    """A section within a generated session."""
+    type: str  # "breathwork" | "movement" | "meditation" | "transition"
+    name: str
+    duration_minutes: float
+    instructions: str
+    audio_url: Optional[str] = None
+    cues: Optional[List[str]] = None  # Timed cues for the player
+
+
 class SessionOutput(BaseModel):
-    session_id: str
+    """Full session output for the player UI."""
+    id: str
+    name: str
+    duration_minutes: int
+    persona_style: Optional[str] = None
+    sections: List[SessionSection]
+    safety_warnings: List[str]
+    # Legacy fields for backwards compatibility
     user_id: str
     template_name: str
-    duration_min: int
-    phases: List[Dict[str, Any]]
     breath_protocols: List[str]
     movements: List[str]
-    safety_warnings: List[str]
-    persona_style: Optional[str] = None
     created_at: str
 
 
@@ -154,49 +167,95 @@ async def generate_session(request: GenerateSessionRequest):
         if severity and severity.lower() in ["high", "warning"]:
             safety_warnings.append(f"{rule.get('rule_name', 'Unknown')}: {rule.get('description', '')}")
     
-    # 5. Build session phases (simplified)
-    phases = []
-    
-    # Opening phase
-    phases.append({
-        "phase": "opening",
-        "duration_min": max(2, request.duration_min // 6),
-        "instructions": "Begin with grounding and intention setting",
-        "breath_protocol": breath_library[0].get("protocol_name") if breath_library else None,
-    })
-    
-    # Main phase
-    phases.append({
-        "phase": "main",
-        "duration_min": request.duration_min - 4,
-        "instructions": "Core practice based on template intent",
-        "movements": [m.get("movement___practice") for m in movements[:3]] if movements else [],
-    })
-    
-    # Closing phase
-    phases.append({
-        "phase": "closing",
-        "duration_min": 2,
-        "instructions": "Integration and gentle return",
-    })
-    
-    # 6. Select persona style
+    # 5. Select persona style
     persona_style = None
     if personas:
-        # Use first persona as default - in production, match to profile
         persona_style = personas[0].get("persona")
     
-    # 7. Build output
+    # 6. Build session sections (new format for player UI)
+    sections: List[SessionSection] = []
+    remaining_time = request.duration_min
+    
+    # Opening breath section (15% of time, min 2 min)
+    opening_duration = max(2, int(request.duration_min * 0.15))
+    remaining_time -= opening_duration
+    
+    opening_breath = breath_library[0] if breath_library else None
+    sections.append(SessionSection(
+        type="breathwork",
+        name=opening_breath.get("protocol_name", "Centering Breath") if opening_breath else "Centering Breath",
+        duration_minutes=opening_duration,
+        instructions=f"Begin with {opening_breath.get('protocol_name', 'deep breathing')}. "
+                     f"Find a comfortable position and settle into your breath." if opening_breath 
+                     else "Take slow, deep breaths to center yourself.",
+        cues=[
+            f"0:00 - Begin {opening_breath.get('protocol_name', 'breathing') if opening_breath else 'breathing'}",
+            f"0:30 - Deepen your breath",
+            f"{opening_duration-1}:00 - Prepare to transition",
+        ]
+    ))
+    
+    # Movement section (50% of time)
+    movement_duration = max(5, int(request.duration_min * 0.5))
+    remaining_time -= movement_duration
+    
+    if movements:
+        movement = movements[0]
+        sections.append(SessionSection(
+            type="movement",
+            name=movement.get("movement___practice", "Gentle Movement"),
+            duration_minutes=movement_duration,
+            instructions=f"Practice {movement.get('movement___practice', 'gentle movement')}. "
+                        f"{movement.get('notes', 'Move mindfully and with awareness.')}",
+            cues=[
+                f"0:00 - Begin {movement.get('movement___practice', 'movement')}",
+                f"{movement_duration//2}:00 - Find your rhythm",
+                f"{movement_duration-2}:00 - Begin to slow down",
+            ]
+        ))
+    else:
+        sections.append(SessionSection(
+            type="meditation",
+            name="Mindful Awareness",
+            duration_minutes=movement_duration,
+            instructions="Rest in open awareness. Notice sensations, thoughts, and feelings without judgment.",
+            cues=[
+                "0:00 - Settle into stillness",
+                f"{movement_duration//2}:00 - Deepen your awareness",
+                f"{movement_duration-1}:00 - Begin to return",
+            ]
+        ))
+    
+    # Closing section (remaining time)
+    closing_duration = max(2, remaining_time)
+    closing_breath = breath_library[1] if len(breath_library) > 1 else breath_library[0] if breath_library else None
+    
+    sections.append(SessionSection(
+        type="breathwork",
+        name=closing_breath.get("protocol_name", "Integration Breath") if closing_breath else "Integration Breath",
+        duration_minutes=closing_duration,
+        instructions="Return to your natural breath. Allow the practice to integrate. "
+                    "When ready, gently open your eyes.",
+        cues=[
+            "0:00 - Return to natural breathing",
+            f"{closing_duration-1}:00 - Begin to return to the room",
+            f"{closing_duration}:00 - Session complete",
+        ]
+    ))
+    
+    # 7. Build output (new format)
     return SessionOutput(
-        session_id=str(uuid4()),
+        id=str(uuid4()),
+        name=template.get("column_name", "Wellness Session"),
+        duration_minutes=request.duration_min,
+        persona_style=persona_style,
+        sections=sections,
+        safety_warnings=safety_warnings[:5],
+        # Legacy fields
         user_id=request.user_id,
         template_name=template.get("column_name", "Unknown"),
-        duration_min=request.duration_min,
-        phases=phases,
         breath_protocols=[b.get("protocol_name", "") for b in breath_library[:3]],
         movements=[m.get("movement___practice", "") for m in movements[:3]],
-        safety_warnings=safety_warnings[:5],  # Limit to 5
-        persona_style=persona_style,
         created_at=datetime.utcnow().isoformat(),
     )
 

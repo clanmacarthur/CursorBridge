@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from shared.database import get_db
 from shared.auth import validate_jwt, optional_jwt
 from shared.realtime import publish_content_update, publish_sync_complete
+from shared.templates import get_all_templates, get_template_by_id, get_templates_by_category
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -267,6 +268,143 @@ async def query_table_by_id(table: str, id: int):
         raise HTTPException(status_code=404, detail="Not found")
     
     return row
+
+
+# =============================================================================
+# Template Endpoints
+# =============================================================================
+
+@app.get("/api/templates")
+async def list_templates(category: Optional[str] = None):
+    """
+    List available dashboard templates.
+    
+    Query params:
+        category: Optional filter (wellness, fitness, meditation, nutrition)
+    
+    Returns:
+        List of template definitions with blocks
+    """
+    if category:
+        templates = get_templates_by_category(category)
+    else:
+        templates = get_all_templates()
+    
+    return {
+        "count": len(templates),
+        "templates": templates,
+    }
+
+
+@app.get("/api/templates/{template_id}")
+async def get_template(template_id: str):
+    """Get a specific dashboard template by ID."""
+    template = get_template_by_id(template_id)
+    
+    if not template:
+        raise HTTPException(status_code=404, detail=f"Template '{template_id}' not found")
+    
+    return template
+
+
+# =============================================================================
+# Content Field Documentation
+# =============================================================================
+
+@app.get("/api/schema/{table}")
+async def get_table_schema(table: str):
+    """
+    Get field documentation for a content table.
+    
+    Useful for Main App to understand what fields are available.
+    """
+    SCHEMAS = {
+        "programme_profiles": {
+            "description": "Wellness programme definitions (lenses/doctrine presets)",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID (for relations)",
+                "programme_profile___title": "Programme name (e.g., 'Yoga Practitioner')",
+                "primary_doctrine___select": "Primary approach (Clinical, Athletic, Somatic, Ritual, Spiritual)",
+                "default_depth___select": "Attribute depth (Category, Subcategory, Capability, Parameter)",
+                "default_strictness___select": "Rule strictness (Loose, Normal, Strict)",
+                "notes___text": "Additional notes",
+                "primary_attribute_focus___relation___attribute_taxonomy__db_": "Related attribute (Notion page ID)",
+                "secondary_attribute_focus___relation___attribute_taxonomy__db_": "Secondary attribute (Notion page ID)",
+            },
+            "sample_query": "GET /api/query/programme_profiles?limit=5"
+        },
+        "breath_library": {
+            "description": "Breath protocol library for sessions",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "protocol_name": "Name of breath protocol (e.g., 'Physiological Sigh')",
+                "typical_use": "When to use this protocol",
+                "activation_level": "Energy level (Calming, Neutral, Activating)",
+                "primary_element": "TCM element association",
+                "safety_tier": "Safety classification",
+                "contraindications": "Who should avoid this",
+                "notes": "Additional guidance",
+            },
+            "sample_query": "GET /api/query/breath_library?limit=5"
+        },
+        "movements_system": {
+            "description": "Movement and practice library",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "movement___practice": "Name of movement (e.g., 'Qigong Silk Reeling')",
+                "movement_family": "Category (Yoga, Tai Chi, Qigong, etc.)",
+                "primary_effect": "Main benefit",
+                "intensity": "Physical intensity level",
+                "primary_body_region": "Target area",
+                "nervous_system_bias": "Parasympathetic/Sympathetic",
+                "contraindications___safety_notes": "Safety considerations",
+                "notes": "Additional guidance",
+            },
+            "sample_query": "GET /api/query/movements_system?limit=5"
+        },
+        "session_templates": {
+            "description": "Session recipes for the sandbox generator",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "column_name": "Template name",
+                "session_type____l1_": "Type of session (linked)",
+                "style____nl_": "Persona style (linked)",
+                "primary_intent____l1_": "Primary goal (linked)",
+                "breath_protocols____nl_": "Breath protocols (linked)",
+                "movements____nl_": "Movements (linked)",
+                "default_duration__min_": "Default duration in minutes",
+                "pause_style": "Pause between sections (Minimal, Moderate, Long)",
+                "script_strictness": "How closely to follow script",
+            },
+            "sample_query": "GET /api/query/session_templates?limit=5"
+        },
+        "archetypal_personas": {
+            "description": "AI persona styles for script generation",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "persona": "Persona name (e.g., 'Alan Watts-like')",
+                "cognitive_style": "Thinking approach (Analytical, Narrative, Minimal, Reflective)",
+                "language_tone": "Speaking style (Clinical-calm, Warm, Poetic, Direct)",
+                "metaphor_density": "Use of metaphors (None, Low, Medium, High)",
+                "lineage___influence": "Philosophical influences",
+                "notes": "Character notes",
+            },
+            "sample_query": "GET /api/query/archetypal_personas?limit=5"
+        },
+    }
+    
+    if table not in SCHEMAS:
+        raise HTTPException(
+            status_code=404, 
+            detail=f"Schema not documented for '{table}'. Available: {list(SCHEMAS.keys())}"
+        )
+    
+    return SCHEMAS[table]
 
 
 # =============================================================================
