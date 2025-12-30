@@ -1,134 +1,340 @@
-CursorBridge
-============
+# CursorBridge
 
-Windows-first CLI to bridge Excel automation (with or without VBA), Power Automate Desktop (PAD), and Notion.
+**Content sync and session generation for wellness applications.**
 
-What is CursorBridge?
----------------------
-CursorBridge is your one-command control panel for everyday workflows on Windows. Run Excel tasks without writing VBA, send data into Notion, and (optionally) trigger PAD flows — all from a simple, readable CLI. It’s designed to be safe-by-default (backups and dry-runs), easy to set up, and flexible enough to grow with your automations.
+CursorBridge syncs content from Notion databases to Supabase and provides APIs for dashboard templates, session generation, and content queries.
 
-Why you’ll like it
-- Excel without VBA: write cells or append rows using openpyxl; keep your macros untouched.
-- Notion made simple: append text, set properties, or create database rows from name=value pairs.
-- Bridge profiles: save a mapping once (e.g., Excel → Notion) and run it any time.
-- Safe operations: dry-run to preview changes before writing; PAD integration is opt-in and off by default.
+---
 
-Quick start
------------
-
-1. Install Python 3.9+ on Windows.
-2. In PowerShell:
+## 🏗️ Architecture
 
 ```
-pip install -e .
+┌─────────────────────────────────────────────────────────────────┐
+│                         Main App (Port 8080)                    │
+│                    Vue 3 + Nuxt 3 Dashboard Builder             │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │ HTTP + JWT Auth
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      CursorBridge APIs                          │
+│  ┌──────────────────────┐    ┌──────────────────────────────┐   │
+│  │   Core API (:3000)   │    │   Sandbox API (:3001)        │   │
+│  │  • /api/templates    │    │  • /sandbox/generate-session │   │
+│  │  • /api/query/{t}    │    │  • /sandbox/build-dashboard  │   │
+│  │  • /api/schema/{t}   │    │                              │   │
+│  │  • /api/sync/notion  │    │                              │   │
+│  └──────────────────────┘    └──────────────────────────────┘   │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    Supabase (Shared Backend)                    │
+│  ┌──────────────┐  ┌────────────┐  ┌─────────────────────────┐  │
+│  │ PostgreSQL   │  │  Auth      │  │  Realtime               │  │
+│  │ 25+ content  │  │  JWT       │  │  sync_events channel    │  │
+│  │ tables       │  │  validation│  │                         │  │
+│  └──────────────┘  └────────────┘  └─────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-3. Copy `.env.template` to `.env` and fill secrets.
-4. Configure `config/flows.yaml` with your cloud flow HTTP URL(s).
+---
 
-CLI usage
----------
+## 🚀 Quick Start
 
-Excel VBA: import and run macros headlessly
--------------------------------------------
+### Prerequisites
 
-You can keep your VBA modules versioned in the repo and run them without manually opening Excel.
+- Python 3.11+
+- Supabase account
+- Notion integration (optional, for content sync)
 
-Prereqs (one-time in Excel):
-- Trust Center → Macro Settings: select "Enable VBA macros" (you can revert later) and tick "Trust access to the VBA project object model".
-- Trust Center → Trusted Locations: add `C:\code\CursorBridge` (or your repo folder).
-- If Windows blocked the file: right‑click your `.xlsm` → Properties → Unblock.
+### Installation
 
-Import a module into a workbook (Excel must be closed):
-```
-python -m cb.cli excel vba import --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --module-path "C:\code\CursorBridge\vba\CleanDates.bas"
-```
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/CursorBridge.git
+cd CursorBridge
 
-Run the macro headlessly (no UI):
-```
-python -m cb.cli excel run --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --macro CleanDates_Col5_AllSheets
+# Install dependencies
+pip install -r requirements.txt
+
+# For Supabase support
+pip install supabase psycopg2-binary
 ```
 
-Tips:
-- If Excel shows a yellow bar the first time, run with the UI to approve once:
-  - PowerShell: `$env:XLWINGS_VISIBLE="true"; python -m cb.cli excel run --workbook "...xlsm" --macro CleanDates_Col5_AllSheets`
-- If Alt+F8 shows no macros, re-run the import with Excel closed and confirm `Modules/CleanDates` appears in the VBA editor (Alt+F11).
+### Configuration
 
-Zero‑Excel alternative (fast, no macro trust required):
-```
-python -m cb.cli excel run --workbook "C:\code\CursorBridge\BridgeOddsTest2.xlsm" --py cb.excel:clean_dates_col5
-```
-This performs the same date clean (column 5: "1st/2nd/3rd/4th" → "1, 2, 3, 4,") without launching Excel.
+Create a `.env` file:
 
-```
-cb --help
-cb excel run --workbook "C:\path\file.xlsm" --macro "Module1.DoThing"
-cb excel run --workbook "C:\path\file.xlsx" --py "cb.excel:example_task"
-cb pad run my_desktop_flow --param customerId=123
-cb notion edit --page-id <uuid> --append "Run complete" --property Status=Done
-cb notion db-insert --database-id <uuid> --property Name="My item" --property Status=Open
-
-# Excel openpyxl helpers (no macros needed)
-cb excel write --workbook "C:\path\file.xlsm" --sheet 1 --cell A1 --value "Hello"
-cb excel append --workbook "C:\path\file.xlsm" --sheet Sheet1 --values col1 --values col2 --values col3
-
-Bridge profiles
----------------
-
-Define a profile in `config/bridge.yaml` and run it:
-
-```
-Dashboard builder
------------------
-
-You can build the dashboard even if your sheet names differ. For example, if your fighters sheet is named `Profiles` and your events sheet is `Events`:
-
-```
-cb dashboard --workbook "C:\\path\\Ankalaev vs. Pereira 2 (partly2).xlsm" --events-sheet "Events" --fighters-sheet "Profiles" --visible
+```env
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your-service-role-key
+NOTION_TOKEN=your-notion-integration-token
 ```
 
-Flags:
-- `--events-sheet`: sheet containing `EventId` (default `Events`)
-- `--fighters-sheet`: sheet containing fighters with `EventId` and `Name`/`Fighter` (default `fighters`)
-- `--fights-sheet`: optional sheet containing fights with `EventId` and `FightName`/`Bout` (default `fights`)
+### Running the APIs
 
-cb bridge run-profile --profile ufc_events --dry-run
+```bash
+# Core API (port 3000)
+python run_api.py
+
+# Sandbox API (port 3001)
+python run_sandbox.py
 ```
 
-Or run ad-hoc with mapping:
+---
+
+## 📚 API Reference
+
+### Core API (Port 3000)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Health check |
+| `/api/templates` | GET | List dashboard templates |
+| `/api/templates/{id}` | GET | Get specific template |
+| `/api/schema/{table}` | GET | Get field documentation |
+| `/api/query/{table}` | GET | Query content tables |
+| `/api/sync/notion` | POST | Sync from Notion |
+| `/api/logs/checkin` | POST | Log user check-in |
+
+### Sandbox API (Port 3001)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Health check |
+| `/sandbox/generate-session` | POST | Generate guided session |
+| `/sandbox/build-dashboard` | POST | Build dashboard from template |
+
+---
+
+## 📦 Dashboard Templates
+
+5 pre-built templates available via `GET /api/templates`:
+
+| ID | Name | Category | Blocks |
+|----|------|----------|--------|
+| `daily-wellness-check` | Daily Wellness Check | wellness | 5 |
+| `breath-movement` | Breath & Movement | fitness | 3 |
+| `meditation-journal` | Meditation Journal | meditation | 7 |
+| `nutrition-tracker` | Nutrition Tracker | nutrition | 4 |
+| `sleep-tracker` | Sleep Tracker | wellness | 6 |
+
+### Template Format
+
+```json
+{
+  "id": "daily-wellness-check",
+  "name": "Daily Wellness Check",
+  "description": "Track your daily mood, sleep quality, energy, and stress levels",
+  "category": "wellness",
+  "icon": "heart",
+  "blocks": [
+    {
+      "block_type": "slider",
+      "config": {
+        "label": "Mood",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      },
+      "position": {"x": 0, "y": 0, "w": 6, "h": 2}
+    }
+  ]
+}
+```
+
+---
+
+## 🧘 Session Generation
+
+`POST /sandbox/generate-session`
+
+### Request
+
+```json
+{
+  "user_id": "user-uuid",
+  "template_id": "session-template-id",
+  "duration_min": 15,
+  "preferences": {
+    "intensity": "gentle",
+    "focus": "relaxation"
+  }
+}
+```
+
+### Response
+
+```json
+{
+  "id": "session-uuid",
+  "name": "Morning Energy Flow",
+  "duration_minutes": 15,
+  "persona_style": "Alan Watts-like",
+  "sections": [
+    {
+      "type": "breathwork",
+      "name": "Physiological Sigh",
+      "duration_minutes": 2.5,
+      "instructions": "Begin with deep breathing...",
+      "cues": [
+        "0:00 - Begin breathing",
+        "0:30 - Deepen your breath",
+        "2:00 - Prepare to transition"
+      ]
+    },
+    {
+      "type": "movement",
+      "name": "Qigong Silk Reeling",
+      "duration_minutes": 7.5,
+      "instructions": "Practice gentle movement..."
+    },
+    {
+      "type": "breathwork",
+      "name": "Integration Breath",
+      "duration_minutes": 5,
+      "instructions": "Return to natural breathing..."
+    }
+  ],
+  "safety_warnings": ["Avoid if experiencing acute anxiety"]
+}
+```
+
+---
+
+## 🗄️ Content Tables
+
+CursorBridge owns these Supabase tables (synced from Notion):
+
+| Table | Description |
+|-------|-------------|
+| `programme_profiles` | Wellness programme definitions |
+| `breath_library` | Breath protocol library |
+| `movements_system` | Movement practices |
+| `session_templates` | Session recipes |
+| `archetypal_personas` | AI persona styles |
+| `attribute_taxonomy` | Attribute hierarchy |
+| `safety_rules` | Safety gating rules |
+| `nutrition_and_food` | Nutrition database |
+| `chakra_systems` | Chakra reference |
+| `meridian_system` | Meridian reference |
+| ... and 15+ more |
+
+Use `GET /api/schema/{table}` for field documentation.
+
+---
+
+## 🔐 Authentication
+
+CursorBridge validates Supabase JWTs. Include in requests:
 
 ```
-cb bridge excel-to-notion --workbook "C:\path\file.xlsm" --sheet 1 --database-id <uuid> --map "Event=Name" --map "Location=Location" --dry-run
-```
-```
-
-If the `cb` command isn't on PATH, you can run via Python:
-
-```
-python -m cb.cli --help
+Authorization: Bearer <supabase_jwt>
 ```
 
-Configuration
--------------
+JWT claims expected:
+- `sub` - User ID
+- `email` - User email
+- `role` - User role (optional)
 
-`.env` (copy from `.env.template`):
+---
+
+## 🔄 Realtime Sync
+
+Content updates are published to Supabase Realtime via the `sync_events` table:
+
+```json
+{
+  "type": "content_synced",
+  "table": "programme_profiles",
+  "record_id": "uuid",
+  "timestamp": "2025-12-30T12:00:00Z"
+}
+```
+
+Subscribe in Main App to receive live updates.
+
+---
+
+## 📁 Project Structure
 
 ```
-NOTION_TOKEN=
-``` 
-
-`config/flows.yaml` example:
-
+CursorBridge/
+├── api/
+│   └── main.py           # Core API (FastAPI)
+├── sandbox/
+│   └── main.py           # Sandbox API (FastAPI)
+├── shared/
+│   ├── auth.py           # JWT validation
+│   ├── database.py       # Supabase client
+│   ├── realtime.py       # Realtime publishing
+│   └── templates.py      # Dashboard templates
+├── cb/
+│   ├── bridge.py         # Notion→DB sync logic
+│   ├── notion.py         # Notion API client
+│   ├── db.py             # Database adapters
+│   └── cli.py            # CLI commands
+├── config/
+│   └── bridge.yaml       # Sync profiles
+├── run_api.py            # Start Core API
+├── run_sandbox.py        # Start Sandbox API
+├── requirements.txt      # Dependencies
+├── BRIDGE_SPEC.md        # Integration spec
+└── COORDINATION_RESPONSE.md  # Main App coordination
 ```
-flows:
-  my_desktop_flow:
-    url: "https://prod-00.westeurope.logic.azure.com:443/..."
-    timeout_seconds: 600
+
+---
+
+## 🔗 Integration with Main App
+
+See `BRIDGE_SPEC.md` for full integration details.
+
+### Quick Integration
+
+```javascript
+// Nuxt server route example
+export default defineEventHandler(async (event) => {
+  const jwt = getCookie(event, 'sb-access-token')
+  
+  const templates = await $fetch('http://localhost:3000/api/templates', {
+    headers: { Authorization: `Bearer ${jwt}` }
+  })
+  
+  return templates
+})
 ```
 
-Status
-------
+---
 
-Initial scaffold. PAD connectors will be wired in next commits.
+## 🛠️ CLI Usage
 
+```bash
+# Export Notion database to Supabase
+python -m cb.cli export notion-to-db \
+  --database-id YOUR_NOTION_DB_ID \
+  --target supabase \
+  --connection "https://xxx.supabase.co|your-key" \
+  --table my_table
 
+# Dry run (preview only)
+python -m cb.cli export notion-to-db \
+  --database-id YOUR_NOTION_DB_ID \
+  --dry-run
+```
+
+---
+
+## 📄 License
+
+MIT License - See LICENSE file for details.
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
