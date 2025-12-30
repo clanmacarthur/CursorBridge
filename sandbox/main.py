@@ -34,12 +34,19 @@ app = FastAPI(
     version="0.1.0",
 )
 
+# CORS for Main App access
+ALLOWED_ORIGINS = [
+    "http://localhost:8080",      # Main App dev
+    "http://localhost:3000",      # API (internal calls)
+    "https://yourdomain.com",     # Main App prod (update when known)
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 
@@ -322,4 +329,6 @@ async def evaluate_rules(
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=3001)  # Different port from main API
+
+
 

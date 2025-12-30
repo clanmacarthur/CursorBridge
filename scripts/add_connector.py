@@ -28,11 +28,16 @@ ROLES = [
     ("fighter_name", "Profiles", ["Profile", "profile", "Name", "Fighter"]),
 ]
 
-# Stats we bind
-STAT_KEYS = [
-    "Height", "Weight", "Reach", "Stance", "Record",
-    "TSSL", "TSSA", "STRACC%", "SSL/M", "SSA/M", "DSL/M", "DSA/M", "KD/15mins",
+# Stats we bind (split into measurables vs striking)
+MEAS_KEYS = [
+    "Height",
+    "Weight",
+    "Reach",
+    "Stance",
+    "Record",
 ]
+
+STRIKE_KEYS: List[str] = []  # deprecated: we now derive stats from the stats sheet headers
 
 
 def headers_of(ws) -> List[str]:
@@ -107,27 +112,37 @@ def main() -> None:
                     note = f"FUZZY:{score:.2f}"
         rows.append([role, sheet, ", ".join(candidates), found_name or "", str(col_idx or ""), "OK" if col_idx else "MISSING", note])
 
-    # Stats
-    for key in STAT_KEYS:
-        # Prefer stats sheet, fall back to profiles; then fuzzy
-        used_sheet = stats_sheet_name
-        found_name, col_idx = detect_header(st_hdr, [key])
+    # Measurables: PROFILES only (preserve existing connections)
+    for key in MEAS_KEYS:
+        used_sheet = args.profiles_sheet
+        found_name, col_idx = detect_header(pf_hdr, [key])
         note = "EXACT" if col_idx else ""
         if not col_idx:
-            f_name, f_idx, score = fuzzy_match_header(st_hdr, key)
+            f_name, f_idx, score = fuzzy_match_header(pf_hdr, key)
             if f_idx:
                 found_name, col_idx = f_name, f_idx
                 note = f"FUZZY:{score:.2f}"
-        if not col_idx:
-            used_sheet = args.profiles_sheet
-            found_name, col_idx = detect_header(pf_hdr, [key])
-            note = "EXACT" if col_idx else note
-            if not col_idx:
-                f_name, f_idx, score = fuzzy_match_header(pf_hdr, key)
-                if f_idx:
-                    found_name, col_idx = f_name, f_idx
-                    note = f"FUZZY:{score:.2f}"
         rows.append([f"stat:{key}", used_sheet, key, found_name or "", str(col_idx or ""), "OK" if col_idx else "MISSING", note])
+
+    # Dynamic stats: derive directly from the stats sheet headers (no fallback)
+    # Ignore name/id/event columns
+    ignore_names = {"profile", "name", "fighter", "eventid", "event id", "event", "card", "card name", "event name", "column3", "column 3"}
+    # Find fighter name column on stats sheet to exclude it
+    name_idx_stats = 0
+    for cand in ["Profile", "profile", "Name", "Fighter"]:
+        found, idx = detect_header(st_hdr, [cand])
+        if idx:
+            name_idx_stats = idx
+            break
+    for i, h in enumerate(st_hdr, start=1):
+        if not h:
+            continue
+        if i == name_idx_stats:
+            continue
+        if h.strip().lower() in ignore_names:
+            continue
+        # Record exact mapping from stats sheet
+        rows.append([f"stat:{h}", stats_sheet_name, h, h, str(i), "OK", "EXACT"])
 
     # Create/replace Connector sheet
     if "Connector" in wb.sheetnames:

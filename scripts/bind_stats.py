@@ -12,16 +12,8 @@ MEASURABLES = [
     ("Record", "Record"),
 ]
 
-STRIKING = [
-    ("TSSL", "TSSL"),
-    ("TSSA", "TSSA"),
-    ("STRACC%", "STRACC%"),
-    ("SSL/M", "SSL/M"),
-    ("SSA/M", "SSA/M"),
-    ("DSL/M", "DSL/M"),
-    ("DSA/M", "DSA/M"),
-    ("KD/15mins", "KD/15mins"),
-]
+# Striking keys are now dynamic: we read them from Connector rows (stat:*)
+STRIKING = []  # populated from Connector
 
 
 def headers_of(ws) -> List[str]:
@@ -75,7 +67,35 @@ def main() -> None:
         raise SystemExit("Neither stats sheet nor profiles sheet has a Profile/Name/Fighter column")
 
     # Build header maps for both sheets
-    need = {k for _, k in MEASURABLES + STRIKING}
+    # Build list of striking keys from Connector if available
+    dynamic_strike_keys: List[str] = []
+    if "Connector" in wb.sheetnames:
+        ws_conn = wb["Connector"]
+        for row in ws_conn.iter_rows(min_row=2, values_only=True):
+            role = str(row[0]).strip() if row[0] is not None else ""
+            sheet_name = str(row[1]).strip() if row[1] is not None else ""
+            if not role.startswith("stat:"):
+                continue
+            key = role.split(":", 1)[1]
+            # Only consider keys that come from stats sheet (not Profiles), to avoid measurables duplication
+            if sheet_name == (args.stats_sheet or args.profiles_sheet):
+                if key not in dynamic_strike_keys:
+                    dynamic_strike_keys.append(key)
+
+    # If none found, fallback to any stat:* present
+    if not dynamic_strike_keys and "Connector" in wb.sheetnames:
+        ws_conn = wb["Connector"]
+        for row in ws_conn.iter_rows(min_row=2, values_only=True):
+            role = str(row[0]).strip() if row[0] is not None else ""
+            if role.startswith("stat:"):
+                key = role.split(":", 1)[1]
+                if key not in dynamic_strike_keys:
+                    dynamic_strike_keys.append(key)
+
+    # Build needed header set from measurables + dynamic striking
+    need = {k for _, k in MEASURABLES}
+    for k in dynamic_strike_keys:
+        need.add(k)
     stats_colmap: Dict[str, int] = {}
     for name in need:
         idx = find_col(hdr_stats, name)
@@ -171,8 +191,8 @@ def main() -> None:
 
     r += 1
     ws_dash.cell(row=r-1, column=4, value="STRIKING")
-    for label, key in STRIKING:
-        ws_dash.cell(row=r, column=4, value=label)
+    for key in dynamic_strike_keys:
+        ws_dash.cell(row=r, column=4, value=key)
         if key in connector_sheets_for_stat:
             sheet_for_key = connector_sheets_for_stat[key]
             name_idx = get_name_col_for_sheet(sheet_for_key)

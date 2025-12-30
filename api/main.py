@@ -12,7 +12,7 @@ import sys
 from datetime import date, datetime
 from typing import Any, Dict, List, Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -20,6 +20,8 @@ from pydantic import BaseModel
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from shared.database import get_db
+from shared.auth import validate_jwt, optional_jwt
+from shared.realtime import publish_content_update, publish_sync_complete
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,13 +32,19 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# CORS middleware for frontend access
+# CORS middleware for Main App access
+ALLOWED_ORIGINS = [
+    "http://localhost:8080",      # Main App dev
+    "http://localhost:3000",      # Local testing
+    "https://yourdomain.com",     # Main App prod (update when known)
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure for production
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 
@@ -156,6 +164,13 @@ async def sync_notion(request: SyncRequest):
         except Exception as e:
             errors.append(f"{table}: {str(e)}")
     
+    # Publish realtime event for Main App
+    if synced:
+        publish_sync_complete(
+            tables_synced=list(synced.keys()),
+            total_rows=sum(synced.values()),
+        )
+    
     return SyncResponse(
         success=len(errors) == 0,
         synced=synced,
@@ -168,7 +183,10 @@ async def sync_notion(request: SyncRequest):
 # =============================================================================
 
 @app.post("/api/logs/checkin", response_model=CheckinResponse)
-async def log_checkin(request: CheckinRequest):
+async def log_checkin(
+    request: CheckinRequest,
+    user: dict = Depends(optional_jwt),  # Optional auth - uses request.user_id if no JWT
+):
     """
     Log a daily check-in (checkboxes + sliders/knobs).
     
@@ -183,13 +201,16 @@ async def log_checkin(request: CheckinRequest):
         }
     }
     """
+    # Use authenticated user_id if available, otherwise use request.user_id
+    user_id = user["id"] if user else request.user_id
+    
     db = get_db()
     
     # First, ensure the user_checkins table exists
     # For now, we'll store as JSON in a generic logs table
     try:
         checkin_data = {
-            "user_id": request.user_id,
+            "user_id": user_id,
             "checkin_date": request.date,
             "block_id": request.block_id,
             "completed_items": request.values.get("completed", []),
@@ -255,4 +276,6 @@ async def query_table_by_id(table: str, id: int):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=3000)
+
+
 
