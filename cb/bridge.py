@@ -4,7 +4,8 @@ import subprocess
 import tempfile
 from typing import Dict, List, Tuple
 
-from .notion import create_database_row
+from .notion import create_database_row, query_database
+from .db import get_adapter
 import yaml
 
 
@@ -202,5 +203,77 @@ def excel_preview(workbook_path: str, sheet: str, max_rows: int = 5) -> Dict[str
         "rows": rows[:max_rows],
         "total_rows": len(rows),
     }
+
+
+def notion_to_db(
+    database_id: str,
+    target: str,
+    connection_string: str,
+    table_name: str,
+    dry_run: bool = False,
+) -> Dict[str, int]:
+    """Export a Notion database to a SQL database.
+    
+    Args:
+        database_id: Notion database ID
+        target: Target database type ('sqlite', 'postgres', 'supabase')
+        connection_string: Connection string for target database
+        table_name: Name of table to create/insert into
+        dry_run: If True, only preview without writing
+    
+    Returns:
+        Dict with 'rows_fetched' and 'rows_inserted' counts
+    """
+    # Fetch data from Notion
+    result = query_database(database_id)
+    schema = result["schema"]
+    rows = result["rows"]
+    
+    if dry_run:
+        import json
+        print(f"[DRY RUN] Would export {len(rows)} rows to {target}:{table_name}")
+        print(f"[DRY RUN] Schema: {json.dumps(schema, ensure_ascii=True)}")
+        if rows:
+            print(f"[DRY RUN] Sample row: {json.dumps(rows[0], ensure_ascii=True, default=str)}")
+        return {"rows_fetched": len(rows), "rows_inserted": 0}
+    
+    # Get appropriate adapter and export
+    adapter = get_adapter(target, connection_string)
+    with adapter:
+        adapter.create_table(table_name, schema)
+        inserted = adapter.insert_rows(table_name, rows)
+    
+    return {"rows_fetched": len(rows), "rows_inserted": inserted}
+
+
+def notion_to_db_from_profile(profile: str, dry_run: bool = False) -> Dict[str, int]:
+    """Export Notion database to SQL database using a configured profile.
+    
+    Args:
+        profile: Profile name from config/bridge.yaml
+        dry_run: If True, only preview without writing
+    
+    Returns:
+        Dict with 'rows_fetched' and 'rows_inserted' counts
+    """
+    config_path = os.path.join(os.getcwd(), "config", "bridge.yaml")
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Missing config: {config_path}")
+    
+    with open(config_path, "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f) or {}
+    
+    db_profiles = (cfg or {}).get("db_profiles", {})
+    if profile not in db_profiles:
+        raise KeyError(f"Database profile '{profile}' not found in config/bridge.yaml")
+    
+    p = db_profiles[profile]
+    return notion_to_db(
+        database_id=p["notion_database_id"],
+        target=p["target"],
+        connection_string=p["connection_string"],
+        table_name=p["table_name"],
+        dry_run=dry_run,
+    )
 
 

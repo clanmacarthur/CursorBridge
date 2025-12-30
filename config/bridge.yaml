@@ -9,3 +9,26 @@ profiles:
       Date: Date
       Source: Source
 
+# Database export profiles for Notion -> SQL migrations
+db_profiles:
+  # Example: Export Notion database to local SQLite file
+  events_to_sqlite:
+    notion_database_id: "290c47c61e2180718c6ad0d62e935a52"
+    target: sqlite
+    connection_string: "C:\\data\\events.db"
+    table_name: events
+
+  # Example: Export to PostgreSQL (works with Supabase, Neon, etc.)
+  # events_to_postgres:
+  #   notion_database_id: "your-notion-db-id"
+  #   target: postgres
+  #   connection_string: "postgresql://user:password@host:5432/database"
+  #   table_name: events
+
+  # Example: Export to Supabase via REST API
+  # events_to_supabase:
+  #   notion_database_id: "your-notion-db-id"
+  #   target: supabase
+  #   connection_string: "https://your-project.supabase.co|your-anon-key"
+  #   table_name: events
+

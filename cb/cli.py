@@ -5,7 +5,7 @@ from typing import List, Optional
 from . import excel as excel_mod
 from . import pad as pad_mod
 from . import notion as notion_mod
-from .bridge import excel_to_notion
+from .bridge import excel_to_notion, notion_to_db
 from .dashboard import build_dashboard
 from dotenv import load_dotenv
 
@@ -159,6 +159,36 @@ def build_parser() -> argparse.ArgumentParser:
         result = excel_preview(args.workbook, args.sheet, args.max_rows)
         print(result)
     p_bridge_prev.set_defaults(func=_bridge_prev)
+
+    # export
+    p_export = sub.add_parser("export", help="Export data between platforms")
+    sub_export = p_export.add_subparsers(dest="export_command")
+    
+    p_export_n2db = sub_export.add_parser("notion-to-db", help="Export a Notion database to SQL database")
+    p_export_n2db.add_argument("--database-id", required=True, help="Notion database ID")
+    p_export_n2db.add_argument("--target", required=True, choices=["sqlite", "postgres", "supabase"], help="Target database type")
+    p_export_n2db.add_argument("--connection-string", required=True, help="Connection string (sqlite: path, postgres: postgresql://..., supabase: url|key)")
+    p_export_n2db.add_argument("--table", required=True, help="Table name to create/insert into")
+    p_export_n2db.add_argument("--dry-run", action="store_true", help="Preview export without writing")
+    def _export_n2db(args: argparse.Namespace) -> None:
+        result = notion_to_db(
+            args.database_id,
+            args.target,
+            args.connection_string,
+            args.table,
+            args.dry_run,
+        )
+        print(f"Fetched: {result['rows_fetched']}, Inserted: {result['rows_inserted']}")
+    p_export_n2db.set_defaults(func=_export_n2db)
+    
+    p_export_profile = sub_export.add_parser("run-profile", help="Run a database export profile from config/bridge.yaml")
+    p_export_profile.add_argument("--profile", required=True, help="Profile name under db_profiles:")
+    p_export_profile.add_argument("--dry-run", action="store_true", help="Preview export without writing")
+    def _export_profile(args: argparse.Namespace) -> None:
+        from .bridge import notion_to_db_from_profile
+        result = notion_to_db_from_profile(args.profile, args.dry_run)
+        print(f"Fetched: {result['rows_fetched']}, Inserted: {result['rows_inserted']}")
+    p_export_profile.set_defaults(func=_export_profile)
 
     # dashboard
     p_dash = sub.add_parser("dashboard", help="Build an Excel dashboard with dynamic dropdowns and a demo pie chart")

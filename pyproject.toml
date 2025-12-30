@@ -17,5 +17,10 @@ dependencies = [
   "xlwings>=0.30",
 ]
 
+[project.optional-dependencies]
+postgres = ["psycopg2-binary>=2.9"]
+supabase = ["supabase>=2.0"]
+all-db = ["psycopg2-binary>=2.9", "supabase>=2.0"]
+
 [project.scripts]
 cb = "cb.cli:main"
