@@ -1,0 +1,10 @@
+{
+  "control_definitions": "2dcc47c6-1e21-810b-a228-fb1796009ed4",
+  "control_packs": "2dcc47c6-1e21-8131-b438-ee2da9b7f922",
+  "profile_pack_map": "2dcc47c6-1e21-813b-8c11-f7a3eddd2de1",
+  "default_weights": "2dcc47c6-1e21-813f-af4c-d9ae9dac9bae",
+  "coupling_rules": "2dcc47c6-1e21-8141-991b-ee3618a5bbdd",
+  "derived_metrics": "2dcc47c6-1e21-8175-b684-fa10969c3e43",
+  "questionnaires": "2dcc47c6-1e21-8153-873c-f3cf30976fc5",
+  "questionnaire_questions": "2dcc47c6-1e21-8122-8899-dad9b21d651f"
+}

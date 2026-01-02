@@ -131,7 +131,7 @@ def create_database(
         return None
     
     result = response.json()
-    print(f"✅ Created: {db_template['title']} (ID: {result['id']})")
+    print(f"[OK] Created: {db_template['title']} (ID: {result['id']})")
     
     return {
         "id": result["id"],
@@ -159,7 +159,7 @@ def add_relations(
                 break
         
         if not target_id:
-            print(f"  ⚠️ Cannot find target database for relation: {prop_name} → {target_db_title}")
+            print(f"  [WARN] Cannot find target database for relation: {prop_name} -> {target_db_title}")
             continue
         
         # Add relation property
@@ -180,9 +180,9 @@ def add_relations(
         )
         
         if response.status_code == 200:
-            print(f"  ✅ Added relation: {prop_name} → {target_db_title}")
+            print(f"  [OK] Added relation: {prop_name} -> {target_db_title}")
         else:
-            print(f"  ❌ Failed to add relation {prop_name}: {response.text}")
+            print(f"  [ERR] Failed to add relation {prop_name}: {response.text}")
 
 
 def main():
@@ -201,18 +201,18 @@ def main():
     
     # Load template
     template = load_template()
-    print(f"\n📋 Loaded template with {len(template['databases'])} databases")
+    print(f"\nLoaded template with {len(template['databases'])} databases")
     
     if args.dry_run:
-        print("\n🔍 DRY RUN - would create:")
+        print("\n[DRY RUN] Would create:")
         for db in template["databases"]:
             print(f"  - {db['title']} ({db['id']})")
             for prop_name, prop_def in db["properties"].items():
-                print(f"      • {prop_name}: {prop_def['type']}")
+                print(f"      * {prop_name}: {prop_def['type']}")
         return
     
     # Phase 1: Create all databases without relations
-    print("\n📦 Phase 1: Creating databases...")
+    print("\n[Phase 1] Creating databases...")
     db_id_map = {}
     
     for db_template in template["databases"]:
@@ -221,7 +221,7 @@ def main():
             db_id_map[db_template["id"]] = result
     
     # Phase 2: Add relations (now that all databases exist)
-    print("\n🔗 Phase 2: Adding relations...")
+    print("\n[Phase 2] Adding relations...")
     for template_id, info in db_id_map.items():
         if info.get("relation_props"):
             print(f"\nAdding relations to: {info['title']}")
@@ -229,7 +229,7 @@ def main():
     
     # Output summary
     print("\n" + "=" * 60)
-    print("✅ COMPLETE! Created databases:")
+    print("COMPLETE! Created databases:")
     print("=" * 60)
     
     output_map = {}
@@ -248,7 +248,7 @@ def main():
     with open(map_path, "w", encoding="utf-8") as f:
         json.dump(output_map, f, indent=2)
     
-    print(f"\n💾 Database ID map saved to: {map_path}")
+    print(f"\nDatabase ID map saved to: {map_path}")
 
 
 if __name__ == "__main__":
