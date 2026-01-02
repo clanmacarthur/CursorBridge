@@ -1,0 +1,333 @@
+================================================================================
+CURSORBRIDGE - NOTION DATABASE SETUP GUIDE
+================================================================================
+
+This guide explains how to manually create the automation databases in Notion.
+These databases mirror the Supabase automation tables and allow you to manage
+control definitions, packs, and rules through Notion's visual interface.
+
+================================================================================
+BEFORE YOU START
+================================================================================
+
+1. You need a Notion workspace with edit access
+2. These databases are OPTIONAL - Supabase is the source of truth
+3. If you create them in Notion, use CursorBridge to sync to Supabase
+
+================================================================================
+DATABASE 1: CONTROL DEFINITIONS
+================================================================================
+
+Purpose: Every knob/tick/slider the UI can render. One control = one meaning.
+
+Icon: Use the slider/knob emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name          | Type        | Options/Notes                          |
+--------------------------------------------------------------------------------
+| Control Name         | Title       | (default title column)                 |
+| Control Type         | Select      | slider, checkbox, knob, hybrid,        |
+|                      |             | number, text, time                     |
+| Primary Domain       | Relation    | Link to Attribute Taxonomy (DB)        |
+|                      |             | Limit: 1                               |
+| Secondary Domains    | Relation    | Link to Attribute Taxonomy (DB)        |
+|                      |             | Limit: No limit                        |
+| Range Min            | Number      | e.g., 0                                |
+| Range Max            | Number      | e.g., 10                               |
+| Range Step           | Number      | e.g., 1                                |
+| Default Value        | Number      | e.g., 5                                |
+| Unit                 | Text        | e.g., hours, ml, score, minutes        |
+| Label                | Text        | Display label for UI                   |
+| Description          | Text        | Help text for users                    |
+| Icon                 | Text        | Icon name or emoji                     |
+| Is Required          | Checkbox    | Must user fill this in?                |
+| Is Default           | Checkbox    | Include in default dashboard?          |
+| Completion Threshold | Number      | Value above which = "completed"        |
+| Status               | Select      | Active, Deprecated, Archived           |
+| Notes                | Text        | Internal notes                         |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Sleep Duration | slider | 0-12 hours | Default: 7 | Is Default: Yes
+- Sleep Quality | slider | 1-10 score | Default: 5 | Is Default: Yes
+- Hydration | checkbox | completion threshold: 1 | Is Default: Yes
+- Caffeine Intake | number | 0-500 mg | Is Default: No
+
+
+================================================================================
+DATABASE 2: CONTROL PACKS
+================================================================================
+
+Purpose: Curated bundles of controls that users can add to their dashboard.
+
+Icon: Use the package emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name    | Type        | Options/Notes                               |
+--------------------------------------------------------------------------------
+| Pack Name      | Title       | (default title column)                      |
+| Pack Slug      | Text        | URL-safe identifier (e.g., daily-essentials)|
+| Description    | Text        | What this pack is for                       |
+| Category       | Select      | Wellness, Fitness, Nutrition, Sleep,        |
+|                |             | Stress, Custom                              |
+| Difficulty     | Select      | Beginner, Intermediate, Advanced            |
+| Controls       | Relation    | Link to Control Definitions (DB)            |
+|                |             | Limit: No limit (many controls per pack)    |
+| Icon           | Text        | Icon name or emoji                          |
+| Display Order  | Number      | Order in pack list (lower = first)          |
+| Is Public      | Checkbox    | Visible to all users?                       |
+| Is Default     | Checkbox    | Auto-assigned to new users?                 |
+| Status         | Select      | Active, Deprecated, Archived                |
+| Notes          | Text        | Internal notes                              |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Daily Essentials | daily-essentials | Wellness | Beginner | Is Default: Yes
+- Sleep Optimization | sleep-optimization | Sleep | Beginner
+- Endurance Athlete | endurance-athlete | Fitness | Advanced
+- Insomnia Support | insomnia-support | Sleep | Intermediate
+- Trauma-Safe Regulation | trauma-safe | Wellness | Intermediate
+
+
+================================================================================
+DATABASE 3: PROFILE PACK MAP
+================================================================================
+
+Purpose: Links Programme Profiles to their default Control Packs.
+
+Icon: Use the link emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name       | Type        | Options/Notes                            |
+--------------------------------------------------------------------------------
+| Mapping Name      | Title       | e.g., "Athlete -> Endurance Pack"        |
+| Programme Profile | Relation    | Link to Programme Profiles (DB)          |
+|                   |             | Limit: 1                                 |
+| Control Pack      | Relation    | Link to Control Packs (DB)               |
+|                   |             | Limit: 1                                 |
+| Display Order     | Number      | Order of packs for this profile          |
+| Is Required       | Checkbox    | Pack is mandatory for this profile?      |
+| Notes             | Text        | Internal notes                           |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Yoga Practitioner -> Daily Essentials | Required: Yes
+- Athlete -> Endurance Athlete | Required: Yes
+- Athlete -> Nutrition Basics | Required: No
+
+
+================================================================================
+DATABASE 4: DEFAULT WEIGHTS
+================================================================================
+
+Purpose: Baseline importance weights per programme profile.
+
+Icon: Use the balance/scales emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name       | Type        | Options/Notes                            |
+--------------------------------------------------------------------------------
+| Weight Name       | Title       | e.g., "Athlete - Sleep Weight"           |
+| Programme Profile | Relation    | Link to Programme Profiles (DB)          |
+|                   |             | Limit: 1                                 |
+| Attribute         | Relation    | Link to Attribute Taxonomy (DB)          |
+|                   |             | Limit: 1                                 |
+| Weight            | Number      | 0.0 to 1.0 (importance)                  |
+| Weight Label      | Select      | High, Medium, Low, None                  |
+| Domain            | Select      | Recovery, Nutrition, Movement, Sleep,    |
+|                   |             | Stress, Cognitive, Spiritual             |
+| Notes             | Text        | Why this weight?                         |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Athlete - Recovery Weight | Weight: 0.9 | High | Recovery
+- Athlete - Sleep Weight | Weight: 0.8 | High | Sleep
+- Breath Focus - Movement Weight | Weight: 0.3 | Low | Movement
+
+
+================================================================================
+DATABASE 5: COUPLING RULES
+================================================================================
+
+Purpose: THE ADAPTIVE ENGINE - How controls influence each other.
+
+Icon: Use the circular arrows emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name          | Type        | Options/Notes                         |
+--------------------------------------------------------------------------------
+| Rule Name            | Title       | e.g., "Sleep to Recovery"             |
+| From Control         | Relation    | Link to Control Definitions (DB)      |
+|                      |             | Limit: 1                              |
+| From Attribute       | Relation    | Link to Attribute Taxonomy (DB)       |
+|                      |             | Limit: 1 (alternative to From Control)|
+| From Metric          | Text        | Derived metric name (if applicable)   |
+| To Control           | Relation    | Link to Control Definitions (DB)      |
+|                      |             | Limit: 1                              |
+| To Attribute         | Relation    | Link to Attribute Taxonomy (DB)       |
+|                      |             | Limit: 1                              |
+| To Metric            | Text        | Derived metric name (if applicable)   |
+| Function Type        | Select      | Linear, Threshold, Conditional,       |
+|                      |             | Decay, Inverse, Step                  |
+| Direction            | Select      | Positive, Negative, Conditional       |
+| Magnitude            | Number      | Strength of effect (0.0 to 2.0)       |
+| Threshold Value      | Number      | For threshold/conditional types       |
+| Threshold Comparator | Select      | >=, <=, =, Between, Above, Below      |
+| Applies To Profiles  | Relation    | Link to Programme Profiles (DB)       |
+|                      |             | Limit: No limit (empty = all)         |
+| Priority             | Number      | For conflict resolution               |
+| Evidence Confidence  | Select      | Strong, Moderate, Emerging,           |
+|                      |             | Traditional                           |
+| Status               | Select      | Active, Deprecated, Archived          |
+| Notes                | Text        | Explanation of the rule               |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Sleep to Recovery | Linear | Positive | Magnitude: 0.8
+  "More sleep = better recovery"
+  
+- Stress to Sleep Quality | Inverse | Negative | Magnitude: 0.6
+  "Higher stress = worse sleep quality"
+  
+- Caffeine to Sleep Quality | Threshold | Negative | Threshold: 200mg
+  "Caffeine above 200mg reduces sleep quality"
+  
+- Rest Day Walk Success | Conditional | Positive | Magnitude: 1.0
+  "Walking counts as 100% movement success on rest days"
+
+
+================================================================================
+DATABASE 6: DERIVED METRICS
+================================================================================
+
+Purpose: Computed scores from raw check-in values and coupling rules.
+
+Icon: Use the chart emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name      | Type        | Options/Notes                             |
+--------------------------------------------------------------------------------
+| Metric Name      | Title       | e.g., "Sleep Adequacy"                    |
+| Metric Slug      | Text        | URL-safe identifier (e.g., sleep-adequacy)|
+| Description      | Text        | What this metric measures                 |
+| Formula Type     | Select      | Weighted Average, Sum, Min, Max, Custom   |
+| Input Controls   | Relation    | Link to Control Definitions (DB)          |
+|                  |             | Limit: No limit (multiple inputs)         |
+| Output Min       | Number      | Minimum score (e.g., 0)                   |
+| Output Max       | Number      | Maximum score (e.g., 100)                 |
+| Unit             | Text        | e.g., score, percent                      |
+| Threshold Low    | Number      | Below this = poor (e.g., 30)              |
+| Threshold Medium | Number      | Below this = moderate (e.g., 60)          |
+| Threshold High   | Number      | Above this = good (e.g., 80)              |
+| Domain           | Select      | Recovery, Sleep Quality, Nutrition        |
+|                  |             | Quality, Stress Load, Energy, Focus, Mood |
+| Status           | Select      | Active, Deprecated, Archived              |
+| Notes            | Text        | Formula details or notes                  |
+--------------------------------------------------------------------------------
+
+EXAMPLE ENTRIES:
+- Sleep Adequacy | sleep-adequacy | Weighted Average | 0-100 | Sleep Quality
+- Recovery Score | recovery-score | Weighted Average | 0-100 | Recovery
+- Stress Load | stress-load | Weighted Average | 0-100 | Stress Load
+- Energy Level | energy-level | Weighted Average | 0-100 | Energy
+
+
+================================================================================
+DATABASE 7: QUESTIONNAIRES
+================================================================================
+
+Purpose: Questionnaire definitions for assigning programme profiles.
+
+Icon: Use the clipboard emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name         | Type        | Options/Notes                          |
+--------------------------------------------------------------------------------
+| Questionnaire Name  | Title       | e.g., "Initial Profile Assessment"     |
+| Questionnaire Slug  | Text        | URL-safe identifier                    |
+| Description         | Text        | What this questionnaire determines     |
+| Version             | Number      | Version number (e.g., 1)               |
+| Is Active           | Checkbox    | Currently in use?                      |
+| Is Onboarding       | Checkbox    | Used during signup?                    |
+| Scoring Method      | Select      | Weighted, Simple, Branching            |
+| Notes               | Text        | Internal notes                         |
+--------------------------------------------------------------------------------
+
+
+================================================================================
+DATABASE 8: QUESTIONNAIRE QUESTIONS
+================================================================================
+
+Purpose: Individual questions within questionnaires.
+
+Icon: Use the question mark emoji
+
+COLUMNS TO CREATE:
+--------------------------------------------------------------------------------
+| Column Name    | Type        | Options/Notes                               |
+--------------------------------------------------------------------------------
+| Question Text  | Title       | The actual question                         |
+| Questionnaire  | Relation    | Link to Questionnaires (DB)                 |
+|                |             | Limit: 1                                    |
+| Question Type  | Select      | Single Choice, Multi Choice, Scale,         |
+|                |             | Text, Yes/No                                |
+| Options        | Text        | JSON or comma-separated options             |
+| Scale Min      | Number      | For scale type (e.g., 1)                    |
+| Scale Max      | Number      | For scale type (e.g., 5)                    |
+| Weight         | Number      | Importance in scoring (default: 1.0)        |
+| Display Order  | Number      | Order in questionnaire                      |
+| Is Required    | Checkbox    | Must answer?                                |
+| Notes          | Text        | Internal notes                              |
+--------------------------------------------------------------------------------
+
+
+================================================================================
+SETUP ORDER (IMPORTANT!)
+================================================================================
+
+Create databases in this order to set up relations properly:
+
+1. Control Definitions (no relations needed first)
+2. Control Packs (relates to Control Definitions)
+3. Profile Pack Map (relates to Programme Profiles + Control Packs)
+4. Default Weights (relates to Programme Profiles + Attribute Taxonomy)
+5. Coupling Rules (relates to Control Definitions + Attribute Taxonomy)
+6. Derived Metrics (relates to Control Definitions)
+7. Questionnaires (no relations needed)
+8. Questionnaire Questions (relates to Questionnaires)
+
+
+================================================================================
+AFTER CREATING DATABASES
+================================================================================
+
+1. Add your Notion integration to the parent page containing these databases
+   - Click "..." menu on the parent page
+   - Select "Connections" 
+   - Add your CursorBridge integration
+   - Enable "Include sub-pages"
+
+2. Copy the database IDs (from the URL) into config/notion_db_ids.json
+
+3. Run the sync to push data to Supabase:
+   python -m cb.cli export run-profile --profile wellness
+
+
+================================================================================
+QUESTIONS?
+================================================================================
+
+See also:
+- docs/SYSTEM_MANIFEST.md - Complete database registry
+- notion_automation_databases.json - Machine-readable template
+- scripts/create_notion_databases.py - Automated creation script
+
+================================================================================
+
