@@ -15,15 +15,47 @@ CursorBridge APIs are running and ready for integration:
 
 ---
 
-## NEW: LENS SYSTEM (Evidence + Techniques)
+## NEW: LENS SYSTEM (14 Lenses, Infinite Expansion)
 
-The lens system enables multi-paradigm session explanations:
+The lens system enables multi-paradigm session explanations. **Users can eventually create their own lenses.**
 
-| Lens | Description |
-|------|-------------|
-| `western` | Mechanistic/scientific explanations |
-| `tcm` | Traditional Chinese Medicine framing |
-| `hybrid` | Both explanations combined |
+### Available Lenses
+
+| Slug | Name | Icon | Paradigm |
+|------|------|------|----------|
+| `western` | Western Scientific | 🔬 | scientific |
+| `clinical` | Clinical/Medical | 🏥 | scientific |
+| `athletic` | Athletic/Performance | 🏃 | performance |
+| `tcm` | Traditional Chinese Medicine | ☯️ | traditional |
+| `ayurvedic` | Ayurvedic | 🕉️ | traditional |
+| `yogic` | Yogic/Tantric | 🧘 | traditional |
+| `somatic` | Somatic/Body-Based | 🫀 | somatic |
+| `polyvagal` | Polyvagal-Informed | 🌊 | somatic |
+| `spiritual` | Spiritual/Energetic | ✨ | spiritual |
+| `contemplative` | Contemplative/Mindfulness | 🪷 | spiritual |
+| `plain` | Plain Language | 💬 | practical |
+| `motivational` | Motivational/Coaching | 🎯 | practical |
+| `hybrid` | Hybrid/Adaptive | 🔄 | adaptive |
+| `personalized` | Personalized (user-defined) | 👤 | adaptive |
+
+### Lens Registry Endpoints
+
+```bash
+# List all lenses
+GET http://localhost:3001/sandbox/lenses
+
+# Get specific lens
+GET http://localhost:3001/sandbox/lenses/somatic
+
+# Get all lens explanations for a technique
+GET http://localhost:3001/sandbox/techniques/1/lenses
+
+# Update user lens preferences
+POST http://localhost:3001/sandbox/user/lens-preferences
+
+# Update context for AI lens selection
+POST http://localhost:3001/sandbox/user/lens-context
+```
 
 ### Quick Test: Flagship Lens Demo
 
@@ -413,12 +445,44 @@ All endpoints tested and working:
 
 ---
 
+## FUTURE VISION: Adaptive AI Companion
+
+See `ADAPTIVE_AI_VISION.md` for the full roadmap. Key concepts:
+
+### 1. Infinite User-Created Lenses
+Users will create their own explanatory frameworks by blending existing lenses.
+
+### 2. AI-Driven Lens Selection
+The AI selects lenses based on:
+- Current mood/energy (from check-ins)
+- Time of day
+- User history and patterns
+- Explicit preferences
+
+### 3. Conversational Questionnaire
+Not static forms—dynamic dialogue that adapts to user receptivity.
+
+### 4. Permission-Based Escalation
+Trigger system with buddy/family notifications (user-controlled):
+- Low mood for 5 days → notify buddy
+- Crisis language → immediate resources + designated contact
+
+### 5. Eternal Companion
+AI learns patterns over months/years and proactively suggests interventions.
+
+---
+
 ## CONTACT
 
 CursorBridge APIs:
 - Core API: http://localhost:3000
 - Sandbox API: http://localhost:3001
 - GitHub: https://github.com/clanmacarthur/CursorBridge
+
+Key docs:
+- `LENS_SYSTEM_SETUP.md` - How to test lenses
+- `ADAPTIVE_AI_VISION.md` - Full adaptive AI roadmap
+- `lens_registry_schema.sql` - Lens registry SQL
 
 Ready to build!
 

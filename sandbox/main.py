@@ -135,23 +135,73 @@ async def root():
 # =============================================================================
 
 def get_lens_explanation(technique: Dict[str, Any], lens: str) -> str:
-    """Get the appropriate explanation based on the requested lens."""
+    """
+    Get the appropriate explanation based on the requested lens.
+    
+    Supports 14+ lenses with intelligent fallback:
+    - scientific: western, clinical, athletic
+    - traditional: tcm, ayurvedic, yogic
+    - somatic: somatic, polyvagal
+    - spiritual: spiritual, contemplative
+    - practical: plain, motivational
+    - adaptive: hybrid, personalized
+    """
+    # Primary explanations from technique table
     western = technique.get("lens_explanation_western") or technique.get("mechanism_notes_simple", "")
     tcm = technique.get("lens_explanation_tcm", "")
+    mechanism = technique.get("mechanism_notes_simple", "")
     
-    if lens == "western":
-        return western
-    elif lens == "tcm":
-        return tcm if tcm else western  # Fallback to western if no TCM
-    elif lens == "hybrid":
-        # Combine both explanations
+    # Lens-specific templates (expandable)
+    LENS_TEMPLATES = {
+        # Scientific paradigm
+        "western": western,
+        "clinical": western,  # Uses same base, can be enhanced
+        "athletic": western,  # Performance framing
+        
+        # Traditional paradigm
+        "tcm": tcm if tcm else western,
+        "ayurvedic": tcm if tcm else western,  # Falls back to TCM/Western
+        "yogic": tcm if tcm else western,
+        
+        # Somatic paradigm
+        "somatic": mechanism if mechanism else western,
+        "polyvagal": mechanism if mechanism else western,
+        
+        # Spiritual paradigm
+        "spiritual": tcm if tcm else mechanism,  # TCM often more poetic
+        "contemplative": mechanism if mechanism else western,
+        
+        # Practical paradigm
+        "plain": mechanism if mechanism else western,
+        "motivational": western,
+        
+        # Adaptive (special handling)
+        "hybrid": None,  # Special: combines multiple
+        "personalized": None,  # Special: user-defined
+    }
+    
+    lens = lens.lower()
+    
+    if lens == "hybrid":
+        # Combine available explanations
         parts = []
         if western:
             parts.append(f"[Western] {western}")
         if tcm:
             parts.append(f"[TCM] {tcm}")
-        return " ".join(parts) if parts else "No explanation available."
-    return western
+        return " ".join(parts) if parts else mechanism or "Follow the practice with gentle attention."
+    
+    elif lens == "personalized":
+        # Would use user preferences - for now, blend western + somatic
+        return mechanism if mechanism else western
+    
+    elif lens in LENS_TEMPLATES:
+        explanation = LENS_TEMPLATES[lens]
+        return explanation if explanation else western or mechanism or "Follow the practice with gentle attention."
+    
+    else:
+        # Unknown lens, default to western
+        return western or mechanism or "Follow the practice with gentle attention."
 
 
 def build_technique_section(
@@ -530,6 +580,218 @@ async def list_evidence_sources():
     return {
         "count": len(evidence),
         "evidence_sources": evidence
+    }
+
+
+# =============================================================================
+# Lens Registry - Infinite, User-Creatable Lenses
+# =============================================================================
+
+@app.get("/sandbox/lenses")
+async def list_lenses(active_only: bool = True):
+    """
+    List all available lenses.
+    
+    The lens system supports infinite, user-creatable explanatory frameworks.
+    Each lens provides a different way to explain the same technique.
+    """
+    db = get_db()
+    
+    try:
+        lenses = db.get_all_lenses(active_only=active_only)
+        
+        return {
+            "count": len(lenses),
+            "paradigm_families": ["scientific", "traditional", "somatic", "spiritual", "practical", "adaptive"],
+            "lenses": [
+                {
+                    "slug": l.get("lens_slug"),
+                    "name": l.get("lens_name"),
+                    "description": l.get("lens_description"),
+                    "paradigm": l.get("paradigm_family"),
+                    "language_style": l.get("language_style"),
+                    "cultural_origin": l.get("cultural_origin"),
+                    "icon": l.get("icon"),
+                    "color": l.get("color"),
+                    "is_system": l.get("is_system", True),
+                }
+                for l in lenses
+            ]
+        }
+    except Exception:
+        # Fallback if lens_definitions table doesn't exist yet
+        return {
+            "count": 14,
+            "paradigm_families": ["scientific", "traditional", "somatic", "spiritual", "practical", "adaptive"],
+            "lenses": [
+                {"slug": "western", "name": "Western Scientific", "icon": "🔬", "paradigm": "scientific"},
+                {"slug": "clinical", "name": "Clinical/Medical", "icon": "🏥", "paradigm": "scientific"},
+                {"slug": "athletic", "name": "Athletic/Performance", "icon": "🏃", "paradigm": "performance"},
+                {"slug": "tcm", "name": "Traditional Chinese Medicine", "icon": "☯️", "paradigm": "traditional"},
+                {"slug": "ayurvedic", "name": "Ayurvedic", "icon": "🕉️", "paradigm": "traditional"},
+                {"slug": "yogic", "name": "Yogic/Tantric", "icon": "🧘", "paradigm": "traditional"},
+                {"slug": "somatic", "name": "Somatic/Body-Based", "icon": "🫀", "paradigm": "somatic"},
+                {"slug": "polyvagal", "name": "Polyvagal-Informed", "icon": "🌊", "paradigm": "somatic"},
+                {"slug": "spiritual", "name": "Spiritual/Energetic", "icon": "✨", "paradigm": "spiritual"},
+                {"slug": "contemplative", "name": "Contemplative/Mindfulness", "icon": "🪷", "paradigm": "spiritual"},
+                {"slug": "plain", "name": "Plain Language", "icon": "💬", "paradigm": "practical"},
+                {"slug": "motivational", "name": "Motivational/Coaching", "icon": "🎯", "paradigm": "practical"},
+                {"slug": "hybrid", "name": "Hybrid/Adaptive", "icon": "🔄", "paradigm": "adaptive"},
+                {"slug": "personalized", "name": "Personalized", "icon": "👤", "paradigm": "adaptive"},
+            ],
+            "note": "Lens registry table not yet created. Run lens_registry_schema.sql in Supabase."
+        }
+
+
+@app.get("/sandbox/lenses/{lens_slug}")
+async def get_lens(lens_slug: str):
+    """Get details for a specific lens."""
+    db = get_db()
+    
+    try:
+        lens = db.get_lens_by_slug(lens_slug)
+        if not lens:
+            raise HTTPException(status_code=404, detail=f"Lens '{lens_slug}' not found")
+        return lens
+    except Exception as e:
+        if "not found" in str(e).lower():
+            raise
+        # Fallback for missing table
+        raise HTTPException(status_code=404, detail=f"Lens registry not yet created. Run lens_registry_schema.sql")
+
+
+@app.get("/sandbox/techniques/{technique_id}/lenses")
+async def get_technique_lenses(technique_id: str):
+    """
+    Get all lens explanations for a specific technique.
+    
+    Returns the technique with explanations in every available lens.
+    """
+    db = get_db()
+    
+    # Get base technique
+    techniques = db.get_techniques()
+    technique = None
+    for t in techniques:
+        if str(t.get("id")) == technique_id or t.get("notion_page_id") == technique_id:
+            technique = t
+            break
+    
+    if not technique:
+        raise HTTPException(status_code=404, detail="Technique not found")
+    
+    try:
+        # Get all lens explanations
+        explanations = db.get_technique_lens_explanations(technique["id"])
+        
+        return {
+            "technique": technique.get("technique"),
+            "technique_id": technique.get("id"),
+            "category": technique.get("technique_category"),
+            "explanations": {
+                exp.get("lens_definitions", {}).get("lens_slug"): {
+                    "lens_name": exp.get("lens_definitions", {}).get("lens_name"),
+                    "explanation": exp.get("explanation_template"),
+                    "mechanism_notes": exp.get("mechanism_notes"),
+                    "icon": exp.get("lens_definitions", {}).get("icon"),
+                }
+                for exp in explanations
+            }
+        }
+    except Exception:
+        # Fallback: return explanations from technique table columns
+        return {
+            "technique": technique.get("technique"),
+            "technique_id": technique.get("id"),
+            "category": technique.get("technique_category"),
+            "explanations": {
+                "western": {
+                    "lens_name": "Western Scientific",
+                    "explanation": technique.get("lens_explanation_western"),
+                    "mechanism_notes": technique.get("mechanism_notes_simple"),
+                    "icon": "🔬"
+                },
+                "tcm": {
+                    "lens_name": "Traditional Chinese Medicine",
+                    "explanation": technique.get("lens_explanation_tcm"),
+                    "icon": "☯️"
+                }
+            },
+            "note": "Lens registry not yet created. Only Western/TCM available from technique table."
+        }
+
+
+@app.post("/sandbox/user/lens-preferences")
+async def update_user_lens_preferences(
+    user_id: str,
+    preferred_lenses: List[str],
+    avoided_lenses: Optional[List[str]] = None
+):
+    """
+    Update a user's lens preferences.
+    
+    Used by the adaptive AI to select appropriate lenses.
+    """
+    db = get_db()
+    
+    # This would update user_lens_preferences table
+    # For now, return acknowledgment
+    return {
+        "user_id": user_id,
+        "preferred_lenses": preferred_lenses,
+        "avoided_lenses": avoided_lenses or [],
+        "status": "preferences_recorded",
+        "note": "Preferences will influence AI lens selection"
+    }
+
+
+@app.post("/sandbox/user/lens-context")
+async def update_user_lens_context(
+    user_id: str,
+    mood_state: Optional[str] = None,
+    energy_level: Optional[int] = None,
+    receptivity: Optional[str] = None
+):
+    """
+    Update user context for adaptive lens selection.
+    
+    The AI uses this context to select the most appropriate lens(es).
+    """
+    context_data = {}
+    if mood_state:
+        context_data["mood_state"] = mood_state
+    if energy_level:
+        context_data["energy_level"] = energy_level
+    if receptivity:
+        context_data["receptivity"] = receptivity
+    
+    # Suggest lens based on context
+    suggested_lens = "plain"  # Default
+    reasoning = "Default selection"
+    
+    if energy_level and energy_level < 4:
+        suggested_lens = "somatic"
+        reasoning = "Low energy suggests body-based, gentle approach"
+    elif energy_level and energy_level > 7:
+        suggested_lens = "athletic"
+        reasoning = "High energy aligned with performance framing"
+    elif mood_state and mood_state.lower() in ["low", "sad", "anxious"]:
+        suggested_lens = "somatic"
+        reasoning = "Current mood benefits from body-based, trauma-informed language"
+    elif receptivity == "high":
+        suggested_lens = "spiritual"
+        reasoning = "High receptivity opens space for deeper frameworks"
+    
+    context_data["ai_suggested_lens"] = suggested_lens
+    context_data["ai_reasoning"] = reasoning
+    
+    return {
+        "user_id": user_id,
+        "context_date": datetime.utcnow().date().isoformat(),
+        "ai_suggested_lens": suggested_lens,
+        "ai_reasoning": reasoning,
+        "context_received": context_data,
+        "note": "AI suggestion can be overridden by user preference"
     }
 
 

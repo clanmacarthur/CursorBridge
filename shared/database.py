@@ -127,6 +127,46 @@ class DatabaseService:
         """Get techniques available in a specific lens (Western, TCM, Hybrid)."""
         response = self.client.table("techniques").select("*").ilike("lens_availability", f"%{lens}%").execute()
         return response.data
+    
+    # =========================================================================
+    # Lens Registry
+    # =========================================================================
+    
+    def get_all_lenses(self, active_only: bool = True) -> List[Dict[str, Any]]:
+        """Get all lens definitions."""
+        query = self.client.table("lens_definitions").select("*").order("sort_order")
+        if active_only:
+            query = query.eq("is_active", True)
+        response = query.execute()
+        return response.data
+    
+    def get_lens_by_slug(self, slug: str) -> Optional[Dict[str, Any]]:
+        """Get a lens definition by slug."""
+        response = self.client.table("lens_definitions").select("*").eq("lens_slug", slug).execute()
+        return response.data[0] if response.data else None
+    
+    def get_technique_lens_explanations(self, technique_id: int) -> List[Dict[str, Any]]:
+        """Get all lens explanations for a technique."""
+        response = self.client.table("technique_lens_explanations").select("*, lens_definitions(*)").eq("technique_id", technique_id).execute()
+        return response.data
+    
+    def get_user_lens_preferences(self, user_id: str) -> List[Dict[str, Any]]:
+        """Get a user's lens preferences."""
+        response = self.client.table("user_lens_preferences").select("*, lens_definitions(*)").eq("user_id", user_id).order("preference_level", desc=True).execute()
+        return response.data
+    
+    def update_user_lens_context(self, user_id: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Update or insert user lens context for today."""
+        from datetime import date
+        context_data["user_id"] = user_id
+        context_data["context_date"] = date.today().isoformat()
+        
+        # Upsert (insert or update)
+        response = self.client.table("user_lens_context").upsert(
+            context_data, 
+            on_conflict="user_id,context_date"
+        ).execute()
+        return response.data[0] if response.data else {}
 
 
 # Singleton instance
