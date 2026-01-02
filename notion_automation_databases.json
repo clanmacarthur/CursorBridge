@@ -1,0 +1,212 @@
+{
+  "description": "Notion database templates for CursorBridge automation backbone",
+  "version": "1.0",
+  "created": "2025-01-02",
+  "databases": [
+    {
+      "id": "control_definitions",
+      "title": "Control Definitions (DB)",
+      "icon": "🎛️",
+      "description": "Canonical list of every knob/tick the UI can render",
+      "properties": {
+        "Control Name": {"type": "title"},
+        "Control Type": {"type": "select", "options": ["slider", "checkbox", "knob", "hybrid", "number", "text", "time"]},
+        "Primary Domain": {"type": "relation", "database": "Attribute Taxonomy (DB)", "limit": "L1"},
+        "Secondary Domains": {"type": "relation", "database": "Attribute Taxonomy (DB)", "limit": "NL"},
+        "Range Min": {"type": "number"},
+        "Range Max": {"type": "number"},
+        "Range Step": {"type": "number"},
+        "Default Value": {"type": "number"},
+        "Unit": {"type": "text"},
+        "Label": {"type": "text"},
+        "Description": {"type": "text"},
+        "Icon": {"type": "text"},
+        "Is Required": {"type": "checkbox"},
+        "Is Default": {"type": "checkbox"},
+        "Completion Threshold": {"type": "number"},
+        "Status": {"type": "select", "options": ["Active", "Deprecated", "Archived"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "control_packs",
+      "title": "Control Packs (DB)",
+      "icon": "📦",
+      "description": "Curated bundles of controls for drag/drop dashboard building",
+      "properties": {
+        "Pack Name": {"type": "title"},
+        "Pack Slug": {"type": "text"},
+        "Description": {"type": "text"},
+        "Category": {"type": "select", "options": ["Wellness", "Fitness", "Nutrition", "Sleep", "Stress", "Custom"]},
+        "Difficulty": {"type": "select", "options": ["Beginner", "Intermediate", "Advanced"]},
+        "Controls": {"type": "relation", "database": "Control Definitions (DB)", "limit": "NL"},
+        "Icon": {"type": "text"},
+        "Display Order": {"type": "number"},
+        "Is Public": {"type": "checkbox"},
+        "Is Default": {"type": "checkbox"},
+        "Status": {"type": "select", "options": ["Active", "Deprecated", "Archived"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "profile_pack_map",
+      "title": "Profile Pack Map (DB)",
+      "icon": "🔗",
+      "description": "Maps programme profiles to their default control packs",
+      "properties": {
+        "Mapping Name": {"type": "title"},
+        "Programme Profile": {"type": "relation", "database": "Programme Profiles (DB)", "limit": "L1"},
+        "Control Pack": {"type": "relation", "database": "Control Packs (DB)", "limit": "L1"},
+        "Display Order": {"type": "number"},
+        "Is Required": {"type": "checkbox"},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "default_weights",
+      "title": "Default Weights (DB)",
+      "icon": "⚖️",
+      "description": "Baseline weighting distributions per programme profile",
+      "properties": {
+        "Weight Name": {"type": "title"},
+        "Programme Profile": {"type": "relation", "database": "Programme Profiles (DB)", "limit": "L1"},
+        "Attribute": {"type": "relation", "database": "Attribute Taxonomy (DB)", "limit": "L1"},
+        "Weight": {"type": "number"},
+        "Weight Label": {"type": "select", "options": ["High", "Medium", "Low", "None"]},
+        "Domain": {"type": "select", "options": ["Recovery", "Nutrition", "Movement", "Sleep", "Stress", "Cognitive", "Spiritual"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "coupling_rules",
+      "title": "Coupling Rules (DB)",
+      "icon": "🔄",
+      "description": "Defines how controls/metrics influence each other - the adaptive engine core",
+      "properties": {
+        "Rule Name": {"type": "title"},
+        "From Control": {"type": "relation", "database": "Control Definitions (DB)", "limit": "L1"},
+        "From Attribute": {"type": "relation", "database": "Attribute Taxonomy (DB)", "limit": "L1"},
+        "From Metric": {"type": "text"},
+        "To Control": {"type": "relation", "database": "Control Definitions (DB)", "limit": "L1"},
+        "To Attribute": {"type": "relation", "database": "Attribute Taxonomy (DB)", "limit": "L1"},
+        "To Metric": {"type": "text"},
+        "Function Type": {"type": "select", "options": ["Linear", "Threshold", "Conditional", "Decay", "Inverse", "Step"]},
+        "Direction": {"type": "select", "options": ["Positive", "Negative", "Conditional"]},
+        "Magnitude": {"type": "number"},
+        "Threshold Value": {"type": "number"},
+        "Threshold Comparator": {"type": "select", "options": [">=", "<=", "=", "Between", "Above", "Below"]},
+        "Applies To Profiles": {"type": "relation", "database": "Programme Profiles (DB)", "limit": "NL"},
+        "Priority": {"type": "number"},
+        "Evidence Confidence": {"type": "select", "options": ["Strong", "Moderate", "Emerging", "Traditional"]},
+        "Status": {"type": "select", "options": ["Active", "Deprecated", "Archived"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "derived_metrics",
+      "title": "Derived Metrics (DB)",
+      "icon": "📊",
+      "description": "Computed metrics from raw check-ins and coupling rules",
+      "properties": {
+        "Metric Name": {"type": "title"},
+        "Metric Slug": {"type": "text"},
+        "Description": {"type": "text"},
+        "Formula Type": {"type": "select", "options": ["Weighted Average", "Sum", "Min", "Max", "Custom"]},
+        "Input Controls": {"type": "relation", "database": "Control Definitions (DB)", "limit": "NL"},
+        "Output Min": {"type": "number"},
+        "Output Max": {"type": "number"},
+        "Unit": {"type": "text"},
+        "Threshold Low": {"type": "number"},
+        "Threshold Medium": {"type": "number"},
+        "Threshold High": {"type": "number"},
+        "Domain": {"type": "select", "options": ["Recovery", "Sleep Quality", "Nutrition Quality", "Stress Load", "Energy", "Focus", "Mood"]},
+        "Status": {"type": "select", "options": ["Active", "Deprecated", "Archived"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "questionnaires",
+      "title": "Questionnaires (DB)",
+      "icon": "📝",
+      "description": "Questionnaire definitions for profile assignment",
+      "properties": {
+        "Questionnaire Name": {"type": "title"},
+        "Questionnaire Slug": {"type": "text"},
+        "Description": {"type": "text"},
+        "Version": {"type": "number"},
+        "Is Active": {"type": "checkbox"},
+        "Is Onboarding": {"type": "checkbox"},
+        "Scoring Method": {"type": "select", "options": ["Weighted", "Simple", "Branching"]},
+        "Notes": {"type": "text"}
+      }
+    },
+    {
+      "id": "questionnaire_questions",
+      "title": "Questionnaire Questions (DB)",
+      "icon": "❓",
+      "description": "Individual questions within questionnaires",
+      "properties": {
+        "Question Text": {"type": "title"},
+        "Questionnaire": {"type": "relation", "database": "Questionnaires (DB)", "limit": "L1"},
+        "Question Type": {"type": "select", "options": ["Single Choice", "Multi Choice", "Scale", "Text", "Yes/No"]},
+        "Options": {"type": "text"},
+        "Scale Min": {"type": "number"},
+        "Scale Max": {"type": "number"},
+        "Weight": {"type": "number"},
+        "Display Order": {"type": "number"},
+        "Is Required": {"type": "checkbox"},
+        "Notes": {"type": "text"}
+      }
+    }
+  ],
+  "seed_data": {
+    "control_definitions": [
+      {"control_name": "Sleep Duration", "control_type": "slider", "range_min": 0, "range_max": 12, "unit": "hours", "is_default": true},
+      {"control_name": "Sleep Quality", "control_type": "slider", "range_min": 1, "range_max": 10, "unit": "score", "is_default": true},
+      {"control_name": "Morning Energy", "control_type": "slider", "range_min": 1, "range_max": 10, "unit": "score", "is_default": true},
+      {"control_name": "Stress Level", "control_type": "slider", "range_min": 1, "range_max": 10, "unit": "score", "is_default": true},
+      {"control_name": "Mood", "control_type": "slider", "range_min": 1, "range_max": 10, "unit": "score", "is_default": true},
+      {"control_name": "Hydration", "control_type": "checkbox", "completion_threshold": 1, "is_default": true},
+      {"control_name": "Morning Light", "control_type": "checkbox", "completion_threshold": 1, "is_default": true},
+      {"control_name": "Movement", "control_type": "checkbox", "completion_threshold": 1, "is_default": true},
+      {"control_name": "Meditation", "control_type": "checkbox", "completion_threshold": 1, "is_default": false},
+      {"control_name": "Caffeine Intake", "control_type": "number", "range_min": 0, "range_max": 500, "unit": "mg", "is_default": false},
+      {"control_name": "Steps", "control_type": "number", "range_min": 0, "range_max": 50000, "unit": "steps", "is_default": false},
+      {"control_name": "Exercise Duration", "control_type": "slider", "range_min": 0, "range_max": 180, "unit": "minutes", "is_default": false},
+      {"control_name": "Water Intake", "control_type": "slider", "range_min": 0, "range_max": 4000, "unit": "ml", "is_default": false},
+      {"control_name": "Protein Intake", "control_type": "slider", "range_min": 0, "range_max": 200, "unit": "grams", "is_default": false},
+      {"control_name": "Pain Level", "control_type": "slider", "range_min": 0, "range_max": 10, "unit": "score", "is_default": false}
+    ],
+    "control_packs": [
+      {"pack_name": "Daily Essentials", "pack_slug": "daily-essentials", "category": "Wellness", "difficulty": "Beginner", "is_default": true},
+      {"pack_name": "Sleep Optimization", "pack_slug": "sleep-optimization", "category": "Sleep", "difficulty": "Beginner", "is_default": false},
+      {"pack_name": "Endurance Athlete", "pack_slug": "endurance-athlete", "category": "Fitness", "difficulty": "Advanced", "is_default": false},
+      {"pack_name": "Stress Management", "pack_slug": "stress-management", "category": "Stress", "difficulty": "Beginner", "is_default": false},
+      {"pack_name": "Nutrition Basics", "pack_slug": "nutrition-basics", "category": "Nutrition", "difficulty": "Beginner", "is_default": false},
+      {"pack_name": "Insomnia Support", "pack_slug": "insomnia-support", "category": "Sleep", "difficulty": "Intermediate", "is_default": false},
+      {"pack_name": "Trauma-Safe Regulation", "pack_slug": "trauma-safe", "category": "Wellness", "difficulty": "Intermediate", "is_default": false}
+    ],
+    "coupling_rules": [
+      {"rule_name": "Sleep → Recovery", "from_metric": "sleep_duration", "to_metric": "recovery_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.8},
+      {"rule_name": "Sleep Quality → Cognitive", "from_metric": "sleep_quality", "to_metric": "cognitive_load_tolerance", "function_type": "Linear", "direction": "Positive", "magnitude": 0.7},
+      {"rule_name": "Training Load → Sleep Need", "from_metric": "exercise_duration", "to_metric": "sleep_need", "function_type": "Linear", "direction": "Positive", "magnitude": 0.5},
+      {"rule_name": "Stress → Sleep Quality", "from_metric": "stress_level", "to_metric": "sleep_quality", "function_type": "Inverse", "direction": "Negative", "magnitude": 0.6},
+      {"rule_name": "Caffeine → Sleep Quality", "from_metric": "caffeine_intake", "to_metric": "sleep_quality", "function_type": "Threshold", "direction": "Negative", "magnitude": 0.4, "threshold_value": 200},
+      {"rule_name": "Hydration → Energy", "from_metric": "water_intake", "to_metric": "energy_level", "function_type": "Linear", "direction": "Positive", "magnitude": 0.3},
+      {"rule_name": "Movement → Mood", "from_metric": "steps", "to_metric": "mood_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.4},
+      {"rule_name": "Rest Day Walk = Success", "from_metric": "steps", "to_metric": "movement_goal", "function_type": "Conditional", "direction": "Positive", "magnitude": 1.0}
+    ],
+    "derived_metrics": [
+      {"metric_name": "Sleep Adequacy", "metric_slug": "sleep-adequacy", "formula_type": "Weighted Average", "domain": "Sleep Quality"},
+      {"metric_name": "Recovery Score", "metric_slug": "recovery-score", "formula_type": "Weighted Average", "domain": "Recovery"},
+      {"metric_name": "Stress Load", "metric_slug": "stress-load", "formula_type": "Weighted Average", "domain": "Stress Load"},
+      {"metric_name": "Energy Level", "metric_slug": "energy-level", "formula_type": "Weighted Average", "domain": "Energy"},
+      {"metric_name": "Nutrition Quality", "metric_slug": "nutrition-quality", "formula_type": "Weighted Average", "domain": "Nutrition Quality"},
+      {"metric_name": "Movement Score", "metric_slug": "movement-score", "formula_type": "Sum", "domain": "Recovery"}
+    ],
+    "questionnaires": [
+      {"questionnaire_name": "Initial Profile Assessment", "questionnaire_slug": "initial-assessment", "is_onboarding": true, "scoring_method": "Weighted"}
+    ]
+  }
+}
+

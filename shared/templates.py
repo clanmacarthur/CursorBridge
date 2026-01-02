@@ -356,3 +356,5 @@ def get_templates_by_category(category: str) -> List[Dict[str, Any]]:
     """Get templates filtered by category."""
     return [t for t in DASHBOARD_TEMPLATES if t["category"] == category]
 
+
+

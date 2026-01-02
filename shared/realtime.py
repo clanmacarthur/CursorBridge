@@ -112,3 +112,5 @@ def publish_sync_complete(tables_synced: list, total_rows: int) -> bool:
     )
 
 
+
+
