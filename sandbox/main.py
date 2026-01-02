@@ -59,6 +59,11 @@ class GenerateSessionRequest(BaseModel):
     programme_profile_id: str  # Notion page ID or internal ID
     session_template_id: str
     duration_min: int = 20
+    # LENS SYSTEM - New parameters for multi-paradigm explanations
+    lens: str = "western"  # "western" | "tcm" | "hybrid"
+    explanation_level: str = "plain"  # "plain" | "clinical"
+    # Optional: specify techniques directly
+    technique_ids: Optional[List[str]] = None
 
 
 class SessionSection(BaseModel):
@@ -69,6 +74,12 @@ class SessionSection(BaseModel):
     instructions: str
     audio_url: Optional[str] = None
     cues: Optional[List[str]] = None  # Timed cues for the player
+    # LENS SYSTEM - Explanation templates by paradigm
+    lens_explanation: Optional[str] = None  # The active lens explanation
+    lens_explanation_western: Optional[str] = None
+    lens_explanation_tcm: Optional[str] = None
+    mechanism_notes: Optional[str] = None
+    technique_id: Optional[str] = None  # Reference to the technique
 
 
 class SessionOutput(BaseModel):
@@ -79,6 +90,9 @@ class SessionOutput(BaseModel):
     persona_style: Optional[str] = None
     sections: List[SessionSection]
     safety_warnings: List[str]
+    # LENS SYSTEM - Active lens for this session
+    lens: str = "western"  # "western" | "tcm" | "hybrid"
+    explanation_level: str = "plain"  # "plain" | "clinical"
     # Legacy fields for backwards compatibility
     user_id: str
     template_name: str
@@ -120,17 +134,85 @@ async def root():
 # Session Generation
 # =============================================================================
 
+def get_lens_explanation(technique: Dict[str, Any], lens: str) -> str:
+    """Get the appropriate explanation based on the requested lens."""
+    western = technique.get("lens_explanation_western") or technique.get("mechanism_notes_simple", "")
+    tcm = technique.get("lens_explanation_tcm", "")
+    
+    if lens == "western":
+        return western
+    elif lens == "tcm":
+        return tcm if tcm else western  # Fallback to western if no TCM
+    elif lens == "hybrid":
+        # Combine both explanations
+        parts = []
+        if western:
+            parts.append(f"[Western] {western}")
+        if tcm:
+            parts.append(f"[TCM] {tcm}")
+        return " ".join(parts) if parts else "No explanation available."
+    return western
+
+
+def build_technique_section(
+    technique: Dict[str, Any], 
+    duration: float, 
+    lens: str,
+    section_type: str = None
+) -> SessionSection:
+    """Build a session section from a technique with lens-specific explanation."""
+    # Determine section type from technique category
+    category = technique.get("technique_category", "").lower()
+    if section_type is None:
+        if "breath" in category:
+            section_type = "breathwork"
+        elif "movement" in category or "qigong" in category:
+            section_type = "movement"
+        elif "meditation" in category or "nsdr" in category:
+            section_type = "meditation"
+        elif "tapping" in category or "somatic" in category:
+            section_type = "somatic"
+        else:
+            section_type = "meditation"
+    
+    # Get lens-specific explanation
+    active_explanation = get_lens_explanation(technique, lens)
+    
+    return SessionSection(
+        type=section_type,
+        name=technique.get("technique", "Unknown Technique"),
+        duration_minutes=duration,
+        instructions=active_explanation,
+        cues=[
+            f"0:00 - Begin {technique.get('technique', 'practice')}",
+            f"{int(duration)//2}:00 - Find your rhythm",
+            f"{int(duration)-1}:00 - Prepare to transition",
+        ],
+        # Lens system fields
+        lens_explanation=active_explanation,
+        lens_explanation_western=technique.get("lens_explanation_western"),
+        lens_explanation_tcm=technique.get("lens_explanation_tcm"),
+        mechanism_notes=technique.get("mechanism_notes_simple"),
+        technique_id=technique.get("notion_page_id") or str(technique.get("id", "")),
+    )
+
+
 @app.post("/sandbox/generate-session", response_model=SessionOutput)
 async def generate_session(request: GenerateSessionRequest):
     """
-    Generate a session from a template.
+    Generate a session from a template with LENS-SPECIFIC explanations.
     
     This is the core "engine" that:
     1. Loads Session Template with all relations
-    2. Expands intents via Attribute Taxonomy
-    3. Applies Safety Rules (hard stops + warnings)
-    4. Assembles the script using chosen Persona lens
-    5. Emits structured output
+    2. Loads Techniques from the new techniques table
+    3. Applies the requested LENS (western/tcm/hybrid) to explanations
+    4. Applies Safety Rules (hard stops + warnings)
+    5. Emits structured output with lens-specific content
+    
+    LENS SYSTEM:
+    - lens="western": Uses Lens Explanation Template (Western)
+    - lens="tcm": Uses Lens Explanation Template (TCM)
+    - lens="hybrid": Combines both explanations
     """
     db = get_db()
     
@@ -153,97 +235,112 @@ async def generate_session(request: GenerateSessionRequest):
             profile = p
             break
     
-    # 3. Load related content
-    breath_library = db.get_breath_library()
-    movements = db.get_movements()
-    safety_rules = db.get_safety_rules()
-    personas = db.get_archetypal_personas()
+    # 3. Load techniques from the new techniques table
+    techniques = db.get_techniques()
     
-    # 4. Apply safety rules
+    # 4. Load safety rules
+    safety_rules = db.get_safety_rules()
+    
+    # 5. Load personas for style
+    personas = db.get_archetypal_personas()
+    persona_style = personas[0].get("persona") if personas else None
+    
+    # 6. Apply safety rules - collect warnings
     safety_warnings = []
     for rule in safety_rules:
-        # Basic safety check - in production, this would be more sophisticated
         severity = rule.get("severity", "")
         if severity and severity.lower() in ["high", "warning"]:
             safety_warnings.append(f"{rule.get('rule_name', 'Unknown')}: {rule.get('description', '')}")
     
-    # 5. Select persona style
-    persona_style = None
-    if personas:
-        persona_style = personas[0].get("persona")
-    
-    # 6. Build session sections (new format for player UI)
+    # 7. Build session sections using LENS SYSTEM
     sections: List[SessionSection] = []
     remaining_time = request.duration_min
     
-    # Opening breath section (15% of time, min 2 min)
-    opening_duration = max(2, int(request.duration_min * 0.15))
-    remaining_time -= opening_duration
+    # Normalize lens parameter
+    lens = request.lens.lower() if request.lens else "western"
+    if lens not in ["western", "tcm", "hybrid"]:
+        lens = "western"
     
-    opening_breath = breath_library[0] if breath_library else None
-    sections.append(SessionSection(
-        type="breathwork",
-        name=opening_breath.get("protocol_name", "Centering Breath") if opening_breath else "Centering Breath",
-        duration_minutes=opening_duration,
-        instructions=f"Begin with {opening_breath.get('protocol_name', 'deep breathing')}. "
-                     f"Find a comfortable position and settle into your breath." if opening_breath 
-                     else "Take slow, deep breaths to center yourself.",
-        cues=[
-            f"0:00 - Begin {opening_breath.get('protocol_name', 'breathing') if opening_breath else 'breathing'}",
-            f"0:30 - Deepen your breath",
-            f"{opening_duration-1}:00 - Prepare to transition",
-        ]
-    ))
+    # Check for flagship demo: "Hybrid Lens Demo" template
+    is_hybrid_demo = "hybrid" in template.get("column_name", "").lower() or "demo" in template.get("column_name", "").lower()
     
-    # Movement section (50% of time)
-    movement_duration = max(5, int(request.duration_min * 0.5))
-    remaining_time -= movement_duration
+    if is_hybrid_demo and techniques:
+        # FLAGSHIP DEMO: Movement (TCM Qigong) -> NSDR
+        # Find the specific techniques
+        qigong = next((t for t in techniques if "qigong" in t.get("technique", "").lower()), None)
+        nsdr = next((t for t in techniques if "nsdr" in t.get("technique", "").lower()), None)
+        
+        if qigong:
+            movement_duration = request.duration_min // 2
+            sections.append(build_technique_section(qigong, movement_duration, lens, "movement"))
+            remaining_time -= movement_duration
+        
+        if nsdr:
+            nsdr_duration = remaining_time
+            sections.append(build_technique_section(nsdr, nsdr_duration, lens, "meditation"))
     
-    if movements:
-        movement = movements[0]
-        sections.append(SessionSection(
-            type="movement",
-            name=movement.get("movement___practice", "Gentle Movement"),
-            duration_minutes=movement_duration,
-            instructions=f"Practice {movement.get('movement___practice', 'gentle movement')}. "
-                        f"{movement.get('notes', 'Move mindfully and with awareness.')}",
-            cues=[
-                f"0:00 - Begin {movement.get('movement___practice', 'movement')}",
-                f"{movement_duration//2}:00 - Find your rhythm",
-                f"{movement_duration-2}:00 - Begin to slow down",
-            ]
-        ))
+    elif techniques:
+        # Standard session: use available techniques
+        # Opening technique (30% of time)
+        opening_duration = max(3, int(request.duration_min * 0.3))
+        opening_technique = techniques[0]
+        sections.append(build_technique_section(opening_technique, opening_duration, lens))
+        remaining_time -= opening_duration
+        
+        # Main technique (50% of time)
+        if len(techniques) > 1:
+            main_duration = max(5, int(request.duration_min * 0.5))
+            main_technique = techniques[1]
+            sections.append(build_technique_section(main_technique, main_duration, lens))
+            remaining_time -= main_duration
+        
+        # Closing (remaining time)
+        if remaining_time > 2:
+            closing_technique = techniques[0]  # Use first technique for closing
+            sections.append(SessionSection(
+                type="transition",
+                name="Integration & Close",
+                duration_minutes=remaining_time,
+                instructions="Return to your natural rhythm. Allow the practice to integrate. When ready, gently return to the room.",
+                cues=[
+                    "0:00 - Begin closing",
+                    f"{remaining_time-1}:00 - Session complete",
+                ],
+                lens_explanation="Take a moment to notice any shifts in your body, breath, or mind.",
+            ))
+    
     else:
-        sections.append(SessionSection(
-            type="meditation",
-            name="Mindful Awareness",
-            duration_minutes=movement_duration,
-            instructions="Rest in open awareness. Notice sensations, thoughts, and feelings without judgment.",
-            cues=[
-                "0:00 - Settle into stillness",
-                f"{movement_duration//2}:00 - Deepen your awareness",
-                f"{movement_duration-1}:00 - Begin to return",
-            ]
-        ))
+        # Fallback: no techniques available, use legacy breath/movement
+        breath_library = db.get_breath_library()
+        movements = db.get_movements()
+        
+        if breath_library:
+            opening_duration = max(2, int(request.duration_min * 0.15))
+            opening_breath = breath_library[0]
+            sections.append(SessionSection(
+                type="breathwork",
+                name=opening_breath.get("protocol_name", "Centering Breath"),
+                duration_minutes=opening_duration,
+                instructions=f"Begin with {opening_breath.get('protocol_name', 'deep breathing')}.",
+                cues=[f"0:00 - Begin breathing"],
+            ))
+            remaining_time -= opening_duration
+        
+        if movements:
+            movement_duration = max(5, remaining_time - 2)
+            movement = movements[0]
+            sections.append(SessionSection(
+                type="movement",
+                name=movement.get("movement___practice", "Gentle Movement"),
+                duration_minutes=movement_duration,
+                instructions=f"Practice {movement.get('movement___practice', 'gentle movement')}.",
+                cues=[f"0:00 - Begin movement"],
+            ))
     
-    # Closing section (remaining time)
-    closing_duration = max(2, remaining_time)
-    closing_breath = breath_library[1] if len(breath_library) > 1 else breath_library[0] if breath_library else None
+    # 8. Build output with lens information
+    breath_library = db.get_breath_library()
+    movements = db.get_movements()
     
-    sections.append(SessionSection(
-        type="breathwork",
-        name=closing_breath.get("protocol_name", "Integration Breath") if closing_breath else "Integration Breath",
-        duration_minutes=closing_duration,
-        instructions="Return to your natural breath. Allow the practice to integrate. "
-                    "When ready, gently open your eyes.",
-        cues=[
-            "0:00 - Return to natural breathing",
-            f"{closing_duration-1}:00 - Begin to return to the room",
-            f"{closing_duration}:00 - Session complete",
-        ]
-    ))
-    
-    # 7. Build output (new format)
     return SessionOutput(
         id=str(uuid4()),
         name=template.get("column_name", "Wellness Session"),
@@ -251,13 +348,189 @@ async def generate_session(request: GenerateSessionRequest):
         persona_style=persona_style,
         sections=sections,
         safety_warnings=safety_warnings[:5],
+        # LENS SYSTEM - include active lens in output
+        lens=lens,
+        explanation_level=request.explanation_level or "plain",
         # Legacy fields
         user_id=request.user_id,
         template_name=template.get("column_name", "Unknown"),
-        breath_protocols=[b.get("protocol_name", "") for b in breath_library[:3]],
-        movements=[m.get("movement___practice", "") for m in movements[:3]],
+        breath_protocols=[b.get("protocol_name", "") for b in (breath_library or [])[:3]],
+        movements=[m.get("movement___practice", "") for m in (movements or [])[:3]],
         created_at=datetime.utcnow().isoformat(),
     )
+
+
+# =============================================================================
+# Flagship Demo: Lens System Test
+# =============================================================================
+
+@app.get("/sandbox/demo/lens-test")
+async def lens_demo_info():
+    """
+    Information about the flagship lens demo.
+    
+    This demo proves the lens system works end-to-end by generating
+    the same session with different explanatory frameworks.
+    """
+    return {
+        "demo_name": "Hybrid Lens Demo: Movement to Rest",
+        "description": "TCM Liver Flow Qigong (15min) -> NSDR (15min)",
+        "available_lenses": ["western", "tcm", "hybrid"],
+        "usage": {
+            "western": "POST /sandbox/demo/generate-flagship?lens=western",
+            "tcm": "POST /sandbox/demo/generate-flagship?lens=tcm",
+            "hybrid": "POST /sandbox/demo/generate-flagship?lens=hybrid",
+        },
+        "expected_behavior": "Same session phases, different explanation paragraphs based on lens",
+    }
+
+
+@app.post("/sandbox/demo/generate-flagship")
+async def generate_flagship_demo(
+    lens: str = "hybrid",
+    user_id: str = "demo-user",
+    duration_min: int = 30
+):
+    """
+    Generate the flagship lens demo session.
+    
+    This creates a 2-phase session:
+    1. TCM Liver Flow Qigong (Movement) - 15 min
+    2. NSDR (Non-Sleep Deep Rest) - 15 min
+    
+    The explanations change based on the lens parameter:
+    - western: Western/mechanistic explanations
+    - tcm: Traditional Chinese Medicine framing
+    - hybrid: Both explanations included
+    """
+    db = get_db()
+    techniques = db.get_techniques()
+    
+    # Find the specific techniques
+    qigong = next((t for t in techniques if "qigong" in t.get("technique", "").lower()), None)
+    nsdr = next((t for t in techniques if "nsdr" in t.get("technique", "").lower()), None)
+    
+    sections: List[SessionSection] = []
+    
+    # Phase 1: Movement (TCM Liver Flow Qigong)
+    if qigong:
+        sections.append(build_technique_section(qigong, duration_min // 2, lens, "movement"))
+    else:
+        # Fallback if technique not in DB
+        sections.append(SessionSection(
+            type="movement",
+            name="TCM Liver Flow Qigong (Beginner)",
+            duration_minutes=duration_min // 2,
+            instructions=get_lens_explanation({
+                "lens_explanation_western": "Gentle movement + breathing can reduce muscle guarding and support a calmer baseline.",
+                "lens_explanation_tcm": "Supports Liver Qi flow: smooth movement, soft eyes, relaxed ribs; avoid strain and keep breath easy.",
+                "mechanism_notes_simple": "Gentle mobility + breath synchrony; good for tension patterns."
+            }, lens),
+            lens_explanation_western="Gentle movement + breathing can reduce muscle guarding and support a calmer baseline.",
+            lens_explanation_tcm="Supports Liver Qi flow: smooth movement, soft eyes, relaxed ribs; avoid strain and keep breath easy.",
+        ))
+    
+    # Phase 2: NSDR (Non-Sleep Deep Rest)
+    if nsdr:
+        sections.append(build_technique_section(nsdr, duration_min // 2, lens, "meditation"))
+    else:
+        # Fallback if technique not in DB
+        sections.append(SessionSection(
+            type="meditation",
+            name="NSDR (Non-Sleep Deep Rest)",
+            duration_minutes=duration_min // 2,
+            instructions=get_lens_explanation({
+                "lens_explanation_western": "This practice shifts attention inward, reduces cognitive load, and supports parasympathetic settling. Expect calmer breathing, reduced mental chatter, and easier transition into rest.",
+                "lens_explanation_tcm": "In TCM language, this supports Shen settling and smooths overactive mind activity; keep gentle, consistent, and avoid forcing.",
+                "mechanism_notes_simple": "Low-demand guided rest state; suitable for beginners."
+            }, lens),
+            lens_explanation_western="This practice shifts attention inward, reduces cognitive load, and supports parasympathetic settling. Expect calmer breathing, reduced mental chatter, and easier transition into rest.",
+            lens_explanation_tcm="In TCM language, this supports Shen settling and smooths overactive mind activity; keep gentle, consistent, and avoid forcing.",
+        ))
+    
+    return SessionOutput(
+        id=str(uuid4()),
+        name="Hybrid Lens Demo: Movement to Rest",
+        duration_minutes=duration_min,
+        persona_style="Gentle Guide",
+        sections=sections,
+        safety_warnings=[],  # Low intensity, no warnings needed
+        lens=lens,
+        explanation_level="plain",
+        user_id=user_id,
+        template_name="Hybrid Lens Demo",
+        breath_protocols=[],
+        movements=["TCM Liver Flow Qigong"],
+        created_at=datetime.utcnow().isoformat(),
+    )
+
+
+@app.get("/sandbox/techniques")
+async def list_techniques(
+    category: Optional[str] = None,
+    lens: Optional[str] = None
+):
+    """
+    List available techniques, optionally filtered by category or lens.
+    
+    Categories: Breath, Movement, Somatic, Meditation/NSDR, Tapping, Cognitive, Ritual
+    Lenses: Western, TCM, Hybrid
+    """
+    db = get_db()
+    
+    if category:
+        techniques = db.get_techniques_by_category(category)
+    elif lens:
+        techniques = db.get_techniques_by_lens(lens)
+    else:
+        techniques = db.get_techniques()
+    
+    return {
+        "count": len(techniques),
+        "techniques": [
+            {
+                "id": t.get("id"),
+                "notion_page_id": t.get("notion_page_id"),
+                "technique": t.get("technique"),
+                "category": t.get("technique_category"),
+                "objective": t.get("objective"),
+                "lens_availability": t.get("lens_availability"),
+                "intensity_band": t.get("intensity_band"),
+                "default_duration_min": t.get("default_duration_min"),
+            }
+            for t in techniques
+        ]
+    }
+
+
+@app.get("/sandbox/techniques/{technique_id}")
+async def get_technique(technique_id: str):
+    """Get a single technique with all lens explanations."""
+    db = get_db()
+    techniques = db.get_techniques()
+    
+    technique = None
+    for t in techniques:
+        if str(t.get("id")) == technique_id or t.get("notion_page_id") == technique_id:
+            technique = t
+            break
+    
+    if not technique:
+        raise HTTPException(status_code=404, detail="Technique not found")
+    
+    return technique
+
+
+@app.get("/sandbox/evidence-sources")
+async def list_evidence_sources():
+    """List all evidence sources."""
+    db = get_db()
+    evidence = db.get_evidence_sources()
+    
+    return {
+        "count": len(evidence),
+        "evidence_sources": evidence
+    }
 
 
 # =============================================================================

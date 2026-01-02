@@ -100,6 +100,33 @@ class DatabaseService:
     def get_rules_gating(self) -> List[Dict[str, Any]]:
         """Get gating rules."""
         return self.get_all("rules_gating")
+    
+    # =========================================================================
+    # Lens System - Evidence & Techniques
+    # =========================================================================
+    
+    def get_evidence_sources(self) -> List[Dict[str, Any]]:
+        """Get all evidence sources."""
+        return self.get_all("evidence_sources")
+    
+    def get_techniques(self) -> List[Dict[str, Any]]:
+        """Get all techniques with lens templates."""
+        return self.get_all("techniques")
+    
+    def get_technique_by_name(self, name: str) -> Optional[Dict[str, Any]]:
+        """Get a technique by name."""
+        response = self.client.table("techniques").select("*").ilike("technique", f"%{name}%").execute()
+        return response.data[0] if response.data else None
+    
+    def get_techniques_by_category(self, category: str) -> List[Dict[str, Any]]:
+        """Get techniques by category."""
+        response = self.client.table("techniques").select("*").eq("technique_category", category).execute()
+        return response.data
+    
+    def get_techniques_by_lens(self, lens: str) -> List[Dict[str, Any]]:
+        """Get techniques available in a specific lens (Western, TCM, Hybrid)."""
+        response = self.client.table("techniques").select("*").ilike("lens_availability", f"%{lens}%").execute()
+        return response.data
 
 
 # Singleton instance

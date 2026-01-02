@@ -8,3 +8,5 @@ export default defineEventHandler(async (event) => {
   return await $fetch(`${config.cursorBridgeApi}/api/templates/${id}`)
 })
 
+
+

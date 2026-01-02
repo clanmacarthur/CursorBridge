@@ -15,7 +15,67 @@ CursorBridge APIs are running and ready for integration:
 
 ---
 
-## NEW: Automation Backbone (Seeded)
+## NEW: LENS SYSTEM (Evidence + Techniques)
+
+The lens system enables multi-paradigm session explanations:
+
+| Lens | Description |
+|------|-------------|
+| `western` | Mechanistic/scientific explanations |
+| `tcm` | Traditional Chinese Medicine framing |
+| `hybrid` | Both explanations combined |
+
+### Quick Test: Flagship Lens Demo
+
+```bash
+# Get demo info
+curl http://localhost:3001/sandbox/demo/lens-test
+
+# Generate with Western lens
+curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=western"
+
+# Generate with TCM lens
+curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=tcm"
+
+# Generate with Hybrid lens (both)
+curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
+```
+
+### Session Generation with Lens
+
+```bash
+POST http://localhost:3001/sandbox/generate-session
+Content-Type: application/json
+
+{
+  "user_id": "user-uuid",
+  "programme_profile_id": "profile-id",
+  "session_template_id": "template-id",
+  "duration_min": 30,
+  "lens": "hybrid",
+  "explanation_level": "plain"
+}
+```
+
+### New Tables
+
+| Table | Rows | Purpose |
+|-------|------|---------|
+| `techniques` | 4 | Core techniques with lens templates |
+| `evidence_sources` | 4 | Research/traditional references |
+
+Query them:
+```bash
+GET /api/query/techniques
+GET /api/query/evidence_sources
+GET /sandbox/techniques
+GET /sandbox/techniques?lens=tcm
+GET /sandbox/evidence-sources
+```
+
+---
+
+## Automation Backbone (Seeded)
 
 The engine tables are populated and ready:
 
@@ -85,19 +145,35 @@ Content-Type: application/json
 }
 ```
 
-**Response format:**
+**Response format (with lens system):**
 ```json
 {
   "id": "session-uuid",
   "name": "Session Name",
   "duration_minutes": 15,
+  "lens": "hybrid",
+  "explanation_level": "plain",
   "sections": [
     {
-      "type": "breathwork",
-      "name": "Protocol Name",
-      "duration_minutes": 2.5,
-      "instructions": "Guidance text...",
-      "cues": ["0:00 - Begin", "1:00 - Deepen"]
+      "type": "movement",
+      "name": "TCM Liver Flow Qigong (Beginner)",
+      "duration_minutes": 15,
+      "instructions": "[Western] Gentle movement + breathing... [TCM] Supports Liver Qi flow...",
+      "lens_explanation": "Combined lens explanation",
+      "lens_explanation_western": "Gentle movement + breathing can reduce muscle guarding...",
+      "lens_explanation_tcm": "Supports Liver Qi flow: smooth movement, soft eyes...",
+      "mechanism_notes": "Gentle mobility + breath synchrony; good for tension patterns.",
+      "technique_id": "technique-uuid",
+      "cues": ["0:00 - Begin", "7:00 - Find rhythm", "14:00 - Transition"]
+    },
+    {
+      "type": "meditation",
+      "name": "NSDR (Non-Sleep Deep Rest)",
+      "duration_minutes": 15,
+      "instructions": "[Western] Shifts attention inward... [TCM] Supports Shen settling...",
+      "lens_explanation_western": "This practice shifts attention inward...",
+      "lens_explanation_tcm": "In TCM language, this supports Shen settling...",
+      "cues": ["0:00 - Begin", "14:00 - Transition"]
     }
   ],
   "safety_warnings": []

@@ -248,10 +248,12 @@ async def query_table(table: str, limit: int = 100):
         "light_colour", "symbols_index", "sacred_geometry",
         "deities_archetypes", "elemental_framework", "organ_emotion_system",
         "nutrition_protocols", "chakra_systems", "meridian_system",
-        # Automation backbone (new)
+        # Automation backbone
         "control_definitions", "control_packs", "control_pack_items",
         "profile_pack_map", "default_weights", "coupling_rules",
         "derived_metrics", "questionnaires", "questionnaire_questions",
+        # LENS SYSTEM - Evidence & Techniques
+        "evidence_sources", "techniques",
     ]
     
     if table not in ALLOWED_TABLES:
@@ -400,6 +402,59 @@ async def get_table_schema(table: str):
                 "notes": "Character notes",
             },
             "sample_query": "GET /api/query/archetypal_personas?limit=5"
+        },
+        # LENS SYSTEM TABLES
+        "techniques": {
+            "description": "Core technique library with lens-specific explanation templates",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "technique": "Technique name (e.g., 'NSDR (Non-Sleep Deep Rest)')",
+                "technique_category": "Category (Breath, Movement, Somatic, Meditation/NSDR, Tapping, Cognitive, Ritual)",
+                "objective": "Multi-select objectives (Downshift Arousal, Increase Energy, etc.)",
+                "primary_intent": "Primary intent linked to Attribute Taxonomy",
+                "secondary_intents": "Secondary intents (comma-separated)",
+                "lens_availability": "Which lenses are available (Western, TCM, Hybrid)",
+                "lens_explanation_western": "Western/mechanistic explanation template",
+                "lens_explanation_tcm": "Traditional Chinese Medicine explanation template",
+                "mechanism_notes_simple": "Plain language mechanism (no medical claims)",
+                "contraindications_summary": "Safety considerations (linked to Safety Rules)",
+                "required_inputs": "Inputs needed (Duration, Intensity, Experience Level, etc.)",
+                "default_duration_min": "Default duration in minutes",
+                "intensity_band": "Intensity level (Low, Medium, High)",
+                "session_compatibility": "Compatible session templates (linked)",
+                "evidence_sources": "Supporting evidence (linked)",
+                "notes": "Additional notes",
+            },
+            "sample_query": "GET /api/query/techniques?limit=5",
+            "lens_system_note": "Use lens parameter in sandbox to get lens-specific explanations"
+        },
+        "evidence_sources": {
+            "description": "Research, guidelines, and traditional references supporting techniques",
+            "fields": {
+                "id": "Auto-generated Supabase ID",
+                "notion_page_id": "Original Notion page ID",
+                "evidence_source": "Evidence source name/title",
+                "evidence_type": "Type (Systematic Review, Meta-analysis, RCT, Observational, Mechanistic, Clinical Guideline, Traditional/Lineage, Expert Consensus)",
+                "primary_domain": "Primary domain from Attribute Taxonomy",
+                "secondary_domains": "Secondary domains (comma-separated)",
+                "applies_to_techniques": "Techniques this evidence supports (linked)",
+                "applies_to_protocols": "Nutrition protocols (linked)",
+                "applies_to_supplement_interactions": "Supplement interactions (linked)",
+                "lens_tags": "Lens categorization (Western, TCM, Hybrid, Somatic, Breathwork, Movement, Sleep)",
+                "citation_apa_short": "APA-style citation (short form)",
+                "doi_url": "DOI or URL to source",
+                "year": "Publication year",
+                "author_organisation": "Author or organization",
+                "key_claims_summary": "One paragraph summary of key claims",
+                "evidence_confidence": "Confidence level (Strong, Moderate, Emerging, Traditional)",
+                "review_state": "Review status (Unreviewed, In Review, Verified, Disputed, Deprecated)",
+                "verified_by": "Professional who verified (linked)",
+                "verification_notes": "Notes from verification",
+                "last_reviewed_date": "Date of last review",
+                "notes": "Additional notes",
+            },
+            "sample_query": "GET /api/query/evidence_sources?limit=5"
         },
     }
     
