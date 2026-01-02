@@ -4,6 +4,39 @@
 
 ---
 
+## The Three-Pillar System
+
+Every AI response is shaped by THREE complementary systems:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        AI RESPONSE GENERATION                       │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐              │
+│   │    LENS     │   │   PERSONA   │   │ KNOWLEDGE   │              │
+│   │ (Framework) │ + │   (Voice)   │ + │    BASE     │              │
+│   └─────────────┘   └─────────────┘   └─────────────┘              │
+│                                                                     │
+│   HOW to explain    WHO is speaking   WHAT sources                  │
+│   (TCM, Western,    (Alan Watts,      inform the                    │
+│    Somatic, etc)     Therapist, etc)   content                      │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Example Combinations
+
+| Lens | Persona | Knowledge Base | Result |
+|------|---------|----------------|--------|
+| TCM | TCM Practitioner | Huangdi Neijing | Classical TCM guidance |
+| Western | Clinical Therapist | PubMed | Evidence-based clinical style |
+| Somatic | Somatic Guide | Polyvagal Theory | Trauma-informed body focus |
+| Hybrid | Alan Watts-like | Zen + Tao Te Ching | Playful philosophical wisdom |
+| Plain | Friendly Neighbor | None (just common sense) | Simple, practical advice |
+
+---
+
 ## Core Philosophy
 
 The system should feel like having a **wise, attentive companion** who:
@@ -51,9 +84,63 @@ Users can create their own lenses by:
 
 ---
 
-## 2. Adaptive AI Lens Selection
+## 2. Personas (WHO is Speaking)
 
-### The AI Doesn't Ask "Which Lens?" — It Senses
+### 18 Predefined Personas
+
+| Category | Personas | Voice Style |
+|----------|----------|-------------|
+| **Scientific** | Clinical Therapist, Research Scientist, Performance Coach | Evidence-based, boundaried |
+| **Somatic** | Somatic Guide, Movement Teacher | Gentle, body-aware, trauma-informed |
+| **Contemplative** | Zen Teacher, Alan Watts-like, Mystic Poet, Mindfulness Teacher | Spacious, poetic, wise |
+| **Traditional** | TCM Practitioner, Ayurvedic Guide, Yoga Philosopher, Qigong Master | Lineage-informed |
+| **Accessible** | Friendly Neighbor, Encouraging Parent, Elder Guide | Warm, jargon-free |
+
+### Persona Selection Logic
+
+The AI selects persona based on:
+- User's explicit preference
+- Receptivity level (high → deeper personas, low → practical)
+- Session type (breathwork → different than journaling)
+- Mood state (anxious → grounding personas)
+- History (what worked before)
+
+---
+
+## 3. Knowledge Bases (WHAT Sources Inform)
+
+### The Literature Registry
+
+| Type | Knowledge Bases | Access |
+|------|-----------------|--------|
+| **Traditional Eastern** | Yoga Sutras, Bhagavad Gita, Tao Te Ching, Huangdi Neijing, Sufi Poetry, Zen Koans | Public, maturity-gated |
+| **Research** | PubMed (neuro, psych), Cochrane Reviews, Sports Science | Public |
+| **Clinical** | Clinical Guidelines, Safety/Contraindications | Professional or gated |
+| **Somatic** | Somatic Experiencing, Polyvagal Theory | Public |
+| **Secular** | MBSR/MBCT Research, Secular Meditation | Public |
+| **Personal** | Your Journal, Your Teachers/Lineage | Private |
+
+### Knowledge Base Gating
+
+Some knowledge bases require:
+- **Maturity level** (beginner can't access advanced texts without progression)
+- **Training** (must complete intro before accessing)
+- **Professional status** (clinical guidelines for practitioners)
+- **User consent** (opt-in to specific traditions)
+
+### User Control
+
+Users can:
+- Enable/disable specific knowledge bases
+- Weight certain sources higher ("lean more on research")
+- Add their own sources (personal journal, teacher's notes)
+- Exclude specific traditions (respect for cultural/religious boundaries)
+
+---
+
+### Combined Adaptive Selection
+
+The AI doesn't ask "which lens/persona/KB?" — It **senses** and selects:
 
 Based on:
 - **Current mood** (from today's check-in)
