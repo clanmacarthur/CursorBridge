@@ -255,7 +255,96 @@ Reference docs:
 - `COORDINATION_RESPONSE.md` - Detailed API documentation
 - `README.md` - Project overview
 
-Ready to build! 🎯
+---
+
+## VERIFIED WORKING (Test Results)
+
+All endpoints tested and working:
+
+| Endpoint | Status | Sample Data |
+|----------|--------|-------------|
+| `GET /api/query/control_definitions` | OK | 15 controls |
+| `GET /api/query/control_packs` | OK | 7 packs |
+| `GET /api/query/coupling_rules` | OK | 8 rules |
+| `GET /api/query/derived_metrics` | OK | 6 metrics |
+| `GET /api/templates` | OK | 5 templates |
+| `POST /sandbox/generate-session` | OK | Full session with sections |
+
+### Sample Session Output
+
+```json
+{
+  "id": "uuid",
+  "name": "Movements",
+  "duration_minutes": 15,
+  "persona_style": "Alan Watts-like",
+  "sections": [
+    {
+      "type": "breathwork",
+      "name": "Counting Breath",
+      "duration_minutes": 2,
+      "instructions": "Begin with Counting Breath...",
+      "cues": ["0:00 - Begin", "0:30 - Deepen", "1:00 - Transition"]
+    },
+    {
+      "type": "movement",
+      "name": "Qigong Silk Reeling",
+      "duration_minutes": 7,
+      "instructions": "Practice Qigong Silk Reeling...",
+      "cues": ["0:00 - Begin", "3:00 - Find rhythm", "5:00 - Slow down"]
+    },
+    {
+      "type": "breathwork",
+      "name": "Physiological Sigh",
+      "duration_minutes": 6,
+      "instructions": "Return to natural breath...",
+      "cues": ["0:00 - Natural breathing", "5:00 - Return", "6:00 - Complete"]
+    }
+  ],
+  "safety_warnings": [
+    "Ground Before Visualization",
+    "Post-Session No Driving",
+    "Avoid Major Decisions Post-Session"
+  ]
+}
+```
+
+---
+
+## MAIN APP BUILD CHECKLIST
+
+### Phase 1: Setup
+- [ ] Create Nuxt 3 project with Supabase module
+- [ ] Configure Supabase Auth (email + social)
+- [ ] Set up server routes to proxy CursorBridge APIs
+
+### Phase 2: Core Features
+- [ ] User registration/login (Supabase Auth)
+- [ ] Profile selection page (fetch from `/api/query/programme_profiles`)
+- [ ] Dashboard builder (fetch from `/api/templates`, `/api/query/control_packs`)
+- [ ] Check-in form (save to `user_checkins` table)
+- [ ] Session player (call `/sandbox/generate-session`)
+
+### Phase 3: Adaptive Engine
+- [ ] Apply coupling rules to check-in data
+- [ ] Calculate derived metrics
+- [ ] Display progress/insights
+
+### Phase 4: Polish
+- [ ] Subscribe to Realtime for content updates
+- [ ] Add user weight overrides
+- [ ] Questionnaire flow for profile assignment
+
+---
+
+## CONTACT
+
+CursorBridge APIs:
+- Core API: http://localhost:3000
+- Sandbox API: http://localhost:3001
+- GitHub: https://github.com/clanmacarthur/CursorBridge
+
+Ready to build!
 
 
 
