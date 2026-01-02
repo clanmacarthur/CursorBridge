@@ -239,6 +239,7 @@ async def query_table(table: str, limit: int = 100):
     Example: GET /api/query/attribute_taxonomy?limit=50
     """
     ALLOWED_TABLES = [
+        # Library backbone
         "system_manifest", "attribute_taxonomy", "programme_profiles",
         "dashboard_blocks", "safety_rules", "session_templates",
         "breath_library", "movements_system", "archetypal_personas",
@@ -247,6 +248,10 @@ async def query_table(table: str, limit: int = 100):
         "light_colour", "symbols_index", "sacred_geometry",
         "deities_archetypes", "elemental_framework", "organ_emotion_system",
         "nutrition_protocols", "chakra_systems", "meridian_system",
+        # Automation backbone (new)
+        "control_definitions", "control_packs", "control_pack_items",
+        "profile_pack_map", "default_weights", "coupling_rules",
+        "derived_metrics", "questionnaires", "questionnaire_questions",
     ]
     
     if table not in ALLOWED_TABLES:

@@ -1,21 +1,42 @@
-# 📦 CursorBridge → Main App Handoff
+# CursorBridge -> Main App Handoff
 
 **Share this document with the Main App AI**
 
 ---
 
-## ✅ What's Ready
+## What's Ready
 
 CursorBridge APIs are running and ready for integration:
 
 | Service | Port | Status |
 |---------|------|--------|
-| Core API | 3000 | ✅ Running |
-| Sandbox API | 3001 | ✅ Running |
+| Core API | 3000 | Running |
+| Sandbox API | 3001 | Running |
 
 ---
 
-## 🔌 Endpoints to Use
+## NEW: Automation Backbone (Seeded)
+
+The engine tables are populated and ready:
+
+| Table | Rows | Purpose |
+|-------|------|---------|
+| `control_definitions` | 15 | Every knob/tick the UI can render |
+| `control_packs` | 7 | Curated bundles (Daily Essentials, Insomnia, etc.) |
+| `derived_metrics` | 6 | Computed scores (Sleep Adequacy, Recovery, etc.) |
+| `coupling_rules` | 8 | How controls influence each other |
+
+Query them:
+```bash
+GET /api/query/control_definitions
+GET /api/query/control_packs
+GET /api/query/derived_metrics
+GET /api/query/coupling_rules
+```
+
+---
+
+## Endpoints to Use
 
 ### 1. Dashboard Templates
 
