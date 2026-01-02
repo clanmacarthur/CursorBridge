@@ -364,24 +364,24 @@ def main():
     total_applied = 0
     
     # Seed default data first
-    print("\n📦 Seeding control definitions...")
+    print("\n[1/4] Seeding control definitions...")
     total_applied += apply_control_definitions_seed(args.dry_run)
     
-    print("\n📦 Seeding control packs...")
+    print("\n[2/4] Seeding control packs...")
     total_applied += apply_control_packs_seed(args.dry_run)
     
-    print("\n📦 Seeding derived metrics...")
+    print("\n[3/4] Seeding derived metrics...")
     total_applied += apply_derived_metrics_seed(args.dry_run)
     
-    print("\n📦 Seeding coupling rules...")
+    print("\n[4/4] Seeding coupling rules...")
     total_applied += apply_coupling_rule_defaults(args.dry_run)
     
     if not args.seed_only:
-        print("\n🔗 Applying profile → pack defaults...")
+        print("\n[+] Applying profile -> pack defaults...")
         total_applied += apply_profile_pack_defaults(args.dry_run)
         
         # Apply custom mappings from the mappings table
-        print("\n📋 Applying custom mappings...")
+        print("\n[+] Applying custom mappings...")
         try:
             mappings = get_mappings()
             for mapping in mappings:
@@ -398,7 +398,7 @@ def main():
             print(f"  Note: mappings table may not exist yet: {e}")
     
     print("\n" + "=" * 60)
-    print(f"✅ Complete! Applied {total_applied} mappings/seeds")
+    print(f"COMPLETE! Applied {total_applied} mappings/seeds")
     print("=" * 60)
 
 

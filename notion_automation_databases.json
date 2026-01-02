@@ -187,14 +187,14 @@
       {"pack_name": "Trauma-Safe Regulation", "pack_slug": "trauma-safe", "category": "Wellness", "difficulty": "Intermediate", "is_default": false}
     ],
     "coupling_rules": [
-      {"rule_name": "Sleep → Recovery", "from_metric": "sleep_duration", "to_metric": "recovery_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.8},
-      {"rule_name": "Sleep Quality → Cognitive", "from_metric": "sleep_quality", "to_metric": "cognitive_load_tolerance", "function_type": "Linear", "direction": "Positive", "magnitude": 0.7},
-      {"rule_name": "Training Load → Sleep Need", "from_metric": "exercise_duration", "to_metric": "sleep_need", "function_type": "Linear", "direction": "Positive", "magnitude": 0.5},
-      {"rule_name": "Stress → Sleep Quality", "from_metric": "stress_level", "to_metric": "sleep_quality", "function_type": "Inverse", "direction": "Negative", "magnitude": 0.6},
-      {"rule_name": "Caffeine → Sleep Quality", "from_metric": "caffeine_intake", "to_metric": "sleep_quality", "function_type": "Threshold", "direction": "Negative", "magnitude": 0.4, "threshold_value": 200},
-      {"rule_name": "Hydration → Energy", "from_metric": "water_intake", "to_metric": "energy_level", "function_type": "Linear", "direction": "Positive", "magnitude": 0.3},
-      {"rule_name": "Movement → Mood", "from_metric": "steps", "to_metric": "mood_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.4},
-      {"rule_name": "Rest Day Walk = Success", "from_metric": "steps", "to_metric": "movement_goal", "function_type": "Conditional", "direction": "Positive", "magnitude": 1.0}
+      {"rule_name": "Sleep to Recovery", "from_metric": "sleep_duration", "to_metric": "recovery_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.8},
+      {"rule_name": "Sleep Quality to Cognitive", "from_metric": "sleep_quality", "to_metric": "cognitive_load_tolerance", "function_type": "Linear", "direction": "Positive", "magnitude": 0.7},
+      {"rule_name": "Training Load to Sleep Need", "from_metric": "exercise_duration", "to_metric": "sleep_need", "function_type": "Linear", "direction": "Positive", "magnitude": 0.5},
+      {"rule_name": "Stress to Sleep Quality", "from_metric": "stress_level", "to_metric": "sleep_quality", "function_type": "Inverse", "direction": "Negative", "magnitude": 0.6},
+      {"rule_name": "Caffeine to Sleep Quality", "from_metric": "caffeine_intake", "to_metric": "sleep_quality", "function_type": "Threshold", "direction": "Negative", "magnitude": 0.4, "threshold_value": 200},
+      {"rule_name": "Hydration to Energy", "from_metric": "water_intake", "to_metric": "energy_level", "function_type": "Linear", "direction": "Positive", "magnitude": 0.3},
+      {"rule_name": "Movement to Mood", "from_metric": "steps", "to_metric": "mood_score", "function_type": "Linear", "direction": "Positive", "magnitude": 0.4},
+      {"rule_name": "Rest Day Walk Success", "from_metric": "steps", "to_metric": "movement_goal", "function_type": "Conditional", "direction": "Positive", "magnitude": 1.0}
     ],
     "derived_metrics": [
       {"metric_name": "Sleep Adequacy", "metric_slug": "sleep-adequacy", "formula_type": "Weighted Average", "domain": "Sleep Quality"},
