@@ -314,7 +314,127 @@ AI: "Cool. I'll send a nudge at 12:30.
 
 ---
 
-## 7. Implementation Roadmap
+## 7. Meta-Intelligence Layer (AI Adaptive Dimensions)
+
+Beyond lens/persona/KB, the AI operates across FOUR DIMENSIONS:
+
+### The Four Dimensions
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    META-INTELLIGENCE DIMENSIONS                     │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│   SCOPE          DEPTH          SOURCE         CONFIDENCE           │
+│   ──────         ─────          ──────         ──────────           │
+│   Narrow ←→ Wide Surface ←→ Deep Individual ←→ Established ←→      │
+│                               Collective    Experimental           │
+│                                                                     │
+│   How wide       How deep      Where from     How proven            │
+│   should AI      should AI     should AI      should the            │
+│   look?          work?         draw?          approach be?          │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### SCOPE (Narrow ↔ Wide)
+
+| Level | Description | Example |
+|-------|-------------|---------|
+| `narrow` | Single domain specialist | "Only breathwork approaches" |
+| `focused` | Related domains | "Breathwork + meditation" |
+| `medium` | Adjacent fields | "Athletic recovery for stress" |
+| `wide` | Cross-domain synthesis | "Addiction tools for grief" |
+| `universal` | Any field | "Whatever works, wherever it comes from" |
+| `experimental` | Beyond established | "Novel combinations, beta testing" |
+
+**When AI widens scope:** User is resistant to conventional approaches, has tried everything, or explicitly requests cross-domain insights.
+
+### DEPTH (Surface ↔ Foundational)
+
+| Level | Description | Consent Required |
+|-------|-------------|------------------|
+| `surface` | Immediate practical tips | No |
+| `habit` | Building practices | No |
+| `pattern` | Recognizing recurring patterns | No |
+| `structural` | Underlying beliefs, schemas | Yes |
+| `identity` | Core self-concept | Yes + Support |
+| `foundational` | Existential, transformational | Yes + Professional |
+
+**Deep work only with explicit consent + safety rails (buddy system, professional support).**
+
+### SOURCE (Individual ↔ Collective)
+
+| Level | Description | Privacy |
+|-------|-------------|---------|
+| `individual` | Only user's own data | Maximum |
+| `similar` | Anonymized similar users | Anonymized |
+| `aggregate` | Population patterns | Anonymized |
+| `collective` | Cross-user wisdom | Anonymized + Consent |
+| `research` | User contributes data | Opt-in |
+
+**Collective wisdom example:** "Users with similar patterns found X helpful when therapy wasn't working."
+
+### CONFIDENCE (Established ↔ Frontier)
+
+| Level | Description | Disclaimer |
+|-------|-------------|------------|
+| `gold_standard` | Meta-analyses, guidelines | None |
+| `established` | Good RCT evidence | None |
+| `emerging` | Early research, promising | None |
+| `traditional` | Lineage-based, not RCT | Yes |
+| `experimental` | Novel combinations | Yes |
+| `frontier` | User-generated, pioneering | Yes + Extra |
+
+**Frontier example:** "This approach goes beyond established practice. You are helping pioneer new territory."
+
+### Meta-Lens Presets
+
+| Preset | Scope | Depth | Source | Confidence | Best For |
+|--------|-------|-------|--------|------------|----------|
+| 🛡️ Safe Start | narrow | surface | individual | established | New users |
+| 🔭 Open Explorer | medium | pattern | aggregate | emerging | Curious users |
+| 🌊 Deep Diver | focused | structural | individual | established | Practitioners |
+| 🔀 Synthesizer | wide | pattern | collective | experimental | Tried everything |
+| 🚀 Frontier Explorer | universal | identity | collective | frontier | Advanced + support |
+
+### Cross-Domain Transfer
+
+When AI widens scope, it maps techniques across domains:
+
+| From | To | Pattern | Confidence |
+|------|-----|---------|------------|
+| Athletic breathing | Anxiety | CO2 tolerance → calm | Emerging |
+| Meditation attention | Chronic pain | Non-reactive awareness | Established |
+| Addiction recovery | Grief | Distress tolerance | Emerging |
+| Trauma somatic | Performance anxiety | Nervous system regulation | Established |
+
+### User-Created Technique Blends
+
+Users can create their own techniques by:
+1. Selecting base techniques
+2. Adding personal modifications
+3. Setting their own objectives
+4. Using their own cue language
+
+Blends can be:
+- Private (just for them)
+- Shared anonymously (contribute to collective wisdom)
+- Tracked for effectiveness
+
+### Full Transparency
+
+Users can always ask:
+- "Why did you suggest this?"
+- "What other options did you consider?"
+- "What's your confidence level?"
+- "Where is this coming from?"
+
+AI logs all decisions with full reasoning chain.
+
+---
+
+## 8. Implementation Roadmap
 
 ### Phase 1: Foundation (Current)
 - [x] Lens registry with 14 predefined lenses

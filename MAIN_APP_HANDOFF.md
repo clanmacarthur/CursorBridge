@@ -447,28 +447,57 @@ All endpoints tested and working:
 
 ## FUTURE VISION: Adaptive AI Companion
 
-See `ADAPTIVE_AI_VISION.md` for the full roadmap. Key concepts:
+See `ADAPTIVE_AI_VISION.md` for the full roadmap.
 
-### 1. Infinite User-Created Lenses
-Users will create their own explanatory frameworks by blending existing lenses.
+### The Three-Pillar System
 
-### 2. AI-Driven Lens Selection
-The AI selects lenses based on:
-- Current mood/energy (from check-ins)
-- Time of day
-- User history and patterns
-- Explicit preferences
+| Pillar | What it controls | Count |
+|--------|------------------|-------|
+| **Lens** | HOW to explain | 14 lenses |
+| **Persona** | WHO is speaking | 18 personas |
+| **Knowledge Base** | WHAT sources inform | 18 knowledge bases |
 
-### 3. Conversational Questionnaire
-Not static forms—dynamic dialogue that adapts to user receptivity.
+### The Four Meta-Dimensions
 
-### 4. Permission-Based Escalation
-Trigger system with buddy/family notifications (user-controlled):
-- Low mood for 5 days → notify buddy
-- Crisis language → immediate resources + designated contact
+| Dimension | Range | What AI decides |
+|-----------|-------|-----------------|
+| **Scope** | Narrow ↔ Wide | How widely to look for solutions |
+| **Depth** | Surface ↔ Deep | How deeply to work (behavioral → existential) |
+| **Source** | Individual ↔ Collective | Where to draw insights from |
+| **Confidence** | Established ↔ Frontier | How proven the approach is |
 
-### 5. Eternal Companion
-AI learns patterns over months/years and proactively suggests interventions.
+### Meta-Lens Presets
+
+| Preset | Description | Best For |
+|--------|-------------|----------|
+| 🛡️ Safe Start | Conservative, evidence-based | New users |
+| 🔭 Open Explorer | Curious, adjacent domains | Explorers |
+| 🌊 Deep Diver | Narrow but deep | Practitioners |
+| 🔀 Synthesizer | Cross-domain, collective wisdom | Tried everything |
+| 🚀 Frontier Explorer | Experimental, pioneering | Advanced + support |
+
+### Experimental/Beta Flags
+
+When AI goes beyond established practice:
+- `experimental` flag shown to user
+- Disclaimer text displayed
+- User consent logged
+- Feedback collected
+
+### Cross-Domain Transfer
+
+AI can map techniques across fields:
+- Athletic recovery → Burnout management
+- Addiction tools → Grief processing
+- Trauma somatic → Performance anxiety
+
+### User-Created Technique Blends
+
+Users can create their own techniques by blending existing ones with personal modifications.
+
+### Full Transparency
+
+Users can always ask "Why did you suggest this?" and get the full reasoning chain.
 
 ---
 
