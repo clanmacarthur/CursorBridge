@@ -5,13 +5,18 @@ This script creates the missing automation databases in Notion
 to mirror the Supabase automation tables.
 
 Usage:
-    python scripts/create_notion_databases.py --parent-page-id YOUR_PAGE_ID
+    # Just paste the Notion page URL:
+    python scripts/create_notion_databases.py --page https://www.notion.so/My-Page-2d9c47c61e2180a1848bd93728f116cd
+    
+    # Or use the page ID directly:
+    python scripts/create_notion_databases.py --page 2d9c47c61e2180a1848bd93728f116cd
 """
 
 import os
 import sys
 import json
 import argparse
+import re
 from typing import Dict, Any, List
 
 # Add parent to path
@@ -21,6 +26,30 @@ from dotenv import load_dotenv
 import requests
 
 load_dotenv()
+
+
+def extract_page_id(url_or_id: str) -> str:
+    """
+    Extract Notion page ID from URL or return ID if already an ID.
+    
+    Accepts:
+    - https://www.notion.so/Page-Name-2d9c47c61e2180a1848bd93728f116cd
+    - https://www.notion.so/2d9c47c61e2180a1848bd93728f116cd
+    - 2d9c47c61e2180a1848bd93728f116cd
+    - 2d9c47c6-1e21-80a1-848b-d93728f116cd (with dashes)
+    """
+    # Remove any query params
+    url_or_id = url_or_id.split("?")[0]
+    
+    # Pattern for Notion page ID (32 hex chars, with or without dashes)
+    id_pattern = r"[a-f0-9]{32}|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
+    
+    match = re.search(id_pattern, url_or_id, re.IGNORECASE)
+    if match:
+        # Remove dashes if present
+        return match.group(0).replace("-", "")
+    
+    raise ValueError(f"Could not extract page ID from: {url_or_id}")
 
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
 NOTION_VERSION = "2022-06-28"
@@ -188,9 +217,9 @@ def add_relations(
 def main():
     parser = argparse.ArgumentParser(description="Create Notion automation databases")
     parser.add_argument(
-        "--parent-page-id",
+        "--page",
         required=True,
-        help="Notion page ID to create databases under",
+        help="Notion page URL or ID (just paste the link!)",
     )
     parser.add_argument(
         "--dry-run",
@@ -199,9 +228,17 @@ def main():
     )
     args = parser.parse_args()
     
+    # Extract page ID from URL or use directly
+    try:
+        page_id = extract_page_id(args.page)
+        print(f"\nTarget page ID: {page_id}")
+    except ValueError as e:
+        print(f"ERROR: {e}")
+        sys.exit(1)
+    
     # Load template
     template = load_template()
-    print(f"\nLoaded template with {len(template['databases'])} databases")
+    print(f"Loaded template with {len(template['databases'])} databases")
     
     if args.dry_run:
         print("\n[DRY RUN] Would create:")
@@ -216,7 +253,7 @@ def main():
     db_id_map = {}
     
     for db_template in template["databases"]:
-        result = create_database(args.parent_page_id, db_template, skip_relations=True)
+        result = create_database(page_id, db_template, skip_relations=True)
         if result:
             db_id_map[db_template["id"]] = result
     
