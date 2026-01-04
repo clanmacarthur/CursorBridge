@@ -129,3 +129,5 @@ SELECT 'Lens registry tables created/updated successfully. ' ||
        (SELECT COUNT(*) FROM lens_definitions) || ' lenses in system.' AS status;
 
 
+
+

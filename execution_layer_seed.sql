@@ -199,3 +199,5 @@ INSERT INTO meta_lens_presets (preset_slug, preset_name, icon, description, prim
 SELECT 'minimal_words', 'Minimal Words', '⚪', 'Sparse narration, mostly silence', 'minimalist', ARRAY['physiology_plain'], 'narrow', 'behavioral', 'individual', 'established', false, 80
 WHERE NOT EXISTS (SELECT 1 FROM meta_lens_presets WHERE preset_slug = 'minimal_words');
 
+
+

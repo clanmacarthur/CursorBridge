@@ -253,3 +253,5 @@ INSERT INTO meta_lens_presets (preset_slug, preset_name, icon, description, prim
 ('minimal_words', 'Minimal Words', '⚪', 'Sparse narration, mostly silence', 'minimalist', ARRAY['physiology_plain'], 'narrow', 'behavioral', 'individual', 'established', false, 80)
 ON CONFLICT (preset_slug) DO NOTHING;
 
+
+

@@ -412,3 +412,5 @@ CREATE INDEX IF NOT EXISTS "idx_user_kb_user" ON "user_knowledge_access" ("user_
 CREATE INDEX IF NOT EXISTS "idx_prog_kb_prog" ON "programme_knowledge_map" ("programme_profile_id");
 
 
+
+

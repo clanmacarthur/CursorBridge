@@ -1,83 +1,49 @@
-# Wellness App - Main App Starter
+# Main App Starter (EXAMPLE ONLY)
 
-Vue 3 + Nuxt 3 starter template for the wellness application.
+**This is just example code. Main App connects DIRECTLY to Supabase.**
 
-## Quick Start
+CursorBridge does NOT need to be running for Main App to work.
 
-```bash
-# Install dependencies
-npm install
+---
 
-# Start development server
-npm run dev
-```
-
-Open http://localhost:8080
-
-## Project Structure
+## The Architecture
 
 ```
-main-app-starter/
-├── nuxt.config.ts          # Nuxt configuration
-├── app.vue                  # Root component
-├── pages/
-│   ├── index.vue           # Home/landing page
-│   ├── login.vue           # Login page
-│   ├── dashboard.vue       # Main dashboard
-│   └── session.vue         # Session player
-├── components/
-│   ├── BlockSlider.vue     # Slider control
-│   ├── BlockCheckbox.vue   # Checkbox control
-│   ├── BlockChart.vue      # Chart display
-│   └── SessionPlayer.vue   # Session player
-├── composables/
-│   ├── useBridge.ts        # CursorBridge API client
-│   └── useSupabase.ts      # Supabase client
-├── server/
-│   └── api/
-│       ├── bridge/
-│       │   ├── templates.get.ts
-│       │   ├── controls.get.ts
-│       │   └── session.post.ts
-│       └── checkin.post.ts
-└── types/
-    └── index.ts            # TypeScript types
+Main App  ──────────────►  Supabase (direct connection)
+
+CursorBridge = separate admin tool (optional, for content authoring)
 ```
 
-## Environment Variables
+---
 
-Create `.env`:
+## What Main App Needs
 
-```env
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your-anon-key
-CURSORBRIDGE_API=http://localhost:3000
-CURSORBRIDGE_SANDBOX=http://localhost:3001
-```
+1. Supabase URL + Anon Key
+2. `@supabase/supabase-js` package
+3. A composable like `useSupabase.ts`
 
-## Features
+See `MAIN_APP_INTEGRATION_PACKAGE.md` in the parent folder for complete code.
 
-- Supabase Auth (email + social)
-- Dashboard with drag-drop blocks
-- Check-in forms with sliders/checkboxes
-- Session player with guided instructions
-- Real-time sync with CursorBridge
+---
 
-## CursorBridge Integration
+## This Folder
 
-All content comes from CursorBridge APIs:
+This folder contains EXAMPLE components you can reference:
 
-```typescript
-// Fetch templates
-const { data } = await useFetch('/api/bridge/templates')
+- `composables/useBridge.ts` - Example API patterns (adapt for direct Supabase)
+- `components/SessionPlayer.vue` - Example session player UI
+- `types/index.ts` - TypeScript interfaces
 
-// Generate session
-const session = await $fetch('/api/bridge/session', {
-  method: 'POST',
-  body: { programme_profile_id: '1', session_template_id: '1', duration_min: 15 }
-})
-```
+**Copy what's useful, ignore the rest.**
 
+---
 
+## CursorBridge Role
 
+CursorBridge is a standalone admin tool for:
+- Syncing Notion ↔ Supabase
+- Creating database schemas
+- Running Excel automation
+- Seeding content
 
+**It does NOT need to run for Main App to function.**

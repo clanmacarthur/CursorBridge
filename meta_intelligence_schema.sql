@@ -572,3 +572,5 @@ CREATE INDEX IF NOT EXISTS "idx_decision_log_user" ON "ai_decision_log" ("user_i
 CREATE INDEX IF NOT EXISTS "idx_aggregate_patterns_cluster" ON "aggregate_patterns" ("condition_cluster");
 
 
+
+

@@ -141,3 +141,5 @@ INSERT INTO session_blueprints (blueprint_name, description, safety_level, is_pl
 SELECT 'TCM Liver Soothe Breath Meridian Movement', 'Organ/color/sound integration with TCM framing', 'baseline', true, true, 50, ARRAY['tcm', 'meridian', 'liver', 'movement'], 'Organs/colour/sound test'
 WHERE NOT EXISTS (SELECT 1 FROM session_blueprints WHERE blueprint_name = 'TCM Liver Soothe Breath Meridian Movement');
 
+
+

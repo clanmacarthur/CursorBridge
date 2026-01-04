@@ -293,3 +293,5 @@ WHERE NOT EXISTS (SELECT 1 FROM knowledge_bases WHERE kb_slug = 'fairy_tales');
 
 SELECT 'Content enrichment complete!' as status;
 
+
+

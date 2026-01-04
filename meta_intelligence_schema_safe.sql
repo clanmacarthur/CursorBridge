@@ -286,3 +286,5 @@ SELECT 'Meta-Intelligence Layer created. ' ||
        (SELECT COUNT(*) FROM meta_lens_presets) || ' meta-presets.' AS status;
 
 
+
+

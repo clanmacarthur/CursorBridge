@@ -255,3 +255,5 @@ CREATE INDEX IF NOT EXISTS "idx_user_lens_pref_user" ON "user_lens_preferences" 
 CREATE INDEX IF NOT EXISTS "idx_user_lens_context_user" ON "user_lens_context" ("user_id", "context_date");
 
 
+
+

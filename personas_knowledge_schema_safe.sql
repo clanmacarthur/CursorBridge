@@ -255,3 +255,5 @@ SELECT 'Personas and Knowledge Bases updated. ' ||
        (SELECT COUNT(*) FROM archetypal_personas) || ' personas.' AS status;
 
 
+
+

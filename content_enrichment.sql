@@ -300,3 +300,5 @@ SELECT 'Content enrichment complete!' as status,
        (SELECT COUNT(*) FROM lens_definitions) as lenses,
        (SELECT COUNT(*) FROM knowledge_bases) as knowledge_bases;
 
+
+
