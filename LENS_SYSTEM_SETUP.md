@@ -202,3 +202,4 @@ When generating a session:
 4. Verify lens-switching works
 5. Inform Main App AI of the new capabilities
 
+

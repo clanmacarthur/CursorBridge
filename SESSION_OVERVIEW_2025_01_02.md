@@ -217,3 +217,4 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
 *This document summarizes the CursorBridge development session.*
 *Share with Main App AI for integration.*
 
+

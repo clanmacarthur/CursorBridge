@@ -254,3 +254,4 @@ CREATE INDEX IF NOT EXISTS "idx_technique_lens_lens" ON "technique_lens_explanat
 CREATE INDEX IF NOT EXISTS "idx_user_lens_pref_user" ON "user_lens_preferences" ("user_id");
 CREATE INDEX IF NOT EXISTS "idx_user_lens_context_user" ON "user_lens_context" ("user_id", "context_date");
 
+

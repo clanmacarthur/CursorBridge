@@ -411,3 +411,4 @@ CREATE INDEX IF NOT EXISTS "idx_kb_paradigm" ON "knowledge_bases" ("paradigm_fam
 CREATE INDEX IF NOT EXISTS "idx_user_kb_user" ON "user_knowledge_access" ("user_id");
 CREATE INDEX IF NOT EXISTS "idx_prog_kb_prog" ON "programme_knowledge_map" ("programme_profile_id");
 
+

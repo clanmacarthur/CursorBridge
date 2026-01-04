@@ -270,3 +270,4 @@ INSERT INTO "session_templates" (
   'Flagship demo session: TCM Liver Flow Qigong (15min) -> NSDR (15min). Use to test lens-switching in session generation.'
 );
 
+

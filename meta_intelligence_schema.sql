@@ -571,3 +571,4 @@ CREATE INDEX IF NOT EXISTS "idx_permissions_user" ON "deep_work_permissions" ("u
 CREATE INDEX IF NOT EXISTS "idx_decision_log_user" ON "ai_decision_log" ("user_id");
 CREATE INDEX IF NOT EXISTS "idx_aggregate_patterns_cluster" ON "aggregate_patterns" ("condition_cluster");
 
+

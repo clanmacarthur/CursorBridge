@@ -128,3 +128,4 @@ CREATE INDEX IF NOT EXISTS "idx_user_lens_context_user" ON "user_lens_context" (
 SELECT 'Lens registry tables created/updated successfully. ' || 
        (SELECT COUNT(*) FROM lens_definitions) || ' lenses in system.' AS status;
 
+
