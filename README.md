@@ -1,340 +1,237 @@
 # CursorBridge
 
-**Content sync and session generation for wellness applications.**
+**The Content Intelligence Layer for Adaptive Wellness Applications**
 
-CursorBridge syncs content from Notion databases to Supabase and provides APIs for dashboard templates, session generation, and content queries.
+CursorBridge connects Notion (content authoring) → Supabase (data storage) → Main App (user interface), providing APIs for session generation, lens switching, and personalized content delivery.
 
 ---
 
-## 🏗️ Architecture
+## 🎯 What CursorBridge Does
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         Main App (Port 8080)                    │
-│                    Vue 3 + Nuxt 3 Dashboard Builder             │
-└─────────────────────┬───────────────────────────────────────────┘
-                      │ HTTP + JWT Auth
-                      ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      CursorBridge APIs                          │
-│  ┌──────────────────────┐    ┌──────────────────────────────┐   │
-│  │   Core API (:3000)   │    │   Sandbox API (:3001)        │   │
-│  │  • /api/templates    │    │  • /sandbox/generate-session │   │
-│  │  • /api/query/{t}    │    │  • /sandbox/build-dashboard  │   │
-│  │  • /api/schema/{t}   │    │                              │   │
-│  │  • /api/sync/notion  │    │                              │   │
-│  └──────────────────────┘    └──────────────────────────────┘   │
-└─────────────────────┬───────────────────────────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    Supabase (Shared Backend)                    │
-│  ┌──────────────┐  ┌────────────┐  ┌─────────────────────────┐  │
-│  │ PostgreSQL   │  │  Auth      │  │  Realtime               │  │
-│  │ 25+ content  │  │  JWT       │  │  sync_events channel    │  │
-│  │ tables       │  │  validation│  │                         │  │
-│  └──────────────┘  └────────────┘  └─────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-```
+| Function | Description |
+|----------|-------------|
+| **Content Sync** | Syncs Notion databases to Supabase tables |
+| **Query API** | REST endpoints for content retrieval |
+| **Session Generation** | Creates timed sessions from blueprints |
+| **Lens System** | 14+ lenses for different explanation styles |
+| **Persona System** | 20+ AI voices/personas |
+| **Knowledge Bases** | 19+ curated knowledge sources |
+| **Meta-Intelligence** | 4 adaptive dimensions (Scope, Depth, Source, Confidence) |
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- Python 3.11+
+- Python 3.9+
 - Supabase account
-- Notion integration (optional, for content sync)
+- Notion integration token
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/CursorBridge.git
+git clone https://github.com/clanmacarthur/CursorBridge.git
 cd CursorBridge
-
-# Install dependencies
 pip install -r requirements.txt
-
-# For Supabase support
-pip install supabase psycopg2-binary
 ```
 
-### Configuration
-
-Create a `.env` file:
-
-```env
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your-service-role-key
-NOTION_TOKEN=your-notion-integration-token
-```
-
-### Running the APIs
+### Environment Variables
 
 ```bash
-# Core API (port 3000)
+export SUPABASE_URL="https://your-project.supabase.co"
+export SUPABASE_KEY="your-service-role-key"
+export NOTION_TOKEN="your-notion-integration-token"
+```
+
+### Run Servers
+
+```bash
+# Terminal 1: Core API (port 3000)
 python run_api.py
 
-# Sandbox API (port 3001)
+# Terminal 2: Sandbox API (port 3001)
 python run_sandbox.py
 ```
 
 ---
 
-## 📚 API Reference
+## 📡 API Endpoints
 
 ### Core API (Port 3000)
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/` | GET | Health check |
-| `/api/templates` | GET | List dashboard templates |
-| `/api/templates/{id}` | GET | Get specific template |
-| `/api/schema/{table}` | GET | Get field documentation |
-| `/api/query/{table}` | GET | Query content tables |
-| `/api/sync/notion` | POST | Sync from Notion |
-| `/api/logs/checkin` | POST | Log user check-in |
+| `/api/query/{table}` | GET | Query any table |
+| `/api/templates` | GET | Dashboard templates |
+| `/api/schema/{table}` | GET | Table schema info |
+| `/sync/{db}` | POST | Sync Notion → Supabase |
 
 ### Sandbox API (Port 3001)
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/` | GET | Health check |
-| `/sandbox/generate-session` | POST | Generate guided session |
-| `/sandbox/build-dashboard` | POST | Build dashboard from template |
+| `/sandbox/lenses` | GET | List all 14+ lenses |
+| `/sandbox/generate-session` | POST | Generate session from blueprint |
+| `/sandbox/demo/generate-flagship` | POST | Demo session with lens |
 
 ---
 
-## 📦 Dashboard Templates
+## 📊 Database Tables
 
-5 pre-built templates available via `GET /api/templates`:
+### Core Content (25 tables from Notion)
+- `attribute_taxonomy`, `programme_profiles`, `session_templates`
+- `breath_library`, `movements_system`, `sound_vibration`
+- `archetypal_personas`, `chakra_system`, `meridian_system`
+- ... and 16 more
 
-| ID | Name | Category | Blocks |
-|----|------|----------|--------|
-| `daily-wellness-check` | Daily Wellness Check | wellness | 5 |
-| `breath-movement` | Breath & Movement | fitness | 3 |
-| `meditation-journal` | Meditation Journal | meditation | 7 |
-| `nutrition-tracker` | Nutrition Tracker | nutrition | 4 |
-| `sleep-tracker` | Sleep Tracker | wellness | 6 |
+### Execution Layer (11 tables)
+- `timing_presets` - Duration configurations
+- `session_phases` - Phase templates
+- `transition_rules` - Phase connections
+- `narration_styles` - Voice/pace settings
+- `cue_triggers` - Scheduled events
+- `session_blueprints` - Complete session recipes
+- `technique_steps` - Step sequences
+- `blueprint_steps` - Blueprint-step links
+- `blueprint_cues` - Blueprint-cue links
+- `session_runs` - User session records
+- `session_outputs` - Generated content
 
-### Template Format
-
-```json
-{
-  "id": "daily-wellness-check",
-  "name": "Daily Wellness Check",
-  "description": "Track your daily mood, sleep quality, energy, and stress levels",
-  "category": "wellness",
-  "icon": "heart",
-  "blocks": [
-    {
-      "block_type": "slider",
-      "config": {
-        "label": "Mood",
-        "min": 1,
-        "max": 10,
-        "step": 1,
-        "default": 5
-      },
-      "position": {"x": 0, "y": 0, "w": 6, "h": 2}
-    }
-  ]
-}
-```
+### Intelligence Layer
+- `lens_definitions` - 14+ explanation paradigms
+- `meta_lens_presets` - 5+ user-selectable presets
+- `knowledge_bases` - 19+ curated sources
+- `ai_scope_levels`, `ai_depth_levels`, `ai_source_levels`, `ai_confidence_levels`
 
 ---
 
-## 🧘 Session Generation
+## 🔮 The Lens System
 
-`POST /sandbox/generate-session`
+Same technique, different explanations:
 
-### Request
-
-```json
-{
-  "user_id": "user-uuid",
-  "template_id": "session-template-id",
-  "duration_min": 15,
-  "preferences": {
-    "intensity": "gentle",
-    "focus": "relaxation"
-  }
-}
-```
-
-### Response
-
-```json
-{
-  "id": "session-uuid",
-  "name": "Morning Energy Flow",
-  "duration_minutes": 15,
-  "persona_style": "Alan Watts-like",
-  "sections": [
-    {
-      "type": "breathwork",
-      "name": "Physiological Sigh",
-      "duration_minutes": 2.5,
-      "instructions": "Begin with deep breathing...",
-      "cues": [
-        "0:00 - Begin breathing",
-        "0:30 - Deepen your breath",
-        "2:00 - Prepare to transition"
-      ]
-    },
-    {
-      "type": "movement",
-      "name": "Qigong Silk Reeling",
-      "duration_minutes": 7.5,
-      "instructions": "Practice gentle movement..."
-    },
-    {
-      "type": "breathwork",
-      "name": "Integration Breath",
-      "duration_minutes": 5,
-      "instructions": "Return to natural breathing..."
-    }
-  ],
-  "safety_warnings": ["Avoid if experiencing acute anxiety"]
-}
-```
-
----
-
-## 🗄️ Content Tables
-
-CursorBridge owns these Supabase tables (synced from Notion):
-
-| Table | Description |
-|-------|-------------|
-| `programme_profiles` | Wellness programme definitions |
-| `breath_library` | Breath protocol library |
-| `movements_system` | Movement practices |
-| `session_templates` | Session recipes |
-| `archetypal_personas` | AI persona styles |
-| `attribute_taxonomy` | Attribute hierarchy |
-| `safety_rules` | Safety gating rules |
-| `nutrition_and_food` | Nutrition database |
-| `chakra_systems` | Chakra reference |
-| `meridian_system` | Meridian reference |
-| ... and 15+ more |
-
-Use `GET /api/schema/{table}` for field documentation.
-
----
-
-## 🔐 Authentication
-
-CursorBridge validates Supabase JWTs. Include in requests:
-
-```
-Authorization: Bearer <supabase_jwt>
-```
-
-JWT claims expected:
-- `sub` - User ID
-- `email` - User email
-- `role` - User role (optional)
-
----
-
-## 🔄 Realtime Sync
-
-Content updates are published to Supabase Realtime via the `sync_events` table:
-
-```json
-{
-  "type": "content_synced",
-  "table": "programme_profiles",
-  "record_id": "uuid",
-  "timestamp": "2025-12-30T12:00:00Z"
-}
-```
-
-Subscribe in Main App to receive live updates.
-
----
-
-## 📁 Project Structure
-
-```
-CursorBridge/
-├── api/
-│   └── main.py           # Core API (FastAPI)
-├── sandbox/
-│   └── main.py           # Sandbox API (FastAPI)
-├── shared/
-│   ├── auth.py           # JWT validation
-│   ├── database.py       # Supabase client
-│   ├── realtime.py       # Realtime publishing
-│   └── templates.py      # Dashboard templates
-├── cb/
-│   ├── bridge.py         # Notion→DB sync logic
-│   ├── notion.py         # Notion API client
-│   ├── db.py             # Database adapters
-│   └── cli.py            # CLI commands
-├── config/
-│   └── bridge.yaml       # Sync profiles
-├── run_api.py            # Start Core API
-├── run_sandbox.py        # Start Sandbox API
-├── requirements.txt      # Dependencies
-├── BRIDGE_SPEC.md        # Integration spec
-└── COORDINATION_RESPONSE.md  # Main App coordination
-```
-
----
-
-## 🔗 Integration with Main App
-
-See `BRIDGE_SPEC.md` for full integration details.
-
-### Quick Integration
-
-```javascript
-// Nuxt server route example
-export default defineEventHandler(async (event) => {
-  const jwt = getCookie(event, 'sb-access-token')
-  
-  const templates = await $fetch('http://localhost:3000/api/templates', {
-    headers: { Authorization: `Bearer ${jwt}` }
-  })
-  
-  return templates
-})
-```
-
----
-
-## 🛠️ CLI Usage
+| Lens | Example |
+|------|---------|
+| **Western** | "Activates parasympathetic nervous system..." |
+| **TCM** | "Smooths Liver Qi, releasing stagnation..." |
+| **Somatic** | "Notice the settling in your body..." |
+| **Spiritual** | "Each breath connects you to source..." |
 
 ```bash
-# Export Notion database to Supabase
-python -m cb.cli export notion-to-db \
-  --database-id YOUR_NOTION_DB_ID \
-  --target supabase \
-  --connection "https://xxx.supabase.co|your-key" \
-  --table my_table
-
-# Dry run (preview only)
-python -m cb.cli export notion-to-db \
-  --database-id YOUR_NOTION_DB_ID \
-  --dry-run
+# Test it:
+curl http://localhost:3001/sandbox/lenses
+curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=tcm"
 ```
 
 ---
 
-## 📄 License
+## 📁 Key Files
 
-MIT License - See LICENSE file for details.
+| File | Purpose |
+|------|---------|
+| `MAIN_APP_HANDOFF.md` | Share with Main App AI |
+| `SESSION_GENERATION_RUNTIME_SPEC.md` | How Main App generates sessions |
+| `ADAPTIVE_AI_VISION.md` | Full AI architecture |
+| `main-app-starter/` | Nuxt 3 starter project |
+
+---
+
+## 🛣️ Future Vision
+
+### Phase 1: Standalone Bridge App
+- Downloadable desktop application
+- Power Automate Desktop (PAD) integration
+- Scheduled content syncs
+- Trigger-based automations
+
+### Phase 2: User Knowledge Base Uploads
+- Upload personal documents (PDFs, notes, journals)
+- AI learns from user-provided texts
+- Private knowledge bases with permission controls
+- Custom lenses from user content
+
+### Phase 3: Expanded Content Domains
+
+| Domain | Description |
+|--------|-------------|
+| **Storytelling** | Myths, legends, folklore integration |
+| **Religious Texts** | Comparative wisdom traditions (with legal review) |
+| **Instruction Manuals** | Step-by-step practice guides |
+| **Astrology** | Birth chart integration for personalized sessions |
+| **Tarot** | Card readings as session prompts/reflections |
+
+### Phase 4: Advanced AI Features
+- Cross-domain technique transfer
+- Collective wisdom from anonymized patterns
+- Experimental frontier mode with disclaimers
+- Buddy/family notification system
+- Conversational questionnaires
+
+---
+
+## 🔒 Legal Considerations for Future Features
+
+- **User Uploads**: Terms of service for uploaded content
+- **Religious Texts**: Fair use, proper attribution, sensitivity
+- **Astrology/Tarot**: Entertainment disclaimer, not predictive claims
+- **AI Permissions**: Clear user consent for data usage levels
+
+---
+
+## 🧪 Testing
+
+```bash
+# Verify all tables
+curl http://localhost:3000/api/query/session_blueprints
+curl http://localhost:3000/api/query/timing_presets
+curl http://localhost:3000/api/query/narration_styles
+
+# Test lens system
+curl http://localhost:3001/sandbox/lenses
+
+# Generate demo session
+curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
+```
+
+---
+
+## 📖 Documentation
+
+- [Main App Handoff](MAIN_APP_HANDOFF.md)
+- [Session Generation Spec](docs/SESSION_GENERATION_RUNTIME_SPEC.md)
+- [Adaptive AI Vision](ADAPTIVE_AI_VISION.md)
+- [Notion Overview](https://www.notion.so/CursorBridge-Overview-Jan-2-2025-2dcc47c61e21815ebd5ffb19738c6e78)
+
+---
+
+## 📊 Current Status
+
+| Component | Status |
+|-----------|--------|
+| Core API | ✅ Running |
+| Sandbox API | ✅ Running |
+| Notion Sync | ✅ Working |
+| Supabase | ✅ Connected |
+| 25 Content Tables | ✅ Synced |
+| 11 Execution Tables | ✅ Created |
+| 14 Lenses | ✅ Active |
+| 20 Personas | ✅ Active |
+| 19 Knowledge Bases | ✅ Active |
+| Session Blueprints | ✅ 5 Platform Examples |
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+This project is designed to work with the Main App (Nuxt 3). See `MAIN_APP_HANDOFF.md` for integration details.
+
+---
+
+## 📜 License
+
+MIT License - See LICENSE file for details.
+
+---
+
+*Built with ❤️ for adaptive wellness*
+*Last updated: January 2, 2025*
