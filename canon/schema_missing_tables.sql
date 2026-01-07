@@ -1,0 +1,4 @@
+﻿-- Execution-layer missing tables migration
+-- Generated: 2026-01-04T23:40:53Z
+-- All required execution-layer tables already exist (session_outputs present; session_output_text not required).
+-- No DDL generated.
