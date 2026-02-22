@@ -86,4 +86,6 @@ Target relation rows and gap tracking.
   - `python scripts/create_notion_relations_registry.py --page <NOTION_PAGE_URL_OR_ID>`
 - Preview only:
   - `python scripts/create_notion_relations_registry.py --page <PAGE> --dry-run`
-
+- Check boxes as work is completed:
+  - `python scripts/checkoff_notion_relation_progress.py --relation-id TG018 --mark-supabase-done --note "FK added"`
+  - `python scripts/checkoff_notion_relation_progress.py --relation-key "mappings.from_db+from_field->mappings.to_db+to_field" --mark-convex-done`
