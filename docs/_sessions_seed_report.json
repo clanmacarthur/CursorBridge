@@ -1,0 +1,34 @@
+{
+  "supabase_url": "https://dshwdxhycdrtemaxrupu.supabase.co",
+  "actions": [
+    "Seeding control_pack_items",
+    "Seeding profile_pack_map",
+    "Seeding default_weights",
+    "Seeding persona_lens_compatibility",
+    "Seeding programme_knowledge_map",
+    "Seeding questionnaires and questionnaire_questions",
+    "questionnaire_responses intentionally not seeded (runtime user data table)"
+  ],
+  "inserted": {
+    "programme_knowledge_map": 5,
+    "questionnaires": 1,
+    "questionnaire_questions": 6
+  },
+  "skipped": {
+    "control_pack_items": 12,
+    "profile_pack_map": 7,
+    "default_weights": 7,
+    "persona_lens_compatibility": 9
+  },
+  "errors": [],
+  "final_counts": {
+    "control_pack_items": 12,
+    "default_weights": 7,
+    "persona_lens_compatibility": 9,
+    "profile_pack_map": 7,
+    "programme_knowledge_map": 5,
+    "questionnaires": 1,
+    "questionnaire_questions": 6,
+    "questionnaire_responses": 0
+  }
+}
