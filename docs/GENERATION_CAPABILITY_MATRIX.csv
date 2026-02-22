@@ -1,0 +1,13 @@
+capability_id,intent_category,practice_family,subcategory,delivery_formats,default_session_types,primary_tables,mach_layer,notes
+CAP001,Regulation,Breathwork,Box Breathing,"timeline_json|narration_script|audio_cue_sheet",regulation,"session_blueprints|blueprint_steps|techniques|technique_steps|narration_styles",Core,Core downshift pattern
+CAP002,Recovery,NSDR / Deep Rest,NSDR,"timeline_json|narration_script|sleep_winddown_script|audio_cue_sheet",recovery,"session_blueprints|techniques|technique_steps|session_phases|narration_styles|lens_definitions",Core,Primary home for NSDR
+CAP003,Sleep Support,NSDR / Deep Rest,Insomnia Support NSDR,"timeline_json|narration_script|sleep_winddown_script",recovery,"session_blueprints|techniques|technique_steps|safety_rules|knowledge_bases",Core,Condition-tagged usage not standalone family
+CAP004,Emotional Processing,Tapping / EFT,EFT Basic,"timeline_json|narration_script|instructional_video_script",regulation,"techniques|technique_steps|safety_rules|technique_lens_explanations",Core,Good for guided + educational output
+CAP005,Activation,Movement / Somatic,Activation Flow,"timeline_json|narration_script|instructional_video_script",training,"techniques|technique_steps|movements_system|timing_presets",Core,Adds movement scenes
+CAP006,Focus,Meditation / Attention,Attention Reset,"timeline_json|narration_script|instruction_cards",regulation,"session_blueprints|techniques|narration_styles|meta_lens_presets",Core,Short focus session pattern
+CAP007,Learning,Education Block,Technique Explainer,"lesson_cards|instructional_video_script|narration_script",training,"knowledge_bases|technique_lens_explanations|lens_definitions|meta_lens_presets",Core,Not only therapeutic
+CAP008,Reflection,Storytelling,Narrative Reflection,"narration_script|reflection_prompts|lesson_cards",recovery,"knowledge_bases|archetypal_personas|narration_styles|meta_lens_presets",Core,Story output mode
+CAP009,Pain/Tension Modulation,Movement / Somatic,Gentle Release,"timeline_json|narration_script|instructional_video_script",recovery,"techniques|movements_system|safety_rules|session_types",Core,Safety-first defaults
+CAP010,Regulation,Sound / Vibration,Tone-Guided Settle,"timeline_json|narration_script|audio_cue_sheet",regulation,"sound_vibration|cue_triggers|session_blueprints|narration_styles",Core,Good cue-driven output
+CAP011,Custom Builder,User-Defined,Custom Wheel Session,"timeline_json|narration_script|custom_cards",custom,"future_user_defined_tables",Mach1.1,Parked until core taxonomy is stable
+CAP012,Custom Library,User-Defined,User Authored Technique,"instruction_cards|lesson_cards|timeline_json",custom,"future_user_defined_tables|knowledge_bases",Mach1.1,Parked advanced layer

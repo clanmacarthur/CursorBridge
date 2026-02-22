@@ -261,6 +261,7 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
 - [Relations Master Table](docs/RELATIONS_MASTER.csv)
 - [Notion Relations Tracker Spec](docs/NOTION_RELATIONS_TRACKER_SPEC.md)
 - [Generation Scope Taxonomy](docs/GENERATION_SCOPE_TAXONOMY.md)
+- [Generation Capability Matrix](docs/GENERATION_CAPABILITY_MATRIX.csv)
 - [Task-Manager Alignment](docs/TASK_MANAGER_CURSORBRIDGE_ALIGNMENT.md)
 - [Controlled Port Plan](docs/CONTROLLED_PORT_PLAN_TASK_MANAGER_TO_CURSORBRIDGE.md)
 - [Notion Overview](https://www.notion.so/CursorBridge-Overview-Jan-2-2025-2dcc47c61e21815ebd5ffb19738c6e78)
