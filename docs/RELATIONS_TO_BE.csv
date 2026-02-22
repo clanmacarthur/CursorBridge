@@ -1,0 +1,45 @@
+relation_id,from_table,from_column,to_table,to_column,target_type,current_state,next_action,phase,notes
+TG001,control_pack_items,control_id,control_definitions,id,schema_fk,live,keep,P0,Already live
+TG002,control_pack_items,pack_id,control_packs,id,schema_fk,live,keep,P0,Already live
+TG003,coupling_rules,from_control_id,control_definitions,id,schema_fk,live,keep,P0,Already live
+TG004,coupling_rules,to_control_id,control_definitions,id,schema_fk,live,keep,P0,Already live
+TG005,persona_kb_compatibility,kb_id,knowledge_bases,id,schema_fk,live,keep,P0,Already live
+TG006,persona_lens_compatibility,lens_id,lens_definitions,id,schema_fk,live,keep,P0,Already live
+TG007,profile_pack_map,pack_id,control_packs,id,schema_fk,live,keep,P0,Already live
+TG008,programme_knowledge_map,kb_id,knowledge_bases,id,schema_fk,live,keep,P0,Already live
+TG009,questionnaire_questions,questionnaire_id,questionnaires,id,schema_fk,live,keep,P0,Already live
+TG010,questionnaire_responses,questionnaire_id,questionnaires,id,schema_fk,live,keep,P0,Already live
+TG011,session_outputs,session_run_id,session_runs,id,schema_fk,live,keep,P0,Already live
+TG012,technique_lens_explanations,lens_id,lens_definitions,id,schema_fk,live,keep,P0,Already live
+TG013,technique_lens_explanations,technique_id,techniques,id,schema_fk,live,keep,P0,Already live
+TG014,user_knowledge_access,kb_id,knowledge_bases,id,schema_fk,live,keep,P0,Already live
+TG015,user_lens_preferences,lens_id,lens_definitions,id,schema_fk,live,keep,P0,Already live
+TG016,profile_pack_map,programme_profile_id,programme_profiles,id,schema_fk,missing_fk,add_fk_after_type_fix,P1,Column is text while target id is bigint
+TG017,programme_knowledge_map,programme_profile_id,programme_profiles,id,schema_fk,missing_fk,add_fk_after_type_fix,P1,Column is text while target id is bigint
+TG018,persona_lens_compatibility,persona_id,archetypal_personas,id,schema_fk,missing_fk,add_fk,P1,Column exists and should be linked
+TG019,default_weights,programme_profile_id,programme_profiles,id,schema_fk,missing_fk,add_fk_after_type_fix,P1,Column is text while target id is bigint
+TG020,default_weights,attribute_id,attribute_taxonomy,id,schema_fk,missing_fk,add_fk_after_type_fix,P1,Column is text while target id is bigint
+TG021,questionnaire_responses,assigned_profile_id,programme_profiles,id,schema_fk,missing_fk,add_fk_after_type_fix,P2,Assigned profile should point to programme profile
+TG022,session_runs,session_template_id,session_templates,id,schema_fk,missing_fk,add_fk_after_type_fix,P1,Column is text while target id is bigint
+TG023,session_runs,persona_id,archetypal_personas,id,schema_fk,missing_fk,add_fk_after_type_fix,P2,Column is text while target id is bigint
+TG024,blueprint_steps,blueprint_id,session_blueprints,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG025,blueprint_steps,technique_step_id,technique_steps,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG026,blueprint_cues,blueprint_id,session_blueprints,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG027,blueprint_cues,cue_trigger_id,cue_triggers,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG028,technique_steps,phase_id,session_phases,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG029,technique_steps,transition_rule_id,transition_rules,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG030,session_blueprints,timing_preset_id,timing_presets,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG031,session_blueprints,narration_style_id,narration_styles,id,schema_fk,missing_fk,add_fk,P1,Column exists and ids are uuid
+TG032,session_blueprints,programme_profile_id,programme_profiles,id,schema_fk,missing_fk,fix_id_strategy_then_add_fk,P2,Column is uuid while target id is bigint
+TG033,session_blueprints,persona_id,archetypal_personas,id,schema_fk,missing_fk,fix_id_strategy_then_add_fk,P2,Column is uuid while target id is bigint
+TG034,session_blueprints,lens_preset_id,meta_lens_presets,id,schema_fk,missing_fk,fix_id_strategy_then_add_fk,P2,Confirm id type alignment first
+TG035,session_templates,session_type____l1_,session_types,session_type,mapping_rule,text_link_only,stabilize_lookup_key,P2,Current link is by text not id
+TG036,session_templates,style____nl_,archetypal_personas,persona,mapping_rule,text_link_only,stabilize_lookup_key,P2,Current link is by text not id
+TG037,session_templates,breath_protocols____nl_,breath_library,protocol_name,mapping_rule,text_link_only,stabilize_lookup_key,P2,Current link is by text not id
+TG038,session_templates,movements____nl_,movements_system,movement___practice,mapping_rule,text_link_only,stabilize_lookup_key,P2,Current link is by text not id
+TG039,session_templates,safety_rules____nl_,safety_rules,rule_name,mapping_rule,text_link_only,stabilize_lookup_key,P2,Current link is by text not id
+TG040,user_checkins,control_values,control_definitions,id,mapping_rule,json_link_only,define_json_schema_and_fk_strategy,P3,Current link lives inside jsonb
+TG041,user_dashboard_layouts,layout_config,control_packs,id,mapping_rule,json_link_only,define_json_schema_and_fk_strategy,P3,Current link lives inside jsonb
+TG042,user_dashboard_layouts,layout_config,dashboard_blocks,id,mapping_rule,json_link_only,define_json_schema_and_fk_strategy,P3,Current link lives inside jsonb
+TG043,mappings,from_db+from_field,mappings,to_db+to_field,edge_registry,live_edge_table,keep_and_validate,P0,Treat as app-level edge registry
+TG044,cross_domain_mappings,source_domain,cross_domain_mappings,target_domain,edge_registry,live_edge_table,keep_and_validate,P0,Treat as app-level domain bridge table

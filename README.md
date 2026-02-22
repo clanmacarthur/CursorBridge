@@ -2,7 +2,7 @@
 
 **The Content Intelligence Layer for Adaptive Wellness Applications**
 
-CursorBridge connects Notion (content authoring) → Supabase (data storage) → Main App (user interface), providing APIs for session generation, lens switching, and personalized content delivery.
+CursorBridge syncs Notion-authored content into Supabase and provides optional Core/Sandbox APIs for queries, lens testing, and session generation. The Main App can call these APIs or connect directly to Supabase; see `MAIN_APP_INTEGRATION_PACKAGE.md`.
 
 ---
 
@@ -32,7 +32,10 @@ CursorBridge connects Notion (content authoring) → Supabase (data storage) →
 ```bash
 git clone https://github.com/clanmacarthur/CursorBridge.git
 cd CursorBridge
-pip install -r requirements.txt
+python -m pip install -r api/requirements.txt
+python -m pip install -r sandbox/requirements.txt
+# Optional: install the CLI package
+python -m pip install -e .
 ```
 
 ### Environment Variables
@@ -55,6 +58,44 @@ python run_sandbox.py
 
 ---
 
+## End-to-End Flow (Beginning -> End)
+
+1. Author content in Notion (programmes, techniques, templates, lenses).
+2. Sync Notion to Supabase via `POST /api/sync/notion` or the `cb` CLI (uses `config/bridge.yaml` + `config/notion_db_ids.json`).
+3. Supabase becomes the source of truth for content tables and execution-layer tables.
+4. Main App reads from Supabase directly (preferred) or via Core API `/api/query/*` and `/api/templates`.
+5. Sessions are generated in one of two ways:
+   - Main App assembles timeline + narration from `session_blueprints` (see `docs/SESSION_GENERATION_RUNTIME_SPEC.md`) and writes `session_runs` + `session_outputs`.
+   - Sandbox API `/sandbox/generate-session` generates demo sessions for validation/testing.
+6. Main App plays back the session (example player in `main-app-starter/components/SessionPlayer.vue`).
+
+---
+
+## Action Triggers (Who Calls What)
+
+| Trigger | Action | Endpoint / Tool |
+|---------|--------|-----------------|
+| Content update | Sync Notion -> Supabase | `POST /api/sync/notion` or `cb export notion-to-db` |
+| Content read | Query tables | `GET /api/query/{table}` or direct Supabase |
+| Template read | Dashboard templates | `GET /api/templates` |
+| Session generation | Build session output | Main App runtime (blueprints) or `POST /sandbox/generate-session` |
+| Lens lookup | List lens registry | `GET /sandbox/lenses` |
+| Check-in logging | Save user check-in | `POST /api/logs/checkin` or direct Supabase insert |
+| Realtime update | Notify content sync | `sync_events` insert (published by `shared/realtime.py`) |
+
+---
+
+## Main App Starter (Nuxt 3 Example)
+
+`main-app-starter/` is a reference Nuxt 3 app that:
+- Uses Supabase Auth via `@nuxtjs/supabase`
+- Proxies CursorBridge APIs via `server/api/bridge/*`
+- Demonstrates session playback + check-ins with example components
+
+For production, follow `MAIN_APP_INTEGRATION_PACKAGE.md` and connect directly to Supabase.
+
+---
+
 ## 📡 API Endpoints
 
 ### Core API (Port 3000)
@@ -65,7 +106,7 @@ python run_sandbox.py
 | `/api/query/{table}` | GET | Query any table |
 | `/api/templates` | GET | Dashboard templates |
 | `/api/schema/{table}` | GET | Table schema info |
-| `/sync/{db}` | POST | Sync Notion → Supabase |
+| `/api/sync/notion` | POST | Sync Notion to Supabase |
 
 ### Sandbox API (Port 3001)
 
@@ -130,8 +171,9 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=tcm"
 | File | Purpose |
 |------|---------|
 | `MAIN_APP_HANDOFF.md` | Share with Main App AI |
-| `SESSION_GENERATION_RUNTIME_SPEC.md` | How Main App generates sessions |
+| `docs/SESSION_GENERATION_RUNTIME_SPEC.md` | How Main App generates sessions |
 | `ADAPTIVE_AI_VISION.md` | Full AI architecture |
+| `MAIN_APP_INTEGRATION_PACKAGE.md` | Direct-to-Supabase integration guide |
 | `main-app-starter/` | Nuxt 3 starter project |
 
 ---
@@ -200,6 +242,24 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
 - [Main App Handoff](MAIN_APP_HANDOFF.md)
 - [Session Generation Spec](docs/SESSION_GENERATION_RUNTIME_SPEC.md)
 - [Adaptive AI Vision](ADAPTIVE_AI_VISION.md)
+- [Main App Integration Package](MAIN_APP_INTEGRATION_PACKAGE.md)
+- [Sessions Handover](docs/HANDOVER_SESSIONS.md)
+- [Sessions Master](docs/SESSIONS_MASTER.md)
+- [CursorBridge Role Reset](docs/HANDOVER_CURSORBRIDGE.md)
+- [CursorBridge Status Report](docs/CURSORBRIDGE_STATUS.md)
+- [Data Model Overview](docs/DATA_MODEL_OVERVIEW.md)
+- [Theme Table Catalog](docs/THEME_TABLE_CATALOG.md)
+- [Convex Migration Plan](docs/CONVEX_MIGRATION_PLAN.md)
+- [Notion DB Inventory](docs/NOTION_DB_INVENTORY.md)
+- [Notion Supabase Convex Plan](docs/NOTION_SUPABASE_CONVEX_PLAN.md)
+- [Supabase Sessions Audit](docs/SUPABASE_SESSIONS_AUDIT.md)
+- [Sessions Keep Merge Deprecate Matrix](docs/SESSIONS_KEEP_MERGE_DEPRECATE_MATRIX.md)
+- [Full System Keep Merge Deprecate Matrix](docs/FULL_SYSTEM_KEEP_MERGE_DEPRECATE_MATRIX.md)
+- [Relations Registry Guide](docs/RELATIONS_REGISTRY.md)
+- [Relations Existing Table](docs/RELATIONS_EXISTING.csv)
+- [Relations To-Be Table](docs/RELATIONS_TO_BE.csv)
+- [Task-Manager Alignment](docs/TASK_MANAGER_CURSORBRIDGE_ALIGNMENT.md)
+- [Controlled Port Plan](docs/CONTROLLED_PORT_PLAN_TASK_MANAGER_TO_CURSORBRIDGE.md)
 - [Notion Overview](https://www.notion.so/CursorBridge-Overview-Jan-2-2025-2dcc47c61e21815ebd5ffb19738c6e78)
 
 ---
@@ -208,16 +268,16 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
 
 | Component | Status |
 |-----------|--------|
-| Core API | ✅ Running |
-| Sandbox API | ✅ Running |
-| Notion Sync | ✅ Working |
-| Supabase | ✅ Connected |
-| 25 Content Tables | ✅ Synced |
-| 11 Execution Tables | ✅ Created |
-| 14 Lenses | ✅ Active |
-| 20 Personas | ✅ Active |
-| 19 Knowledge Bases | ✅ Active |
-| Session Blueprints | ✅ 5 Platform Examples |
+| Core API | Implemented (run via `run_api.py`) |
+| Sandbox API | Implemented (run via `run_sandbox.py`) |
+| Notion Sync | Implemented (Core API + `cb` CLI) |
+| Supabase | Required backend |
+| Content Tables | Defined + seeded (see SQL files) |
+| Execution Tables | Defined + seeded (see SQL files) |
+| Lenses | Defined (table + sandbox endpoints) |
+| Personas | Defined (table + seed data) |
+| Knowledge Bases | Defined (table + seed data) |
+| Session Blueprints | Defined (execution layer schema + seeds) |
 
 ---
 

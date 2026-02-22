@@ -1,0 +1,17 @@
+relation_id,from_table,from_column,to_table,to_column,relation_type,join_table,state,source
+EX001,control_pack_items,control_id,control_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX002,control_pack_items,pack_id,control_packs,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX003,coupling_rules,from_control_id,control_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX004,coupling_rules,to_control_id,control_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX005,persona_kb_compatibility,kb_id,knowledge_bases,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX006,persona_lens_compatibility,lens_id,lens_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX007,profile_pack_map,pack_id,control_packs,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX008,programme_knowledge_map,kb_id,knowledge_bases,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX009,questionnaire_questions,questionnaire_id,questionnaires,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX010,questionnaire_responses,questionnaire_id,questionnaires,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX011,session_outputs,session_run_id,session_runs,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX012,technique_lens_explanations,lens_id,lens_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX013,technique_lens_explanations,technique_id,techniques,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX014,user_knowledge_access,kb_id,knowledge_bases,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX015,user_lens_preferences,lens_id,lens_definitions,id,many-to-one,,live_fk,canon/RelationsManifest.md
+EX016,control_definitions,id,control_packs,id,many-to-many,control_pack_items,derived_live,canon/RelationsManifest.md
