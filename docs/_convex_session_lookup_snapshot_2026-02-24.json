@@ -1,0 +1,434 @@
+{
+  "runDateUtc": "2026-02-24T13:40:23.690Z",
+  "deploymentHint": "regenerative-hive-mind / dev (elated-ibis-363)",
+  "results": {
+    "sessionLookupSafety": {
+      "contraindications": [
+        {
+          "condition": "PTSD (severe)",
+          "notionPageId": "2c6c47c6-1e21-801a-99b5-cfaf6de0a697",
+          "restriction": "No trauma recall without resourcing"
+        },
+        {
+          "condition": "Epilepsy",
+          "notionPageId": "2c6c47c6-1e21-8033-b2b7-fecbf546a2af",
+          "restriction": "No rhythmic flashing or hyperventilation"
+        },
+        {
+          "condition": "Recent concussion",
+          "notionPageId": "2c6c47c6-1e21-803f-924e-f581512e1b02",
+          "restriction": "Avoid altered states"
+        },
+        {
+          "condition": "Substance use",
+          "notionPageId": "2c6c47c6-1e21-806d-a27d-d7c752564873",
+          "restriction": "No breathwork or hypnosis"
+        },
+        {
+          "condition": "Sleep deprivation",
+          "notionPageId": "2c6c47c6-1e21-8078-b54b-cc564b969b53",
+          "restriction": "Avoid deep trance"
+        },
+        {
+          "condition": "Bipolar (mania)",
+          "notionPageId": "2c6c47c6-1e21-8089-9a29-fb6a3653c6d3",
+          "restriction": "Avoid trance and activation"
+        },
+        {
+          "condition": "Psychosis history",
+          "notionPageId": "2c6c47c6-1e21-8098-aeda-c2b47a615b59",
+          "restriction": "No altered-state practices"
+        },
+        {
+          "condition": "Panic disorder",
+          "notionPageId": "2c6c47c6-1e21-809a-853d-d93ce5372443",
+          "restriction": "No breath holds, no hyperventilation"
+        },
+        {
+          "condition": "Dissociative disorders",
+          "notionPageId": "2c6c47c6-1e21-80ad-bbde-ca4dfa6f5eed",
+          "restriction": "Avoid hypnosis, archetypes"
+        },
+        {
+          "condition": "Pregnancy",
+          "notionPageId": "2c6c47c6-1e21-80d7-a4ff-ed97e4f05b22",
+          "restriction": "Avoid intense breathwork"
+        },
+        {
+          "condition": "Cardiac conditions",
+          "notionPageId": "2c6c47c6-1e21-80f9-a896-e5f8abed613d",
+          "restriction": "No breath retention"
+        }
+      ],
+      "runDateUtc": "2026-02-24T13:40:23.690Z",
+      "stopTriggers": [
+        {
+          "action": "End session",
+          "notionPageId": "2c6c47c6-1e21-8019-a27b-eff345b9b847",
+          "symptom": "Confusion"
+        },
+        {
+          "action": "Name objects in room",
+          "notionPageId": "2c6c47c6-1e21-8038-94cd-c8c213037666",
+          "symptom": "Dissociation"
+        },
+        {
+          "action": "Stop immediately",
+          "notionPageId": "2c6c47c6-1e21-8088-8fd1-ef7d66cdf921",
+          "symptom": "Chest pain"
+        },
+        {
+          "action": "Sit upright",
+          "notionPageId": "2c6c47c6-1e21-8089-b424-ee47e6f9eeca",
+          "symptom": "Severe dizziness"
+        },
+        {
+          "action": "Resume normal breathing",
+          "notionPageId": "2c6c47c6-1e21-80b9-a398-ebf5e5c07d80",
+          "symptom": "Air hunger distress"
+        },
+        {
+          "action": "Ground body",
+          "notionPageId": "2c6c47c6-1e21-80e0-bfe1-deafb883abb2",
+          "symptom": "Emotional flooding"
+        },
+        {
+          "action": "Stop, open eyes",
+          "notionPageId": "2c6c47c6-1e21-80f2-bc7b-f103c713665f",
+          "symptom": "Panic surge"
+        }
+      ],
+      "totals": {
+        "contraindications": 11,
+        "stopTriggers": 7
+      }
+    },
+    "sessionLookupBreathwork": {
+      "filter": {
+        "useCase": "nsdr"
+      },
+      "items": [
+        {
+          "breathType": "Nasal slow",
+          "nervousSystem": "Parasympathetic",
+          "notionPageId": "2c6c47c6-1e21-80f0-9e26-d0723c862145",
+          "pattern": "4\u20136 bpm",
+          "physiologyEffect": "CO\u2082 tolerance \u2191",
+          "safetyNotes": "Safe for most",
+          "useCase": "NSDR"
+        }
+      ],
+      "returned": 1,
+      "runDateUtc": "2026-02-24T13:40:27.484Z",
+      "totalAvailable": 1
+    },
+    "sessionLookupBuilderControls": {
+      "controls": [
+        {
+          "column": "Notes",
+          "notes": "\u2014",
+          "notionPageId": "2d5c47c6-1e21-800b-92b5-f664203dc550",
+          "type": "Text"
+        },
+        {
+          "column": "Data Type",
+          "notes": "Quantitative / Qualitative / Binary",
+          "notionPageId": "2d5c47c6-1e21-8016-9b4b-e25760b4ede8",
+          "type": "Select"
+        },
+        {
+          "column": "Safety Link",
+          "notes": "One-way, no limit",
+          "notionPageId": "2d5c47c6-1e21-8038-a6b8-c9ae3eb4edcb",
+          "type": "Relation \u2192 Safety Rules (DB)"
+        },
+        {
+          "column": "Control",
+          "notes": "The knob/toggle name",
+          "notionPageId": "2d5c47c6-1e21-8041-9b92-fb41e84eb4cb",
+          "type": "Title"
+        },
+        {
+          "column": "Control Type",
+          "notes": "Slider / Toggle / Checkbox / Select / Multi-select / Timer / Counter",
+          "notionPageId": "2d5c47c6-1e21-8061-a3ab-cac986d6dd85",
+          "type": "Select"
+        },
+        {
+          "column": "Default Range Min",
+          "notes": "For sliders",
+          "notionPageId": "2d5c47c6-1e21-8076-ba73-c9e4f32e52f5",
+          "type": "Number"
+        },
+        {
+          "column": "Maps To Attributes",
+          "notes": "One-way, no limit",
+          "notionPageId": "2d5c47c6-1e21-807b-90ee-d4ab3281141f",
+          "type": "Relation \u2192 Attribute Taxonomy (DB)"
+        },
+        {
+          "column": "Suggested Block",
+          "notes": "One-way, limit 1 (optional)",
+          "notionPageId": "2d5c47c6-1e21-8090-8a59-f150da948cff",
+          "type": "Relation \u2192 Dashboard Blocks (DB)"
+        },
+        {
+          "column": "Scoring Mode",
+          "notes": "None / Threshold / Weighted / Composite",
+          "notionPageId": "2d5c47c6-1e21-8090-bc79-d3dc3f80a347",
+          "type": "Select"
+        },
+        {
+          "column": "Unit",
+          "notes": "%, reps, minutes, grams, \u201cyes/no\u201d, etc.",
+          "notionPageId": "2d5c47c6-1e21-809e-800b-f5c242203ac5",
+          "type": "Select/Text"
+        },
+        {
+          "column": "Default Range Max",
+          "notes": "For sliders",
+          "notionPageId": "2d5c47c6-1e21-80bf-a9e5-d1d7cd2081d1",
+          "type": "Number"
+        },
+        {
+          "column": "Default Step",
+          "notes": "For sliders",
+          "notionPageId": "2d5c47c6-1e21-80e7-9700-d675965ed2b5",
+          "type": "Number"
+        },
+        {
+          "column": "Default Value",
+          "notes": "Optional",
+          "notionPageId": "2d5c47c6-1e21-80fa-8f82-d4ad0781315a",
+          "type": "Number/Text"
+        }
+      ],
+      "runDateUtc": "2026-02-24T13:40:31.229Z",
+      "sliders": [
+        {
+          "columnName": "Regulation Metric",
+          "notionPageId": "2d7c47c6-1e21-8008-be1d-e34ebe202171",
+          "settings": "\u2014",
+          "type": "Title"
+        },
+        {
+          "columnName": "Default Weight",
+          "notionPageId": "2d7c47c6-1e21-800b-be57-ea4796d7b3b2",
+          "settings": "0\u20131 (e.g. 0.5)",
+          "type": "Number"
+        },
+        {
+          "columnName": "Scale Max",
+          "notionPageId": "2d7c47c6-1e21-8019-82a7-e74c4b69c55b",
+          "settings": "default 10",
+          "type": "Number"
+        },
+        {
+          "columnName": "Scale Min",
+          "notionPageId": "2d7c47c6-1e21-804f-b8d1-f95df365c9f5",
+          "settings": "default 0",
+          "type": "Number"
+        },
+        {
+          "columnName": "Metric Category",
+          "notionPageId": "2d7c47c6-1e21-8050-a23f-c180728fea4d",
+          "settings": "Nervous System \u00b7 Energy \u00b7 Sleep \u00b7 Mood \u00b7 Pain \u00b7 Focus \u00b7 Recovery",
+          "type": "Select"
+        },
+        {
+          "columnName": "Primary Attribute",
+          "notionPageId": "2d7c47c6-1e21-8057-907a-f2d983a3df6e",
+          "settings": "\u2192 Attribute Taxonomy (DB); one-way; L1",
+          "type": "Relation"
+        },
+        {
+          "columnName": "Safety Notes",
+          "notionPageId": "2d7c47c6-1e21-8073-bd72-e48cbcb060f5",
+          "settings": "\u2014",
+          "type": "Text"
+        },
+        {
+          "columnName": "Input Type",
+          "notionPageId": "2d7c47c6-1e21-80a4-8f02-f5dec8e1c9c7",
+          "settings": "Slider \u00b7 Checkbox \u00b7 Multi-select",
+          "type": "Select"
+        },
+        {
+          "columnName": "Affects Other Metrics",
+          "notionPageId": "2d7c47c6-1e21-80ae-8946-f24f9ea36f12",
+          "settings": "\u2192 Daily Regulation Sliders (DB); \u2194; NL",
+          "type": "Relation"
+        },
+        {
+          "columnName": "Secondary Attributes",
+          "notionPageId": "2d7c47c6-1e21-80f3-9593-e2d76f2d7724",
+          "settings": "\u2192 Attribute Taxonomy (DB); one-way; NL",
+          "type": "Relation"
+        },
+        {
+          "columnName": "Notes",
+          "notionPageId": "2d7c47c6-1e21-80f5-a0a6-ee859e4e6a36",
+          "settings": "\u2014",
+          "type": "Text"
+        }
+      ],
+      "totals": {
+        "controls": 13,
+        "sliders": 11
+      }
+    },
+    "sessionLookupThemes_mythologicalBeings": {
+      "domain": "mythologicalBeings",
+      "items": [
+        {
+          "category": "Underworld Being",
+          "intensity": "Medium",
+          "label": "Pazuzu",
+          "notes": "Dual role",
+          "notionPageId": "2cdc47c6-1e21-8001-b755-c32e44ab944f",
+          "primaryElement": "Air",
+          "psychologicalTheme": "Disruptive"
+        },
+        {
+          "category": "Celestial Being",
+          "intensity": "High",
+          "label": "Garuda",
+          "notes": "Solar force",
+          "notionPageId": "2cdc47c6-1e21-8002-a9c2-c321426d64cd",
+          "primaryElement": "Air",
+          "psychologicalTheme": "Activating"
+        },
+        {
+          "category": "Underworld Being",
+          "intensity": "High",
+          "label": "Ammit",
+          "notes": "Devourer of souls",
+          "notionPageId": "2cdc47c6-1e21-800e-8d1b-e87d09e6e67c",
+          "primaryElement": "Earth",
+          "psychologicalTheme": "Disruptive"
+        },
+        {
+          "category": "Dragon / Serpent",
+          "intensity": "High",
+          "label": "Dragon",
+          "notes": "Elemental sovereignty",
+          "notionPageId": "2cdc47c6-1e21-8022-8404-dd483c09a2ce",
+          "primaryElement": "Fire",
+          "psychologicalTheme": "Activating"
+        },
+        {
+          "category": "Ancestral / Primordial",
+          "intensity": "Medium",
+          "label": "Nagual",
+          "notes": "Shapeshifting",
+          "notionPageId": "2cdc47c6-1e21-8039-aa5f-c87bfd585287",
+          "primaryElement": "Earth",
+          "psychologicalTheme": "Integrative"
+        }
+      ],
+      "returned": 5,
+      "runDateUtc": "2026-02-24T13:40:34.868Z",
+      "search": null,
+      "totalAvailable": 23
+    },
+    "sessionLookupThemes_sacredAnimals": {
+      "domain": "sacredAnimals",
+      "items": [
+        {
+          "category": "Mammal",
+          "intensity": "Regulating",
+          "label": "Seal",
+          "notes": null,
+          "notionPageId": "2ccc47c6-1e21-8098-b311-e6081df739de",
+          "primaryElement": "Water",
+          "psychologicalTheme": "Soothing"
+        },
+        {
+          "category": "Mammal",
+          "intensity": "Regulating",
+          "label": "Seal",
+          "notes": null,
+          "notionPageId": "2ccc47c6-1e21-80fd-a8dc-e5395b5db960",
+          "primaryElement": "Water",
+          "psychologicalTheme": "Soothing"
+        }
+      ],
+      "returned": 2,
+      "runDateUtc": "2026-02-24T13:40:38.534Z",
+      "search": "seal",
+      "totalAvailable": 2
+    },
+    "sessionLookupThemes_stonesMinerals": {
+      "domain": "stonesMinerals",
+      "items": [
+        {
+          "category": "Crystal",
+          "intensity": "Integrative",
+          "label": "Quartz (Clear)",
+          "notes": "Neutral amplifier",
+          "notionPageId": "2cdc47c6-1e21-8008-b6a9-f8c445a2997e",
+          "primaryElement": "Ether",
+          "psychologicalTheme": null
+        },
+        {
+          "category": "Crystal",
+          "intensity": "Calming",
+          "label": "Rose Quartz",
+          "notes": "Heart-focused",
+          "notionPageId": "2cdc47c6-1e21-80ce-812c-e88c34494194",
+          "primaryElement": "Water",
+          "psychologicalTheme": "Soothing, Bonding"
+        },
+        {
+          "category": "Crystal",
+          "intensity": "Activating",
+          "label": "Herkimer Diamond",
+          "notes": "High-vibration quartz",
+          "notionPageId": "2cdc47c6-1e21-80ee-af42-d9530a24da48",
+          "primaryElement": "Ether",
+          "psychologicalTheme": "Amplification"
+        },
+        {
+          "category": "Crystal",
+          "intensity": "Grounding",
+          "label": "Smoky Quartz",
+          "notes": "Stress discharge",
+          "notionPageId": "2cdc47c6-1e21-80fc-b6f3-e80770184dd5",
+          "primaryElement": "Earth",
+          "psychologicalTheme": "Grounding"
+        }
+      ],
+      "returned": 4,
+      "runDateUtc": "2026-02-24T13:40:42.369Z",
+      "search": "quartz",
+      "totalAvailable": 4
+    },
+    "sessionLookupThemes_astrologyCalendricalSystems": {
+      "domain": "astrologyCalendricalSystems",
+      "items": [
+        {
+          "category": "Vedic Astrology",
+          "intensity": "Regulating",
+          "label": "Rohini",
+          "notes": "Fertility",
+          "notionPageId": "2cdc47c6-1e21-80cc-87f3-ff5aaa80fa2f",
+          "primaryElement": null,
+          "psychologicalTheme": "Growth"
+        },
+        {
+          "category": "Vedic Astrology",
+          "intensity": "Activating",
+          "label": "Ashwini",
+          "notes": "Healers",
+          "notionPageId": "2cdc47c6-1e21-80f4-a4ed-e7a98dd60091",
+          "primaryElement": null,
+          "psychologicalTheme": "Initiation"
+        }
+      ],
+      "returned": 2,
+      "runDateUtc": "2026-02-24T13:40:45.967Z",
+      "search": "vedic",
+      "totalAvailable": 2
+    }
+  }
+}

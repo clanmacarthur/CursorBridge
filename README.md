@@ -245,13 +245,18 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=hybrid"
 - [Main App Integration Package](MAIN_APP_INTEGRATION_PACKAGE.md)
 - [Sessions Handover](docs/HANDOVER_SESSIONS.md)
 - [Sessions Master](docs/SESSIONS_MASTER.md)
+- [Wheels Pre-Build Reassessment](docs/WHEELS_PREBUILD_REASSESSMENT.md)
+- [Grand Project Skeleton](docs/GRAND_PROJECT_SKELETON.md)
+- [ISU Integration Map](docs/ISU_INTEGRATION_MAP.md)
 - [CursorBridge Role Reset](docs/HANDOVER_CURSORBRIDGE.md)
 - [CursorBridge Status Report](docs/CURSORBRIDGE_STATUS.md)
 - [Data Model Overview](docs/DATA_MODEL_OVERVIEW.md)
 - [Theme Table Catalog](docs/THEME_TABLE_CATALOG.md)
 - [Convex Migration Plan](docs/CONVEX_MIGRATION_PLAN.md)
+- [Convex Session Lookups](docs/CONVEX_SESSION_LOOKUPS.md)
 - [Notion DB Inventory](docs/NOTION_DB_INVENTORY.md)
 - [Notion Supabase Convex Plan](docs/NOTION_SUPABASE_CONVEX_PLAN.md)
+- [Notion Supabase Sync Run (2026-02-23)](docs/NOTION_SUPABASE_SYNC_RUN_2026-02-23.md)
 - [Supabase Sessions Audit](docs/SUPABASE_SESSIONS_AUDIT.md)
 - [Sessions Keep Merge Deprecate Matrix](docs/SESSIONS_KEEP_MERGE_DEPRECATE_MATRIX.md)
 - [Full System Keep Merge Deprecate Matrix](docs/FULL_SYSTEM_KEEP_MERGE_DEPRECATE_MATRIX.md)
@@ -298,4 +303,4 @@ MIT License - See LICENSE file for details.
 ---
 
 *Built with ❤️ for adaptive wellness*
-*Last updated: January 2, 2025*
+*Last updated: February 22, 2026*
