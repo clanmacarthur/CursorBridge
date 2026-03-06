@@ -21,7 +21,7 @@ One row per relation key, used as the single checklist.
 | `In To Be` | Checkbox | Present in target relation list |
 | `Current State` | Select | `live`, `missing_fk`, `text_link_only`, etc. |
 | `Next Action` | Text | Plain action step |
-| `Phase` | Select | `P0`, `P1`, `P2`, `P3`, `Parked` |
+| `Phase` | Select | `P0`, `P1`, `P2`, `P3`, `P4`, `Parked` |
 | `On Supabase` | Checkbox | Relation source/target lives in Supabase |
 | `Supabase Configured` | Checkbox | Relation already configured in schema/runtime |
 | `Needs More Data` | Checkbox | Missing content or mapping quality |
@@ -65,9 +65,9 @@ Target relation rows and gap tracking.
 | `To Table` | Text | Target table |
 | `To Column` | Text | Target column |
 | `Target Type` | Select | Target relation type |
-| `Current State` | Select | Live/missing/text-link/json-link |
+| `Current State` | Select | Live/missing/text-link/json-link/not-created |
 | `Next Action` | Text | Immediate action |
-| `Phase` | Select | `P0` to `P3` |
+| `Phase` | Select | `P0` to `P4` |
 | `On Supabase` | Checkbox | Exists in Supabase context |
 | `Supabase Configured` | Checkbox | Configured now |
 | `Needs More Data` | Checkbox | Still needs more data/mapping |

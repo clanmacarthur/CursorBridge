@@ -1,0 +1,274 @@
+{
+  "timestamp": "2026-03-05T00:38:04.119458+00:00",
+  "dry_run": true,
+  "supabase_url": "https://dshwdxhycdrtemaxrupu.supabase.co",
+  "notion_db_count": 31,
+  "synced": [
+    {
+      "notion_key": "astrology_calendrical_systems",
+      "target_table": "astrology_calendrical_systems_stage",
+      "rows_in_notion": 21,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 12
+    },
+    {
+      "notion_key": "breathwork_master_taxonomy",
+      "target_table": "breathwork_master_taxonomy_stage",
+      "rows_in_notion": 12,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 6
+    },
+    {
+      "notion_key": "colour_legacy_archive",
+      "target_table": "light_colour",
+      "rows_in_notion": 23,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 6
+    },
+    {
+      "notion_key": "colours_schema",
+      "target_table": "light_colour",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "contraindications_mandatory_disclosure",
+      "target_table": "contraindications_mandatory_disclosure_stage",
+      "rows_in_notion": 11,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 2
+    },
+    {
+      "notion_key": "control_definitions",
+      "target_table": "control_definitions",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "control_packs",
+      "target_table": "control_packs",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "controls_library_design",
+      "target_table": "controls_library_design_stage",
+      "rows_in_notion": 13,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 3
+    },
+    {
+      "notion_key": "coupling_rules",
+      "target_table": "coupling_rules",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "daily_regulation_sliders",
+      "target_table": "daily_regulation_sliders_stage",
+      "rows_in_notion": 11,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 3
+    },
+    {
+      "notion_key": "default_weights",
+      "target_table": "default_weights",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "deities_archetypes_schema",
+      "target_table": "deities_archetypes",
+      "rows_in_notion": 1,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 11
+    },
+    {
+      "notion_key": "derived_metrics",
+      "target_table": "derived_metrics",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "during_session_stop_triggers",
+      "target_table": "during_session_stop_triggers_stage",
+      "rows_in_notion": 7,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 2
+    },
+    {
+      "notion_key": "emotion_brain_body_energy_mapping",
+      "target_table": "emotion_brain_body_energy_mapping_stage",
+      "rows_in_notion": 12,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 6
+    },
+    {
+      "notion_key": "full_brain_neural_systems_table",
+      "target_table": "full_brain_neural_systems_table_stage",
+      "rows_in_notion": 19,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 7
+    },
+    {
+      "notion_key": "mythological_beings",
+      "target_table": "mythological_beings_stage",
+      "rows_in_notion": 23,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 12
+    },
+    {
+      "notion_key": "nadi_system",
+      "target_table": "nadi_system_stage",
+      "rows_in_notion": 10,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 13
+    },
+    {
+      "notion_key": "profile_pack_map",
+      "target_table": "profile_pack_map",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "questionnaire_questions",
+      "target_table": "questionnaire_questions",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "questionnaires",
+      "target_table": "questionnaires",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "sacred_animals",
+      "target_table": "sacred_animals_stage",
+      "rows_in_notion": 170,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 11
+    },
+    {
+      "notion_key": "sacred_geometry_schema",
+      "target_table": "sacred_geometry",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "safety_rules",
+      "target_table": "safety_rules",
+      "rows_in_notion": 8,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 4
+    },
+    {
+      "notion_key": "sounds_tones_schema",
+      "target_table": "sound_vibration",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    },
+    {
+      "notion_key": "stones_minerals",
+      "target_table": "stones_minerals_stage",
+      "rows_in_notion": 55,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 11
+    },
+    {
+      "notion_key": "symbols_schema",
+      "target_table": "symbols_index",
+      "rows_in_notion": 0,
+      "rows_inserted": 0,
+      "rows_updated": 0,
+      "rows_failed": 0,
+      "source_schema_fields": 0
+    }
+  ],
+  "blocked_missing_target_table": [
+    {
+      "notion_key": "stage_to_canonical_tracker",
+      "target_table": null,
+      "rows_in_notion": 19,
+      "reason": "no_supabase_table_or_mapping"
+    }
+  ],
+  "skipped": [
+    {
+      "notion_key": "relations_existing",
+      "reason": "admin_tracker_not_runtime"
+    },
+    {
+      "notion_key": "relations_master",
+      "reason": "admin_tracker_not_runtime"
+    },
+    {
+      "notion_key": "relations_to_be",
+      "reason": "admin_tracker_not_runtime"
+    }
+  ],
+  "errors": []
+}

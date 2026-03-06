@@ -1,0 +1,652 @@
+{
+  "generated_at_utc": "2026-03-05T01:50:31.583150+00:00",
+  "supabase_url": "https://dshwdxhycdrtemaxrupu.supabase.co",
+  "domain_audit": [
+    {
+      "table": "breath_library",
+      "exists": true,
+      "row_count": 26,
+      "label_column_used": "protocol_name",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "typical_use",
+        "activation_level",
+        "safety_tier",
+        "core_breath_quality"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "typical_use": {
+          "distinct_count": 27,
+          "sample": [
+            "Attention training",
+            "Stress relief",
+            "Balance",
+            "Deep rest",
+            "Containment",
+            "Activation",
+            "Integration",
+            "Grounding",
+            "Arousal",
+            "Emotional processing",
+            "Regulation",
+            "anxiety",
+            "Energy",
+            "Somatic integration",
+            "Downshift",
+            "Sleep prep",
+            "Focus",
+            "NSDR core",
+            "HRV",
+            "CO₂ tolerance"
+          ]
+        },
+        "activation_level": {
+          "distinct_count": 5,
+          "sample": [
+            "Neutral",
+            "Calming",
+            "Regulating",
+            "Trance",
+            "Activating"
+          ]
+        },
+        "safety_tier": {
+          "distinct_count": 3,
+          "sample": [
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "core_breath_quality": {
+          "distinct_count": 28,
+          "sample": [
+            "Counted cycles",
+            "Double inhale + long exhale",
+            "Nasal alternation",
+            "Minimal movement",
+            "Slow",
+            "heavy cadence",
+            "Forceful exhales",
+            "Breath + mantra",
+            "Deep abdominal",
+            "Rapid rhythmic",
+            "Smooth",
+            "wave-like",
+            "Exhale longer than inhale",
+            "Bellows breath",
+            "Breath-movement sync",
+            "Soft sigh exhales",
+            "Inhale–hold–exhale",
+            "Equal phases + holds",
+            "Very slow nasal",
+            "Exhale doubled"
+          ]
+        }
+      }
+    },
+    {
+      "table": "movements_system",
+      "exists": true,
+      "row_count": 16,
+      "label_column_used": "movement___practice",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "movement_family",
+        "intensity",
+        "primary_effect",
+        "intent___condition_fit",
+        "primary_body_region"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "movement_family": {
+          "distinct_count": 11,
+          "sample": [
+            "Flow",
+            "Tremor",
+            "Shake",
+            "Mudra",
+            "Hand",
+            "Posture",
+            "Somatic Touch",
+            "Gaze",
+            "Sound-linked",
+            "Breath-linked",
+            "Walk"
+          ]
+        },
+        "intensity": {
+          "distinct_count": 3,
+          "sample": [
+            "Moderate",
+            "Gentle",
+            "Very Gentle"
+          ]
+        },
+        "primary_effect": {
+          "distinct_count": 5,
+          "sample": [
+            "Integrative",
+            "Discharge",
+            "Regulating",
+            "Soothing",
+            "Grounding"
+          ]
+        },
+        "intent___condition_fit": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "primary_body_region": {
+          "distinct_count": 9,
+          "sample": [
+            "Spine",
+            "Pelvis",
+            "Arms",
+            "Legs",
+            "Hands",
+            "Chest",
+            "Abdomen",
+            "Head",
+            "Neck"
+          ]
+        }
+      }
+    },
+    {
+      "table": "organ_emotion_system",
+      "exists": true,
+      "row_count": 15,
+      "label_column_used": "organ___system",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "primary_emotion",
+        "stress_expression",
+        "breath_type",
+        "regulation_direction"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "primary_emotion": {
+          "distinct_count": 15,
+          "sample": [
+            "Boundary",
+            "Grief",
+            "Attachment",
+            "Control",
+            "Boundary Anxiety",
+            "Safety",
+            "Decision Stress",
+            "Anger",
+            "Worry",
+            "Vigilance",
+            "Burden",
+            "Joy",
+            "Anxiety",
+            "Fear",
+            "Letting Go"
+          ]
+        },
+        "stress_expression": {
+          "distinct_count": 3,
+          "sample": [
+            "Dysregulation",
+            "Suppression",
+            "Hyperactivation"
+          ]
+        },
+        "breath_type": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "regulation_direction": {
+          "distinct_count": 7,
+          "sample": [
+            "Soothing",
+            "Activating",
+            "Integrative",
+            "Grounding",
+            "Regulation",
+            "Mobilising",
+            "Warming"
+          ]
+        }
+      }
+    },
+    {
+      "table": "meridian_system",
+      "exists": true,
+      "row_count": 12,
+      "label_column_used": "meridian",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "associated_organ",
+        "primary_emotion",
+        "five_element_phase",
+        "nervous_system_bias"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "associated_organ": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "primary_emotion": {
+          "distinct_count": 12,
+          "sample": [
+            "Overload",
+            "Decision Stress",
+            "Anxiety",
+            "Grief",
+            "Joy",
+            "Letting Go",
+            "Worry",
+            "Discernment",
+            "Vigilance",
+            "Attachment",
+            "Fear",
+            "Anger"
+          ]
+        },
+        "five_element_phase": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "nervous_system_bias": {
+          "distinct_count": 3,
+          "sample": [
+            "Sympathetic",
+            "Parasympathetic",
+            "Mixed"
+          ]
+        }
+      }
+    },
+    {
+      "table": "light_colour",
+      "exists": true,
+      "row_count": 66,
+      "label_column_used": "light___colour",
+      "missing_label_columns": [
+        "light_colour"
+      ],
+      "filter_columns_present": [
+        "colour_family",
+        "psychological_theme",
+        "circadian_influence"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "colour_family": {
+          "distinct_count": 11,
+          "sample": [
+            "Yellow",
+            "White",
+            "Multi",
+            "Orange",
+            "Indigo",
+            "Red",
+            "Blue-Green",
+            "Blue",
+            "Black",
+            "Green",
+            "Violet"
+          ]
+        },
+        "psychological_theme": {
+          "distinct_count": 34,
+          "sample": [
+            "Reverence",
+            "Orientation",
+            "Renewal",
+            "Safety",
+            "Survival",
+            "Emotional Flow",
+            "Creativity",
+            "Warmth",
+            "Devotion",
+            "Containment",
+            "Stillness",
+            "Rest",
+            "Will",
+            "Clarity",
+            "Awe",
+            "Transcendence",
+            "Womb",
+            "void",
+            "Closure",
+            "Stability"
+          ]
+        },
+        "circadian_influence": {
+          "distinct_count": 5,
+          "sample": [
+            "Day",
+            "Morning",
+            "Neutral",
+            "Evening",
+            "Night"
+          ]
+        }
+      }
+    },
+    {
+      "table": "sound_vibration",
+      "exists": true,
+      "row_count": 10,
+      "label_column_used": "sound_type",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "primary_effect",
+        "nervous_system_bias",
+        "primary_organ"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "primary_effect": {
+          "distinct_count": 5,
+          "sample": [
+            "Soothing",
+            "Regulating",
+            "Integrative",
+            "Activating",
+            "Grounding"
+          ]
+        },
+        "nervous_system_bias": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "primary_organ": {
+          "distinct_count": 0,
+          "sample": []
+        }
+      }
+    },
+    {
+      "table": "nutrition_and_food",
+      "exists": true,
+      "row_count": 59,
+      "label_column_used": "food_type",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "primary_nutrition_domain",
+        "associated_diets___protocols",
+        "evidence_confidence"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "primary_nutrition_domain": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "associated_diets___protocols": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "evidence_confidence": {
+          "distinct_count": 4,
+          "sample": [
+            "Emerging",
+            "Strong",
+            "Moderate",
+            "Traditional"
+          ]
+        }
+      }
+    },
+    {
+      "table": "nutrition_protocols",
+      "exists": true,
+      "row_count": 12,
+      "label_column_used": "nutrition_protocol",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "strictness_level",
+        "primary_nutrition_goal",
+        "primary_attribute_focus",
+        "secondary_attribute_focus"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "strictness_level": {
+          "distinct_count": 3,
+          "sample": [
+            "Loose",
+            "Strict",
+            "Moderate"
+          ]
+        },
+        "primary_nutrition_goal": {
+          "distinct_count": 5,
+          "sample": [
+            "Recovery",
+            "Regulation",
+            "Clinical",
+            "Performance",
+            "Spiritual"
+          ]
+        },
+        "primary_attribute_focus": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "secondary_attribute_focus": {
+          "distinct_count": 0,
+          "sample": []
+        }
+      }
+    },
+    {
+      "table": "symbols_index",
+      "exists": true,
+      "row_count": 94,
+      "label_column_used": "symbol",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "symbol_class",
+        "meaning_domain",
+        "emotional_tone",
+        "cultural_scope"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "symbol_class": {
+          "distinct_count": 20,
+          "sample": [
+            "Ritual Object",
+            "Sacred Geometry",
+            "Boundary",
+            "Threshold",
+            "Natural Feature",
+            "Celestial",
+            "Astronomical",
+            "Mortality Symbol",
+            "Psychological Symbol",
+            "Metaphysical Symbol",
+            "Sacred Animal (Biological)",
+            "Natural Phenomenon",
+            "Sacred Object",
+            "Boundary Symbol",
+            "Sexual",
+            "Generative Symbol",
+            "Body Symbol",
+            "Ritual Instrument",
+            "Mythological Being",
+            "Natural Substance"
+          ]
+        },
+        "meaning_domain": {
+          "distinct_count": 114,
+          "sample": [
+            "Protection",
+            "Concealment",
+            "Fire",
+            "Ascent",
+            "Passage",
+            "Change",
+            "Attainment",
+            "Vision",
+            "Integration",
+            "Polarity",
+            "Endings",
+            "Renewal",
+            "Unconscious",
+            "Hidden self",
+            "Structure",
+            "Memory",
+            "Growth",
+            "Evolution",
+            "Wholeness",
+            "Unity"
+          ]
+        },
+        "emotional_tone": {
+          "distinct_count": 45,
+          "sample": [
+            "Safe",
+            "Focused",
+            "Quiet",
+            "Flowing",
+            "Elevated",
+            "Harmonised",
+            "Dark-neutral",
+            "Dry",
+            "Balanced",
+            "Neutral",
+            "Clear",
+            "Heavy",
+            "Progressive",
+            "Ambiguous",
+            "Alert",
+            "Grounded",
+            "Subtle",
+            "Suspended",
+            "Solemn",
+            "Anticipatory"
+          ]
+        },
+        "cultural_scope": {
+          "distinct_count": 12,
+          "sample": [
+            "Cross-cultural",
+            "Universal",
+            "Indigenous",
+            "Indic",
+            "Norse",
+            "Celtic",
+            "Buddhist",
+            "Minoan",
+            "Mystical",
+            "African",
+            "Egyptian",
+            "Chinese"
+          ]
+        }
+      }
+    },
+    {
+      "table": "sacred_geometry",
+      "exists": true,
+      "row_count": 21,
+      "label_column_used": "geometry",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "geometry_class",
+        "primary_element",
+        "secondary_element",
+        "psychophysiological_effect"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "geometry_class": {
+          "distinct_count": 6,
+          "sample": [
+            "Cosmological",
+            "Constructive",
+            "Initiatory",
+            "Foundational",
+            "Meditative",
+            "Metaphysical"
+          ]
+        },
+        "primary_element": {
+          "distinct_count": 5,
+          "sample": [
+            "Ether",
+            "Fire",
+            "Earth",
+            "Water",
+            "Air"
+          ]
+        },
+        "secondary_element": {
+          "distinct_count": 6,
+          "sample": [
+            "Fire",
+            "Air",
+            "Ether",
+            "—",
+            "Earth",
+            "Water"
+          ]
+        },
+        "psychophysiological_effect": {
+          "distinct_count": 6,
+          "sample": [
+            "Activating",
+            "Grounding",
+            "Integrative",
+            "Regulating",
+            "Soothing",
+            "Neutral"
+          ]
+        }
+      }
+    },
+    {
+      "table": "chakra_systems",
+      "exists": true,
+      "row_count": 7,
+      "label_column_used": "chakra",
+      "missing_label_columns": [],
+      "filter_columns_present": [
+        "sanskrit_name",
+        "organ_emotion",
+        "primary_element"
+      ],
+      "filter_columns_missing": [],
+      "distinct_preview": {
+        "sanskrit_name": {
+          "distinct_count": 7,
+          "sample": [
+            "Vishuddha",
+            "Muladhara",
+            "Anahata",
+            "Svadhisthana",
+            "Sahasrara",
+            "Ajna",
+            "Manipura"
+          ]
+        },
+        "organ_emotion": {
+          "distinct_count": 0,
+          "sample": []
+        },
+        "primary_element": {
+          "distinct_count": 5,
+          "sample": [
+            "2ccc47c6-1e21-8030-991a-c4338fdf9e1e",
+            "2ccc47c6-1e21-8045-9761-ffb554b0f315",
+            "2ccc47c6-1e21-80b1-abe7-d39d770ff4f8",
+            "2ccc47c6-1e21-806a-85b8-f6c1175d16d4",
+            "2ccc47c6-1e21-801a-b42b-f15e5be25525"
+          ]
+        }
+      }
+    }
+  ],
+  "blockers": []
+}

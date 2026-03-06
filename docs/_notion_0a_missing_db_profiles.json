@@ -1,0 +1,177 @@
+{
+  "generated_at_utc": "2026-03-05T01:52:46.823472+00:00",
+  "rows": [
+    {
+      "database_id": "6ed9bf3a5974460c986c6f82185fa7d1",
+      "title": "(Untitled)",
+      "property_count": 2,
+      "properties": [
+        {
+          "name": "Name",
+          "type": "title"
+        },
+        {
+          "name": "Tags",
+          "type": "multi_select"
+        }
+      ],
+      "row_count": 3,
+      "likely_classification": "unknown_needs_manual_label"
+    },
+    {
+      "database_id": "addec191b2a9447aa7352af8543b2c96",
+      "error": "database_fetch_failed_400",
+      "error_body": {
+        "object": "error",
+        "status": 400,
+        "code": "validation_error",
+        "message": "Database with ID addec191-b2a9-447a-a735-2af8543b2c96 does not contain any data sources accessible by this API bot.",
+        "request_id": "2f1bea59-4a6f-47cb-bbed-598503c7e931"
+      }
+    },
+    {
+      "database_id": "b7179b0cdda243619e8f20d275ec9b4c",
+      "error": "database_fetch_failed_400",
+      "error_body": {
+        "object": "error",
+        "status": 400,
+        "code": "validation_error",
+        "message": "Database with ID b7179b0c-dda2-4361-9e8f-20d275ec9b4c does not contain any data sources accessible by this API bot.",
+        "request_id": "5794b7ab-4bce-4656-b084-36377e0baeab"
+      }
+    },
+    {
+      "database_id": "d1503be4cdb0412e8957f074f756de79",
+      "title": "Finance Tracker (1)",
+      "property_count": 13,
+      "properties": [
+        {
+          "name": "30% to Backsbottom",
+          "type": "formula"
+        },
+        {
+          "name": "Bank",
+          "type": "select"
+        },
+        {
+          "name": "Expense $",
+          "type": "number"
+        },
+        {
+          "name": "Expense Source",
+          "type": "select"
+        },
+        {
+          "name": "Expenses",
+          "type": "number"
+        },
+        {
+          "name": "Income Source",
+          "type": "select"
+        },
+        {
+          "name": "Income £",
+          "type": "number"
+        },
+        {
+          "name": "Income/Expense",
+          "type": "select"
+        },
+        {
+          "name": "Name",
+          "type": "title"
+        },
+        {
+          "name": "Placed on shelf",
+          "type": "date"
+        },
+        {
+          "name": "Profit",
+          "type": "formula"
+        },
+        {
+          "name": "Sold",
+          "type": "date"
+        },
+        {
+          "name": "Sub-total",
+          "type": "formula"
+        }
+      ],
+      "row_count": 1,
+      "likely_classification": "non_sessions_finance"
+    },
+    {
+      "database_id": "dc63ed2c9455406b9c6d41d8e5e8325b",
+      "title": "Finance Tracker",
+      "property_count": 13,
+      "properties": [
+        {
+          "name": "30% to Backsbottom",
+          "type": "formula"
+        },
+        {
+          "name": "Bank",
+          "type": "select"
+        },
+        {
+          "name": "Expense $",
+          "type": "number"
+        },
+        {
+          "name": "Expense Source",
+          "type": "select"
+        },
+        {
+          "name": "Expenses",
+          "type": "number"
+        },
+        {
+          "name": "Income Source",
+          "type": "select"
+        },
+        {
+          "name": "Income £",
+          "type": "number"
+        },
+        {
+          "name": "Income/Expense",
+          "type": "select"
+        },
+        {
+          "name": "Name",
+          "type": "title"
+        },
+        {
+          "name": "Placed on shelf",
+          "type": "date"
+        },
+        {
+          "name": "Profit",
+          "type": "formula"
+        },
+        {
+          "name": "Sold",
+          "type": "date"
+        },
+        {
+          "name": "Sub-total",
+          "type": "formula"
+        }
+      ],
+      "row_count": 2,
+      "likely_classification": "non_sessions_finance"
+    },
+    {
+      "database_id": "f5a434341cb944d2b5117331ac7cbc49",
+      "error": "database_fetch_failed_400",
+      "error_body": {
+        "object": "error",
+        "status": 400,
+        "code": "validation_error",
+        "message": "Database with ID f5a43434-1cb9-44d2-b511-7331ac7cbc49 does not contain any data sources accessible by this API bot.",
+        "request_id": "b5127279-8e41-43e5-b83f-9b1bc397482c"
+      }
+    }
+  ]
+}

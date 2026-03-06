@@ -1,0 +1,128 @@
+{
+  "page_id": "36207156f7034c13a839249dee0afe1a",
+  "db_count": 14,
+  "rows": [
+    {
+      "database_id": "2c6c47c61e2180d1a310dee856f34a07",
+      "title": "During-Session Stop Triggers",
+      "config_key": "during_session_stop_triggers",
+      "in_config": true
+    },
+    {
+      "database_id": "2c6c47c61e2180e1b174f0f2d965c6c4",
+      "title": "Contraindications (Non-Exhaustive, Mandatory Disclosure)",
+      "config_key": "contraindications_mandatory_disclosure",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e218026af0dd267b7dbefb9",
+      "title": "Sounds & Tones (DB) \u2014 schema",
+      "config_key": "sounds_tones_schema",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e2180279e15e2df866000bb",
+      "title": "Sacred Geometry (DB) \u2014 schema",
+      "config_key": "sacred_geometry_schema",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e2180298a4cfa7bbc9d2ec3",
+      "title": "Safety Rules",
+      "config_key": "safety_rules",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e21805d889dd28f8d6bc9c0",
+      "title": "Deities & Archetypes (DB) \u2014 schema",
+      "config_key": "deities_archetypes_schema",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e218082bc48cd81770166f5",
+      "title": "Colours (DB) \u2014 schema",
+      "config_key": "colours_schema",
+      "in_config": true
+    },
+    {
+      "database_id": "2c8c47c61e2180d7b9f6e04029369671",
+      "title": "Symbols (DB) \u2014 schema",
+      "config_key": "symbols_schema",
+      "in_config": true
+    },
+    {
+      "database_id": "6ed9bf3a5974460c986c6f82185fa7d1",
+      "title": "New database",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "addec191b2a9447aa7352af8543b2c96",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "b7179b0cdda243619e8f20d275ec9b4c",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "d1503be4cdb0412e8957f074f756de79",
+      "title": "Finance Tracker (1)",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "dc63ed2c9455406b9c6d41d8e5e8325b",
+      "title": "Finance Tracker",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "f5a434341cb944d2b5117331ac7cbc49",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    }
+  ],
+  "missing_in_config": [
+    {
+      "database_id": "6ed9bf3a5974460c986c6f82185fa7d1",
+      "title": "New database",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "addec191b2a9447aa7352af8543b2c96",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "b7179b0cdda243619e8f20d275ec9b4c",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "d1503be4cdb0412e8957f074f756de79",
+      "title": "Finance Tracker (1)",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "dc63ed2c9455406b9c6d41d8e5e8325b",
+      "title": "Finance Tracker",
+      "config_key": "",
+      "in_config": false
+    },
+    {
+      "database_id": "f5a434341cb944d2b5117331ac7cbc49",
+      "title": "Untitled",
+      "config_key": "",
+      "in_config": false
+    }
+  ]
+}

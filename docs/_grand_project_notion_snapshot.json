@@ -1,0 +1,334 @@
+[
+  {
+    "key": "root_project_row",
+    "id": "30fc47c61e2181ef8921c92bb32a3120",
+    "title": "Wheels Pre-Build Project - Sessions, DB Map, Convex Prep",
+    "sample_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Master project shell created from GRAND_PROJECT_SKELETON.md, AI_BUILDER_INSTRUCTIONS_NOTION.md, and MASTER_OVERVIEW.md."
+      },
+      {
+        "type": "paragraph",
+        "text": "Purpose: lock structure and execution plan before further wellness wheel visual work."
+      },
+      {
+        "type": "heading_2",
+        "text": "Execution Tracker"
+      }
+    ]
+  },
+  {
+    "key": "00_READ_ME",
+    "id": "30fc47c61e21816db4a3de103e6155df",
+    "title": "00_READ_ME",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "WHAT IS LIVE AND WHAT IS NOT"
+      },
+      {
+        "type": "paragraph",
+        "text": "This workspace contains the structural map for the Regenerative Hive Mind system. It is a living reference, not a finished product."
+      },
+      {
+        "type": "heading_3",
+        "text": "What is active and being built"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Dashboard Builder (meta-layer platform)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Wellness App (first product surface: sessions, wheels, knobs)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Buddy Program (peer support layer inside Wellness App)"
+      },
+      {
+        "type": "heading_3",
+        "text": "What is specified but not yet built"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Digital Expansion Division (AI sandbox, botlet factory)"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Sustainable Institute of Technologies"
+      },
+      {
+        "type": "heading_3",
+        "text": "What is constitution-level"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Grand Plan page is constitution. Do not edit it from this project."
+      },
+      {
+        "type": "heading_3",
+        "text": "Navigation rule"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shared model is defined once in 01_SHARED_CORE. Project pages reference it and avoid duplicate model text."
+      },
+      {
+        "type": "heading_3",
+        "text": "Where new content goes"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "New structural thinking: 01_SHARED_CORE or the relevant project page"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "New vision ideas: Grand Plan"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "New pitches: 07_PITCH_DECK_LAYER"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Unsorted ideas: 08_BACKLOG_AND_FUTURE"
+      }
+    ]
+  },
+  {
+    "key": "01_SHARED_CORE",
+    "id": "30fc47c61e218135917bc794bc07b410",
+    "title": "01_SHARED_CORE",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "The Self-Build Mechanism"
+      },
+      {
+        "type": "paragraph",
+        "text": "Every layer exposes self-build interfaces. Users configure, extend, and publish. Growth is driven by user-generated structure, not only content."
+      },
+      {
+        "type": "heading_2",
+        "text": "The Validation Workbench"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nothing becomes truth without validation. Literature, audio, and video are authenticated, indexed, and source-tagged."
+      },
+      {
+        "type": "heading_2",
+        "text": "Wheels and Knobs Interface Pattern"
+      },
+      {
+        "type": "paragraph",
+        "text": "Wheel is the state map. Rings are knowledge domains. Knobs are input parameters before, during, and after sessions. Ring and knob changes are linked."
+      },
+      {
+        "type": "heading_2",
+        "text": "Shared Infrastructure vs Private Silos"
+      },
+      {
+        "type": "paragraph",
+        "text": "Shared mode supports network effects and low-cost access. Private mode supports isolation and premium compliance needs. Portability remains available."
+      },
+      {
+        "type": "heading_2",
+        "text": "Regenerative Economics"
+      },
+      {
+        "type": "paragraph",
+        "text": "Value flow supports creators and project sustainability. Multi-token design is shared across projects rather than fragmented per product."
+      },
+      {
+        "type": "heading_2",
+        "text": "Non-Profit Governance Interlock"
+      },
+      {
+        "type": "paragraph",
+        "text": "For-profit delivery and non-profit public-good funding are structurally linked but separated to avoid governance capture."
+      },
+      {
+        "type": "heading_2",
+        "text": "ISU Tie-In"
+      },
+      {
+        "type": "paragraph",
+        "text": "ISU page link: https://www.notion.so/Sustainable-Utilities-Institute-Token-ISU-1b6c47c61e21802e8e3cd167e5c1214e"
+      },
+      {
+        "type": "paragraph",
+        "text": "ISU is treated as a practical shared-core example of blockchain-backed agreements, sector token coordination, and transparent funding flows."
+      }
+    ]
+  },
+  {
+    "key": "02_DASHBOARD_BUILDER",
+    "id": "30fc47c61e218100bad7de2c7e83e7f2",
+    "title": "02_DASHBOARD_BUILDER",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "Metadata"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Status: Active build"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Role: Operating system and meta-layer"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Shared Core reference: 01_SHARED_CORE"
+      },
+      {
+        "type": "heading_2",
+        "text": "What It Is"
+      },
+      {
+        "type": "paragraph",
+        "text": "Coordination, trust, and reuse platform. It assembles validated modules into deployable dashboards and lowers deployment cost over time."
+      }
+    ]
+  },
+  {
+    "key": "03_WELLNESS_APP",
+    "id": "30fc47c61e218130a401f52e780858ab",
+    "title": "03_WELLNESS_APP",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "Metadata"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Status: Active build"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Role: First product surface to prove the model"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Lives inside: 02_DASHBOARD_BUILDER"
+      },
+      {
+        "type": "heading_2",
+        "text": "Core Engine"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sessions and programmes generation, wheels and knobs, immersive environment, and validation-backed source handling."
+      }
+    ]
+  },
+  {
+    "key": "04_DIGITAL_EXPANSION_DIVISION",
+    "id": "30fc47c61e2181eba9aad32dbfad7134",
+    "title": "04_DIGITAL_EXPANSION_DIVISION",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "Metadata"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Status: Specified, not built"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Role: AI intelligence layer; agents building agents"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Lives inside: 02_DASHBOARD_BUILDER"
+      },
+      {
+        "type": "heading_2",
+        "text": "What It Is"
+      },
+      {
+        "type": "paragraph",
+        "text": "Per-user private AI sandbox with botlet creation, permissions, and marketplace pathways."
+      }
+    ]
+  },
+  {
+    "key": "05_SUSTAINABLE_INSTITUTE",
+    "id": "30fc47c61e21816b9b99cbd693674250",
+    "title": "05_SUSTAINABLE_INSTITUTE",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "Metadata"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Status: Early specification"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Role: Sustainability and circular economy hub"
+      },
+      {
+        "type": "bulleted_list_item",
+        "text": "Lives inside: 02_DASHBOARD_BUILDER"
+      },
+      {
+        "type": "heading_2",
+        "text": "Sub-Systems"
+      }
+    ]
+  },
+  {
+    "key": "06_MONETIZATION_MENU",
+    "id": "30fc47c61e21818d83edffb0c867f862",
+    "title": "06_MONETIZATION_MENU",
+    "sample_blocks": []
+  },
+  {
+    "key": "07_PITCH_DECK_LAYER",
+    "id": "30fc47c61e21815eac20cf1096f74334",
+    "title": "07_PITCH_DECK_LAYER",
+    "sample_blocks": [
+      {
+        "type": "heading_2",
+        "text": "Core Principle"
+      },
+      {
+        "type": "paragraph",
+        "text": "The pitch layer runs on the same system. Viewer configuration is the proof, not a static slide narrative."
+      },
+      {
+        "type": "heading_2",
+        "text": "How It Self-Proves"
+      }
+    ]
+  },
+  {
+    "key": "08_BACKLOG_AND_FUTURE",
+    "id": "30fc47c61e2181b9a219c1b3f0096217",
+    "title": "08_BACKLOG_AND_FUTURE",
+    "sample_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Backlog inbox. Keep this light. No heavy structure yet."
+      }
+    ]
+  },
+  {
+    "key": "99_ARCHIVE",
+    "id": "30fc47c61e218162a5feeb4299bd1c98",
+    "title": "99_ARCHIVE",
+    "sample_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Ready for old drafts and archived experiments."
+      }
+    ]
+  }
+]

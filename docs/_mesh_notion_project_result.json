@@ -1,0 +1,67 @@
+{
+  "generated_at_utc": "2026-02-26T12:47:39.666703+00:00",
+  "dry_run": false,
+  "parent_page_id": "30fc47c6-1e21-81ef-8921-c92bb32a3120",
+  "main_page": {
+    "id": "313c47c6-1e21-81e9-af23-f35dad9af9ac",
+    "url": "https://www.notion.so/Mesh-Master-Project-Unified-Adaptive-Engine-2026-02-26-313c47c61e2181e9af23f35dad9af9ac",
+    "title": "Mesh Master Project - Unified Adaptive Engine (2026-02-26)"
+  },
+  "sections": [
+    {
+      "title": "00 Intro Pitchdeck",
+      "source": "00_INTRO_PITCHDECK.md",
+      "id": "313c47c6-1e21-81ea-8ad7-fabe3c8e83dc",
+      "url": "https://www.notion.so/00-Intro-Pitchdeck-313c47c61e2181ea8ad7fabe3c8e83dc"
+    },
+    {
+      "title": "01 Onion Architecture",
+      "source": "01_ONION_ARCHITECTURE.md",
+      "id": "313c47c6-1e21-81ee-9994-f89ce638c44d",
+      "url": "https://www.notion.so/01-Onion-Architecture-313c47c61e2181ee9994f89ce638c44d"
+    },
+    {
+      "title": "02 Interactive Pitchdeck Model",
+      "source": "02_INTERACTIVE_PITCHDECK_MODEL.md",
+      "id": "313c47c6-1e21-8129-89e2-e99223e7ea76",
+      "url": "https://www.notion.so/02-Interactive-Pitchdeck-Model-313c47c61e21812989e2e99223e7ea76"
+    },
+    {
+      "title": "03 Sector Use Cases",
+      "source": "03_SECTOR_USE_CASES.md",
+      "id": "313c47c6-1e21-81d2-98f5-fa00d4944eef",
+      "url": "https://www.notion.so/03-Sector-Use-Cases-313c47c61e2181d298f5fa00d4944eef"
+    },
+    {
+      "title": "04 Governance Permissions Gates",
+      "source": "04_GOVERNANCE_PERMISSIONS_GATES.md",
+      "id": "313c47c6-1e21-8117-a8e2-f712b6cd09fd",
+      "url": "https://www.notion.so/04-Governance-Permissions-Gates-313c47c61e218117a8e2f712b6cd09fd"
+    },
+    {
+      "title": "05 Shared Economy Assets Modules",
+      "source": "05_SHARED_ECONOMY_ASSETS_MODULES.md",
+      "id": "313c47c6-1e21-8199-ae35-ef6a7a2d88dd",
+      "url": "https://www.notion.so/05-Shared-Economy-Assets-Modules-313c47c61e218199ae35ef6a7a2d88dd"
+    },
+    {
+      "title": "06 Implementation Now Supabase Stable",
+      "source": "06_IMPLEMENTATION_NOW_SUPABASE_STABLE.md",
+      "id": "313c47c6-1e21-81ff-bb13-e9d4c8e86694",
+      "url": "https://www.notion.so/06-Implementation-Now-Supabase-Stable-313c47c61e2181ffbb13e9d4c8e86694"
+    },
+    {
+      "title": "07 Convex Evolution Path",
+      "source": "07_CONVEX_EVOLUTION_PATH.md",
+      "id": "313c47c6-1e21-813a-9d4c-e066f6b8d746",
+      "url": "https://www.notion.so/07-Convex-Evolution-Path-313c47c61e21813a9d4ce066f6b8d746"
+    },
+    {
+      "title": "08 Revolution Side Proposal",
+      "source": "08_REVOLUTION_SIDE_PROPOSAL.md",
+      "id": "313c47c6-1e21-816b-8f10-f1962fe4617c",
+      "url": "https://www.notion.so/08-Revolution-Side-Proposal-313c47c61e21816b8f10f1962fe4617c"
+    }
+  ],
+  "package_path": "C:\\code\\task-manager\\docs\\mesh\\MESH_NOTION_PROJECT_PACKAGE.json"
+}

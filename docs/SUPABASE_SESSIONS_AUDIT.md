@@ -1,19 +1,63 @@
-# Supabase Sessions Audit
+﻿# Supabase Sessions Audit
 
-Last updated: 2026-02-22
+Last updated: 2026-03-05
 
 ## What I checked
 
-- Live Supabase table endpoints and row counts (from the current connected project).
-- Sessions runtime table usage from `task-manager` session code paths.
-- New Notion page `Therapeutic Databases 0a` child databases.
+- Live Supabase table endpoints and row counts (fresh inventory run).
+- Full Notion -> Supabase sync output after stage tables were created.
+- Relation tracker checkbox state in `RELATIONS_MASTER.csv` and Notion relation DBs.
 
 ## Snapshot
 
-- Supabase tables detected: **73**
-- Total rows across all detected tables: **977**
-- Seed pass completed for required empty sessions tables (see `docs/_sessions_seed_report.json`).
-- Priority requested: sessions-related tables first; infrastructure parked but listed.
+- Supabase tables detected: **85**
+- Total rows across all detected tables: **1373**
+- Stage tables now active: **12 tables**, **364 rows**
+- Priority remains sessions-related tables first; broader infrastructure is still parked.
+
+## Live refresh (2026-03-05)
+
+- Ran dry-run sync checks again and refreshed:
+  - `docs/_notion_supabase_sync_full_report.json`
+  - `docs/_notion_next_to_used_sessions_sync.json`
+- Scanned Notion page `Therapeutic Databases 0a` (`36207156f7034c13a839249dee0afe1a`) and wrote:
+  - `docs/_notion_0a_page_scan.json`
+- Current result for that page:
+  - Total databases found: **14**
+  - Already tracked in config: **8**
+  - Missing in `config/notion_db_ids.json`: **6**
+- The 6 currently untracked IDs:
+  - `6ed9bf3a5974460c986c6f82185fa7d1` (`New database`)
+  - `addec191b2a9447aa7352af8543b2c96` (`Untitled`)
+  - `b7179b0cdda243619e8f20d275ec9b4c` (`Untitled`)
+  - `d1503be4cdb0412e8957f074f756de79` (`Finance Tracker (1)`)
+  - `dc63ed2c9455406b9c6d41d8e5e8325b` (`Finance Tracker`)
+  - `f5a434341cb944d2b5117331ac7cbc49` (`Untitled`)
+- Profile details for the 6 were saved in:
+  - `docs/_notion_0a_missing_db_profiles.json`
+- Initial classification:
+  - 2 are clearly finance-only (`Finance Tracker`, `Finance Tracker (1)`), not sessions.
+  - 1 is a tiny generic table (`Name`, `Tags`) with 3 rows and no sessions signals.
+  - 3 cannot be read by the current Notion integration token (API returns not accessible).
+
+## Sessions composer readiness (2026-03-05)
+
+- Live domain/filter audit created:
+  - `docs/SESSIONS_COMPOSER_DOMAIN_AUDIT_2026-03-05.md`
+  - `docs/_sessions_composer_domain_audit_2026-03-05.json`
+- Locked build spec created:
+  - `docs/SESSIONS_COMPOSER_LOCKED_SPEC_2026-03-05.md`
+- Legacy architecture archived:
+  - `docs/legacy/SESSIONS_COMPOSER_LOCKED_SPEC_PRE_RESET_2026-03-05.md`
+  - `docs/legacy/SESSION_GENERATION_RUNTIME_SPEC_LEGACY_2026-03-05.md`
+- Strict actual-values-only composer inventory pass created:
+  - `docs/SESSIONS_DOMAIN_INVENTORY_2026-03-05.md`
+  - `docs/SESSIONS_SUBJECT_TREE_2026-03-05.md`
+  - `docs/SESSIONS_FIELD_MAP_2026-03-05.md`
+- Hard blocker count: **0**
+- Important note for UI/filter build:
+  - Some planned filter columns exist but currently have no values in live rows.
+  - This means UI filters must hide empty filter groups and only show filters with actual values.
 
 ## Sessions Core (execution path)
 
@@ -21,7 +65,7 @@ Last updated: 2026-02-22
 |---|---:|---|
 | `session_blueprints` | 22 | active |
 | `blueprint_steps` | 9 | active |
-| `blueprint_cues` | 0 | empty |
+| `blueprint_cues` | 66 | active |
 | `cue_triggers` | 20 | active |
 | `session_templates` | 22 | active |
 | `session_types` | 6 | active |
@@ -40,12 +84,12 @@ Last updated: 2026-02-22
 | table | rows | status |
 |---|---:|---|
 | `lens_definitions` | 22 | active |
-| `light_colour` | 43 | active |
+| `light_colour` | 66 | active |
 | `chakra_systems` | 7 | active |
 | `meridian_system` | 12 | active |
 | `organ_emotion_system` | 15 | active |
 | `elemental_framework` | 19 | active |
-| `deities_archetypes` | 55 | active |
+| `deities_archetypes` | 56 | active |
 | `symbols_index` | 94 | active |
 | `sacred_geometry` | 21 | active |
 | `sound_vibration` | 10 | active |
@@ -83,6 +127,32 @@ Last updated: 2026-02-22
 | `user_technique_blends` | 0 | empty |
 | `user_knowledge_access` | 0 | empty |
 
+## Stage Tables (newly loaded from Notion)
+
+| table | rows | status |
+|---|---:|---|
+| `astrology_calendrical_systems_stage` | 21 | active |
+| `breathwork_master_taxonomy_stage` | 12 | active |
+| `contraindications_mandatory_disclosure_stage` | 11 | active |
+| `controls_library_design_stage` | 13 | active |
+| `daily_regulation_sliders_stage` | 11 | active |
+| `during_session_stop_triggers_stage` | 7 | active |
+| `emotion_brain_body_energy_mapping_stage` | 12 | active |
+| `full_brain_neural_systems_table_stage` | 19 | active |
+| `mythological_beings_stage` | 23 | active |
+| `nadi_system_stage` | 10 | active |
+| `sacred_animals_stage` | 170 | active |
+| `stones_minerals_stage` | 55 | active |
+
+## Relation Tracker Checkbox Snapshot
+
+- Master relation rows: **55**
+- `on_supabase = true`: **45**
+- `supabase_configured = true`: **18**
+- `needs_more_data = true`: **8**
+- `ready_for_launch = true`: **18**
+- Notion relation databases were synced from CSV on 2026-02-23.
+
 ## Infrastructure / Broader System (parked for now)
 
 | table | rows | status |
@@ -111,48 +181,13 @@ Last updated: 2026-02-22
 | `evidence_sources` | 12 | active |
 | `persona_kb_compatibility` | 0 | empty |
 
-## Mapping tables you asked about
-
-- `mappings`: 10 rows
-- `cross_domain_mappings`: 6 rows
-- `coupling_rules`: 8 rows
-- `persona_lens_compatibility`: 9 rows
-- `profile_pack_map`: 7 rows
-- `programme_knowledge_map`: 5 rows
-- Interpretation: relation scaffolding is now active, including previously empty coupling/profile relation tables.
-
-## Duplicate / legacy risk flags (sessions context)
-
-- `light_colour` is the active colour ontology table in Supabase.
-- `sound_vibration` is the active sound ontology table in Supabase.
-- No active Supabase runtime tables named `colours` or `sounds_tones` were found.
-- Safety overlap to rationalize later: `safety_rules` and `rules_gating`, plus Notion stop/contra sources.
-- Event-like table present: `sync_events` (currently 0 rows).
-
-## New Notion Page 0a (child databases found)
-
-| Notion DB title | rows | note |
-|---|---:|---|
-| `Deities & Archetypes (DB) — schema` | 1 | schema placeholder |
-| `Symbols (DB) — schema` | 0 | schema placeholder |
-| `Colours (DB) — schema` | 0 | schema placeholder |
-| `Sacred Geometry (DB) — schema` | 0 | schema placeholder |
-| `Sounds & Tones (DB) — schema` | 0 | schema placeholder |
-| `Contraindications (Non-Exhaustive, Mandatory Disclosure)` | 11 | content/safety source |
-| `During-Session Stop Triggers` | 7 | content/safety source |
-| `Safety Rules` | 8 | content/safety source |
-
-Observation: page 0a mostly adds schema/safety references. Colour/sound schema DBs there are placeholders, not canonical runtime sources yet.
-
 ## Sessions-first cleanup actions (recommended now)
 
-1. Freeze canonical sessions table names: `light_colour`, `sound_vibration`, `mappings`, `cross_domain_mappings`, and session blueprint/runtime tables.
-2. Keep Notion schema placeholders as `schema-only`; do not sync them into canonical runtime tables.
-3. Keep and maintain the newly seeded relation/control tables (`persona_lens_compatibility`, `profile_pack_map`, `programme_knowledge_map`, `control_pack_items`, `default_weights`).
-4. Reconcile safety stack: define one canonical runtime read path between `safety_rules`, `rules_gating`, and Notion stop/contra sources.
-5. Create a deprecation list for non-sessions tables before Convex migration so legacy names do not reappear.
+1. Keep canonical sessions table names fixed: `light_colour`, `sound_vibration`, `mappings`, `cross_domain_mappings`, and session blueprint/runtime tables.
+2. Keep schema-only Notion sources in stage tables until canonical mapping is approved table-by-table.
+3. Move stage tables into canonical tables only when relation keys and field names are fully locked.
+4. Keep relation tracker checkboxes updated at the end of each migration step.
+5. Prepare Convex migration mapping only after the above reaches stable parity.
 
-## Whole-system plan (parked but mapped)
 
-- Keep infrastructure/AI/meta tables parked during sessions cleanup, but preserve inventory and row counts.
-- After sessions tables are canonicalized, run a second pass for events/infrastructure/legislation and assign keep/merge/deprecate decisions.
+Update note (2026-02-26): lueprint_cues was seeded with baseline phase_start/interval/phase_end links for all existing session blueprints.

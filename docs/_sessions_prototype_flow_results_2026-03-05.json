@@ -1,0 +1,131 @@
+{
+  "route_path": "/sessions-composer-prototype",
+  "generated_at": "2026-03-06T07:18:32.277Z",
+  "payload_source_file": "C:\\code\\CursorBridge\\docs\\SESSIONS_UI_PAYLOAD_2026-03-05.json",
+  "top_level_subjects": [
+    "Activation",
+    "Breath Awareness",
+    "Hypnosis",
+    "NSDR",
+    "Somatic Regulation",
+    "Trauma Titration"
+  ],
+  "domain_tables": [
+    "breath_library",
+    "movements_system",
+    "organ_emotion_system",
+    "meridian_system",
+    "light_colour",
+    "sound_vibration",
+    "nutrition_and_food",
+    "nutrition_protocols",
+    "symbols_index",
+    "sacred_geometry",
+    "chakra_systems"
+  ],
+  "screenshot_dir": "C:\\code\\CursorBridge\\docs\\screenshots\\sessions-composer-2026-03-05",
+  "route_fetch_status": 200,
+  "route_contains_title": true,
+  "route_html_excerpt": "<!DOCTYPE html><html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Wellness App</title>\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\">\n<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#0f0f23;color:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5}.btn-primary{align-items:center;background:linear-gradient(135deg,#e94560,#ff6b6b);border:none;border-radius:12px;color:#fff;cursor:pointer;display:inline-flex;font-size:1rem;font-weight:600;justify-content:center;padding:.75rem 1.5rem;text-decoration:none;transition:all .2s}.btn-primary:hover{box-shadow:0 8px 20px #e945604d;transform:translateY(-2px)}.btn-primary:disabled{cursor:not-allowed;opacity:.6;transform:none}.btn-secondary{align-items:center;background:#ffffff0d;border:1px solid hsla(0,0%,100%,.2);border-radius:12px;color:#fff;cursor:pointer;display:inline-flex;font-size:1rem;font-weight:500;justify-content:center;padding:.75rem 1.5rem;text-decoration:none;transition:all .2s}.btn-secondary:hover{background:#ffffff1a}.btn-large{font-size:1.125r",
+  "flow_results": {
+    "flow_1_breath_only": {
+      "subject": "Breath Awareness",
+      "stack_count": 1,
+      "stack_labels": [
+        "breath_library:Counting Breath"
+      ],
+      "screenshot": {
+        "ok": true,
+        "path": "C:\\code\\CursorBridge\\docs\\screenshots\\sessions-composer-2026-03-05\\flow-1-breath-only.png",
+        "error": ""
+      },
+      "response": {
+        "ok": true,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "route": "/api/session/composer-save",
+          "session_run_id": "f5e64706-2e6e-4029-a945-a072b60e0cd4",
+          "session_output_ids": [
+            "a2cb1457-4692-44a5-a243-b9d9a85e36b3"
+          ],
+          "save_status": {
+            "session_runs": "saved",
+            "session_outputs": "saved"
+          },
+          "blocker": null,
+          "temp_user_id": "ff9cca3e-f5b8-423a-a8d9-55539d5b9870",
+          "temp_user_email": "composer_proto_1772781495217_0d69e5@example.com"
+        }
+      }
+    },
+    "flow_2_breath_movement": {
+      "subject": "Somatic Regulation",
+      "stack_count": 2,
+      "stack_labels": [
+        "breath_library:Counting Breath",
+        "movements_system:Qigong “Silk Reeling”"
+      ],
+      "screenshot": {
+        "ok": true,
+        "path": "C:\\code\\CursorBridge\\docs\\screenshots\\sessions-composer-2026-03-05\\flow-2-breath-movement.png",
+        "error": ""
+      },
+      "response": {
+        "ok": true,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "route": "/api/session/composer-save",
+          "session_run_id": "7ff6ceaa-84ed-4948-ba4f-c30555a02f96",
+          "session_output_ids": [
+            "29c781e1-131d-4bf1-9b30-1f9972e73640"
+          ],
+          "save_status": {
+            "session_runs": "saved",
+            "session_outputs": "saved"
+          },
+          "blocker": null,
+          "temp_user_id": "1af40d70-40c2-4bf9-bae9-64d8e5d2578a",
+          "temp_user_email": "composer_proto_1772781503882_e97b80@example.com"
+        }
+      }
+    },
+    "flow_3_breath_colour_or_sound_movement_nutrition": {
+      "subject": "NSDR",
+      "stack_count": 4,
+      "stack_labels": [
+        "breath_library:Counting Breath",
+        "light_colour:Temple Gold",
+        "movements_system:Qigong “Silk Reeling”",
+        "nutrition_and_food:Herb / Spice"
+      ],
+      "screenshot": {
+        "ok": true,
+        "path": "C:\\code\\CursorBridge\\docs\\screenshots\\sessions-composer-2026-03-05\\flow-3-breath-colour-sound-movement-nutrition.png",
+        "error": ""
+      },
+      "response": {
+        "ok": true,
+        "status": 200,
+        "body": {
+          "ok": true,
+          "route": "/api/session/composer-save",
+          "session_run_id": "921363eb-7bd3-4322-8fb5-c50015a1c4a7",
+          "session_output_ids": [
+            "340ab875-9226-4e3d-8d96-1cfba7a5edf0"
+          ],
+          "save_status": {
+            "session_runs": "saved",
+            "session_outputs": "saved"
+          },
+          "blocker": null,
+          "temp_user_id": "ee63b58b-4b8f-4de7-8209-360e85e585a0",
+          "temp_user_email": "composer_proto_1772781511506_70fdcd@example.com"
+        }
+      }
+    }
+  },
+  "server_stdout_tail": "\n[nitro-runtime] request: 0.128ms\n[nitro-runtime] beforeResponse: 0.036ms\n[nitro-runtime] afterResponse: 0.021ms\n[nitro-runtime] request: 0.246ms\n[nitro-runtime] request: 0.182ms\n[nitro-runtime] request: 0.117ms\n[nitro-runtime] request: 0.104ms\n[nitro-runtime] request: 0.079ms\n[nitro-runtime] request: 0.111ms\n[nitro-runtime] beforeResponse: 0.046ms\n[nitro-runtime] beforeResponse: 0.042ms\n[nitro-runtime] afterResponse: 0.048ms\n[nitro-runtime] afterResponse: 0.02ms\n[nitro-runtime] beforeResponse: 0.016ms\n[nitro-runtime] beforeResponse: 0.012ms\n[nitro-runtime] afterResponse: 0.047ms\n[nitro-runtime] afterResponse: 0.018ms\n[nitro-runtime] beforeResponse: 0.013ms\n[nitro-runtime] beforeResponse: 0.012ms\n[nitro-runtime] request: 0.103ms\n[nitro-runtime] request: 0.114ms\n[nitro-runtime] afterResponse: 0.039ms\n[nitro-runtime] afterResponse: 0.075ms\n[nitro-runtime] request: 0.308ms\n[nitro-runtime] request: 0.441ms\n[nitro-runtime] request: 0.129ms\n[nitro-runtime] beforeResponse: 0.027ms\n[nitro-runtime] afterResponse: 0.022ms\n[nitro-runtime] beforeResponse: 0.012ms\n[nitro-runtime] beforeResponse: 0.012ms\n[nitro-runtime] afterResponse: 0.033ms\n[nitro-runtime] afterResponse: 0.021ms\n[nitro-runtime] beforeResponse: 0.025ms\n[nitro-runtime] beforeResponse: 0.021ms\n[nitro-runtime] afterResponse: 0.03ms\n[nitro-runtime] afterResponse: 0.232ms\n[nitro-runtime] request: 0.248ms\n[nitro-runtime] beforeResponse: 0.068ms\n[nitro-runtime] afterResponse: 0.063ms\n[nitro-runtime] request: 0.097ms\n[nitro-runtime] beforeResponse: 0.041ms\n[nitro-runtime] afterResponse: 1.565ms\n[nitro-runtime] request: 0.095ms\n[nitro-runtime] render:before: 0.03ms\n[nuxt-app] page:loading:start: 0.021ms\n[nuxt-app] app:created: 1.007ms\n[nuxt-app] vue:setup: 0.017ms\n[nitro-runtime] request: 0.182ms\n[nitro-runtime] beforeResponse: 0.06ms\n[nitro-runtime] afterResponse: 0.028ms\n[nuxt-app] app:rendered: 0.02ms\n[nitro-runtime] render:html: 0.026ms\n[nitro-runtime] render:response: 0.034ms\n[nitro-runtime] beforeResponse: 0.014ms\n",
+  "server_stderr_tail": ""
+}

@@ -1,0 +1,171 @@
+[
+  {
+    "notionPageId": "2d5c47c6-1e21-800b-92b5-f664203dc550",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 1,
+      "notion_page_id": "2d5c47c6-1e21-800b-92b5-f664203dc550",
+      "notes": "—",
+      "type": "Text",
+      "column": "Notes"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8016-9b4b-e25760b4ede8",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 2,
+      "notion_page_id": "2d5c47c6-1e21-8016-9b4b-e25760b4ede8",
+      "notes": "Quantitative / Qualitative / Binary",
+      "type": "Select",
+      "column": "Data Type"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8038-a6b8-c9ae3eb4edcb",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 3,
+      "notion_page_id": "2d5c47c6-1e21-8038-a6b8-c9ae3eb4edcb",
+      "notes": "One-way, no limit",
+      "type": "Relation → Safety Rules (DB)",
+      "column": "Safety Link"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8041-9b92-fb41e84eb4cb",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 4,
+      "notion_page_id": "2d5c47c6-1e21-8041-9b92-fb41e84eb4cb",
+      "notes": "The knob/toggle name",
+      "type": "Title",
+      "column": "Control"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8061-a3ab-cac986d6dd85",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 5,
+      "notion_page_id": "2d5c47c6-1e21-8061-a3ab-cac986d6dd85",
+      "notes": "Slider / Toggle / Checkbox / Select / Multi-select / Timer / Counter",
+      "type": "Select",
+      "column": "Control Type"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8076-ba73-c9e4f32e52f5",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 6,
+      "notion_page_id": "2d5c47c6-1e21-8076-ba73-c9e4f32e52f5",
+      "notes": "For sliders",
+      "type": "Number",
+      "column": "Default Range Min"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-807b-90ee-d4ab3281141f",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 7,
+      "notion_page_id": "2d5c47c6-1e21-807b-90ee-d4ab3281141f",
+      "notes": "One-way, no limit",
+      "type": "Relation → Attribute Taxonomy (DB)",
+      "column": "Maps To Attributes"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8090-8a59-f150da948cff",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 8,
+      "notion_page_id": "2d5c47c6-1e21-8090-8a59-f150da948cff",
+      "notes": "One-way, limit 1 (optional)",
+      "type": "Relation → Dashboard Blocks (DB)",
+      "column": "Suggested Block"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-8090-bc79-d3dc3f80a347",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 9,
+      "notion_page_id": "2d5c47c6-1e21-8090-bc79-d3dc3f80a347",
+      "notes": "None / Threshold / Weighted / Composite",
+      "type": "Select",
+      "column": "Scoring Mode"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-809e-800b-f5c242203ac5",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 10,
+      "notion_page_id": "2d5c47c6-1e21-809e-800b-f5c242203ac5",
+      "notes": "%, reps, minutes, grams, “yes/no”, etc.",
+      "type": "Select/Text",
+      "column": "Unit"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-80bf-a9e5-d1d7cd2081d1",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 11,
+      "notion_page_id": "2d5c47c6-1e21-80bf-a9e5-d1d7cd2081d1",
+      "notes": "For sliders",
+      "type": "Number",
+      "column": "Default Range Max"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-80e7-9700-d675965ed2b5",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 12,
+      "notion_page_id": "2d5c47c6-1e21-80e7-9700-d675965ed2b5",
+      "notes": "For sliders",
+      "type": "Number",
+      "column": "Default Step"
+    }
+  },
+  {
+    "notionPageId": "2d5c47c6-1e21-80fa-8f82-d4ad0781315a",
+    "sourceTable": "controls_library_design_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 13,
+      "notion_page_id": "2d5c47c6-1e21-80fa-8f82-d4ad0781315a",
+      "notes": "Optional",
+      "type": "Number/Text",
+      "column": "Default Value"
+    }
+  }
+]

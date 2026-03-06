@@ -1,6 +1,6 @@
 # Relations Registry (As-Is and To-Be)
 
-Last updated: 2026-02-22
+Last updated: 2026-02-23
 
 Goal: keep three clear relation tables:
 - `RELATIONS_MASTER.csv`: one checklist view across both states
@@ -37,9 +37,9 @@ Goal: keep three clear relation tables:
 ## Current state summary
 
 - Existing live relations: 16 rows
-- Target relation map: 44 rows
-- Master merged checklist: 45 rows
-- Missing or non-FK links to resolve: 28 rows
+- Target relation map: 54 rows
+- Master merged checklist: 55 rows
+- Missing or non-FK links to resolve: 37 rows
 
 ## Simple phase order
 

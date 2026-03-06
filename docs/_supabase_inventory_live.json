@@ -1,7 +1,9 @@
 {
+  "generated_at": "2026-02-23T15:43:39.727058+00:00",
   "supabase_url": "https://dshwdxhycdrtemaxrupu.supabase.co",
   "key_name_used": "SUPABASE_KEY",
-  "table_count": 73,
+  "table_count": 85,
+  "total_rows": 1373,
   "tables": [
     {
       "table": "aggregate_patterns",
@@ -137,6 +139,28 @@
       ]
     },
     {
+      "table": "astrology_calendrical_systems_stage",
+      "status_code": 206,
+      "row_count": 21,
+      "content_range": "0-0/21",
+      "columns": [
+        "archetype___marker",
+        "cultural_origin",
+        "id",
+        "notes",
+        "notion_page_id",
+        "primary_element",
+        "psychological_theme",
+        "risk_notes",
+        "secondary_element",
+        "somatic___nervous_bias",
+        "subtype",
+        "symbols_index__db_",
+        "system",
+        "temporal_function"
+      ]
+    },
+    {
       "table": "attribute_taxonomy",
       "status_code": 206,
       "row_count": 76,
@@ -212,6 +236,22 @@
       ]
     },
     {
+      "table": "breathwork_master_taxonomy_stage",
+      "status_code": 206,
+      "row_count": 12,
+      "content_range": "0-0/12",
+      "columns": [
+        "breath_type",
+        "id",
+        "nervous_system",
+        "notion_page_id",
+        "pattern",
+        "physiology_effect",
+        "safety_notes",
+        "use_case"
+      ]
+    },
+    {
       "table": "chakra_systems",
       "status_code": 206,
       "row_count": 7,
@@ -239,6 +279,18 @@
         "symbol",
         "untitled_database",
         "untitled_database_1"
+      ]
+    },
+    {
+      "table": "contraindications_mandatory_disclosure_stage",
+      "status_code": 206,
+      "row_count": 11,
+      "content_range": "0-0/11",
+      "columns": [
+        "condition",
+        "id",
+        "notion_page_id",
+        "restriction"
       ]
     },
     {
@@ -312,6 +364,19 @@
       ]
     },
     {
+      "table": "controls_library_design_stage",
+      "status_code": 206,
+      "row_count": 13,
+      "content_range": "0-0/13",
+      "columns": [
+        "column",
+        "id",
+        "notes",
+        "notion_page_id",
+        "type"
+      ]
+    },
+    {
       "table": "coupling_rules",
       "status_code": 206,
       "row_count": 8,
@@ -380,6 +445,19 @@
         "symbol_id",
         "trigger_name",
         "trigger_scope"
+      ]
+    },
+    {
+      "table": "daily_regulation_sliders_stage",
+      "status_code": 206,
+      "row_count": 11,
+      "content_range": "0-0/11",
+      "columns": [
+        "column_name",
+        "id",
+        "notion_page_id",
+        "settings",
+        "type"
       ]
     },
     {
@@ -456,8 +534,8 @@
     {
       "table": "deities_archetypes",
       "status_code": 206,
-      "row_count": 55,
-      "content_range": "0-0/55",
+      "row_count": 56,
+      "content_range": "0-0/56",
       "columns": [
         "associated_colours",
         "culture_lineage",
@@ -504,6 +582,18 @@
       ]
     },
     {
+      "table": "during_session_stop_triggers_stage",
+      "status_code": 206,
+      "row_count": 7,
+      "content_range": "0-0/7",
+      "columns": [
+        "action",
+        "id",
+        "notion_page_id",
+        "symptom"
+      ]
+    },
+    {
       "table": "elemental_framework",
       "status_code": 206,
       "row_count": 19,
@@ -520,6 +610,22 @@
         "physiological_correlates",
         "risk_profile",
         "typical_functions"
+      ]
+    },
+    {
+      "table": "emotion_brain_body_energy_mapping_stage",
+      "status_code": 206,
+      "row_count": 12,
+      "content_range": "0-0/12",
+      "columns": [
+        "adaptive_function",
+        "body___organ_correlates",
+        "emotion",
+        "energetic_systems",
+        "id",
+        "notion_page_id",
+        "primary_brain_systems",
+        "script_use"
       ]
     },
     {
@@ -575,6 +681,23 @@
         "promoted_to_established_at",
         "testing_phase",
         "user_count"
+      ]
+    },
+    {
+      "table": "full_brain_neural_systems_table_stage",
+      "status_code": 206,
+      "row_count": 19,
+      "content_range": "0-0/19",
+      "columns": [
+        "brain_area",
+        "emotional_role",
+        "energetic_correspondence",
+        "id",
+        "nervous_system_role",
+        "notion_page_id",
+        "primary_function",
+        "script_use",
+        "traditional_mapping"
       ]
     },
     {
@@ -635,8 +758,8 @@
     {
       "table": "light_colour",
       "status_code": 206,
-      "row_count": 43,
-      "content_range": "0-0/43",
+      "row_count": 66,
+      "content_range": "0-0/66",
       "columns": [
         "archetypal_personas__db_",
         "chakra_affinity",
@@ -752,6 +875,51 @@
         "sound_pairing",
         "tradition___lineage",
         "untitled_database"
+      ]
+    },
+    {
+      "table": "mythological_beings_stage",
+      "status_code": 206,
+      "row_count": 23,
+      "content_range": "0-0/23",
+      "columns": [
+        "archetypal_function",
+        "archetypal_function_1",
+        "being",
+        "category",
+        "cultural_origin",
+        "id",
+        "intensity_level",
+        "notes",
+        "notion_page_id",
+        "primary_element",
+        "psychological_effect",
+        "risk_notes",
+        "secondary_element",
+        "symbols_index__db_"
+      ]
+    },
+    {
+      "table": "nadi_system_stage",
+      "status_code": 206,
+      "row_count": 10,
+      "content_range": "0-0/10",
+      "columns": [
+        "chakra_pathway",
+        "contraindications___safety_notes",
+        "elemental_bias",
+        "id",
+        "movements_system__db_",
+        "nadi",
+        "nervous_system_bias",
+        "notes",
+        "notion_page_id",
+        "polarity",
+        "primary_function",
+        "psychological_influence",
+        "regulation_direction",
+        "somatic_emphasis",
+        "symbol"
       ]
     },
     {
@@ -1030,6 +1198,27 @@
       ]
     },
     {
+      "table": "sacred_animals_stage",
+      "status_code": 206,
+      "row_count": 170,
+      "content_range": "0-0/170",
+      "columns": [
+        "animal",
+        "biological_status",
+        "cultural_traditions",
+        "elemental_bias",
+        "emotional_tone",
+        "id",
+        "nervous_system_effect",
+        "notes",
+        "notion_page_id",
+        "risk_notes",
+        "symbolic_functions",
+        "symbols_index__db_",
+        "symbols_index__db____canonical_expanded_version"
+      ]
+    },
+    {
       "table": "sacred_geometry",
       "status_code": 206,
       "row_count": 21,
@@ -1054,8 +1243,8 @@
     {
       "table": "safety_rules",
       "status_code": 206,
-      "row_count": 8,
-      "content_range": "0-0/8",
+      "row_count": 16,
+      "content_range": "0-0/16",
       "columns": [
         "applies_to",
         "description",
@@ -1229,6 +1418,27 @@
         "sound___frequency",
         "sound_type",
         "untitled_database"
+      ]
+    },
+    {
+      "table": "stones_minerals_stage",
+      "status_code": 206,
+      "row_count": 55,
+      "content_range": "0-0/55",
+      "columns": [
+        "contraindications",
+        "cultural_use",
+        "energetic_function",
+        "energetic_function_1",
+        "id",
+        "mineral_class",
+        "nervous_system_effect",
+        "notes",
+        "notion_page_id",
+        "primary_element",
+        "secondary_element",
+        "stone___mineral",
+        "symbols_index__db_"
       ]
     },
     {

@@ -1,0 +1,145 @@
+[
+  {
+    "notionPageId": "2d7c47c6-1e21-8008-be1d-e34ebe202171",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 1,
+      "notion_page_id": "2d7c47c6-1e21-8008-be1d-e34ebe202171",
+      "settings": "—",
+      "type": "Title",
+      "column_name": "Regulation Metric"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-800b-be57-ea4796d7b3b2",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 2,
+      "notion_page_id": "2d7c47c6-1e21-800b-be57-ea4796d7b3b2",
+      "settings": "0–1 (e.g. 0.5)",
+      "type": "Number",
+      "column_name": "Default Weight"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-8019-82a7-e74c4b69c55b",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 3,
+      "notion_page_id": "2d7c47c6-1e21-8019-82a7-e74c4b69c55b",
+      "settings": "default 10",
+      "type": "Number",
+      "column_name": "Scale Max"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-804f-b8d1-f95df365c9f5",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 4,
+      "notion_page_id": "2d7c47c6-1e21-804f-b8d1-f95df365c9f5",
+      "settings": "default 0",
+      "type": "Number",
+      "column_name": "Scale Min"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-8050-a23f-c180728fea4d",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 5,
+      "notion_page_id": "2d7c47c6-1e21-8050-a23f-c180728fea4d",
+      "settings": "Nervous System · Energy · Sleep · Mood · Pain · Focus · Recovery",
+      "type": "Select",
+      "column_name": "Metric Category"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-8057-907a-f2d983a3df6e",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 6,
+      "notion_page_id": "2d7c47c6-1e21-8057-907a-f2d983a3df6e",
+      "settings": "→ Attribute Taxonomy (DB); one-way; L1",
+      "type": "Relation",
+      "column_name": "Primary Attribute"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-8073-bd72-e48cbcb060f5",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 7,
+      "notion_page_id": "2d7c47c6-1e21-8073-bd72-e48cbcb060f5",
+      "settings": "—",
+      "type": "Text",
+      "column_name": "Safety Notes"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-80a4-8f02-f5dec8e1c9c7",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 8,
+      "notion_page_id": "2d7c47c6-1e21-80a4-8f02-f5dec8e1c9c7",
+      "settings": "Slider · Checkbox · Multi-select",
+      "type": "Select",
+      "column_name": "Input Type"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-80ae-8946-f24f9ea36f12",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 9,
+      "notion_page_id": "2d7c47c6-1e21-80ae-8946-f24f9ea36f12",
+      "settings": "→ Daily Regulation Sliders (DB); ↔; NL",
+      "type": "Relation",
+      "column_name": "Affects Other Metrics"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-80f3-9593-e2d76f2d7724",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 10,
+      "notion_page_id": "2d7c47c6-1e21-80f3-9593-e2d76f2d7724",
+      "settings": "→ Attribute Taxonomy (DB); one-way; NL",
+      "type": "Relation",
+      "column_name": "Secondary Attributes"
+    }
+  },
+  {
+    "notionPageId": "2d7c47c6-1e21-80f5-a0a6-ee859e4e6a36",
+    "sourceTable": "daily_regulation_sliders_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 11,
+      "notion_page_id": "2d7c47c6-1e21-80f5-a0a6-ee859e4e6a36",
+      "settings": "—",
+      "type": "Text",
+      "column_name": "Notes"
+    }
+  }
+]

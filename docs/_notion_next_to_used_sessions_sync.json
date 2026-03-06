@@ -1,0 +1,158 @@
+{
+  "generated_at_utc": "2026-03-05T00:40:20.505897+00:00",
+  "source_page_id": "2d9c47c61e2180a1848bd93728f116cd",
+  "target_page_id": "2d9c47c61e218057962ae39660bd641e",
+  "dry_run": true,
+  "mode": "all_source_databases",
+  "source_database_count": 36,
+  "target_database_count_before": 57,
+  "added_count": 0,
+  "already_present_count": 36,
+  "source_databases": [
+    {
+      "database_id": "2c6c47c61e21802bbcc7da1f57b6ff63",
+      "key": "emotion_brain_body_energy_mapping"
+    },
+    {
+      "database_id": "2c6c47c61e21806d885dd72882029c16",
+      "key": "breathwork_master_taxonomy"
+    },
+    {
+      "database_id": "2c6c47c61e2180d1a310dee856f34a07",
+      "key": "during_session_stop_triggers"
+    },
+    {
+      "database_id": "2c6c47c61e2180e1b174f0f2d965c6c4",
+      "key": "contraindications_mandatory_disclosure"
+    },
+    {
+      "database_id": "2c6c47c61e2180e488e2f8a803b4d47c",
+      "key": "full_brain_neural_systems_table"
+    },
+    {
+      "database_id": "2c8c47c61e218026af0dd267b7dbefb9",
+      "key": "sounds_tones_schema"
+    },
+    {
+      "database_id": "2c8c47c61e2180279e15e2df866000bb",
+      "key": "sacred_geometry_schema"
+    },
+    {
+      "database_id": "2c8c47c61e2180298a4cfa7bbc9d2ec3",
+      "key": "safety_rules"
+    },
+    {
+      "database_id": "2c8c47c61e21805d889dd28f8d6bc9c0",
+      "key": "deities_archetypes_schema"
+    },
+    {
+      "database_id": "2c8c47c61e218082bc48cd81770166f5",
+      "key": "colours_schema"
+    },
+    {
+      "database_id": "2c8c47c61e2180d7b9f6e04029369671",
+      "key": "symbols_schema"
+    },
+    {
+      "database_id": "2c9c47c61e21803f8202e5e24a4e4f10",
+      "key": "colour_legacy_archive"
+    },
+    {
+      "database_id": "2ccc47c61e21807fb035db55ccbdf7c7",
+      "key": "sacred_animals"
+    },
+    {
+      "database_id": "2cdc47c61e218014a33cc52c5063ceba",
+      "key": "nadi_system"
+    },
+    {
+      "database_id": "2cdc47c61e2180349410de849a5eaf4f",
+      "key": "mythological_beings"
+    },
+    {
+      "database_id": "2cdc47c61e2180ab8f81fb9c369f7b7e",
+      "key": "stones_minerals"
+    },
+    {
+      "database_id": "2cdc47c61e2180c393fdfd3e9ed32e02",
+      "key": "astrology_calendrical_systems"
+    },
+    {
+      "database_id": "2d5c47c61e218072a6fce46ec73e72f0",
+      "key": "controls_library_design"
+    },
+    {
+      "database_id": "2d7c47c61e218046962ad8c4674e4949",
+      "key": "daily_regulation_sliders"
+    },
+    {
+      "database_id": "2dcc47c61e21810ba228fb1796009ed4",
+      "key": "control_definitions"
+    },
+    {
+      "database_id": "2dcc47c61e2181228899dad9b21d651f",
+      "key": "questionnaire_questions"
+    },
+    {
+      "database_id": "2dcc47c61e218131b438ee2da9b7f922",
+      "key": "control_packs"
+    },
+    {
+      "database_id": "2dcc47c61e21813b8c11f7a3eddd2de1",
+      "key": "profile_pack_map"
+    },
+    {
+      "database_id": "2dcc47c61e21813faf4cd9ae9dac9bae",
+      "key": "default_weights"
+    },
+    {
+      "database_id": "2dcc47c61e218141991bee3618a5bbdd",
+      "key": "coupling_rules"
+    },
+    {
+      "database_id": "2dcc47c61e218153873cf3cf30976fc5",
+      "key": "questionnaires"
+    },
+    {
+      "database_id": "2dcc47c61e218175b684fa10969c3e43",
+      "key": "derived_metrics"
+    },
+    {
+      "database_id": "30fc47c61e2181119772eed38283d5f7",
+      "key": ""
+    },
+    {
+      "database_id": "30fc47c61e2181358c9ccc3fee56b7eb",
+      "key": ""
+    },
+    {
+      "database_id": "30fc47c61e2181ae80fcda0b520502fd",
+      "key": ""
+    },
+    {
+      "database_id": "6ed9bf3a5974460c986c6f82185fa7d1",
+      "key": ""
+    },
+    {
+      "database_id": "addec191b2a9447aa7352af8543b2c96",
+      "key": ""
+    },
+    {
+      "database_id": "b7179b0cdda243619e8f20d275ec9b4c",
+      "key": ""
+    },
+    {
+      "database_id": "d1503be4cdb0412e8957f074f756de79",
+      "key": ""
+    },
+    {
+      "database_id": "dc63ed2c9455406b9c6d41d8e5e8325b",
+      "key": ""
+    },
+    {
+      "database_id": "f5a434341cb944d2b5117331ac7cbc49",
+      "key": ""
+    }
+  ],
+  "added_databases": []
+}

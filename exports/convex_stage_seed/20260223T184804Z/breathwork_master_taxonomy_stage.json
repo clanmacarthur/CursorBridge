@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "notion_page_id": "2c6c47c6-1e21-8007-9b08-ff95765c01d0",
+    "use_case": "Stability",
+    "safety_notes": "Safe",
+    "pattern": "Soft abdominal",
+    "physiology_effect": "Grounding",
+    "nervous_system": "Parasymp",
+    "breath_type": "Qi Gong breath"
+  },
+  {
+    "id": 2,
+    "notion_page_id": "2c6c47c6-1e21-8012-9b65-f3f08d5d4647",
+    "use_case": "Trance",
+    "safety_notes": "Not for cardiac issues",
+    "pattern": "Retention",
+    "physiology_effect": "Chemoreflex",
+    "nervous_system": "Arousal shift",
+    "breath_type": "Breath holds"
+  },
+  {
+    "id": 3,
+    "notion_page_id": "2c6c47c6-1e21-8023-a9b8-eee707c5784b",
+    "use_case": "Stress",
+    "safety_notes": "Mild dizziness",
+    "pattern": "Double inhale + sigh",
+    "physiology_effect": "Rapid calming",
+    "nervous_system": "Parasympathetic",
+    "breath_type": "Cyclic sigh"
+  },
+  {
+    "id": 4,
+    "notion_page_id": "2c6c47c6-1e21-8024-b93b-dad7f2f3d8d6",
+    "use_case": "Heart opening",
+    "safety_notes": "Safe",
+    "pattern": "Chant + breath",
+    "physiology_effect": "Entrainment",
+    "nervous_system": "Vagal rhythm",
+    "breath_type": "Sufi rhythmic"
+  },
+  {
+    "id": 5,
+    "notion_page_id": "2c6c47c6-1e21-8044-a633-c3d8882ac12f",
+    "use_case": "Focus",
+    "safety_notes": "Not for panic",
+    "pattern": "4-4-4-4",
+    "physiology_effect": "Attention control",
+    "nervous_system": "Balanced",
+    "breath_type": "Box"
+  },
+  {
+    "id": 6,
+    "notion_page_id": "2c6c47c6-1e21-8047-93ed-efb114aa30f5",
+    "use_case": "Rehab",
+    "safety_notes": "Equipment needed",
+    "pattern": "App-guided",
+    "physiology_effect": "Precision",
+    "nervous_system": "Vagal",
+    "breath_type": "HRV bio-breath"
+  },
+  {
+    "id": 7,
+    "notion_page_id": "2c6c47c6-1e21-8049-94da-d82a2fe78929",
+    "use_case": "Integration",
+    "safety_notes": "Gentle",
+    "pattern": "Ratio-based",
+    "physiology_effect": "Autonomic balance",
+    "nervous_system": "Bilateral",
+    "breath_type": "Alternate nostril"
+  },
+  {
+    "id": 8,
+    "notion_page_id": "2c6c47c6-1e21-8062-9031-d72cde9b8f8d",
+    "use_case": "Processing",
+    "safety_notes": "Requires safeguards",
+    "pattern": "Continuous",
+    "physiology_effect": "Emotional surfacing",
+    "nervous_system": "Limbic",
+    "breath_type": "Rebirthing"
+  },
+  {
+    "id": 9,
+    "notion_page_id": "2c6c47c6-1e21-807d-b2fd-fdfad88d19bb",
+    "use_case": "Energy",
+    "safety_notes": "Advanced only",
+    "pattern": "Retention + pressure",
+    "physiology_effect": "Heat ↑",
+    "nervous_system": "Symp + parasymp",
+    "breath_type": "Tummo"
+  },
+  {
+    "id": 10,
+    "notion_page_id": "2c6c47c6-1e21-8090-8c54-de8f46b476ee",
+    "use_case": "Trauma activation",
+    "safety_notes": "Contraindicated in panic",
+    "pattern": "Fast deep",
+    "physiology_effect": "Adrenaline ↑",
+    "nervous_system": "Sympathetic",
+    "breath_type": "Hyperventilation"
+  },
+  {
+    "id": 11,
+    "notion_page_id": "2c6c47c6-1e21-80c2-b9fd-da80be21fdb9",
+    "use_case": "Regulation",
+    "safety_notes": "Avoid forcing",
+    "pattern": "5–6 bpm",
+    "physiology_effect": "HRV ↑",
+    "nervous_system": "Ventral vagal",
+    "breath_type": "Coherent"
+  },
+  {
+    "id": 12,
+    "notion_page_id": "2c6c47c6-1e21-80f0-9e26-d0723c862145",
+    "use_case": "NSDR",
+    "safety_notes": "Safe for most",
+    "pattern": "4–6 bpm",
+    "physiology_effect": "CO₂ tolerance ↑",
+    "nervous_system": "Parasympathetic",
+    "breath_type": "Nasal slow"
+  }
+]

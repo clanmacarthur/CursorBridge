@@ -1,0 +1,185 @@
+{
+  "session_types": {
+    "Activation": {
+      "max_intensity": "Moderate",
+      "allows_activation": "Yes",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-8016-92cc-e8b334bfccc9",
+        "2c8c47c6-1e21-80c0-a01d-c0dbe020e945"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-808b-9734-d04ad4fe3177"
+      ],
+      "mapped_attributes_via_mappings": []
+    },
+    "Breath Awareness": {
+      "max_intensity": "Low",
+      "allows_activation": "No",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-805a-92be-fec26064b109",
+        "2c8c47c6-1e21-8052-84ad-da43b3796738"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-807f-ba4e-cfd71510062d",
+        "2c8c47c6-1e21-808b-9734-d04ad4fe3177"
+      ],
+      "mapped_attributes_via_mappings": []
+    },
+    "Hypnosis": {
+      "max_intensity": "Low",
+      "allows_activation": "No",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-8052-84ad-da43b3796738",
+        "2c8c47c6-1e21-8060-8b3a-cc83b5849148"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-8090-b5cf-f2437c4ebf77",
+        "2c8c47c6-1e21-8064-aad8-f3dcdf5cbd5a"
+      ],
+      "mapped_attributes_via_mappings": []
+    },
+    "NSDR": {
+      "max_intensity": "Low",
+      "allows_activation": "No",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-805a-92be-fec26064b109",
+        "2c8c47c6-1e21-8016-92cc-e8b334bfccc9",
+        "2c8c47c6-1e21-8018-86b9-df9bb0a94484"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-807f-ba4e-cfd71510062d",
+        "2c8c47c6-1e21-808b-9734-d04ad4fe3177",
+        "2c8c47c6-1e21-803c-8b1b-edeb6acd4d81"
+      ],
+      "mapped_attributes_via_mappings": [
+        "Parasympathetic Tone"
+      ]
+    },
+    "Somatic Regulation": {
+      "max_intensity": "Moderate",
+      "allows_activation": "No",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-80f7-a925-c7f260ad5638",
+        "2c8c47c6-1e21-80c0-a01d-c0dbe020e945"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-808b-9734-d04ad4fe3177",
+        "2c8c47c6-1e21-803c-8b1b-edeb6acd4d81"
+      ],
+      "mapped_attributes_via_mappings": []
+    },
+    "Trauma Titration": {
+      "max_intensity": "Moderate",
+      "allows_activation": "No",
+      "relevant_emotions_ids": [
+        "2c8c47c6-1e21-80c0-a01d-c0dbe020e945",
+        "2c8c47c6-1e21-8099-bcab-d15f765e8552",
+        "2c8c47c6-1e21-8012-940a-eee9be0465b7"
+      ],
+      "allowed_styles_ids": [
+        "2c8c47c6-1e21-807f-ba4e-cfd71510062d",
+        "2c8c47c6-1e21-8090-b5cf-f2437c4ebf77"
+      ],
+      "mapped_attributes_via_mappings": []
+    }
+  },
+  "attribute_taxonomy": {
+    "Activation Capacity": [],
+    "Active Mobility": [],
+    "Aerobic Endurance": [],
+    "Anaerobic Endurance": [],
+    "Anti-Inflammatory Support": [],
+    "Anxiety Modulation": [],
+    "Appetite & Satiety": [],
+    "Attention Control": [],
+    "Body Sensation Tracking": [],
+    "Breath Awareness": [],
+    "Breath Control": [],
+    "Breath Discipline": [],
+    "Breath Retention": [],
+    "Breath Rhythm": [],
+    "Breath–Movement Coupling": [],
+    "CO₂ Tolerance": [],
+    "Cognitive Flexibility": [],
+    "Cognitive Load Management": [],
+    "Cognitive Nutrition": [],
+    "Cognitive Regulation": [],
+    "Coordination": [],
+    "Emotional Integration": [],
+    "Emotional Regulation": [],
+    "Endurance": [],
+    "Endurance Strength": [],
+    "Energy Regulation": [],
+    "Explosive Strength": [],
+    "Fatigue Recovery": [],
+    "Fatigue Resistance": [],
+    "Food Quality & Sensitivities": [],
+    "Food Timing & Circadian": [],
+    "Glycemic Regulation": [],
+    "Grief Processing": [],
+    "Grounding Capacity": [],
+    "Gut Function & Tolerance": [],
+    "Hydration & Electrolytes": [],
+    "Insight Generation": [],
+    "Integration Capacity": [],
+    "Isometric Strength": [],
+    "Joint Range": [],
+    "Macronutrient Strategy": [],
+    "Max Strength": [],
+    "Micronutrient Status": [],
+    "Mobility": [],
+    "Motor Control": [],
+    "Mythic Framing": [],
+    "Narrative Integration": [],
+    "Nasal Control": [],
+    "Nervous System Recovery": [],
+    "Nutrition": [
+      "Appetite & Satiety",
+      "Cognitive Nutrition",
+      "Diet Pattern Adherence",
+      "Glycemic Regulation",
+      "Gut Tolerance",
+      "Hydration & Electrolytes",
+      "Inflammation Load",
+      "Meal Timing & Circadian",
+      "Micronutrient Sufficiency",
+      "Recovery Nutrition"
+    ],
+    "Pain Modulation": [],
+    "Passive Mobility": [],
+    "Proprioceptive Awareness": [],
+    "Recovery": [],
+    "Recovery Capacity": [],
+    "Recovery Nutrition": [],
+    "Rhythm Synchronisation": [],
+    "Ritual / Symbolic Practice": [],
+    "Shaking / Discharge": [],
+    "Somatic Regulation": [],
+    "Strength": [],
+    "Stress Recovery": [],
+    "Supplementation Strategy": [],
+    "Symbol Anchoring": [],
+    "Tension Release": [],
+    "Timing Precision": []
+  },
+  "cross_domain_mappings": {
+    "addiction_recovery": [
+      "grief_processing"
+    ],
+    "athletic_breathing": [
+      "anxiety_management"
+    ],
+    "athletic_periodization": [
+      "burnout_recovery"
+    ],
+    "contemplative_surrender": [
+      "control_issues"
+    ],
+    "meditation_attention": [
+      "chronic_pain"
+    ],
+    "trauma_somatic": [
+      "performance_anxiety"
+    ]
+  }
+}

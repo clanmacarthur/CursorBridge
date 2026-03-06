@@ -1,0 +1,69 @@
+{
+  "allNonEmpty": true,
+  "checkedCollections": 12,
+  "collections": {
+    "astrologyCalendricalSystems": {
+      "count": 21,
+      "sampleNotionPageId": "2cdc47c6-1e21-805b-9958-ed4969bde65f",
+      "sampleSourceTable": "astrology_calendrical_systems_stage"
+    },
+    "breathworkTaxonomy": {
+      "count": 12,
+      "sampleNotionPageId": "2c6c47c6-1e21-8007-9b08-ff95765c01d0",
+      "sampleSourceTable": "breathwork_master_taxonomy_stage"
+    },
+    "contraindications": {
+      "count": 11,
+      "sampleNotionPageId": "2c6c47c6-1e21-801a-99b5-cfaf6de0a697",
+      "sampleSourceTable": "contraindications_mandatory_disclosure_stage"
+    },
+    "controlsLibraryDesign": {
+      "count": 13,
+      "sampleNotionPageId": "2d5c47c6-1e21-800b-92b5-f664203dc550",
+      "sampleSourceTable": "controls_library_design_stage"
+    },
+    "dailyRegulationSliders": {
+      "count": 11,
+      "sampleNotionPageId": "2d7c47c6-1e21-8008-be1d-e34ebe202171",
+      "sampleSourceTable": "daily_regulation_sliders_stage"
+    },
+    "emotionBrainBodyEnergyMapping": {
+      "count": 12,
+      "sampleNotionPageId": "2c6c47c6-1e21-8003-8117-e9514b64b0ec",
+      "sampleSourceTable": "emotion_brain_body_energy_mapping_stage"
+    },
+    "fullBrainNeuralSystems": {
+      "count": 19,
+      "sampleNotionPageId": "2c6c47c6-1e21-8002-8946-fefe77d5fcc7",
+      "sampleSourceTable": "full_brain_neural_systems_table_stage"
+    },
+    "mythologicalBeings": {
+      "count": 23,
+      "sampleNotionPageId": "2cdc47c6-1e21-8001-b755-c32e44ab944f",
+      "sampleSourceTable": "mythological_beings_stage"
+    },
+    "nadiSystem": {
+      "count": 10,
+      "sampleNotionPageId": "2cdc47c6-1e21-8016-a607-e6358aab39e1",
+      "sampleSourceTable": "nadi_system_stage"
+    },
+    "sacredAnimals": {
+      "count": 170,
+      "sampleNotionPageId": "2ccc47c6-1e21-8003-8f84-d834ec80a4a2",
+      "sampleSourceTable": "sacred_animals_stage"
+    },
+    "sessionStopTriggers": {
+      "count": 7,
+      "sampleNotionPageId": "2c6c47c6-1e21-8019-a27b-eff345b9b847",
+      "sampleSourceTable": "during_session_stop_triggers_stage"
+    },
+    "stonesMinerals": {
+      "count": 55,
+      "sampleNotionPageId": "2cdc47c6-1e21-8005-a189-e43efbfbc0ef",
+      "sampleSourceTable": "stones_minerals_stage"
+    }
+  },
+  "deploymentHint": "regenerative-hive-mind / dev (elated-ibis-363)",
+  "runDateUtc": "2026-02-24T12:45:28.230Z",
+  "totalDocuments": 364
+}

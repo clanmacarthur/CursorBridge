@@ -43,3 +43,13 @@ TG041,user_dashboard_layouts,layout_config,control_packs,id,mapping_rule,json_li
 TG042,user_dashboard_layouts,layout_config,dashboard_blocks,id,mapping_rule,json_link_only,define_json_schema_and_fk_strategy,P3,Current link lives inside jsonb
 TG043,mappings,from_db+from_field,mappings,to_db+to_field,edge_registry,live_edge_table,keep_and_validate,P0,Treat as app-level edge registry
 TG044,cross_domain_mappings,source_domain,cross_domain_mappings,target_domain,edge_registry,live_edge_table,keep_and_validate,P0,Treat as app-level domain bridge table
+TG045,isu_projects,sector_attribute_id,attribute_taxonomy,id,schema_fk,not_created,create_table_then_add_fk,P4,Map each ISU project to one primary sector attribute
+TG046,isu_projects,owner_profile_id,programme_profiles,id,schema_fk,not_created,create_table_then_add_fk,P4,Allow profile-owned sustainability projects
+TG047,isu_token_classes,project_id,isu_projects,id,schema_fk,not_created,create_table_then_add_fk,P4,Each token class belongs to an ISU project
+TG048,isu_funding_allocations,project_id,isu_projects,id,schema_fk,not_created,create_table_then_add_fk,P4,Track allocation decisions per project
+TG049,isu_funding_allocations,token_class_id,isu_token_classes,id,schema_fk,not_created,create_table_then_add_fk,P4,Track how much each token class funds a project
+TG050,isu_recoup_rules,token_class_id,isu_token_classes,id,schema_fk,not_created,create_table_then_add_fk,P4,Define recoup logic per token class
+TG051,isu_governance_votes,project_id,isu_projects,id,schema_fk,not_created,create_table_then_add_fk,P4,Hybrid governance votes tied to project decisions
+TG052,isu_governance_votes,voter_profile_id,programme_profiles,id,schema_fk,not_created,create_table_then_add_fk,P4,Track participant vote records by profile
+TG053,isu_agreements,project_id,isu_projects,id,schema_fk,not_created,create_table_then_add_fk,P4,Agreement engine records tied to ISU projects
+TG054,isu_agreements,rule_id,rules_gating,id,schema_fk,not_created,create_table_then_add_fk,P4,Connect agreements to gating and compliance rules

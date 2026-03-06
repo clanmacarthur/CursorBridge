@@ -174,6 +174,7 @@ curl -X POST "http://localhost:3001/sandbox/demo/generate-flagship?lens=tcm"
 | `docs/SESSION_GENERATION_RUNTIME_SPEC.md` | How Main App generates sessions |
 | `ADAPTIVE_AI_VISION.md` | Full AI architecture |
 | `MAIN_APP_INTEGRATION_PACKAGE.md` | Direct-to-Supabase integration guide |
+| `scripts/sync_sessions_dbs_next_to_used.py` | Syncs Notion DB mentions from `Therapuetic next basic` to `Therapeutic USED` |
 | `main-app-starter/` | Nuxt 3 starter project |
 
 ---

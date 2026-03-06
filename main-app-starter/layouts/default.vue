@@ -6,6 +6,7 @@
         <nav class="nav-links">
           <NuxtLink to="/dashboard">Dashboard</NuxtLink>
           <NuxtLink to="/session">Session</NuxtLink>
+          <NuxtLink to="/sessions">Sessions (Planned)</NuxtLink>
         </nav>
         <div class="user-menu">
           <button v-if="user" @click="signOut" class="btn-secondary">
@@ -83,6 +84,16 @@ async function signOut() {
   background: #0f0f23;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
 
 
 

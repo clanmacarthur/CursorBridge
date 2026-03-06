@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-02-23T19:01:48.877767+00:00",
+  "source_export": "C:\\code\\CursorBridge\\exports\\convex_stage_seed\\20260223T184804Z",
+  "collections": [
+    {
+      "collection": "sessionStopTriggers",
+      "rows": 7,
+      "file": "sessionStopTriggers.json"
+    },
+    {
+      "collection": "contraindications",
+      "rows": 11,
+      "file": "contraindications.json"
+    },
+    {
+      "collection": "breathworkTaxonomy",
+      "rows": 12,
+      "file": "breathworkTaxonomy.json"
+    },
+    {
+      "collection": "dailyRegulationSliders",
+      "rows": 11,
+      "file": "dailyRegulationSliders.json"
+    },
+    {
+      "collection": "controlsLibraryDesign",
+      "rows": 13,
+      "file": "controlsLibraryDesign.json"
+    },
+    {
+      "collection": "nadiSystem",
+      "rows": 10,
+      "file": "nadiSystem.json"
+    },
+    {
+      "collection": "astrologyCalendricalSystems",
+      "rows": 21,
+      "file": "astrologyCalendricalSystems.json"
+    },
+    {
+      "collection": "emotionBrainBodyEnergyMapping",
+      "rows": 12,
+      "file": "emotionBrainBodyEnergyMapping.json"
+    },
+    {
+      "collection": "fullBrainNeuralSystems",
+      "rows": 19,
+      "file": "fullBrainNeuralSystems.json"
+    },
+    {
+      "collection": "mythologicalBeings",
+      "rows": 23,
+      "file": "mythologicalBeings.json"
+    },
+    {
+      "collection": "sacredAnimals",
+      "rows": 170,
+      "file": "sacredAnimals.json"
+    },
+    {
+      "collection": "stonesMinerals",
+      "rows": 55,
+      "file": "stonesMinerals.json"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "page_id": "1b6c47c61e21802e8e3cd167e5c1214e",
+  "total_blocks": 165,
+  "block_type_counts": {
+    "paragraph": 40,
+    "divider": 10,
+    "heading_3": 7,
+    "bulleted_list_item": 82,
+    "heading_2": 9,
+    "table": 2,
+    "numbered_list_item": 13,
+    "child_database": 2
+  },
+  "headings": [
+    [
+      "heading_3",
+      "Primary Sector Divisions (Relevant to Your Model):"
+    ],
+    [
+      "heading_2",
+      "Tokenized Economy Structure — Framework:"
+    ],
+    [
+      "heading_3",
+      "Each Sector = Separate Token Class"
+    ],
+    [
+      "heading_2",
+      "How AI Allocates Funding Across Sectors:"
+    ],
+    [
+      "heading_3",
+      "Step 1: AI Analyzes Cross-Sector Dependencies"
+    ],
+    [
+      "heading_3",
+      "Step 2: AI Calculates Optimal Funding Split"
+    ],
+    [
+      "heading_2",
+      "Token Recoup Mechanism — Model:"
+    ],
+    [
+      "heading_3",
+      "How Multi-Sector Benefits Work:"
+    ],
+    [
+      "heading_2",
+      "Aligned Governance Structure:"
+    ],
+    [
+      "heading_3",
+      "Human + AI Hybrid Decision-Making:"
+    ],
+    [
+      "heading_2",
+      "Legal Structure -Aligned Model:"
+    ],
+    [
+      "heading_2",
+      "Does This Work at Small Scale (20-50 People)?"
+    ],
+    [
+      "heading_3",
+      "Phase 1: Collapse to 3 Meta-Sectors"
+    ],
+    [
+      "heading_2",
+      "AI System Requirements:"
+    ],
+    [
+      "heading_2",
+      "Next Step:"
+    ],
+    [
+      "heading_2",
+      "Project tasks"
+    ]
+  ],
+  "child_pages": [],
+  "child_databases": [
+    "Untitled",
+    "Tasks"
+  ],
+  "key_lines": [
+    [
+      "paragraph",
+      "The World Economic Forum uses a hierarchical classification system for organizing economic activities. Here’s how to map your tokenized AI-managed farm/community model to it:"
+    ],
+    [
+      "paragraph",
+      "1. Food & Beverage"
+    ],
+    [
+      "bulleted_list_item",
+      "Food processing, distribution"
+    ],
+    [
+      "paragraph",
+      "2. Energy & Materials"
+    ],
+    [
+      "bulleted_list_item",
+      "Renewable energy (solar, wind, biogas)"
+    ],
+    [
+      "heading_2",
+      "Tokenized Economy Structure — Framework:"
+    ],
+    [
+      "heading_3",
+      "Each Sector = Separate Token Class"
+    ],
+    [
+      "heading_2",
+      "How AI Allocates Funding Across Sectors:"
+    ],
+    [
+      "bulleted_list_item",
+      "Infrastructure must be functional before Food & Beverage can scale (no housing = no workers for farms)"
+    ],
+    [
+      "bulleted_list_item",
+      "Energy must be stable before Manufacturing can run (machinery needs power)"
+    ],
+    [
+      "numbered_list_item",
+      "Energy (power for operations)"
+    ],
+    [
+      "numbered_list_item",
+      "Food & Beverage (revenue generation)"
+    ],
+    [
+      "heading_3",
+      "Step 2: AI Calculates Optimal Funding Split"
+    ],
+    [
+      "bulleted_list_item",
+      "Total funding pool: £250k"
+    ],
+    [
+      "bulleted_list_item",
+      "Cross-sector multiplier effects (e.g., Energy repair benefits Manufacturing + Food)"
+    ],
+    [
+      "heading_2",
+      "Token Recoup Mechanism — Model:"
+    ],
+    [
+      "paragraph",
+      "Scenario: You invest £10k to repair solar panels (Energy sector)."
+    ],
+    [
+      "bulleted_list_item",
+      "You hold 10,000 EnergyTokens"
+    ],
+    [
+      "bulleted_list_item",
+      "Recoup rate: 8%/year = £800/year from Energy revenue"
+    ],
+    [
+      "bulleted_list_item",
+      "Solar powers barn refrigeration (Food & Beverage) → saves £800/year"
+    ],
+    [
+      "bulleted_list_item",
+      "You get 60% from Energy revenue (£1,800)"
+    ],
+    [
+      "bulleted_list_item",
+      "20% from Food savings (£160)"
+    ],
+    [
+      "bulleted_list_item",
+      "Total: £2,260/year instead of £800 — 2.8x faster recoup because you funded a multi-benefit asset"
+    ],
+    [
+      "heading_2",
+      "Aligned Governance Structure:"
+    ],
+    [
+      "bulleted_list_item",
+      "Routine funding reallocations (<5% of sector budget)"
+    ],
+    [
+      "bulleted_list_item",
+      "Quarterly funding rebalancing (>5% shifts between sectors)"
+    ],
+    [
+      "bulleted_list_item",
+      "Sector token burns or rule changes"
+    ],
+    [
+      "bulleted_list_item",
+      "Can issue sector-specific share classes (FoodTokens, EnergyTokens, etc.)"
+    ],
+    [
+      "bulleted_list_item",
+      "Fully blockchain-based governance"
+    ],
+    [
+      "bulleted_list_item",
+      "Smart contracts auto-execute token payouts"
+    ],
+    [
+      "bulleted_list_item",
+      "Internal DAO for token management (satisfies tech purists)"
+    ],
+    [
+      "bulleted_list_item",
+      "AI operates within CBS governance rules"
+    ],
+    [
+      "paragraph",
+      "Tier 1 (Baseline): Infrastructure + Energy"
+    ],
+    [
+      "paragraph",
+      "Tier 2 (Revenue): Food & Beverage + Manufacturing"
+    ],
+    [
+      "bulleted_list_item",
+      "20-50 people can’t fund 6 sectors simultaneously"
+    ],
+    [
+      "paragraph",
+      "As you grow past 50 people, split Tier 1 into Infrastructure vs Energy, etc."
+    ],
+    [
+      "bulleted_list_item",
+      "Tracks how sectors interact (e.g., Energy → Manufacturing capacity)"
+    ],
+    [
+      "bulleted_list_item",
+      "Adjusts token recoup rates accordingly"
+    ],
+    [
+      "bulleted_list_item",
+      "If Food sector hits revenue targets early, AI reallocates future funding to Manufacturing"
+    ],
+    [
+      "bulleted_list_item",
+      "Prevents overfunding mature sectors"
+    ],
+    [
+      "bulleted_list_item",
+      "Database: PostgreSQL (asset registry, token ledger)"
+    ],
+    [
+      "bulleted_list_item",
+      "Smart Contracts (Optional): Ethereum L2 for token immutability"
+    ],
+    [
+      "bulleted_list_item",
+      "Food & Beverage? (Are there fields/animals?)"
+    ],
+    [
+      "bulleted_list_item",
+      "Energy? (Any solar/wind/biogas systems?)"
+    ],
+    [
+      "bulleted_list_item",
+      "Don’t allocate tokens to sectors that can’t recoup"
+    ],
+    [
+      "bulleted_list_item",
+      "Example: If there’s no manufacturing capability, MakeTokens are worthless until workshop is rebuilt"
+    ],
+    [
+      "paragraph",
+      "Give me the current state of the land (buildings, systems, people) and I’ll map it to WEF sectors with realistic funding splits + token allocation."
+    ]
+  ]
+}

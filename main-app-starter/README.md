@@ -1,49 +1,53 @@
-# Main App Starter (EXAMPLE ONLY)
+# Main App Starter (Nuxt 3)
 
-**This is just example code. Main App connects DIRECTLY to Supabase.**
+This is the example Nuxt app inside this repo.
 
-CursorBridge does NOT need to be running for Main App to work.
+## Current Routes
 
----
+- `/` home page
+- `/login` login page
+- `/dashboard` dashboard page
+- `/session` session generator + player
+- `/sessions` planned wheel builder placeholder (contract stub)
 
-## The Architecture
+Note:
 
+- `/sessions` (plural) is a placeholder route in this code.
+- The real, live generation flow is still `/session` until wheel logic is implemented.
+
+## Run Locally
+
+From repo root:
+
+```bash
+npm --prefix main-app-starter install
+npm --prefix main-app-starter run dev
 ```
-Main App  ──────────────►  Supabase (direct connection)
 
-CursorBridge = separate admin tool (optional, for content authoring)
+Nuxt runs on port `8080` by default (see `main-app-starter/package.json`).
+
+## Build Check
+
+```bash
+npm --prefix main-app-starter run build
 ```
 
----
+## Bridge Proxy Endpoints In This App
 
-## What Main App Needs
+- `main-app-starter/server/api/bridge/templates.get.ts`
+- `main-app-starter/server/api/bridge/templates/[id].get.ts`
+- `main-app-starter/server/api/bridge/query/[table].get.ts`
+- `main-app-starter/server/api/bridge/session.post.ts`
 
-1. Supabase URL + Anon Key
-2. `@supabase/supabase-js` package
-3. A composable like `useSupabase.ts`
+## Planned Session Contract Stubs
 
-See `MAIN_APP_INTEGRATION_PACKAGE.md` in the parent folder for complete code.
+- `main-app-starter/server/api/session/themes.get.ts`
+- `main-app-starter/server/api/session/preview.post.ts`
+- `main-app-starter/server/api/session/generate.post.ts`
 
----
+## Related Docs
 
-## This Folder
-
-This folder contains EXAMPLE components you can reference:
-
-- `composables/useBridge.ts` - Example API patterns (adapt for direct Supabase)
-- `components/SessionPlayer.vue` - Example session player UI
-- `types/index.ts` - TypeScript interfaces
-
-**Copy what's useful, ignore the rest.**
-
----
-
-## CursorBridge Role
-
-CursorBridge is a standalone admin tool for:
-- Syncing Notion ↔ Supabase
-- Creating database schemas
-- Running Excel automation
-- Seeding content
-
-**It does NOT need to run for Main App to function.**
+- `../docs/HANDOVER_SESSIONS.md`
+- `../docs/HANDOVER_CURSORBRIDGE.md`
+- `../docs/DATA_MODEL_OVERVIEW.md`
+- `../docs/THEME_TABLE_CATALOG.md`

@@ -1,0 +1,194 @@
+[
+  {
+    "notionPageId": "2c6c47c6-1e21-8003-8117-e9514b64b0ec",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 1,
+      "notion_page_id": "2c6c47c6-1e21-8003-8117-e9514b64b0ec",
+      "primary_brain_systems": "Amygdala, PAG, brainstem",
+      "body___organ_correlates": "Kidneys, adrenals, psoas",
+      "energetic_systems": "Root chakra, Water",
+      "script_use": "Titrated activation",
+      "adaptive_function": "Survival",
+      "emotion": "Fear"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8016-9fcb-f8c1e762b140",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 2,
+      "notion_page_id": "2c6c47c6-1e21-8016-9fcb-f8c1e762b140",
+      "primary_brain_systems": "Ventral vagal",
+      "body___organ_correlates": "Diaphragm",
+      "energetic_systems": "Heart",
+      "script_use": "NSDR",
+      "adaptive_function": "Recovery",
+      "emotion": "Calm"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-801d-8f31-fbbb539c9270",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 3,
+      "notion_page_id": "2c6c47c6-1e21-801d-8f31-fbbb539c9270",
+      "primary_brain_systems": "PFC + dopamine",
+      "body___organ_correlates": "Eyes, neck",
+      "energetic_systems": "Third eye",
+      "script_use": "Gentle inquiry",
+      "adaptive_function": "Learning",
+      "emotion": "Curiosity"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-802a-a22a-d303645ffcae",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 4,
+      "notion_page_id": "2c6c47c6-1e21-802a-a22a-d303645ffcae",
+      "primary_brain_systems": "Limbic, DMN",
+      "body___organ_correlates": "Chest, throat",
+      "energetic_systems": "Heart",
+      "script_use": "Soothing",
+      "adaptive_function": "Withdrawal",
+      "emotion": "Sadness"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8038-a33a-cd97e21325bb",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 5,
+      "notion_page_id": "2c6c47c6-1e21-8038-a33a-cd97e21325bb",
+      "primary_brain_systems": "ACC, insula",
+      "body___organ_correlates": "Face, gut",
+      "energetic_systems": "Solar plexus",
+      "script_use": "Safety restoration",
+      "adaptive_function": "Social repair",
+      "emotion": "Shame"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8050-a952-e906e135909b",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 6,
+      "notion_page_id": "2c6c47c6-1e21-8050-a952-e906e135909b",
+      "primary_brain_systems": "vmPFC, vagus",
+      "body___organ_correlates": "Chest",
+      "energetic_systems": "Heart",
+      "script_use": "Attachment repair",
+      "adaptive_function": "Bonding",
+      "emotion": "Trust"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8054-a004-c8e79bc8791a",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 7,
+      "notion_page_id": "2c6c47c6-1e21-8054-a004-c8e79bc8791a",
+      "primary_brain_systems": "Amygdala–PFC loop",
+      "body___organ_correlates": "Chest, breath, gut",
+      "energetic_systems": "Solar plexus",
+      "script_use": "Breath modulation",
+      "adaptive_function": "Anticipation",
+      "emotion": "Anxiety"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8061-ba47-c30db2c7fe9f",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 8,
+      "notion_page_id": "2c6c47c6-1e21-8061-ba47-c30db2c7fe9f",
+      "primary_brain_systems": "Dorsal vagal",
+      "body___organ_correlates": "Limbs",
+      "energetic_systems": "Root",
+      "script_use": "Re-engagement",
+      "adaptive_function": "Freeze",
+      "emotion": "Numbness"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-808e-915f-d352461a5539",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 9,
+      "notion_page_id": "2c6c47c6-1e21-808e-915f-d352461a5539",
+      "primary_brain_systems": "Insula, DMN",
+      "body___organ_correlates": "Lungs, chest",
+      "energetic_systems": "Heart/Lung",
+      "script_use": "Gentle release",
+      "adaptive_function": "Loss processing",
+      "emotion": "Grief"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-809a-909f-cee12521eec8",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 10,
+      "notion_page_id": "2c6c47c6-1e21-809a-909f-cee12521eec8",
+      "primary_brain_systems": "Limbic + motor",
+      "body___organ_correlates": "Liver, jaw, shoulders",
+      "energetic_systems": "Wood element",
+      "script_use": "Discharge",
+      "adaptive_function": "Boundary setting",
+      "emotion": "Anger"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80a0-900c-d7860d9b5d3b",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 11,
+      "notion_page_id": "2c6c47c6-1e21-80a0-900c-d7860d9b5d3b",
+      "primary_brain_systems": "Dopamine circuits",
+      "body___organ_correlates": "Whole body",
+      "energetic_systems": "Heart/Sacral",
+      "script_use": "Reinforcement",
+      "adaptive_function": "Expansion",
+      "emotion": "Joy"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80cb-9327-d3b72211ddf1",
+    "sourceTable": "emotion_brain_body_energy_mapping_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 12,
+      "notion_page_id": "2c6c47c6-1e21-80cb-9327-d3b72211ddf1",
+      "primary_brain_systems": "Thalamus overload",
+      "body___organ_correlates": "Head, chest",
+      "energetic_systems": "Crown–solar",
+      "script_use": "Grounding",
+      "adaptive_function": "Load shedding",
+      "emotion": "Overwhelm"
+    }
+  }
+]

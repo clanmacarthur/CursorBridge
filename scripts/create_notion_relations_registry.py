@@ -317,6 +317,7 @@ def master_db_schema() -> Dict[str, Any]:
                         "live_fk",
                         "derived_live",
                         "live_edge_table",
+                        "not_created",
                         "missing_fk",
                         "text_link_only",
                         "json_link_only",
@@ -325,7 +326,7 @@ def master_db_schema() -> Dict[str, Any]:
             }
         },
         "Next Action": {"rich_text": {}},
-        "Phase": {"select": {"options": options(["P0", "P1", "P2", "P3", "Parked"])}},
+        "Phase": {"select": {"options": options(["P0", "P1", "P2", "P3", "P4", "Parked"])}},
         "On Supabase": {"checkbox": {}},
         "Supabase Configured": {"checkbox": {}},
         "Needs More Data": {"checkbox": {}},
@@ -373,6 +374,7 @@ def to_be_db_schema() -> Dict[str, Any]:
                 "options": options(
                     [
                         "live",
+                        "not_created",
                         "missing_fk",
                         "text_link_only",
                         "json_link_only",
@@ -382,7 +384,7 @@ def to_be_db_schema() -> Dict[str, Any]:
             }
         },
         "Next Action": {"rich_text": {}},
-        "Phase": {"select": {"options": options(["P0", "P1", "P2", "P3", "Parked"])}},
+        "Phase": {"select": {"options": options(["P0", "P1", "P2", "P3", "P4", "Parked"])}},
         "On Supabase": {"checkbox": {}},
         "Supabase Configured": {"checkbox": {}},
         "Needs More Data": {"checkbox": {}},
@@ -467,6 +469,7 @@ def build_to_be_properties(
 ) -> Dict[str, Any]:
     state = row.get("current_state", "").strip()
     next_action = row.get("next_action", "").strip()
+    on_supabase = state != "not_created"
     supabase_configured = state in {"live", "live_fk", "derived_live", "live_edge_table"}
     needs_more_data = state in {"text_link_only", "json_link_only"} or "stabilize_lookup_key" in next_action
 
@@ -480,7 +483,7 @@ def build_to_be_properties(
         "Current State": select_payload(state),
         "Next Action": rich_text_payload(next_action),
         "Phase": select_payload(row.get("phase", "")),
-        "On Supabase": checkbox_payload(True),
+        "On Supabase": checkbox_payload(on_supabase),
         "Supabase Configured": checkbox_payload(supabase_configured),
         "Needs More Data": checkbox_payload(needs_more_data),
         "On Convex": checkbox_payload(False),

@@ -28,5 +28,6 @@
   "safety_rules": "2c8c47c61e2180298a4cfa7bbc9d2ec3",
   "sounds_tones_schema": "2c8c47c61e218026af0dd267b7dbefb9",
   "stones_minerals": "2cdc47c61e2180ab8f81fb9c369f7b7e",
-  "symbols_schema": "2c8c47c61e2180d7b9f6e04029369671"
+  "symbols_schema": "2c8c47c61e2180d7b9f6e04029369671",
+  "stage_to_canonical_tracker": "310c47c61e2181538688e7673a20d973"
 }

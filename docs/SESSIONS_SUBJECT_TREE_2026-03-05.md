@@ -1,0 +1,203 @@
+# Sessions Subject Tree (Strict Live Values)
+
+Generated: 2026-03-05T04:54:35.602726+00:00
+
+Top-level subjects are taken from `session_types.session_type`.
+
+## Top-Level Subjects
+
+- `Activation`
+  - max_intensity: `Moderate`
+  - allows_activation: `Yes`
+  - relevant_emotions_ids: `2c8c47c6-1e21-8016-92cc-e8b334bfccc9, 2c8c47c6-1e21-80c0-a01d-c0dbe020e945`
+  - allowed_styles_ids: `2c8c47c6-1e21-808b-9734-d04ad4fe3177`
+  - mapped_attributes_via_mappings: `(none)`
+- `Breath Awareness`
+  - max_intensity: `Low`
+  - allows_activation: `No`
+  - relevant_emotions_ids: `2c8c47c6-1e21-805a-92be-fec26064b109, 2c8c47c6-1e21-8052-84ad-da43b3796738`
+  - allowed_styles_ids: `2c8c47c6-1e21-807f-ba4e-cfd71510062d, 2c8c47c6-1e21-808b-9734-d04ad4fe3177`
+  - mapped_attributes_via_mappings: `(none)`
+- `Hypnosis`
+  - max_intensity: `Low`
+  - allows_activation: `No`
+  - relevant_emotions_ids: `2c8c47c6-1e21-8052-84ad-da43b3796738, 2c8c47c6-1e21-8060-8b3a-cc83b5849148`
+  - allowed_styles_ids: `2c8c47c6-1e21-8090-b5cf-f2437c4ebf77, 2c8c47c6-1e21-8064-aad8-f3dcdf5cbd5a`
+  - mapped_attributes_via_mappings: `(none)`
+- `NSDR`
+  - max_intensity: `Low`
+  - allows_activation: `No`
+  - relevant_emotions_ids: `2c8c47c6-1e21-805a-92be-fec26064b109, 2c8c47c6-1e21-8016-92cc-e8b334bfccc9, 2c8c47c6-1e21-8018-86b9-df9bb0a94484`
+  - allowed_styles_ids: `2c8c47c6-1e21-807f-ba4e-cfd71510062d, 2c8c47c6-1e21-808b-9734-d04ad4fe3177, 2c8c47c6-1e21-803c-8b1b-edeb6acd4d81`
+  - mapped_attributes_via_mappings: `Parasympathetic Tone`
+- `Somatic Regulation`
+  - max_intensity: `Moderate`
+  - allows_activation: `No`
+  - relevant_emotions_ids: `2c8c47c6-1e21-80f7-a925-c7f260ad5638, 2c8c47c6-1e21-80c0-a01d-c0dbe020e945`
+  - allowed_styles_ids: `2c8c47c6-1e21-808b-9734-d04ad4fe3177, 2c8c47c6-1e21-803c-8b1b-edeb6acd4d81`
+  - mapped_attributes_via_mappings: `(none)`
+- `Trauma Titration`
+  - max_intensity: `Moderate`
+  - allows_activation: `No`
+  - relevant_emotions_ids: `2c8c47c6-1e21-80c0-a01d-c0dbe020e945, 2c8c47c6-1e21-8099-bcab-d15f765e8552, 2c8c47c6-1e21-8012-940a-eee9be0465b7`
+  - allowed_styles_ids: `2c8c47c6-1e21-807f-ba4e-cfd71510062d, 2c8c47c6-1e21-8090-b5cf-f2437c4ebf77`
+  - mapped_attributes_via_mappings: `(none)`
+
+## Attribute Taxonomy Parent Tree
+
+- `Activation Capacity`
+  - (no child branches)
+- `Active Mobility`
+  - (no child branches)
+- `Aerobic Endurance`
+  - (no child branches)
+- `Anaerobic Endurance`
+  - (no child branches)
+- `Anti-Inflammatory Support`
+  - (no child branches)
+- `Anxiety Modulation`
+  - (no child branches)
+- `Appetite & Satiety`
+  - (no child branches)
+- `Attention Control`
+  - (no child branches)
+- `Body Sensation Tracking`
+  - (no child branches)
+- `Breath Awareness`
+  - (no child branches)
+- `Breath Control`
+  - (no child branches)
+- `Breath Discipline`
+  - (no child branches)
+- `Breath Retention`
+  - (no child branches)
+- `Breath Rhythm`
+  - (no child branches)
+- `Breath–Movement Coupling`
+  - (no child branches)
+- `CO₂ Tolerance`
+  - (no child branches)
+- `Cognitive Flexibility`
+  - (no child branches)
+- `Cognitive Load Management`
+  - (no child branches)
+- `Cognitive Nutrition`
+  - (no child branches)
+- `Cognitive Regulation`
+  - (no child branches)
+- `Coordination`
+  - (no child branches)
+- `Emotional Integration`
+  - (no child branches)
+- `Emotional Regulation`
+  - (no child branches)
+- `Endurance`
+  - (no child branches)
+- `Endurance Strength`
+  - (no child branches)
+- `Energy Regulation`
+  - (no child branches)
+- `Explosive Strength`
+  - (no child branches)
+- `Fatigue Recovery`
+  - (no child branches)
+- `Fatigue Resistance`
+  - (no child branches)
+- `Food Quality & Sensitivities`
+  - (no child branches)
+- `Food Timing & Circadian`
+  - (no child branches)
+- `Glycemic Regulation`
+  - (no child branches)
+- `Grief Processing`
+  - (no child branches)
+- `Grounding Capacity`
+  - (no child branches)
+- `Gut Function & Tolerance`
+  - (no child branches)
+- `Hydration & Electrolytes`
+  - (no child branches)
+- `Insight Generation`
+  - (no child branches)
+- `Integration Capacity`
+  - (no child branches)
+- `Isometric Strength`
+  - (no child branches)
+- `Joint Range`
+  - (no child branches)
+- `Macronutrient Strategy`
+  - (no child branches)
+- `Max Strength`
+  - (no child branches)
+- `Micronutrient Status`
+  - (no child branches)
+- `Mobility`
+  - (no child branches)
+- `Motor Control`
+  - (no child branches)
+- `Mythic Framing`
+  - (no child branches)
+- `Narrative Integration`
+  - (no child branches)
+- `Nasal Control`
+  - (no child branches)
+- `Nervous System Recovery`
+  - (no child branches)
+- `Nutrition`
+  - `Appetite & Satiety`
+  - `Cognitive Nutrition`
+  - `Diet Pattern Adherence`
+  - `Glycemic Regulation`
+  - `Gut Tolerance`
+  - `Hydration & Electrolytes`
+  - `Inflammation Load`
+  - `Meal Timing & Circadian`
+  - `Micronutrient Sufficiency`
+  - `Recovery Nutrition`
+- `Pain Modulation`
+  - (no child branches)
+- `Passive Mobility`
+  - (no child branches)
+- `Proprioceptive Awareness`
+  - (no child branches)
+- `Recovery`
+  - (no child branches)
+- `Recovery Capacity`
+  - (no child branches)
+- `Recovery Nutrition`
+  - (no child branches)
+- `Rhythm Synchronisation`
+  - (no child branches)
+- `Ritual / Symbolic Practice`
+  - (no child branches)
+- `Shaking / Discharge`
+  - (no child branches)
+- `Somatic Regulation`
+  - (no child branches)
+- `Strength`
+  - (no child branches)
+- `Stress Recovery`
+  - (no child branches)
+- `Supplementation Strategy`
+  - (no child branches)
+- `Symbol Anchoring`
+  - (no child branches)
+- `Tension Release`
+  - (no child branches)
+- `Timing Precision`
+  - (no child branches)
+
+## Cross-Domain Mapping Tree
+
+- `addiction_recovery`
+  - `grief_processing`
+- `athletic_breathing`
+  - `anxiety_management`
+- `athletic_periodization`
+  - `burnout_recovery`
+- `contemplative_surrender`
+  - `control_issues`
+- `meditation_attention`
+  - `chronic_pain`
+- `trauma_somatic`
+  - `performance_anxiety`

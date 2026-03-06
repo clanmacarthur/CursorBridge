@@ -1,0 +1,34 @@
+{
+  "notion_table_count": 31,
+  "supabase_table_count": 85,
+  "common_count": 9,
+  "notion_missing_in_supabase": [
+    "astrology_calendrical_systems",
+    "breathwork_master_taxonomy",
+    "contraindications_mandatory_disclosure",
+    "controls_library_design",
+    "daily_regulation_sliders",
+    "during_session_stop_triggers",
+    "emotion_brain_body_energy_mapping",
+    "full_brain_neural_systems_table",
+    "mythological_beings",
+    "nadi_system",
+    "relations_existing",
+    "relations_master",
+    "relations_to_be",
+    "sacred_animals",
+    "stage_to_canonical_tracker",
+    "stones_minerals"
+  ],
+  "common_tables": [
+    "control_definitions",
+    "control_packs",
+    "coupling_rules",
+    "default_weights",
+    "derived_metrics",
+    "profile_pack_map",
+    "questionnaire_questions",
+    "questionnaires",
+    "safety_rules"
+  ]
+}

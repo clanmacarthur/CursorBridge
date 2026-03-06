@@ -1,6 +1,11 @@
-# Session Generation Runtime Spec
-**For: Main App**
-**Purpose: Generate sessions from blueprints at runtime**
+# Session Generation Runtime Spec (Legacy)
+**Status: Archived legacy architecture**
+**For: Historical reference only**
+**Purpose (legacy): Generate sessions from blueprints at runtime**
+
+> This document is archived and does not define the first Sessions Composer prototype.
+> Active build spec: `docs/SESSIONS_COMPOSER_LOCKED_SPEC_2026-03-05.md`
+> Legacy snapshot: `docs/legacy/SESSION_GENERATION_RUNTIME_SPEC_LEGACY_2026-03-05.md`
 
 ---
 

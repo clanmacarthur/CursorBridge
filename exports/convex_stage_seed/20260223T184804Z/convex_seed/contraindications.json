@@ -1,0 +1,134 @@
+[
+  {
+    "notionPageId": "2c6c47c6-1e21-801a-99b5-cfaf6de0a697",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 1,
+      "notion_page_id": "2c6c47c6-1e21-801a-99b5-cfaf6de0a697",
+      "restriction": "No trauma recall without resourcing",
+      "condition": "PTSD (severe)"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8033-b2b7-fecbf546a2af",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 2,
+      "notion_page_id": "2c6c47c6-1e21-8033-b2b7-fecbf546a2af",
+      "restriction": "No rhythmic flashing or hyperventilation",
+      "condition": "Epilepsy"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-803f-924e-f581512e1b02",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 3,
+      "notion_page_id": "2c6c47c6-1e21-803f-924e-f581512e1b02",
+      "restriction": "Avoid altered states",
+      "condition": "Recent concussion"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-806d-a27d-d7c752564873",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 4,
+      "notion_page_id": "2c6c47c6-1e21-806d-a27d-d7c752564873",
+      "restriction": "No breathwork or hypnosis",
+      "condition": "Substance use"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8078-b54b-cc564b969b53",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 5,
+      "notion_page_id": "2c6c47c6-1e21-8078-b54b-cc564b969b53",
+      "restriction": "Avoid deep trance",
+      "condition": "Sleep deprivation"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8089-9a29-fb6a3653c6d3",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 6,
+      "notion_page_id": "2c6c47c6-1e21-8089-9a29-fb6a3653c6d3",
+      "restriction": "Avoid trance and activation",
+      "condition": "Bipolar (mania)"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8098-aeda-c2b47a615b59",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 7,
+      "notion_page_id": "2c6c47c6-1e21-8098-aeda-c2b47a615b59",
+      "restriction": "No altered-state practices",
+      "condition": "Psychosis history"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-809a-853d-d93ce5372443",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 8,
+      "notion_page_id": "2c6c47c6-1e21-809a-853d-d93ce5372443",
+      "restriction": "No breath holds, no hyperventilation",
+      "condition": "Panic disorder"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80ad-bbde-ca4dfa6f5eed",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 9,
+      "notion_page_id": "2c6c47c6-1e21-80ad-bbde-ca4dfa6f5eed",
+      "restriction": "Avoid hypnosis, archetypes",
+      "condition": "Dissociative disorders"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80d7-a4ff-ed97e4f05b22",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 10,
+      "notion_page_id": "2c6c47c6-1e21-80d7-a4ff-ed97e4f05b22",
+      "restriction": "Avoid intense breathwork",
+      "condition": "Pregnancy"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80f9-a896-e5f8abed613d",
+    "sourceTable": "contraindications_mandatory_disclosure_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 11,
+      "notion_page_id": "2c6c47c6-1e21-80f9-a896-e5f8abed613d",
+      "restriction": "No breath retention",
+      "condition": "Cardiac conditions"
+    }
+  }
+]

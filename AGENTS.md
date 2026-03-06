@@ -1,6 +1,6 @@
 # CursorBridge Agent Memory
 
-Last updated: 2026-02-24
+Last updated: 2026-03-05
 
 ## Project Snapshot
 
@@ -122,6 +122,52 @@ Last updated: 2026-02-24
     - `api.sessions.sessionLookupThemes`
   - npm shortcut: `npm.cmd run convex:sessions:smoke`
   - snapshot file: `docs/_convex_session_lookup_snapshot_2026-02-24.json`
+- Notion "move DB between pages" is handled as safe mention-link sync (API does not provide reliable DB re-parenting for this workflow).
+- New sync script for Next -> Used page transfer:
+  - `scripts/sync_sessions_dbs_next_to_used.py`
+  - writes report: `docs/_notion_next_to_used_sessions_sync.json`
+- Latest Next -> Used run completed on 2026-02-26:
+  - source page: `2d9c47c6-1e21-80a1-848b-d93728f116cd`
+  - target page: `2d9c47c6-1e21-8057-962a-e39660bd641e`
+  - added database mentions: `36`
+- Live 0a page scan completed on 2026-03-05:
+  - source page: `36207156f7034c13a839249dee0afe1a`
+  - total databases found: `14`
+  - missing in config: `6`
+  - scan artifact: `docs/_notion_0a_page_scan.json`
+  - profile artifact: `docs/_notion_0a_missing_db_profiles.json`
+  - finding: `2` are finance-only, `1` is generic Name/Tags, `3` are inaccessible to current Notion token
+- Live sessions composer domain audit completed on 2026-03-05:
+  - report: `docs/SESSIONS_COMPOSER_DOMAIN_AUDIT_2026-03-05.md`
+  - machine snapshot: `docs/_sessions_composer_domain_audit_2026-03-05.json`
+  - result: `BLOCKER_COUNT=0`
+  - build rule: show only filters with non-empty live values
+- Locked Supabase-first composer build spec added:
+  - `docs/SESSIONS_COMPOSER_LOCKED_SPEC_2026-03-05.md`
+  - wheel = domains, drawer = real rows
+  - no guessed mappings, no empty filter groups
+- Sessions composer spec reset applied from `Sessions_Composer_Reset_Section_1_to_4.md`:
+  - active spec now uses Section 1-4 subject-first composer flow
+  - old script/audio-first architecture archived as legacy, not active for first prototype
+  - legacy archive files:
+    - `docs/legacy/SESSIONS_COMPOSER_LOCKED_SPEC_PRE_RESET_2026-03-05.md`
+    - `docs/legacy/SESSION_GENERATION_RUNTIME_SPEC_LEGACY_2026-03-05.md`
+- Notion page update completed (Entire User Plan Notes):
+  - page: `2d5c47c6-1e21-809b-95aa-d3c17be66d50`
+  - appended sessions/programmes reset section with active direction + legacy archive note
+  - local trace: `docs/_notion_entire_user_plan_sessions_reset_2026-03-05.json`
+- Strict actual-values-only Sessions Composer inventory pass completed (2026-03-05):
+  - generator script: `scripts/build_sessions_composer_inventory_pass.py`
+  - docs:
+    - `docs/SESSIONS_DOMAIN_INVENTORY_2026-03-05.md`
+    - `docs/SESSIONS_SUBJECT_TREE_2026-03-05.md`
+    - `docs/SESSIONS_FIELD_MAP_2026-03-05.md`
+  - machine-readable outputs:
+    - `docs/_sessions_domain_inventory_live_2026-03-05.json`
+    - `docs/_sessions_support_inventory_live_2026-03-05.json`
+    - `docs/_sessions_subject_tree_live_2026-03-05.json`
+    - `docs/_sessions_drilldown_lists_live_2026-03-05.json`
+  - locked spec updated with live subject list, live row counts, live filters, and dead-filter-hide rule.
 
 ## Files To Keep Updated
 
@@ -145,6 +191,17 @@ Last updated: 2026-02-24
 - `docs/TASK_MANAGER_CURSORBRIDGE_ALIGNMENT.md`
 - `docs/CONTROLLED_PORT_PLAN_TASK_MANAGER_TO_CURSORBRIDGE.md`
 - `docs/WHEELS_PREBUILD_REASSESSMENT.md`
+- `docs/SESSIONS_COMPOSER_LOCKED_SPEC_2026-03-05.md`
+- `docs/legacy/SESSIONS_COMPOSER_LOCKED_SPEC_PRE_RESET_2026-03-05.md`
+- `docs/legacy/SESSION_GENERATION_RUNTIME_SPEC_LEGACY_2026-03-05.md`
+- `docs/_notion_entire_user_plan_sessions_reset_2026-03-05.json`
+- `docs/SESSIONS_DOMAIN_INVENTORY_2026-03-05.md`
+- `docs/SESSIONS_SUBJECT_TREE_2026-03-05.md`
+- `docs/SESSIONS_FIELD_MAP_2026-03-05.md`
+- `docs/_sessions_domain_inventory_live_2026-03-05.json`
+- `docs/_sessions_support_inventory_live_2026-03-05.json`
+- `docs/_sessions_subject_tree_live_2026-03-05.json`
+- `docs/_sessions_drilldown_lists_live_2026-03-05.json`
 - `docs/GRAND_PROJECT_SKELETON.md`
 - `docs/GRAND_PROJECT_NOTION_ALIGNMENT.md`
 - `docs/_grand_project_notion_snapshot.json`
@@ -178,6 +235,7 @@ Last updated: 2026-02-24
 - Keep instructions concrete and copy/paste ready.
 - Compare new plans against files on disk before implementing.
 - Do not ask repeated "if you want" questions for routine next actions.
+- Never use "if you want" phrasing. Always give direct recommended next steps.
 - Always provide the next recommended steps proactively.
 - Explicitly flag tangents: if work starts shifting project direction, call it out immediately with impact.
 - Keep Supabase stable; major structural/model changes should be deferred to Convex migration.

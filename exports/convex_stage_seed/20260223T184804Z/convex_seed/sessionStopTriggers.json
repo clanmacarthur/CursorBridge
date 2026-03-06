@@ -1,0 +1,86 @@
+[
+  {
+    "notionPageId": "2c6c47c6-1e21-8019-a27b-eff345b9b847",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 1,
+      "notion_page_id": "2c6c47c6-1e21-8019-a27b-eff345b9b847",
+      "action": "End session",
+      "symptom": "Confusion"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8038-94cd-c8c213037666",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 2,
+      "notion_page_id": "2c6c47c6-1e21-8038-94cd-c8c213037666",
+      "action": "Name objects in room",
+      "symptom": "Dissociation"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8088-8fd1-ef7d66cdf921",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 3,
+      "notion_page_id": "2c6c47c6-1e21-8088-8fd1-ef7d66cdf921",
+      "action": "Stop immediately",
+      "symptom": "Chest pain"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-8089-b424-ee47e6f9eeca",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 4,
+      "notion_page_id": "2c6c47c6-1e21-8089-b424-ee47e6f9eeca",
+      "action": "Sit upright",
+      "symptom": "Severe dizziness"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80b9-a398-ebf5e5c07d80",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 5,
+      "notion_page_id": "2c6c47c6-1e21-80b9-a398-ebf5e5c07d80",
+      "action": "Resume normal breathing",
+      "symptom": "Air hunger distress"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80e0-bfe1-deafb883abb2",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 6,
+      "notion_page_id": "2c6c47c6-1e21-80e0-bfe1-deafb883abb2",
+      "action": "Ground body",
+      "symptom": "Emotional flooding"
+    }
+  },
+  {
+    "notionPageId": "2c6c47c6-1e21-80f2-bc7b-f103c713665f",
+    "sourceTable": "during_session_stop_triggers_stage",
+    "sourceSystem": "supabase_stage",
+    "importedAt": 1771873308850,
+    "raw": {
+      "id": 7,
+      "notion_page_id": "2c6c47c6-1e21-80f2-bc7b-f103c713665f",
+      "action": "Stop, open eyes",
+      "symptom": "Panic surge"
+    }
+  }
+]

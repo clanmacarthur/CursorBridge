@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-02-23T18:48:04.842307+00:00",
+  "supabase_url": "https://dshwdxhycdrtemaxrupu.supabase.co",
+  "tables": [
+    {
+      "table": "during_session_stop_triggers_stage",
+      "rows": 7,
+      "file": "during_session_stop_triggers_stage.json"
+    },
+    {
+      "table": "contraindications_mandatory_disclosure_stage",
+      "rows": 11,
+      "file": "contraindications_mandatory_disclosure_stage.json"
+    },
+    {
+      "table": "breathwork_master_taxonomy_stage",
+      "rows": 12,
+      "file": "breathwork_master_taxonomy_stage.json"
+    },
+    {
+      "table": "daily_regulation_sliders_stage",
+      "rows": 11,
+      "file": "daily_regulation_sliders_stage.json"
+    },
+    {
+      "table": "controls_library_design_stage",
+      "rows": 13,
+      "file": "controls_library_design_stage.json"
+    },
+    {
+      "table": "nadi_system_stage",
+      "rows": 10,
+      "file": "nadi_system_stage.json"
+    },
+    {
+      "table": "astrology_calendrical_systems_stage",
+      "rows": 21,
+      "file": "astrology_calendrical_systems_stage.json"
+    },
+    {
+      "table": "emotion_brain_body_energy_mapping_stage",
+      "rows": 12,
+      "file": "emotion_brain_body_energy_mapping_stage.json"
+    },
+    {
+      "table": "full_brain_neural_systems_table_stage",
+      "rows": 19,
+      "file": "full_brain_neural_systems_table_stage.json"
+    },
+    {
+      "table": "mythological_beings_stage",
+      "rows": 23,
+      "file": "mythological_beings_stage.json"
+    },
+    {
+      "table": "sacred_animals_stage",
+      "rows": 170,
+      "file": "sacred_animals_stage.json"
+    },
+    {
+      "table": "stones_minerals_stage",
+      "rows": 55,
+      "file": "stones_minerals_stage.json"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-02-23T19:01:48.878644+00:00",
+  "latest_export": "C:\\code\\CursorBridge\\exports\\convex_stage_seed\\20260223T184804Z",
+  "mapping_rows": 12,
+  "tables_audited": 12,
+  "table_reports": [
+    {
+      "table": "during_session_stop_triggers_stage",
+      "collection": "sessionStopTriggers",
+      "source_rows": 7,
+      "seed_rows": 7,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 7,
+      "seed_file": "convex_seed\\sessionStopTriggers.json"
+    },
+    {
+      "table": "contraindications_mandatory_disclosure_stage",
+      "collection": "contraindications",
+      "source_rows": 11,
+      "seed_rows": 11,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 11,
+      "seed_file": "convex_seed\\contraindications.json"
+    },
+    {
+      "table": "breathwork_master_taxonomy_stage",
+      "collection": "breathworkTaxonomy",
+      "source_rows": 12,
+      "seed_rows": 12,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 12,
+      "seed_file": "convex_seed\\breathworkTaxonomy.json"
+    },
+    {
+      "table": "daily_regulation_sliders_stage",
+      "collection": "dailyRegulationSliders",
+      "source_rows": 11,
+      "seed_rows": 11,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 11,
+      "seed_file": "convex_seed\\dailyRegulationSliders.json"
+    },
+    {
+      "table": "controls_library_design_stage",
+      "collection": "controlsLibraryDesign",
+      "source_rows": 13,
+      "seed_rows": 13,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 13,
+      "seed_file": "convex_seed\\controlsLibraryDesign.json"
+    },
+    {
+      "table": "nadi_system_stage",
+      "collection": "nadiSystem",
+      "source_rows": 10,
+      "seed_rows": 10,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 10,
+      "seed_file": "convex_seed\\nadiSystem.json"
+    },
+    {
+      "table": "astrology_calendrical_systems_stage",
+      "collection": "astrologyCalendricalSystems",
+      "source_rows": 21,
+      "seed_rows": 21,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 21,
+      "seed_file": "convex_seed\\astrologyCalendricalSystems.json"
+    },
+    {
+      "table": "emotion_brain_body_energy_mapping_stage",
+      "collection": "emotionBrainBodyEnergyMapping",
+      "source_rows": 12,
+      "seed_rows": 12,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 12,
+      "seed_file": "convex_seed\\emotionBrainBodyEnergyMapping.json"
+    },
+    {
+      "table": "full_brain_neural_systems_table_stage",
+      "collection": "fullBrainNeuralSystems",
+      "source_rows": 19,
+      "seed_rows": 19,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 19,
+      "seed_file": "convex_seed\\fullBrainNeuralSystems.json"
+    },
+    {
+      "table": "mythological_beings_stage",
+      "collection": "mythologicalBeings",
+      "source_rows": 23,
+      "seed_rows": 23,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 23,
+      "seed_file": "convex_seed\\mythologicalBeings.json"
+    },
+    {
+      "table": "sacred_animals_stage",
+      "collection": "sacredAnimals",
+      "source_rows": 170,
+      "seed_rows": 170,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 170,
+      "seed_file": "convex_seed\\sacredAnimals.json"
+    },
+    {
+      "table": "stones_minerals_stage",
+      "collection": "stonesMinerals",
+      "source_rows": 55,
+      "seed_rows": 55,
+      "missing_notion_page_id": 0,
+      "duplicate_notion_page_id": 0,
+      "unique_notion_page_id": 55,
+      "seed_file": "convex_seed\\stonesMinerals.json"
+    }
+  ],
+  "upsert_simulation": {
+    "sessionStopTriggers": {
+      "first_inserted": 7,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 7,
+      "final_store_size": 7
+    },
+    "contraindications": {
+      "first_inserted": 11,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 11,
+      "final_store_size": 11
+    },
+    "breathworkTaxonomy": {
+      "first_inserted": 12,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 12,
+      "final_store_size": 12
+    },
+    "dailyRegulationSliders": {
+      "first_inserted": 11,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 11,
+      "final_store_size": 11
+    },
+    "controlsLibraryDesign": {
+      "first_inserted": 13,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 13,
+      "final_store_size": 13
+    },
+    "nadiSystem": {
+      "first_inserted": 10,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 10,
+      "final_store_size": 10
+    },
+    "astrologyCalendricalSystems": {
+      "first_inserted": 21,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 21,
+      "final_store_size": 21
+    },
+    "emotionBrainBodyEnergyMapping": {
+      "first_inserted": 12,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 12,
+      "final_store_size": 12
+    },
+    "fullBrainNeuralSystems": {
+      "first_inserted": 19,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 19,
+      "final_store_size": 19
+    },
+    "mythologicalBeings": {
+      "first_inserted": 23,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 23,
+      "final_store_size": 23
+    },
+    "sacredAnimals": {
+      "first_inserted": 170,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 170,
+      "final_store_size": 170
+    },
+    "stonesMinerals": {
+      "first_inserted": 55,
+      "first_updated": 0,
+      "second_inserted": 0,
+      "second_updated": 55,
+      "final_store_size": 55
+    }
+  },
+  "gates": {
+    "mapping_gate": true,
+    "export_gate": true,
+    "seed_transform_gate": true,
+    "data_quality_no_missing_notion_page_id": true,
+    "data_quality_no_duplicate_notion_page_id": true,
+    "local_dry_run_idempotent": true
+  }
+}

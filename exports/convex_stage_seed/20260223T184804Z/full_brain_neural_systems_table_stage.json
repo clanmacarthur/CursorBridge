@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "notion_page_id": "2c6c47c6-1e21-8002-8946-fefe77d5fcc7",
+    "nervous_system_role": "Fear reflex",
+    "energetic_correspondence": "Solar plexus",
+    "primary_function": "Threat detection",
+    "script_use": "Trauma activation",
+    "emotional_role": "Fear, alarm",
+    "traditional_mapping": "Guard",
+    "brain_area": "Amygdala"
+  },
+  {
+    "id": 2,
+    "notion_page_id": "2c6c47c6-1e21-8002-a340-fc891455769b",
+    "nervous_system_role": "Narrative",
+    "energetic_correspondence": "Crown",
+    "primary_function": "Self-reference",
+    "script_use": "Dissolution",
+    "emotional_role": "Identity",
+    "traditional_mapping": "Ego story",
+    "brain_area": "Default Mode Network"
+  },
+  {
+    "id": 3,
+    "notion_page_id": "2c6c47c6-1e21-800a-a5af-c4686fb300f2",
+    "nervous_system_role": "Signal routing",
+    "energetic_correspondence": "Crown gate",
+    "primary_function": "Sensory relay",
+    "script_use": "Trance induction",
+    "emotional_role": "Neutral",
+    "traditional_mapping": "Gateway",
+    "brain_area": "Thalamus"
+  },
+  {
+    "id": 4,
+    "notion_page_id": "2c6c47c6-1e21-8025-a24f-f06823310fd9",
+    "nervous_system_role": "Time/place",
+    "energetic_correspondence": "Third eye",
+    "primary_function": "Memory context",
+    "script_use": "Reconsolidation",
+    "emotional_role": "Narrative",
+    "traditional_mapping": "Story",
+    "brain_area": "Hippocampus"
+  },
+  {
+    "id": 5,
+    "notion_page_id": "2c6c47c6-1e21-8026-9a4f-e02396f55e8a",
+    "nervous_system_role": "Top-down regulation",
+    "energetic_correspondence": "Ajna chakra",
+    "primary_function": "Meaning, control",
+    "script_use": "Reframing",
+    "emotional_role": "Choice, agency",
+    "traditional_mapping": "“Witness mind”",
+    "brain_area": "Prefrontal Cortex"
+  },
+  {
+    "id": 6,
+    "notion_page_id": "2c6c47c6-1e21-8033-910b-f8b545ae53c6",
+    "nervous_system_role": "Cognitive control",
+    "energetic_correspondence": "Ajna",
+    "primary_function": "Executive function",
+    "script_use": "Guidance",
+    "emotional_role": "Focus",
+    "traditional_mapping": "Discernment",
+    "brain_area": "Dorsolateral PFC"
+  },
+  {
+    "id": 7,
+    "notion_page_id": "2c6c47c6-1e21-803d-83e9-cb6956d909ce",
+    "nervous_system_role": "Orientation",
+    "energetic_correspondence": "Third eye",
+    "primary_function": "Imagery",
+    "script_use": "Visualization",
+    "emotional_role": "Symbol",
+    "traditional_mapping": "Vision",
+    "brain_area": "Visual Cortex"
+  },
+  {
+    "id": 8,
+    "notion_page_id": "2c6c47c6-1e21-8047-87c5-e307ebc4fb92",
+    "nervous_system_role": "Action",
+    "energetic_correspondence": "Root",
+    "primary_function": "Movement",
+    "script_use": "Micro-movement",
+    "emotional_role": "Agency",
+    "traditional_mapping": "Embodiment",
+    "brain_area": "Motor Cortex"
+  },
+  {
+    "id": 9,
+    "notion_page_id": "2c6c47c6-1e21-8068-bc06-e2f34d322b99",
+    "nervous_system_role": "Autonomic base",
+    "energetic_correspondence": "Root",
+    "primary_function": "Life support",
+    "script_use": "Grounding",
+    "emotional_role": "Safety",
+    "traditional_mapping": "Survival core",
+    "brain_area": "Brainstem"
+  },
+  {
+    "id": 10,
+    "notion_page_id": "2c6c47c6-1e21-8093-8f97-f0653531c5d7",
+    "nervous_system_role": "Safety appraisal",
+    "energetic_correspondence": "Heart–Ajna bridge",
+    "primary_function": "Emotional valuation",
+    "script_use": "Safety anchoring",
+    "emotional_role": "Trust",
+    "traditional_mapping": "Integration",
+    "brain_area": "Ventromedial PFC"
+  },
+  {
+    "id": 11,
+    "notion_page_id": "2c6c47c6-1e21-80a3-9b89-e97ac7db4bef",
+    "nervous_system_role": "Regulation",
+    "energetic_correspondence": "Crown–spine",
+    "primary_function": "Timing, coordination",
+    "script_use": "Integration",
+    "emotional_role": "Smoothness",
+    "traditional_mapping": "Flow",
+    "brain_area": "Cerebellum"
+  },
+  {
+    "id": 12,
+    "notion_page_id": "2c6c47c6-1e21-80a6-931a-ccc5aa66a572",
+    "nervous_system_role": "Attention switching",
+    "energetic_correspondence": "Heart bridge",
+    "primary_function": "Error, pain",
+    "script_use": "Pendulation",
+    "emotional_role": "Distress",
+    "traditional_mapping": "Choice point",
+    "brain_area": "Anterior Cingulate"
+  },
+  {
+    "id": 13,
+    "notion_page_id": "2c6c47c6-1e21-80c2-bb4b-f8e97ae5b845",
+    "nervous_system_role": "Defensive states",
+    "energetic_correspondence": "Root",
+    "primary_function": "Freeze/fight",
+    "script_use": "Trauma titration",
+    "emotional_role": "Panic/freeze",
+    "traditional_mapping": "Animal instinct",
+    "brain_area": "Periaqueductal Gray"
+  },
+  {
+    "id": 14,
+    "notion_page_id": "2c6c47c6-1e21-80d3-8cc0-eb7973fc47a1",
+    "nervous_system_role": "Dopamine",
+    "energetic_correspondence": "Sacral",
+    "primary_function": "Motivation",
+    "script_use": "Reinforcement",
+    "emotional_role": "Reward",
+    "traditional_mapping": "Desire",
+    "brain_area": "Nucleus Accumbens"
+  },
+  {
+    "id": 15,
+    "notion_page_id": "2c6c47c6-1e21-80d4-bdd9-cbb82deb23ef",
+    "nervous_system_role": "Learning",
+    "energetic_correspondence": "Sacral",
+    "primary_function": "Dopamine source",
+    "script_use": "Habit encoding",
+    "emotional_role": "Drive",
+    "traditional_mapping": "Seeking",
+    "brain_area": "Ventral Tegmental Area"
+  },
+  {
+    "id": 16,
+    "notion_page_id": "2c6c47c6-1e21-80e8-bae5-cf1398fd13f3",
+    "nervous_system_role": "HPA axis",
+    "energetic_correspondence": "Root–solar",
+    "primary_function": "Hormones",
+    "script_use": "Stress reset",
+    "emotional_role": "Survival",
+    "traditional_mapping": "Homeostasis",
+    "brain_area": "Hypothalamus"
+  },
+  {
+    "id": 17,
+    "notion_page_id": "2c6c47c6-1e21-80f2-a2a9-e801ff2f0ccc",
+    "nervous_system_role": "Entrainment",
+    "energetic_correspondence": "Throat",
+    "primary_function": "Sound",
+    "script_use": "Sound design",
+    "emotional_role": "Emotion via tone",
+    "traditional_mapping": "Vibration",
+    "brain_area": "Auditory Cortex"
+  },
+  {
+    "id": 18,
+    "notion_page_id": "2c6c47c6-1e21-80f6-bc1d-f8177e8be83a",
+    "nervous_system_role": "Body awareness",
+    "energetic_correspondence": "Lower chakras",
+    "primary_function": "Interoception",
+    "script_use": "Somatic tracking",
+    "emotional_role": "Sensation",
+    "traditional_mapping": "Felt sense",
+    "brain_area": "Insula"
+  },
+  {
+    "id": 19,
+    "notion_page_id": "2c6c47c6-1e21-80fc-bd2d-cea274d5dc64",
+    "nervous_system_role": "Switching",
+    "energetic_correspondence": "Solar plexus",
+    "primary_function": "Priority detection",
+    "script_use": "Focus shifts",
+    "emotional_role": "Relevance",
+    "traditional_mapping": "Gatekeeper",
+    "brain_area": "Salience Network"
+  }
+]

@@ -1,0 +1,876 @@
+# Sessions Domain Inventory (Strict Live Values)
+
+Generated: 2026-03-05T04:54:35.598896+00:00
+
+Scope: Active Sessions Composer domain tables only. Live data only.
+
+## Active Table Row Counts
+
+- `breath_library`: 26
+- `movements_system`: 16
+- `organ_emotion_system`: 15
+- `meridian_system`: 12
+- `light_colour`: 66
+- `sound_vibration`: 10
+- `nutrition_and_food`: 59
+- `nutrition_protocols`: 12
+- `symbols_index`: 94
+- `sacred_geometry`: 21
+- `chakra_systems`: 7
+
+## Support Table Row Counts
+
+- `session_types`: 6
+- `attribute_taxonomy`: 76
+- `mappings`: 10
+- `cross_domain_mappings`: 6
+- `safety_rules`: 16
+- `session_runs`: 0
+- `session_outputs`: 0
+
+## `breath_library`
+
+- Table name: `breath_library`
+- Total row count: `26`
+- Main label column: `protocol_name`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `typical_use`
+- `notes`
+- `core_breath_quality`
+- `activation_level`
+- `safety_tier`
+- `contraindications`
+- `protocol_name`
+- Exact empty columns:
+- `primary_element`
+- `untitled_database`
+- `organ___systemprimary_emotionsecondary_emotionstress_expression`
+- `safety_rules`
+- `programme_profiles__db___`
+- `secondary_element`
+- `chakra_systems__db_`
+- Usable filter columns (non-empty only):
+- `typical_use`
+- `activation_level`
+- `safety_tier`
+- `core_breath_quality`
+- Exact distinct values for each usable filter column:
+  - `typical_use` (24 distinct)
+    - ASMR, trance
+    - Activation
+    - Arousal
+    - Attention training
+    - Balance
+    - CO₂ tolerance
+    - Containment
+    - Deep rest
+    - Downshift
+    - Emotional processing
+    - Energy
+    - Focus
+    - Grounding
+    - HRV, balance
+    - Integration
+    - NSDR core
+    - NSDR, meditation
+    - Post-activation
+    - Regulation, anxiety
+    - Sleep prep
+    - Somatic integration
+    - Stress relief
+    - Training
+    - Vagal stimulation
+  - `activation_level` (5 distinct)
+    - Activating
+    - Calming
+    - Neutral
+    - Regulating
+    - Trance
+  - `safety_tier` (3 distinct)
+    - High
+    - Low
+    - Medium
+  - `core_breath_quality` (26 distinct)
+    - Air volume reduction
+    - Bellows breath
+    - Breath + mantra
+    - Breath-movement sync
+    - Counted cycles
+    - Deep abdominal
+    - Double inhale + long exhale
+    - Equal phases + holds
+    - Even rhythmic
+    - Exhale doubled
+    - Exhale longer than inhale
+    - Forceful exhales
+    - Gradual intensity
+    - Inhale–hold–exhale
+    - Minimal movement
+    - Nasal alternation
+    - Natural + pauses
+    - Rapid rhythmic
+    - Slow, heavy cadence
+    - Smooth, wave-like
+    - Soft audible breath
+    - Soft sigh exhales
+    - Unaltered observation
+    - Very brief pauses
+    - Very slow nasal
+    - Vocalised exhale
+- Column use for UI:
+  - Subject grouping: `typical_use`
+  - First drill-down: `activation_level`
+  - Second drill-down: `safety_tier`
+  - Search: `protocol_name, typical_use, activation_level, safety_tier, core_breath_quality`
+  - Drawer detail display: `protocol_name, typical_use, activation_level, safety_tier, core_breath_quality, notes`
+  - Snapping / cross-domain matching: `activation_level, typical_use, safety_tier`
+  - Hidden columns (empty + technical): `chakra_systems__db_, id, notion_page_id, organ___systemprimary_emotionsecondary_emotionstress_expression, primary_element, programme_profiles__db___, safety_rules, secondary_element, untitled_database`
+
+## `movements_system`
+
+- Table name: `movements_system`
+- Total row count: `16`
+- Main label column: `movement___practice`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `contraindications___safety_notes`
+- `primary_body_region`
+- `tradition___lineage`
+- `primary_effect`
+- `nervous_system_bias`
+- `movement_family`
+- `notes`
+- `intensity`
+- `movement___practice`
+- Exact empty columns:
+- `sound_pairing`
+- `nadi_affinity`
+- `programme_profiles__db___`
+- `secondary_element`
+- `organ_affinity`
+- `untitled_database`
+- `recommended_persona_bias`
+- `meridian_affinity`
+- `light___colour_pairing`
+- `primary_element`
+- `intent___condition_fit`
+- `chakra_affinity`
+- Usable filter columns (non-empty only):
+- `movement_family`
+- `intensity`
+- `primary_effect`
+- `primary_body_region`
+- Exact distinct values for each usable filter column:
+  - `movement_family` (9 distinct)
+    - Breath-linked
+    - Flow
+    - Gaze
+    - Mudra/Hand
+    - Posture
+    - Somatic Touch
+    - Sound-linked
+    - Tremor/Shake
+    - Walk
+  - `intensity` (3 distinct)
+    - Gentle
+    - Moderate
+    - Very Gentle
+  - `primary_effect` (5 distinct)
+    - Discharge
+    - Grounding
+    - Integrative
+    - Regulating
+    - Soothing
+  - `primary_body_region` (15 distinct)
+    - Abdomen
+    - Arms/Hands, Chest
+    - Chest, Abdomen
+    - Chest, Spine
+    - Head/Neck
+    - Legs
+    - Legs, Chest
+    - Legs, Pelvis
+    - Legs, Spine
+    - Pelvis, Spine
+    - Spine
+    - Spine, Abdomen
+    - Spine, Arms
+    - Spine, Legs
+    - Spine, Pelvis
+- Column use for UI:
+  - Subject grouping: `movement_family`
+  - First drill-down: `intensity`
+  - Second drill-down: `primary_effect`
+  - Search: `movement___practice, movement_family, intensity, primary_effect, primary_body_region`
+  - Drawer detail display: `movement___practice, movement_family, intensity, primary_effect, primary_body_region, notes`
+  - Snapping / cross-domain matching: `primary_effect, intensity, movement_family`
+  - Hidden columns (empty + technical): `chakra_affinity, id, intent___condition_fit, light___colour_pairing, meridian_affinity, nadi_affinity, notion_page_id, organ_affinity, primary_element, programme_profiles__db___, recommended_persona_bias, secondary_element, sound_pairing, untitled_database`
+
+## `organ_emotion_system`
+
+- Table name: `organ_emotion_system`
+- Total row count: `15`
+- Main label column: `organ___system`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `secondary_element`
+- `regulation_direction`
+- `nervous_system_bias`
+- `notes`
+- `primary_emotion`
+- `contraindications___risk_notes`
+- `secondary_emotion`
+- `somatic_manifestation`
+- `stress_expression`
+- `primary_element`
+- `organ___system`
+- Exact empty columns:
+- `intent___condition_framework__db_`
+- `chakra_systems__db__1`
+- `meridian_system__db_`
+- `breath_type`
+- `intent___condition_framework__db__1`
+- `movements_system__db_`
+- `chakra_systems__db_`
+- `sound___vibration_system__db_`
+- `untitled_database`
+- `symbol`
+- Usable filter columns (non-empty only):
+- `primary_emotion`
+- `stress_expression`
+- `regulation_direction`
+- Exact distinct values for each usable filter column:
+  - `primary_emotion` (15 distinct)
+    - Anger
+    - Anxiety
+    - Attachment
+    - Boundary
+    - Boundary Anxiety
+    - Burden
+    - Control
+    - Decision Stress
+    - Fear
+    - Grief
+    - Joy
+    - Letting Go
+    - Safety
+    - Vigilance
+    - Worry
+  - `stress_expression` (3 distinct)
+    - Dysregulation
+    - Hyperactivation
+    - Suppression
+  - `regulation_direction` (7 distinct)
+    - Activating
+    - Grounding
+    - Integrative
+    - Mobilising
+    - Regulation
+    - Soothing
+    - Warming
+- Column use for UI:
+  - Subject grouping: `primary_emotion`
+  - First drill-down: `stress_expression`
+  - Second drill-down: `regulation_direction`
+  - Search: `organ___system, primary_emotion, stress_expression, regulation_direction`
+  - Drawer detail display: `organ___system, primary_emotion, stress_expression, regulation_direction, contraindications___risk_notes, notes`
+  - Snapping / cross-domain matching: `primary_emotion, regulation_direction, stress_expression`
+  - Hidden columns (empty + technical): `breath_type, chakra_systems__db_, chakra_systems__db__1, id, intent___condition_framework__db_, intent___condition_framework__db__1, meridian_system__db_, movements_system__db_, notion_page_id, sound___vibration_system__db_, symbol, untitled_database`
+
+## `meridian_system`
+
+- Table name: `meridian_system`
+- Total row count: `12`
+- Main label column: `meridian`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `regulation_direction`
+- `secondary_emotional_themes`
+- `somatic_pathway`
+- `notes`
+- `primary_emotion`
+- `yin___yang`
+- `nervous_system_bias`
+- `contraindications___safety_notes`
+- `physiological_emphasis`
+- `meridian`
+- Exact empty columns:
+- `movements_system__db_`
+- `associated_organ`
+- `sound___vibration_system__db_`
+- `five_element_phase`
+- `untitled_database`
+- Usable filter columns (non-empty only):
+- `primary_emotion`
+- `nervous_system_bias`
+- Exact distinct values for each usable filter column:
+  - `primary_emotion` (12 distinct)
+    - Anger
+    - Anxiety
+    - Attachment
+    - Decision Stress
+    - Discernment
+    - Fear
+    - Grief
+    - Joy
+    - Letting Go
+    - Overload
+    - Vigilance
+    - Worry
+  - `nervous_system_bias` (3 distinct)
+    - Mixed
+    - Parasympathetic
+    - Sympathetic
+- Column use for UI:
+  - Subject grouping: `primary_emotion`
+  - First drill-down: `nervous_system_bias`
+  - Second drill-down: `(none)`
+  - Search: `meridian, primary_emotion, nervous_system_bias`
+  - Drawer detail display: `meridian, primary_emotion, nervous_system_bias, physiological_emphasis, notes`
+  - Snapping / cross-domain matching: `primary_emotion, nervous_system_bias`
+  - Hidden columns (empty + technical): `associated_organ, five_element_phase, id, movements_system__db_, notion_page_id, sound___vibration_system__db_, untitled_database`
+
+## `light_colour`
+
+- Table name: `light_colour`
+- Total row count: `66`
+- Main label column: `light___colour`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `primary_effect`
+- `notes`
+- `colour_family`
+- `light___colour`
+- `psychological_theme`
+- `wavelength__nm_`
+- `circadian_influence`
+- Exact empty columns:
+- `contraindications___safety_notes`
+- `programme_profiles__db___`
+- `archetypal_personas__db_`
+- `elemental_bias`
+- `chakra_affinity`
+- `movements_system__db_`
+- Usable filter columns (non-empty only):
+- `colour_family`
+- `circadian_influence`
+- `psychological_theme`
+- Exact distinct values for each usable filter column:
+  - `colour_family` (11 distinct)
+    - Black
+    - Blue
+    - Blue-Green
+    - Green
+    - Indigo
+    - Multi
+    - Orange
+    - Red
+    - Violet
+    - White
+    - Yellow
+  - `circadian_influence` (5 distinct)
+    - Day
+    - Evening
+    - Morning
+    - Neutral
+    - Night
+  - `psychological_theme` (30 distinct)
+    - Alert Calm
+    - Alertness
+    - Ancestral safety
+    - Attention
+    - Awe
+    - Balance
+    - Calm, Trust
+    - Closure
+    - Comfort
+    - Containment
+    - Creativity, Warmth
+    - Devotion
+    - Emotional Flow
+    - Expansion
+    - Insight
+    - Neutrality
+    - Orientation
+    - Protection
+    - Reflection
+    - Renewal
+    - Rest
+    - Reverence
+    - Safety
+    - Safety in expansion
+    - Safety, Survival
+    - Stability
+    - Stillness
+    - Transcendence
+    - Will, Clarity
+    - Womb / void
+- Column use for UI:
+  - Subject grouping: `colour_family`
+  - First drill-down: `circadian_influence`
+  - Second drill-down: `psychological_theme`
+  - Search: `light___colour, colour_family, circadian_influence, psychological_theme`
+  - Drawer detail display: `light___colour, colour_family, psychological_theme, circadian_influence, primary_effect, notes`
+  - Snapping / cross-domain matching: `psychological_theme, circadian_influence, colour_family`
+  - Hidden columns (empty + technical): `archetypal_personas__db_, chakra_affinity, contraindications___safety_notes, elemental_bias, id, movements_system__db_, notion_page_id, programme_profiles__db___`
+
+## `sound_vibration`
+
+- Table name: `sound_vibration`
+- Total row count: `10`
+- Main label column: `sound_type`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `frequency__hz_`
+- `sound_type`
+- `notes`
+- `primary_effect`
+- `sound___frequency`
+- Exact empty columns:
+- `programme_profiles__db___`
+- `elemental_bias`
+- `meridian_affinity`
+- `archetypal_personas__db_`
+- `movements_system__db_`
+- `untitled_database`
+- `nervous_system_bias`
+- `primary_organ`
+- `chakra_affinity`
+- `contraindications___safety_notes`
+- Usable filter columns (non-empty only):
+- `primary_effect`
+- Exact distinct values for each usable filter column:
+  - `primary_effect` (5 distinct)
+    - Activating
+    - Grounding
+    - Integrative
+    - Regulating
+    - Soothing
+- Column use for UI:
+  - Subject grouping: `primary_effect`
+  - First drill-down: `(none)`
+  - Second drill-down: `(none)`
+  - Search: `sound_type, primary_effect`
+  - Drawer detail display: `sound_type, sound___frequency, primary_effect, notes`
+  - Snapping / cross-domain matching: `primary_effect`
+  - Hidden columns (empty + technical): `archetypal_personas__db_, chakra_affinity, contraindications___safety_notes, elemental_bias, id, meridian_affinity, movements_system__db_, nervous_system_bias, notion_page_id, primary_organ, programme_profiles__db___, untitled_database`
+
+## `nutrition_and_food`
+
+- Table name: `nutrition_and_food`
+- Total row count: `59`
+- Main label column: `food_type`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `type`
+- `settings___relation`
+- `column_name`
+- `food_type`
+- `evidence_confidence`
+- `notes`
+- `feeds_intake_items`
+- Exact empty columns:
+- `primary_nutrition_domain`
+- `associated_diets___protocols`
+- `secondary_nutrition_domains`
+- `relevant_supplement_interactions`
+- Usable filter columns (non-empty only):
+- `evidence_confidence`
+- Exact distinct values for each usable filter column:
+  - `evidence_confidence` (4 distinct)
+    - Emerging
+    - Moderate
+    - Strong
+    - Traditional
+- Column use for UI:
+  - Subject grouping: `evidence_confidence`
+  - First drill-down: `(none)`
+  - Second drill-down: `(none)`
+  - Search: `food_type, evidence_confidence`
+  - Drawer detail display: `food_type, evidence_confidence, notes`
+  - Snapping / cross-domain matching: `evidence_confidence`
+  - Hidden columns (empty + technical): `associated_diets___protocols, id, notion_page_id, primary_nutrition_domain, relevant_supplement_interactions, secondary_nutrition_domains`
+
+## `nutrition_protocols`
+
+- Table name: `nutrition_protocols`
+- Total row count: `12`
+- Main label column: `nutrition_protocol`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `strictness_level`
+- `notes`
+- `primary_nutrition_goal`
+- `nutrition_protocol`
+- Exact empty columns:
+- `secondary_attribute_focus`
+- `included_food`
+- `primary_attribute_focus`
+- Usable filter columns (non-empty only):
+- `primary_nutrition_goal`
+- `strictness_level`
+- Exact distinct values for each usable filter column:
+  - `primary_nutrition_goal` (5 distinct)
+    - Clinical
+    - Performance
+    - Recovery
+    - Regulation
+    - Spiritual
+  - `strictness_level` (3 distinct)
+    - Loose
+    - Moderate
+    - Strict
+- Column use for UI:
+  - Subject grouping: `primary_nutrition_goal`
+  - First drill-down: `strictness_level`
+  - Second drill-down: `(none)`
+  - Search: `nutrition_protocol, primary_nutrition_goal, strictness_level`
+  - Drawer detail display: `nutrition_protocol, primary_nutrition_goal, strictness_level, notes`
+  - Snapping / cross-domain matching: `primary_nutrition_goal, strictness_level`
+  - Hidden columns (empty + technical): `id, included_food, notion_page_id, primary_attribute_focus, secondary_attribute_focus`
+
+## `symbols_index`
+
+- Table name: `symbols_index`
+- Total row count: `94`
+- Main label column: `symbol`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `cultural_scope`
+- `meaning_domain`
+- `emotional_tone`
+- `symbol_class`
+- `symbol`
+- `notes`
+- Exact empty columns:
+- `organ___systemprimary_emotionsecondary_emotionstress_expression`
+- `sacred_geometry`
+- `secondary_element`
+- `untitled_database`
+- `programme_profiles__db___`
+- `primary_element`
+- `archetypal_personas__db_`
+- `stones`
+- `mythology`
+- `nadi_system__db_`
+- `chakra_systems__db_`
+- `astrological_archetype`
+- `sacred_animal`
+- Usable filter columns (non-empty only):
+- `symbol_class`
+- `meaning_domain`
+- `emotional_tone`
+- `cultural_scope`
+- Exact distinct values for each usable filter column:
+  - `symbol_class` (17 distinct)
+    - Body Symbol
+    - Boundary / Threshold
+    - Boundary Symbol
+    - Celestial / Astronomical
+    - Metaphysical Symbol
+    - Mortality Symbol
+    - Mythological Being
+    - Natural Feature
+    - Natural Phenomenon
+    - Natural Substance
+    - Psychological Symbol
+    - Ritual Instrument
+    - Ritual Object
+    - Sacred Animal (Biological)
+    - Sacred Geometry
+    - Sacred Object
+    - Sexual / Generative Symbol
+  - `meaning_domain` (91 distinct)
+    - Access / Initiation
+    - Action / Agency
+    - Alignment, Center
+    - Amplification
+    - Amplification, Clarity
+    - Ascent / Stages
+    - Attainment / Vision
+    - Authority
+    - Authority / Channel
+    - Authority / Higher self
+    - Authority / Lightning
+    - Authority, Force
+    - Awareness / Witnessing
+    - Axis / Connection
+    - Beginning / Latent power
+    - Binding / Connection
+    - Bond, Oath
+    - Calling, Time
+    - Capture / Interconnection
+    - Center / Alignment
+    - Change / Passage
+    - Communication
+    - Concealment, Transition
+    - Conductivity, Power
+    - Continuity / Fate
+    - Creation
+    - Creation / Feminine generative field
+    - Creation / Masculine generative force
+    - Creation, Union
+    - Cycles
+    - Cycles, Reflection
+    - Descent / Womb
+    - Disruption, Teaching
+    - Emptiness / Potential
+    - Endings / Renewal
+    - Energy, Transformation
+    - Fire, Ascent
+    - Force / Construction
+    - Forging / Endurance
+    - Foundation / Origin
+    - Grounding
+    - Grounding, Density
+    - Growth / Evolution
+    - Guidance / Initiation
+    - Healing, Flow
+    - Healing, Growth
+    - Home, Continuity
+    - Identity / Persona
+    - Insight
+    - Insight / Revelation
+    - Insight, Vision
+    - Integration, Polarity
+    - Intersection / Sacrifice
+    - Life / Presence
+    - Lineage
+    - Lineage, Memory
+    - Love / Center
+    - Mortality / Wisdom
+    - Order
+    - Orientation, Direction
+    - Origin, Creation
+    - Passage
+    - Passage / Integration
+    - Passage, Protection
+    - Permanence, Memory
+    - Potential / Birth
+    - Power / Seat of rule
+    - Power, Wisdom
+    - Primal force
+    - Protection
+    - Protection / Concealment
+    - Protection, Shadow
+    - Purity, Stillness
+    - Receptivity / Sacred vessel
+    - Refinement
+    - Self-reflection / Truth
+    - Stability, Order
+    - Stages, Ascent
+    - Structure / Memory
+    - Threshold / Transition
+    - Threshold, Judgment
+    - Trance / Rhythm
+    - Transformation
+    - Transformation / Spirit
+    - Transition
+    - Unconscious / Hidden self
+    - Vitality
+    - Vitality, Authority
+    - Vitality, Blood
+    - Water, Descent
+    - Wholeness / Unity
+  - `emotional_tone` (45 distinct)
+    - Alert
+    - Ambiguous
+    - Anticipatory
+    - Balanced
+    - Bright
+    - Calm
+    - Clear
+    - Containing
+    - Cool
+    - Dark-neutral
+    - Dense
+    - Directed
+    - Dry
+    - Electric
+    - Elevated
+    - Energising
+    - Flowing
+    - Fluid
+    - Focused
+    - Gentle
+    - Grounded
+    - Harmonised
+    - Heavy
+    - Intense
+    - Inward
+    - Neutral
+    - Potent
+    - Progressive
+    - Quiet
+    - Receptive
+    - Regulating
+    - Reverent
+    - Safe
+    - Sharp
+    - Sobering
+    - Soft
+    - Solemn
+    - Stable
+    - Steady
+    - Still
+    - Subtle
+    - Suspended
+    - Unstable
+    - Vast
+    - Warm
+  - `cultural_scope` (18 distinct)
+    - African
+    - African, Chinese
+    - African, Cross-cultural
+    - African, Indigenous
+    - African, Norse
+    - Buddhist / Mystical
+    - Celtic / Buddhist
+    - Cross-cultural
+    - Cross-cultural, Indic
+    - Egyptian
+    - Egyptian, Cross-cultural
+    - Indic
+    - Indic, Cross-cultural
+    - Indigenous
+    - Indigenous, Cross-cultural
+    - Minoan
+    - Norse
+    - Universal
+- Column use for UI:
+  - Subject grouping: `symbol_class`
+  - First drill-down: `meaning_domain`
+  - Second drill-down: `emotional_tone`
+  - Search: `symbol, symbol_class, meaning_domain, emotional_tone, cultural_scope`
+  - Drawer detail display: `symbol, symbol_class, meaning_domain, emotional_tone, cultural_scope, notes`
+  - Snapping / cross-domain matching: `meaning_domain, emotional_tone, symbol_class`
+  - Hidden columns (empty + technical): `archetypal_personas__db_, astrological_archetype, chakra_systems__db_, id, mythology, nadi_system__db_, notion_page_id, organ___systemprimary_emotionsecondary_emotionstress_expression, primary_element, programme_profiles__db___, sacred_animal, sacred_geometry, secondary_element, stones, untitled_database`
+
+## `sacred_geometry`
+
+- Table name: `sacred_geometry`
+- Total row count: `21`
+- Main label column: `geometry`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `secondary_element`
+- `notes`
+- `psychophysiological_effect`
+- `primary_element`
+- `cultural_lineage`
+- `risk___contraindications`
+- `dimensional_emphasis`
+- `primary_function`
+- `geometry_class`
+- `geometry`
+- Exact empty columns:
+- `symbols_index__db_`
+- `untitled_database`
+- Usable filter columns (non-empty only):
+- `geometry_class`
+- `psychophysiological_effect`
+- `primary_element`
+- `secondary_element`
+- Exact distinct values for each usable filter column:
+  - `geometry_class` (6 distinct)
+    - Constructive
+    - Cosmological
+    - Foundational
+    - Initiatory
+    - Meditative
+    - Metaphysical
+  - `psychophysiological_effect` (6 distinct)
+    - Activating
+    - Grounding
+    - Integrative
+    - Neutral
+    - Regulating
+    - Soothing
+  - `primary_element` (5 distinct)
+    - Air
+    - Earth
+    - Ether
+    - Fire
+    - Water
+  - `secondary_element` (6 distinct)
+    - Air
+    - Earth
+    - Ether
+    - Fire
+    - Water
+    - —
+- Column use for UI:
+  - Subject grouping: `geometry_class`
+  - First drill-down: `psychophysiological_effect`
+  - Second drill-down: `primary_element`
+  - Search: `geometry, geometry_class, psychophysiological_effect, primary_element, secondary_element`
+  - Drawer detail display: `geometry, geometry_class, psychophysiological_effect, primary_element, secondary_element, notes`
+  - Snapping / cross-domain matching: `psychophysiological_effect, primary_element, secondary_element`
+  - Hidden columns (empty + technical): `id, notion_page_id, symbols_index__db_, untitled_database`
+
+## `chakra_systems`
+
+- Table name: `chakra_systems`
+- Total row count: `7`
+- Main label column: `chakra`
+- Exact non-empty columns:
+- `id`
+- `notion_page_id`
+- `dysregulation_signs`
+- `primary_element`
+- `sanskrit_name`
+- `secondary_element`
+- `location__somatic_`
+- `regulation_direction`
+- `contraindications___safety_notes`
+- `notes`
+- `nervous_system_bias`
+- `physiological_correlates`
+- `psychological_function`
+- `chakra`
+- Exact empty columns:
+- `movements_system__db_`
+- `symbol`
+- `sound___vibration_system__db_`
+- `organ_emotion`
+- `nadi_system__db_`
+- `untitled_database_1`
+- `untitled_database`
+- `breath_type`
+- Usable filter columns (non-empty only):
+- `sanskrit_name`
+- `primary_element`
+- Exact distinct values for each usable filter column:
+  - `sanskrit_name` (7 distinct)
+    - Ajna
+    - Anahata
+    - Manipura
+    - Muladhara
+    - Sahasrara
+    - Svadhisthana
+    - Vishuddha
+  - `primary_element` (5 distinct)
+    - 2ccc47c6-1e21-801a-b42b-f15e5be25525
+    - 2ccc47c6-1e21-8030-991a-c4338fdf9e1e
+    - 2ccc47c6-1e21-8045-9761-ffb554b0f315
+    - 2ccc47c6-1e21-806a-85b8-f6c1175d16d4
+    - 2ccc47c6-1e21-80b1-abe7-d39d770ff4f8
+- Column use for UI:
+  - Subject grouping: `sanskrit_name`
+  - First drill-down: `primary_element`
+  - Second drill-down: `(none)`
+  - Search: `chakra, sanskrit_name, primary_element`
+  - Drawer detail display: `chakra, sanskrit_name, primary_element, notes`
+  - Snapping / cross-domain matching: `primary_element, sanskrit_name`
+  - Hidden columns (empty + technical): `breath_type, id, movements_system__db_, nadi_system__db_, notion_page_id, organ_emotion, sound___vibration_system__db_, symbol, untitled_database, untitled_database_1`
