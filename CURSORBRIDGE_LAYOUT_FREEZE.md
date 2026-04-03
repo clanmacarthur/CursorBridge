@@ -1,4 +1,4 @@
-# CB_LAYOUT_FREEZE.md
+# CURSORBRIDGE_LAYOUT_FREEZE.md
 
 Current approved baseline:
 - compact control-surface UI

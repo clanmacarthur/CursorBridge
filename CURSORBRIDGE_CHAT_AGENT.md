@@ -1,4 +1,4 @@
-# CB_CHAT_AGENT.md
+# CURSORBRIDGE_CHAT_AGENT.md
 
 Purpose:
 Rules specifically for chat-based editing passes.
