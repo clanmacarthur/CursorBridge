@@ -1,6 +1,28 @@
 # CursorBridge Agent Memory
 
-Last updated: 2026-03-05
+Last updated: 2026-04-03
+
+## Additional Active Rule Files
+
+Also treat these files as mandatory source of truth:
+
+- `CB_CHAT_AGENT.md`
+- `CB_LAYOUT_FREEZE.md`
+- `CB_CHANGE_REQUEST_TEMPLATE.md`
+
+Priority order on UI work:
+
+1. `CB_LAYOUT_FREEZE.md`
+2. `CB_CHANGE_REQUEST_TEMPLATE.md`
+3. `CB_CHAT_AGENT.md`
+4. `AGENTS.md`
+
+For UI edits:
+
+- preserve approved baseline
+- edit only requested region
+- do not redesign unchanged areas
+- reject drift
 
 ## Project Snapshot
 
@@ -237,5 +259,7 @@ Last updated: 2026-03-05
 - Do not ask repeated "if you want" questions for routine next actions.
 - Never use "if you want" phrasing. Always give direct recommended next steps.
 - Always provide the next recommended steps proactively.
+- Address the repo-aware AI thread as the default collaborator; do not address the human intermediary directly unless explicitly needed.
+- Treat user messages as relayed copy/paste from the repo-aware AI thread by default.
 - Explicitly flag tangents: if work starts shifting project direction, call it out immediately with impact.
 - Keep Supabase stable; major structural/model changes should be deferred to Convex migration.
