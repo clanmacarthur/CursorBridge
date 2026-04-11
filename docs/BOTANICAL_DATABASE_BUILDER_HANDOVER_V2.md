@@ -1,6 +1,15 @@
 # Botanical Database Builder Handover V2
 
-Last updated: 2026-04-08
+Last updated: 2026-04-11
+
+## Active Execution Rule
+
+For active Brazil botanical execution, use
+`docs/BOTANICAL_BRAZIL_ATLANTIC_FOREST_STAGE1_DATABASE_BUILDER_HANDOVER_2026-04-08.md`
+as the sole live execution contract for this repo's botanical build work.
+
+This file remains a frozen system-support handover for schema, table, field,
+and migration compatibility requirements.
 
 ## Instruction
 
@@ -154,6 +163,9 @@ Support these fields in the zone/profile layer:
 - `yield_source`
 - `yield_source_year`
 - `yield_confidence`
+
+Preserve spacing fields per botanical row where relevant, including accepted
+species, cultivars, and named lines carried through later operational mapping.
 
 ## Mandatory Confidence And Completeness Fields
 

@@ -1,6 +1,15 @@
 # Botanical Brazil Thread Handover V2
 
-Last updated: 2026-04-08
+Last updated: 2026-04-11
+
+## Active Execution Rule
+
+For the active Brazil branch execution thread, use
+`docs/BOTANICAL_BRAZIL_ATLANTIC_FOREST_STAGE1_DATABASE_BUILDER_HANDOVER_2026-04-08.md`
+as the sole live execution contract for the work being carried out here.
+
+This file remains branch context, scope, and anti-drift support for that
+handover.
 
 ## Purpose
 
@@ -92,7 +101,10 @@ Do not treat "everything in existence" as the stop condition.
 - Do not omit size fields. Tree height and spread are required builder filters.
 - Do not collapse min/max size ranges back into one value when the richer Brazil
   identity workbook provides the range.
-- Do not omit self-fertility, spacing, or establishment-method fields where source data supports them.
+- Do not omit `self_fertile_flag`, `spacing_in_row_m`,
+  `spacing_between_rows_m`, `spacing_notes`, or establishment-method fields
+  where source data supports them or where later operational mapping depends on
+  them.
 - Do not blur symbiosis into generic companion notes.
 - Do not reduce the product layer to a one-way list. Brazil must keep the same
   product-first and botanical-first navigation behavior as UK.
