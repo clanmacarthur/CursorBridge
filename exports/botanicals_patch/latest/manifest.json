@@ -1,0 +1,15 @@
+{
+  "identity_source": "C:\\Users\\Lenovo\\Desktop\\OneDrive\\Work folder\\Modular gardens\\brazil_identity_block1_core_targeted_large_v2.xlsx",
+  "brazil_working_source": "C:\\Users\\Lenovo\\Desktop\\OneDrive\\Work folder\\Modular gardens\\brazil_data_tables_only.xlsx",
+  "counts": {
+    "identity_rows_matched_to_brazil_working_master": 262,
+    "zone_rows_backfilled_by_entry": 262,
+    "branch_resources_seed_rows": 2,
+    "canonical_alias_mapping_rows": 6
+  },
+  "notes": [
+    "Identity and zone patch backfill rows are keyed by current Brazil_Working_Master botanical entry IDs.",
+    "Matching uses scientific_name from Brazil_Working_Master to accepted_name from the larger Brazil identity workbook.",
+    "Operational flags local_only_flag/export_mode/nursery_only_flag/education_only_flag/current_site_live_flag did not have explicit source columns in the inspected workbooks and remain intentionally blank pending source-backed values."
+  ]
+}

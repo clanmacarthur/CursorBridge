@@ -1,0 +1,954 @@
+product_id,product_name,ingredient_label,ingredient_kind,botanical_entry_id,matched_botanical_name,match_status,candidate_matches,resolution_needed
+PROD-BR-00001,Abacaxi — Cordial / Syrup,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00002,Abacaxi — Extract / Concentrate,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00003,Abacaxi — Fresh Produce,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00004,Abacaxi — Frozen Pulp / Purée,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00005,Abacaxi — Functional Beverage / RTD,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00006,Abacaxi — Jam / Preserve,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00007,Abacaxi — Juice / Nectar,Abacaxi,Primary,BOT-BR-0001,Abacaxi,matched_source_id,BOT-BR-0001:Abacaxi,False
+PROD-BR-00010,Abacaxi — BRS Ajubá — Cordial / Syrup,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00011,Abacaxi — BRS Ajubá — Extract / Concentrate,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00012,Abacaxi — BRS Ajubá — Fresh Produce,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00013,Abacaxi — BRS Ajubá — Frozen Pulp / Purée,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00014,Abacaxi — BRS Ajubá — Functional Beverage / RTD,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00015,Abacaxi — BRS Ajubá — Jam / Preserve,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00016,Abacaxi — BRS Ajubá — Juice / Nectar,Abacaxi — BRS Ajubá,Primary,BOT-BR-0002,Abacaxi — BRS Ajubá,matched_source_id,BOT-BR-0002:Abacaxi — BRS Ajubá,False
+PROD-BR-00019,Abacaxi — BRS Imperial — Cordial / Syrup,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00020,Abacaxi — BRS Imperial — Extract / Concentrate,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00021,Abacaxi — BRS Imperial — Fresh Produce,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00022,Abacaxi — BRS Imperial — Frozen Pulp / Purée,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00023,Abacaxi — BRS Imperial — Functional Beverage / RTD,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00024,Abacaxi — BRS Imperial — Jam / Preserve,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00025,Abacaxi — BRS Imperial — Juice / Nectar,Abacaxi — BRS Imperial,Primary,BOT-BR-0003,Abacaxi — BRS Imperial,matched_source_id,BOT-BR-0003:Abacaxi — BRS Imperial,False
+PROD-BR-00028,Abacaxi — BRS Vitória — Cordial / Syrup,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00029,Abacaxi — BRS Vitória — Extract / Concentrate,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00030,Abacaxi — BRS Vitória — Fresh Produce,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00031,Abacaxi — BRS Vitória — Frozen Pulp / Purée,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00032,Abacaxi — BRS Vitória — Functional Beverage / RTD,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00033,Abacaxi — BRS Vitória — Jam / Preserve,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00034,Abacaxi — BRS Vitória — Juice / Nectar,Abacaxi — BRS Vitória,Primary,BOT-BR-0004,Abacaxi — BRS Vitória,matched_source_id,BOT-BR-0004:Abacaxi — BRS Vitória,False
+PROD-BR-00037,Abacaxi — MD-2 — Cordial / Syrup,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00038,Abacaxi — MD-2 — Extract / Concentrate,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00039,Abacaxi — MD-2 — Fresh Produce,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00040,Abacaxi — MD-2 — Frozen Pulp / Purée,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00041,Abacaxi — MD-2 — Functional Beverage / RTD,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00042,Abacaxi — MD-2 — Jam / Preserve,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00043,Abacaxi — MD-2 — Juice / Nectar,Abacaxi — MD-2,Primary,BOT-BR-0005,Abacaxi — MD-2,matched_source_id,BOT-BR-0005:Abacaxi — MD-2,False
+PROD-BR-00046,Abacaxi — Pérola — Cordial / Syrup,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00047,Abacaxi — Pérola — Extract / Concentrate,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00048,Abacaxi — Pérola — Fresh Produce,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00049,Abacaxi — Pérola — Frozen Pulp / Purée,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00050,Abacaxi — Pérola — Functional Beverage / RTD,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00051,Abacaxi — Pérola — Jam / Preserve,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00052,Abacaxi — Pérola — Juice / Nectar,Abacaxi — Pérola,Primary,BOT-BR-0006,Abacaxi — Pérola,matched_source_id,BOT-BR-0006:Abacaxi — Pérola,False
+PROD-BR-00055,Abacaxi — Smooth Cayenne — Cordial / Syrup,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00056,Abacaxi — Smooth Cayenne — Extract / Concentrate,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00057,Abacaxi — Smooth Cayenne — Fresh Produce,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00058,Abacaxi — Smooth Cayenne — Frozen Pulp / Purée,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00059,Abacaxi — Smooth Cayenne — Functional Beverage / RTD,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00060,Abacaxi — Smooth Cayenne — Jam / Preserve,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00061,Abacaxi — Smooth Cayenne — Juice / Nectar,Abacaxi — Smooth Cayenne,Primary,BOT-BR-0007,Abacaxi — Smooth Cayenne,matched_source_id,BOT-BR-0007:Abacaxi — Smooth Cayenne,False
+PROD-BR-00064,Abacaxi — Turiaçu — Cordial / Syrup,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00065,Abacaxi — Turiaçu — Extract / Concentrate,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00066,Abacaxi — Turiaçu — Fresh Produce,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00067,Abacaxi — Turiaçu — Frozen Pulp / Purée,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00068,Abacaxi — Turiaçu — Functional Beverage / RTD,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00069,Abacaxi — Turiaçu — Jam / Preserve,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00070,Abacaxi — Turiaçu — Juice / Nectar,Abacaxi — Turiaçu,Primary,BOT-BR-0008,Abacaxi — Turiaçu,matched_source_id,BOT-BR-0008:Abacaxi — Turiaçu,False
+PROD-BR-00073,Acerola — Cordial / Syrup,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00074,Acerola — Extract / Concentrate,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00075,Acerola — Fresh Produce,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00076,Acerola — Frozen Pulp / Purée,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00077,Acerola — Functional Beverage / RTD,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00078,Acerola — Jam / Preserve,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00079,Acerola — Juice / Nectar,Acerola,Primary,BOT-BR-0009,Acerola,matched_source_id,BOT-BR-0009:Acerola,False
+PROD-BR-00082,Acerola — BRS 235 Apodi — Cordial / Syrup,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00083,Acerola — BRS 235 Apodi — Extract / Concentrate,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00084,Acerola — BRS 235 Apodi — Fresh Produce,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00085,Acerola — BRS 235 Apodi — Frozen Pulp / Purée,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00086,Acerola — BRS 235 Apodi — Functional Beverage / RTD,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00087,Acerola — BRS 235 Apodi — Jam / Preserve,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00088,Acerola — BRS 235 Apodi — Juice / Nectar,Acerola — BRS 235 Apodi,Primary,BOT-BR-0010,Acerola — BRS 235 Apodi,matched_source_id,BOT-BR-0010:Acerola — BRS 235 Apodi,False
+PROD-BR-00091,Acerola — BRS 236 Cereja — Cordial / Syrup,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00092,Acerola — BRS 236 Cereja — Extract / Concentrate,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00093,Acerola — BRS 236 Cereja — Fresh Produce,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00094,Acerola — BRS 236 Cereja — Frozen Pulp / Purée,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00095,Acerola — BRS 236 Cereja — Functional Beverage / RTD,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00096,Acerola — BRS 236 Cereja — Jam / Preserve,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00097,Acerola — BRS 236 Cereja — Juice / Nectar,Acerola — BRS 236 Cereja,Primary,BOT-BR-0011,Acerola — BRS 236 Cereja,matched_source_id,BOT-BR-0011:Acerola — BRS 236 Cereja,False
+PROD-BR-00100,Acerola — BRS 237 Roxinha — Cordial / Syrup,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00101,Acerola — BRS 237 Roxinha — Extract / Concentrate,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00102,Acerola — BRS 237 Roxinha — Fresh Produce,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00103,Acerola — BRS 237 Roxinha — Frozen Pulp / Purée,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00104,Acerola — BRS 237 Roxinha — Functional Beverage / RTD,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00105,Acerola — BRS 237 Roxinha — Jam / Preserve,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00106,Acerola — BRS 237 Roxinha — Juice / Nectar,Acerola — BRS 237 Roxinha,Primary,BOT-BR-0012,Acerola — BRS 237 Roxinha,matched_source_id,BOT-BR-0012:Acerola — BRS 237 Roxinha,False
+PROD-BR-00109,Acerola — BRS 238 Frutacor — Cordial / Syrup,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00110,Acerola — BRS 238 Frutacor — Extract / Concentrate,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00111,Acerola — BRS 238 Frutacor — Fresh Produce,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00112,Acerola — BRS 238 Frutacor — Frozen Pulp / Purée,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00113,Acerola — BRS 238 Frutacor — Functional Beverage / RTD,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00114,Acerola — BRS 238 Frutacor — Jam / Preserve,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00115,Acerola — BRS 238 Frutacor — Juice / Nectar,Acerola — BRS 238 Frutacor,Primary,BOT-BR-0013,Acerola — BRS 238 Frutacor,matched_source_id,BOT-BR-0013:Acerola — BRS 238 Frutacor,False
+PROD-BR-00118,Acerola — BRS 366 Jaburu — Cordial / Syrup,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00119,Acerola — BRS 366 Jaburu — Extract / Concentrate,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00120,Acerola — BRS 366 Jaburu — Fresh Produce,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00121,Acerola — BRS 366 Jaburu — Frozen Pulp / Purée,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00122,Acerola — BRS 366 Jaburu — Functional Beverage / RTD,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00123,Acerola — BRS 366 Jaburu — Jam / Preserve,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00124,Acerola — BRS 366 Jaburu — Juice / Nectar,Acerola — BRS 366 Jaburu,Primary,BOT-BR-0014,Acerola — BRS 366 Jaburu,matched_source_id,BOT-BR-0014:Acerola — BRS 366 Jaburu,False
+PROD-BR-00127,Acerola — BRS Cabocla — Cordial / Syrup,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00128,Acerola — BRS Cabocla — Extract / Concentrate,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00129,Acerola — BRS Cabocla — Fresh Produce,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00130,Acerola — BRS Cabocla — Frozen Pulp / Purée,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00131,Acerola — BRS Cabocla — Functional Beverage / RTD,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00132,Acerola — BRS Cabocla — Jam / Preserve,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00133,Acerola — BRS Cabocla — Juice / Nectar,Acerola — BRS Cabocla,Primary,BOT-BR-0015,Acerola — BRS Cabocla,matched_source_id,BOT-BR-0015:Acerola — BRS Cabocla,False
+PROD-BR-00136,Acerola — BRS Rubra — Cordial / Syrup,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00137,Acerola — BRS Rubra — Extract / Concentrate,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00138,Acerola — BRS Rubra — Fresh Produce,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00139,Acerola — BRS Rubra — Frozen Pulp / Purée,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00140,Acerola — BRS Rubra — Functional Beverage / RTD,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00141,Acerola — BRS Rubra — Jam / Preserve,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00142,Acerola — BRS Rubra — Juice / Nectar,Acerola — BRS Rubra,Primary,BOT-BR-0016,Acerola — BRS Rubra,matched_source_id,BOT-BR-0016:Acerola — BRS Rubra,False
+PROD-BR-00145,Acerola — BRS Sertaneja — Cordial / Syrup,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00146,Acerola — BRS Sertaneja — Extract / Concentrate,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00147,Acerola — BRS Sertaneja — Fresh Produce,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00148,Acerola — BRS Sertaneja — Frozen Pulp / Purée,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00149,Acerola — BRS Sertaneja — Functional Beverage / RTD,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00150,Acerola — BRS Sertaneja — Jam / Preserve,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00151,Acerola — BRS Sertaneja — Juice / Nectar,Acerola — BRS Sertaneja,Primary,BOT-BR-0017,Acerola — BRS Sertaneja,matched_source_id,BOT-BR-0017:Acerola — BRS Sertaneja,False
+PROD-BR-00154,Acerola — Okinawa — Cordial / Syrup,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00155,Acerola — Okinawa — Extract / Concentrate,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00156,Acerola — Okinawa — Fresh Produce,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00157,Acerola — Okinawa — Frozen Pulp / Purée,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00158,Acerola — Okinawa — Functional Beverage / RTD,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00159,Acerola — Okinawa — Jam / Preserve,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00160,Acerola — Okinawa — Juice / Nectar,Acerola — Okinawa,Primary,BOT-BR-0018,Acerola — Okinawa,matched_source_id,BOT-BR-0018:Acerola — Okinawa,False
+PROD-BR-00163,Alfavaca-cravo — Aromatic Extract / Hydrosol,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00164,Alfavaca-cravo — Bitters / Tincture,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00165,Alfavaca-cravo — Cordial / Syrup,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00166,Alfavaca-cravo — Culinary Seasoning / Herb,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00167,Alfavaca-cravo — Dried Herb / Spice,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00168,Alfavaca-cravo — Extract / Concentrate,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00169,Alfavaca-cravo — Functional Beverage / RTD,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00171,Alfavaca-cravo — Tea / Tisane,Alfavaca-cravo,Primary,BOT-BR-0019,Alfavaca-cravo,matched_source_id,BOT-BR-0019:Alfavaca-cravo,False
+PROD-BR-00172,Amburana-de-cheiro — Bitters / Tincture,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00173,Amburana-de-cheiro — Cordial / Syrup,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00174,Amburana-de-cheiro — Culinary Seasoning / Herb,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00175,Amburana-de-cheiro — Dried Herb / Spice,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00176,Amburana-de-cheiro — Extract / Concentrate,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00177,Amburana-de-cheiro — Oil / Cosmetic Ingredient,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00178,Amburana-de-cheiro — Tea / Tisane,Amburana-de-cheiro,Primary,BOT-BR-0020,Amburana-de-cheiro,matched_source_id,BOT-BR-0020:Amburana-de-cheiro,False
+PROD-BR-00179,Andiroba — Bitters / Tincture,Andiroba,Primary,BOT-BR-0021,Andiroba,matched_source_id,BOT-BR-0021:Andiroba,False
+PROD-BR-00180,Andiroba — Dried Herb / Spice,Andiroba,Primary,BOT-BR-0021,Andiroba,matched_source_id,BOT-BR-0021:Andiroba,False
+PROD-BR-00181,Andiroba — Extract / Concentrate,Andiroba,Primary,BOT-BR-0021,Andiroba,matched_source_id,BOT-BR-0021:Andiroba,False
+PROD-BR-00182,Andiroba — Oil / Cosmetic Ingredient,Andiroba,Primary,BOT-BR-0021,Andiroba,matched_source_id,BOT-BR-0021:Andiroba,False
+PROD-BR-00183,Andiroba — Tea / Tisane,Andiroba,Primary,BOT-BR-0021,Andiroba,matched_source_id,BOT-BR-0021:Andiroba,False
+PROD-BR-00184,Araticum — Cordial / Syrup,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00185,Araticum — Extract / Concentrate,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00186,Araticum — Fresh Produce,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00187,Araticum — Frozen Pulp / Purée,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00188,Araticum — Functional Beverage / RTD,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00189,Araticum — Jam / Preserve,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00190,Araticum — Juice / Nectar,Araticum,Primary,BOT-BR-0022,Araticum,matched_source_id,BOT-BR-0022:Araticum,False
+PROD-BR-00193,Araucária / Pinhão — Bitters / Tincture,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00194,Araucária / Pinhão — Dried Herb / Spice,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00195,Araucária / Pinhão — Extract / Concentrate,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00196,Araucária / Pinhão — Flour / Powder,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00197,Araucária / Pinhão — Oil / Cosmetic Ingredient,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00198,Araucária / Pinhão — Snack / Nut,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00199,Araucária / Pinhão — Tea / Tisane,Araucária / Pinhão,Primary,BOT-BR-0023,Araucária / Pinhão,matched_source_id,BOT-BR-0023:Araucária / Pinhão,False
+PROD-BR-00200,Araçá — Cordial / Syrup,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00201,Araçá — Extract / Concentrate,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00202,Araçá — Fresh Produce,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00203,Araçá — Frozen Pulp / Purée,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00204,Araçá — Functional Beverage / RTD,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00205,Araçá — Jam / Preserve,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00206,Araçá — Juice / Nectar,Araçá,Primary,BOT-BR-0024,Araçá,matched_source_id,BOT-BR-0024:Araçá,False
+PROD-BR-00209,Araçá-boi — Cordial / Syrup,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00210,Araçá-boi — Extract / Concentrate,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00211,Araçá-boi — Fresh Produce,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00212,Araçá-boi — Frozen Pulp / Purée,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00213,Araçá-boi — Functional Beverage / RTD,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00214,Araçá-boi — Jam / Preserve,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00215,Araçá-boi — Juice / Nectar,Araçá-boi,Primary,BOT-BR-0025,Araçá-boi,matched_source_id,BOT-BR-0025:Araçá-boi,False
+PROD-BR-00218,Arnica-do-campo — Bitters / Tincture,Arnica-do-campo,Primary,BOT-BR-0026,Arnica-do-campo,matched_source_id,BOT-BR-0026:Arnica-do-campo,False
+PROD-BR-00219,Arnica-do-campo — Dried Herb / Spice,Arnica-do-campo,Primary,BOT-BR-0026,Arnica-do-campo,matched_source_id,BOT-BR-0026:Arnica-do-campo,False
+PROD-BR-00220,Arnica-do-campo — Extract / Concentrate,Arnica-do-campo,Primary,BOT-BR-0026,Arnica-do-campo,matched_source_id,BOT-BR-0026:Arnica-do-campo,False
+PROD-BR-00221,Arnica-do-campo — Functional Beverage / RTD,Arnica-do-campo,Primary,BOT-BR-0026,Arnica-do-campo,matched_source_id,BOT-BR-0026:Arnica-do-campo,False
+PROD-BR-00222,Arnica-do-campo — Tea / Tisane,Arnica-do-campo,Primary,BOT-BR-0026,Arnica-do-campo,matched_source_id,BOT-BR-0026:Arnica-do-campo,False
+PROD-BR-00223,Aroeira-do-sertão — Bitters / Tincture,Aroeira-do-sertão,Primary,BOT-BR-0027,Aroeira-do-sertão,matched_source_id,BOT-BR-0027:Aroeira-do-sertão,False
+PROD-BR-00224,Aroeira-do-sertão — Dried Herb / Spice,Aroeira-do-sertão,Primary,BOT-BR-0027,Aroeira-do-sertão,matched_source_id,BOT-BR-0027:Aroeira-do-sertão,False
+PROD-BR-00225,Aroeira-do-sertão — Extract / Concentrate,Aroeira-do-sertão,Primary,BOT-BR-0027,Aroeira-do-sertão,matched_source_id,BOT-BR-0027:Aroeira-do-sertão,False
+PROD-BR-00226,Aroeira-do-sertão — Oil / Cosmetic Ingredient,Aroeira-do-sertão,Primary,BOT-BR-0027,Aroeira-do-sertão,matched_source_id,BOT-BR-0027:Aroeira-do-sertão,False
+PROD-BR-00227,Aroeira-do-sertão — Tea / Tisane,Aroeira-do-sertão,Primary,BOT-BR-0027,Aroeira-do-sertão,matched_source_id,BOT-BR-0027:Aroeira-do-sertão,False
+PROD-BR-00228,Açaí — Cordial / Syrup,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00229,Açaí — Extract / Concentrate,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00230,Açaí — Fresh Produce,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00231,Açaí — Frozen Pulp / Purée,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00232,Açaí — Functional Beverage / RTD,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00233,Açaí — Jam / Preserve,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00234,Açaí — Juice / Nectar,Açaí,Primary,BOT-BR-0028,Açaí,matched_source_id,BOT-BR-0028:Açaí,False
+PROD-BR-00237,Açaí — BRS Pai d’Égua — Cordial / Syrup,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00238,Açaí — BRS Pai d’Égua — Extract / Concentrate,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00239,Açaí — BRS Pai d’Égua — Fresh Produce,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00240,Açaí — BRS Pai d’Égua — Frozen Pulp / Purée,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00241,Açaí — BRS Pai d’Égua — Functional Beverage / RTD,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00242,Açaí — BRS Pai d’Égua — Jam / Preserve,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00243,Açaí — BRS Pai d’Égua — Juice / Nectar,Açaí — BRS Pai d’Égua,Primary,BOT-BR-0029,Açaí — BRS Pai d’Égua,matched_source_id,BOT-BR-0029:Açaí — BRS Pai d’Égua,False
+PROD-BR-00246,Açaí — BRS Pará — Cordial / Syrup,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00247,Açaí — BRS Pará — Extract / Concentrate,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00248,Açaí — BRS Pará — Fresh Produce,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00249,Açaí — BRS Pará — Frozen Pulp / Purée,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00250,Açaí — BRS Pará — Functional Beverage / RTD,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00251,Açaí — BRS Pará — Jam / Preserve,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00252,Açaí — BRS Pará — Juice / Nectar,Açaí — BRS Pará,Primary,BOT-BR-0030,Açaí — BRS Pará,matched_source_id,BOT-BR-0030:Açaí — BRS Pará,False
+PROD-BR-00255,Açaí-solteiro — Cordial / Syrup,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00256,Açaí-solteiro — Extract / Concentrate,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00257,Açaí-solteiro — Fresh Produce,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00258,Açaí-solteiro — Frozen Pulp / Purée,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00259,Açaí-solteiro — Functional Beverage / RTD,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00260,Açaí-solteiro — Jam / Preserve,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00261,Açaí-solteiro — Juice / Nectar,Açaí-solteiro,Primary,BOT-BR-0031,Açaí-solteiro,matched_source_id,BOT-BR-0031:Açaí-solteiro,False
+PROD-BR-00264,Babassu — Bitters / Tincture,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00265,Babassu — Cordial / Syrup,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00266,Babassu — Extract / Concentrate,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00267,Babassu — Flour / Powder,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00268,Babassu — Fresh Produce,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00269,Babassu — Functional Beverage / RTD,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00270,Babassu — Jam / Preserve,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00271,Babassu — Juice / Nectar,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00272,Babassu — Oil / Cosmetic Ingredient,Babassu,Primary,BOT-BR-0032,Babassu,matched_source_id,BOT-BR-0032:Babassu,False
+PROD-BR-00273,Bacaba — Cordial / Syrup,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00274,Bacaba — Extract / Concentrate,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00275,Bacaba — Fresh Produce,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00276,Bacaba — Frozen Pulp / Purée,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00277,Bacaba — Functional Beverage / RTD,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00278,Bacaba — Jam / Preserve,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00279,Bacaba — Juice / Nectar,Bacaba,Primary,BOT-BR-0033,Bacaba,matched_source_id,BOT-BR-0033:Bacaba,False
+PROD-BR-00282,Bacuri — Cordial / Syrup,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00283,Bacuri — Extract / Concentrate,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00284,Bacuri — Fresh Produce,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00285,Bacuri — Frozen Pulp / Purée,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00286,Bacuri — Functional Beverage / RTD,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00287,Bacuri — Jam / Preserve,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00288,Bacuri — Juice / Nectar,Bacuri,Primary,BOT-BR-0034,Bacuri,matched_source_id,BOT-BR-0034:Bacuri,False
+PROD-BR-00291,Banana — BRS Garantida — Cordial / Syrup,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00292,Banana — BRS Garantida — Extract / Concentrate,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00293,Banana — BRS Garantida — Fresh Produce,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00294,Banana — BRS Garantida — Frozen Pulp / Purée,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00295,Banana — BRS Garantida — Functional Beverage / RTD,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00296,Banana — BRS Garantida — Jam / Preserve,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00297,Banana — BRS Garantida — Juice / Nectar,Banana — BRS Garantida,Primary,BOT-BR-0035,Banana — BRS Garantida,matched_source_id,BOT-BR-0035:Banana — BRS Garantida,False
+PROD-BR-00300,Banana — BRS Japira — Cordial / Syrup,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00301,Banana — BRS Japira — Extract / Concentrate,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00302,Banana — BRS Japira — Fresh Produce,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00303,Banana — BRS Japira — Frozen Pulp / Purée,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00304,Banana — BRS Japira — Functional Beverage / RTD,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00305,Banana — BRS Japira — Jam / Preserve,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00306,Banana — BRS Japira — Juice / Nectar,Banana — BRS Japira,Primary,BOT-BR-0036,Banana — BRS Japira,matched_source_id,BOT-BR-0036:Banana — BRS Japira,False
+PROD-BR-00309,Banana — BRS Pacovan Ken — Cordial / Syrup,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00310,Banana — BRS Pacovan Ken — Extract / Concentrate,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00311,Banana — BRS Pacovan Ken — Fresh Produce,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00312,Banana — BRS Pacovan Ken — Frozen Pulp / Purée,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00313,Banana — BRS Pacovan Ken — Functional Beverage / RTD,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00314,Banana — BRS Pacovan Ken — Jam / Preserve,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00315,Banana — BRS Pacovan Ken — Juice / Nectar,Banana — BRS Pacovan Ken,Primary,BOT-BR-0037,Banana — BRS Pacovan Ken,matched_source_id,BOT-BR-0037:Banana — BRS Pacovan Ken,False
+PROD-BR-00318,Banana — BRS Platina — Cordial / Syrup,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00319,Banana — BRS Platina — Extract / Concentrate,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00320,Banana — BRS Platina — Fresh Produce,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00321,Banana — BRS Platina — Frozen Pulp / Purée,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00322,Banana — BRS Platina — Functional Beverage / RTD,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00323,Banana — BRS Platina — Jam / Preserve,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00324,Banana — BRS Platina — Juice / Nectar,Banana — BRS Platina,Primary,BOT-BR-0038,Banana — BRS Platina,matched_source_id,BOT-BR-0038:Banana — BRS Platina,False
+PROD-BR-00327,Banana — BRS Preciosa — Cordial / Syrup,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00328,Banana — BRS Preciosa — Extract / Concentrate,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00329,Banana — BRS Preciosa — Fresh Produce,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00330,Banana — BRS Preciosa — Frozen Pulp / Purée,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00331,Banana — BRS Preciosa — Functional Beverage / RTD,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00332,Banana — BRS Preciosa — Jam / Preserve,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00333,Banana — BRS Preciosa — Juice / Nectar,Banana — BRS Preciosa,Primary,BOT-BR-0039,Banana — BRS Preciosa,matched_source_id,BOT-BR-0039:Banana — BRS Preciosa,False
+PROD-BR-00336,Banana — BRS Princesa — Cordial / Syrup,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00337,Banana — BRS Princesa — Extract / Concentrate,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00338,Banana — BRS Princesa — Fresh Produce,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00339,Banana — BRS Princesa — Frozen Pulp / Purée,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00340,Banana — BRS Princesa — Functional Beverage / RTD,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00341,Banana — BRS Princesa — Jam / Preserve,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00342,Banana — BRS Princesa — Juice / Nectar,Banana — BRS Princesa,Primary,BOT-BR-0040,Banana — BRS Princesa,matched_source_id,BOT-BR-0040:Banana — BRS Princesa,False
+PROD-BR-00345,Banana — BRS Tropical — Cordial / Syrup,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00346,Banana — BRS Tropical — Extract / Concentrate,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00347,Banana — BRS Tropical — Fresh Produce,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00348,Banana — BRS Tropical — Frozen Pulp / Purée,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00349,Banana — BRS Tropical — Functional Beverage / RTD,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00350,Banana — BRS Tropical — Jam / Preserve,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00351,Banana — BRS Tropical — Juice / Nectar,Banana — BRS Tropical,Primary,BOT-BR-0041,Banana — BRS Tropical,matched_source_id,BOT-BR-0041:Banana — BRS Tropical,False
+PROD-BR-00354,Banana — Maçã — Cordial / Syrup,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00355,Banana — Maçã — Extract / Concentrate,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00356,Banana — Maçã — Fresh Produce,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00357,Banana — Maçã — Frozen Pulp / Purée,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00358,Banana — Maçã — Functional Beverage / RTD,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00359,Banana — Maçã — Jam / Preserve,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00360,Banana — Maçã — Juice / Nectar,Banana — Maçã,Primary,BOT-BR-0042,Banana — Maçã,matched_source_id,BOT-BR-0042:Banana — Maçã,False
+PROD-BR-00363,Banana — Nanica — Cordial / Syrup,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00364,Banana — Nanica — Extract / Concentrate,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00365,Banana — Nanica — Fresh Produce,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00366,Banana — Nanica — Frozen Pulp / Purée,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00367,Banana — Nanica — Functional Beverage / RTD,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00368,Banana — Nanica — Jam / Preserve,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00369,Banana — Nanica — Juice / Nectar,Banana — Nanica,Primary,BOT-BR-0043,Banana — Nanica,matched_source_id,BOT-BR-0043:Banana — Nanica,False
+PROD-BR-00372,Banana — Nanicão — Cordial / Syrup,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00373,Banana — Nanicão — Extract / Concentrate,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00374,Banana — Nanicão — Fresh Produce,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00375,Banana — Nanicão — Frozen Pulp / Purée,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00376,Banana — Nanicão — Functional Beverage / RTD,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00377,Banana — Nanicão — Jam / Preserve,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00378,Banana — Nanicão — Juice / Nectar,Banana — Nanicão,Primary,BOT-BR-0044,Banana — Nanicão,matched_source_id,BOT-BR-0044:Banana — Nanicão,False
+PROD-BR-00381,Banana — Pacovan — Cordial / Syrup,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00382,Banana — Pacovan — Extract / Concentrate,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00383,Banana — Pacovan — Fresh Produce,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00384,Banana — Pacovan — Frozen Pulp / Purée,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00385,Banana — Pacovan — Functional Beverage / RTD,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00386,Banana — Pacovan — Jam / Preserve,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00387,Banana — Pacovan — Juice / Nectar,Banana — Pacovan,Primary,BOT-BR-0045,Banana — Pacovan,matched_source_id,BOT-BR-0045:Banana — Pacovan,False
+PROD-BR-00390,Banana — Prata-Anã — Cordial / Syrup,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00391,Banana — Prata-Anã — Extract / Concentrate,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00392,Banana — Prata-Anã — Fresh Produce,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00393,Banana — Prata-Anã — Frozen Pulp / Purée,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00394,Banana — Prata-Anã — Functional Beverage / RTD,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00395,Banana — Prata-Anã — Jam / Preserve,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00396,Banana — Prata-Anã — Juice / Nectar,Banana — Prata-Anã,Primary,BOT-BR-0046,Banana — Prata-Anã,matched_source_id,BOT-BR-0046:Banana — Prata-Anã,False
+PROD-BR-00399,Banana — Terra — Cordial / Syrup,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00400,Banana — Terra — Extract / Concentrate,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00401,Banana — Terra — Fresh Produce,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00402,Banana — Terra — Frozen Pulp / Purée,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00403,Banana — Terra — Functional Beverage / RTD,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00404,Banana — Terra — Jam / Preserve,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00405,Banana — Terra — Juice / Nectar,Banana — Terra,Primary,BOT-BR-0047,Banana — Terra,matched_source_id,BOT-BR-0047:Banana — Terra,False
+PROD-BR-00408,Bananeira — Cordial / Syrup,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00409,Bananeira — Extract / Concentrate,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00410,Bananeira — Fresh Produce,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00411,Bananeira — Frozen Pulp / Purée,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00412,Bananeira — Functional Beverage / RTD,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00413,Bananeira — Jam / Preserve,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00414,Bananeira — Juice / Nectar,Bananeira,Primary,BOT-BR-0048,Bananeira,matched_source_id,BOT-BR-0048:Bananeira,False
+PROD-BR-00417,Barbatimão — Bitters / Tincture,Barbatimão,Primary,BOT-BR-0049,Barbatimão,matched_source_id,BOT-BR-0049:Barbatimão,False
+PROD-BR-00418,Barbatimão — Dried Herb / Spice,Barbatimão,Primary,BOT-BR-0049,Barbatimão,matched_source_id,BOT-BR-0049:Barbatimão,False
+PROD-BR-00419,Barbatimão — Extract / Concentrate,Barbatimão,Primary,BOT-BR-0049,Barbatimão,matched_source_id,BOT-BR-0049:Barbatimão,False
+PROD-BR-00420,Barbatimão — Functional Beverage / RTD,Barbatimão,Primary,BOT-BR-0049,Barbatimão,matched_source_id,BOT-BR-0049:Barbatimão,False
+PROD-BR-00421,Barbatimão — Tea / Tisane,Barbatimão,Primary,BOT-BR-0049,Barbatimão,matched_source_id,BOT-BR-0049:Barbatimão,False
+PROD-BR-00422,Baru — Bitters / Tincture,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00423,Baru — Cordial / Syrup,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00424,Baru — Extract / Concentrate,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00425,Baru — Flour / Powder,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00426,Baru — Fresh Produce,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00427,Baru — Frozen Pulp / Purée,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00428,Baru — Functional Beverage / RTD,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00429,Baru — Jam / Preserve,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00430,Baru — Juice / Nectar,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00431,Baru — Oil / Cosmetic Ingredient,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00432,Baru — Snack / Nut,Baru,Primary,BOT-BR-0050,Baru,matched_source_id,BOT-BR-0050:Baru,False
+PROD-BR-00433,Biribá — Cordial / Syrup,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00434,Biribá — Extract / Concentrate,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00435,Biribá — Fresh Produce,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00436,Biribá — Frozen Pulp / Purée,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00437,Biribá — Functional Beverage / RTD,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00438,Biribá — Jam / Preserve,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00439,Biribá — Juice / Nectar,Biribá,Primary,BOT-BR-0051,Biribá,matched_source_id,BOT-BR-0051:Biribá,False
+PROD-BR-00442,Boldo-baiano — Aromatic Extract / Hydrosol,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00443,Boldo-baiano — Bitters / Tincture,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00444,Boldo-baiano — Cordial / Syrup,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00445,Boldo-baiano — Culinary Seasoning / Herb,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00446,Boldo-baiano — Dried Herb / Spice,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00447,Boldo-baiano — Extract / Concentrate,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00448,Boldo-baiano — Functional Beverage / RTD,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00450,Boldo-baiano — Tea / Tisane,Boldo-baiano,Primary,BOT-BR-0052,Boldo-baiano,matched_source_id,BOT-BR-0052:Boldo-baiano,False
+PROD-BR-00451,Buriti — Cordial / Syrup,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00452,Buriti — Extract / Concentrate,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00453,Buriti — Fresh Produce,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00454,Buriti — Frozen Pulp / Purée,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00455,Buriti — Functional Beverage / RTD,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00456,Buriti — Jam / Preserve,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00457,Buriti — Juice / Nectar,Buriti,Primary,BOT-BR-0053,Buriti,matched_source_id,BOT-BR-0053:Buriti,False
+PROD-BR-00460,Cacau — Cordial / Syrup,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00461,Cacau — Extract / Concentrate,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00462,Cacau — Fresh Produce,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00463,Cacau — Frozen Pulp / Purée,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00464,Cacau — Functional Beverage / RTD,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00465,Cacau — Jam / Preserve,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00466,Cacau — Juice / Nectar,Cacau,Primary,BOT-BR-0054,Cacau,matched_source_id,BOT-BR-0054:Cacau,False
+PROD-BR-00469,Café arábica — Bitters / Tincture,Café arábica,Primary,BOT-BR-0055,Café arábica,matched_source_id,BOT-BR-0055:Café arábica,False
+PROD-BR-00470,Café arábica — Dried Herb / Spice,Café arábica,Primary,BOT-BR-0055,Café arábica,matched_source_id,BOT-BR-0055:Café arábica,False
+PROD-BR-00471,Café arábica — Extract / Concentrate,Café arábica,Primary,BOT-BR-0055,Café arábica,matched_source_id,BOT-BR-0055:Café arábica,False
+PROD-BR-00472,Café arábica — Functional Beverage / RTD,Café arábica,Primary,BOT-BR-0055,Café arábica,matched_source_id,BOT-BR-0055:Café arábica,False
+PROD-BR-00473,Café arábica — Roasted Beverage,Café arábica,Primary,BOT-BR-0055,Café arábica,matched_source_id,BOT-BR-0055:Café arábica,False
+PROD-BR-00474,Café arábica — Acaiá Cerrado MG-1474 — Bitters / Tincture,Café arábica — Acaiá Cerrado MG-1474,Primary,BOT-BR-0056,Café arábica — Acaiá Cerrado MG-1474,matched_source_id,BOT-BR-0056:Café arábica — Acaiá Cerrado MG-1474,False
+PROD-BR-00475,Café arábica — Acaiá Cerrado MG-1474 — Dried Herb / Spice,Café arábica — Acaiá Cerrado MG-1474,Primary,BOT-BR-0056,Café arábica — Acaiá Cerrado MG-1474,matched_source_id,BOT-BR-0056:Café arábica — Acaiá Cerrado MG-1474,False
+PROD-BR-00476,Café arábica — Acaiá Cerrado MG-1474 — Extract / Concentrate,Café arábica — Acaiá Cerrado MG-1474,Primary,BOT-BR-0056,Café arábica — Acaiá Cerrado MG-1474,matched_source_id,BOT-BR-0056:Café arábica — Acaiá Cerrado MG-1474,False
+PROD-BR-00477,Café arábica — Acaiá Cerrado MG-1474 — Functional Beverage / RTD,Café arábica — Acaiá Cerrado MG-1474,Primary,BOT-BR-0056,Café arábica — Acaiá Cerrado MG-1474,matched_source_id,BOT-BR-0056:Café arábica — Acaiá Cerrado MG-1474,False
+PROD-BR-00478,Café arábica — Acaiá Cerrado MG-1474 — Roasted Beverage,Café arábica — Acaiá Cerrado MG-1474,Primary,BOT-BR-0056,Café arábica — Acaiá Cerrado MG-1474,matched_source_id,BOT-BR-0056:Café arábica — Acaiá Cerrado MG-1474,False
+PROD-BR-00479,Café arábica — Acauã — Bitters / Tincture,Café arábica — Acauã,Primary,BOT-BR-0057,Café arábica — Acauã,matched_source_id,BOT-BR-0057:Café arábica — Acauã,False
+PROD-BR-00480,Café arábica — Acauã — Dried Herb / Spice,Café arábica — Acauã,Primary,BOT-BR-0057,Café arábica — Acauã,matched_source_id,BOT-BR-0057:Café arábica — Acauã,False
+PROD-BR-00481,Café arábica — Acauã — Extract / Concentrate,Café arábica — Acauã,Primary,BOT-BR-0057,Café arábica — Acauã,matched_source_id,BOT-BR-0057:Café arábica — Acauã,False
+PROD-BR-00482,Café arábica — Acauã — Functional Beverage / RTD,Café arábica — Acauã,Primary,BOT-BR-0057,Café arábica — Acauã,matched_source_id,BOT-BR-0057:Café arábica — Acauã,False
+PROD-BR-00483,Café arábica — Acauã — Roasted Beverage,Café arábica — Acauã,Primary,BOT-BR-0057,Café arábica — Acauã,matched_source_id,BOT-BR-0057:Café arábica — Acauã,False
+PROD-BR-00484,Café arábica — Arara — Bitters / Tincture,Café arábica — Arara,Primary,BOT-BR-0058,Café arábica — Arara,matched_source_id,BOT-BR-0058:Café arábica — Arara,False
+PROD-BR-00485,Café arábica — Arara — Dried Herb / Spice,Café arábica — Arara,Primary,BOT-BR-0058,Café arábica — Arara,matched_source_id,BOT-BR-0058:Café arábica — Arara,False
+PROD-BR-00486,Café arábica — Arara — Extract / Concentrate,Café arábica — Arara,Primary,BOT-BR-0058,Café arábica — Arara,matched_source_id,BOT-BR-0058:Café arábica — Arara,False
+PROD-BR-00487,Café arábica — Arara — Functional Beverage / RTD,Café arábica — Arara,Primary,BOT-BR-0058,Café arábica — Arara,matched_source_id,BOT-BR-0058:Café arábica — Arara,False
+PROD-BR-00488,Café arábica — Arara — Roasted Beverage,Café arábica — Arara,Primary,BOT-BR-0058,Café arábica — Arara,matched_source_id,BOT-BR-0058:Café arábica — Arara,False
+PROD-BR-00489,Café arábica — Araraçu — Bitters / Tincture,Café arábica — Araraçu,Primary,BOT-BR-0059,Café arábica — Araraçu,matched_source_id,BOT-BR-0059:Café arábica — Araraçu,False
+PROD-BR-00490,Café arábica — Araraçu — Dried Herb / Spice,Café arábica — Araraçu,Primary,BOT-BR-0059,Café arábica — Araraçu,matched_source_id,BOT-BR-0059:Café arábica — Araraçu,False
+PROD-BR-00491,Café arábica — Araraçu — Extract / Concentrate,Café arábica — Araraçu,Primary,BOT-BR-0059,Café arábica — Araraçu,matched_source_id,BOT-BR-0059:Café arábica — Araraçu,False
+PROD-BR-00492,Café arábica — Araraçu — Functional Beverage / RTD,Café arábica — Araraçu,Primary,BOT-BR-0059,Café arábica — Araraçu,matched_source_id,BOT-BR-0059:Café arábica — Araraçu,False
+PROD-BR-00493,Café arábica — Araraçu — Roasted Beverage,Café arábica — Araraçu,Primary,BOT-BR-0059,Café arábica — Araraçu,matched_source_id,BOT-BR-0059:Café arábica — Araraçu,False
+PROD-BR-00494,Café arábica — Bourbon Amarelo — Bitters / Tincture,Café arábica — Bourbon Amarelo,Primary,BOT-BR-0060,Café arábica — Bourbon Amarelo,matched_source_id,BOT-BR-0060:Café arábica — Bourbon Amarelo,False
+PROD-BR-00495,Café arábica — Bourbon Amarelo — Dried Herb / Spice,Café arábica — Bourbon Amarelo,Primary,BOT-BR-0060,Café arábica — Bourbon Amarelo,matched_source_id,BOT-BR-0060:Café arábica — Bourbon Amarelo,False
+PROD-BR-00496,Café arábica — Bourbon Amarelo — Extract / Concentrate,Café arábica — Bourbon Amarelo,Primary,BOT-BR-0060,Café arábica — Bourbon Amarelo,matched_source_id,BOT-BR-0060:Café arábica — Bourbon Amarelo,False
+PROD-BR-00497,Café arábica — Bourbon Amarelo — Functional Beverage / RTD,Café arábica — Bourbon Amarelo,Primary,BOT-BR-0060,Café arábica — Bourbon Amarelo,matched_source_id,BOT-BR-0060:Café arábica — Bourbon Amarelo,False
+PROD-BR-00498,Café arábica — Bourbon Amarelo — Roasted Beverage,Café arábica — Bourbon Amarelo,Primary,BOT-BR-0060,Café arábica — Bourbon Amarelo,matched_source_id,BOT-BR-0060:Café arábica — Bourbon Amarelo,False
+PROD-BR-00499,Café arábica — Catiguá MG2 — Bitters / Tincture,Café arábica — Catiguá MG2,Primary,BOT-BR-0061,Café arábica — Catiguá MG2,matched_source_id,BOT-BR-0061:Café arábica — Catiguá MG2,False
+PROD-BR-00500,Café arábica — Catiguá MG2 — Dried Herb / Spice,Café arábica — Catiguá MG2,Primary,BOT-BR-0061,Café arábica — Catiguá MG2,matched_source_id,BOT-BR-0061:Café arábica — Catiguá MG2,False
+PROD-BR-00501,Café arábica — Catiguá MG2 — Extract / Concentrate,Café arábica — Catiguá MG2,Primary,BOT-BR-0061,Café arábica — Catiguá MG2,matched_source_id,BOT-BR-0061:Café arábica — Catiguá MG2,False
+PROD-BR-00502,Café arábica — Catiguá MG2 — Functional Beverage / RTD,Café arábica — Catiguá MG2,Primary,BOT-BR-0061,Café arábica — Catiguá MG2,matched_source_id,BOT-BR-0061:Café arábica — Catiguá MG2,False
+PROD-BR-00503,Café arábica — Catiguá MG2 — Roasted Beverage,Café arábica — Catiguá MG2,Primary,BOT-BR-0061,Café arábica — Catiguá MG2,matched_source_id,BOT-BR-0061:Café arábica — Catiguá MG2,False
+PROD-BR-00504,Café arábica — Catuaí Amarelo — Bitters / Tincture,Café arábica — Catuaí Amarelo,Primary,BOT-BR-0062,Café arábica — Catuaí Amarelo,matched_source_id,BOT-BR-0062:Café arábica — Catuaí Amarelo,False
+PROD-BR-00505,Café arábica — Catuaí Amarelo — Dried Herb / Spice,Café arábica — Catuaí Amarelo,Primary,BOT-BR-0062,Café arábica — Catuaí Amarelo,matched_source_id,BOT-BR-0062:Café arábica — Catuaí Amarelo,False
+PROD-BR-00506,Café arábica — Catuaí Amarelo — Extract / Concentrate,Café arábica — Catuaí Amarelo,Primary,BOT-BR-0062,Café arábica — Catuaí Amarelo,matched_source_id,BOT-BR-0062:Café arábica — Catuaí Amarelo,False
+PROD-BR-00507,Café arábica — Catuaí Amarelo — Functional Beverage / RTD,Café arábica — Catuaí Amarelo,Primary,BOT-BR-0062,Café arábica — Catuaí Amarelo,matched_source_id,BOT-BR-0062:Café arábica — Catuaí Amarelo,False
+PROD-BR-00508,Café arábica — Catuaí Amarelo — Roasted Beverage,Café arábica — Catuaí Amarelo,Primary,BOT-BR-0062,Café arábica — Catuaí Amarelo,matched_source_id,BOT-BR-0062:Café arábica — Catuaí Amarelo,False
+PROD-BR-00509,Café arábica — Catuaí Vermelho — Bitters / Tincture,Café arábica — Catuaí Vermelho,Primary,BOT-BR-0063,Café arábica — Catuaí Vermelho,matched_source_id,BOT-BR-0063:Café arábica — Catuaí Vermelho,False
+PROD-BR-00510,Café arábica — Catuaí Vermelho — Dried Herb / Spice,Café arábica — Catuaí Vermelho,Primary,BOT-BR-0063,Café arábica — Catuaí Vermelho,matched_source_id,BOT-BR-0063:Café arábica — Catuaí Vermelho,False
+PROD-BR-00511,Café arábica — Catuaí Vermelho — Extract / Concentrate,Café arábica — Catuaí Vermelho,Primary,BOT-BR-0063,Café arábica — Catuaí Vermelho,matched_source_id,BOT-BR-0063:Café arábica — Catuaí Vermelho,False
+PROD-BR-00512,Café arábica — Catuaí Vermelho — Functional Beverage / RTD,Café arábica — Catuaí Vermelho,Primary,BOT-BR-0063,Café arábica — Catuaí Vermelho,matched_source_id,BOT-BR-0063:Café arábica — Catuaí Vermelho,False
+PROD-BR-00513,Café arábica — Catuaí Vermelho — Roasted Beverage,Café arábica — Catuaí Vermelho,Primary,BOT-BR-0063,Café arábica — Catuaí Vermelho,matched_source_id,BOT-BR-0063:Café arábica — Catuaí Vermelho,False
+PROD-BR-00514,Café arábica — Catucaí 785-15 — Bitters / Tincture,Café arábica — Catucaí 785-15,Primary,BOT-BR-0064,Café arábica — Catucaí 785-15,matched_source_id,BOT-BR-0064:Café arábica — Catucaí 785-15,False
+PROD-BR-00515,Café arábica — Catucaí 785-15 — Dried Herb / Spice,Café arábica — Catucaí 785-15,Primary,BOT-BR-0064,Café arábica — Catucaí 785-15,matched_source_id,BOT-BR-0064:Café arábica — Catucaí 785-15,False
+PROD-BR-00516,Café arábica — Catucaí 785-15 — Extract / Concentrate,Café arábica — Catucaí 785-15,Primary,BOT-BR-0064,Café arábica — Catucaí 785-15,matched_source_id,BOT-BR-0064:Café arábica — Catucaí 785-15,False
+PROD-BR-00517,Café arábica — Catucaí 785-15 — Functional Beverage / RTD,Café arábica — Catucaí 785-15,Primary,BOT-BR-0064,Café arábica — Catucaí 785-15,matched_source_id,BOT-BR-0064:Café arábica — Catucaí 785-15,False
+PROD-BR-00518,Café arábica — Catucaí 785-15 — Roasted Beverage,Café arábica — Catucaí 785-15,Primary,BOT-BR-0064,Café arábica — Catucaí 785-15,matched_source_id,BOT-BR-0064:Café arábica — Catucaí 785-15,False
+PROD-BR-00519,Café arábica — Catucaí Amarelo 2SL — Bitters / Tincture,Café arábica — Catucaí Amarelo 2SL,Primary,BOT-BR-0065,Café arábica — Catucaí Amarelo 2SL,matched_source_id,BOT-BR-0065:Café arábica — Catucaí Amarelo 2SL,False
+PROD-BR-00520,Café arábica — Catucaí Amarelo 2SL — Dried Herb / Spice,Café arábica — Catucaí Amarelo 2SL,Primary,BOT-BR-0065,Café arábica — Catucaí Amarelo 2SL,matched_source_id,BOT-BR-0065:Café arábica — Catucaí Amarelo 2SL,False
+PROD-BR-00521,Café arábica — Catucaí Amarelo 2SL — Extract / Concentrate,Café arábica — Catucaí Amarelo 2SL,Primary,BOT-BR-0065,Café arábica — Catucaí Amarelo 2SL,matched_source_id,BOT-BR-0065:Café arábica — Catucaí Amarelo 2SL,False
+PROD-BR-00522,Café arábica — Catucaí Amarelo 2SL — Functional Beverage / RTD,Café arábica — Catucaí Amarelo 2SL,Primary,BOT-BR-0065,Café arábica — Catucaí Amarelo 2SL,matched_source_id,BOT-BR-0065:Café arábica — Catucaí Amarelo 2SL,False
+PROD-BR-00523,Café arábica — Catucaí Amarelo 2SL — Roasted Beverage,Café arábica — Catucaí Amarelo 2SL,Primary,BOT-BR-0065,Café arábica — Catucaí Amarelo 2SL,matched_source_id,BOT-BR-0065:Café arábica — Catucaí Amarelo 2SL,False
+PROD-BR-00524,Café arábica — Icatu Amarelo — Bitters / Tincture,Café arábica — Icatu Amarelo,Primary,BOT-BR-0066,Café arábica — Icatu Amarelo,matched_source_id,BOT-BR-0066:Café arábica — Icatu Amarelo,False
+PROD-BR-00525,Café arábica — Icatu Amarelo — Dried Herb / Spice,Café arábica — Icatu Amarelo,Primary,BOT-BR-0066,Café arábica — Icatu Amarelo,matched_source_id,BOT-BR-0066:Café arábica — Icatu Amarelo,False
+PROD-BR-00526,Café arábica — Icatu Amarelo — Extract / Concentrate,Café arábica — Icatu Amarelo,Primary,BOT-BR-0066,Café arábica — Icatu Amarelo,matched_source_id,BOT-BR-0066:Café arábica — Icatu Amarelo,False
+PROD-BR-00527,Café arábica — Icatu Amarelo — Functional Beverage / RTD,Café arábica — Icatu Amarelo,Primary,BOT-BR-0066,Café arábica — Icatu Amarelo,matched_source_id,BOT-BR-0066:Café arábica — Icatu Amarelo,False
+PROD-BR-00528,Café arábica — Icatu Amarelo — Roasted Beverage,Café arábica — Icatu Amarelo,Primary,BOT-BR-0066,Café arábica — Icatu Amarelo,matched_source_id,BOT-BR-0066:Café arábica — Icatu Amarelo,False
+PROD-BR-00529,Café arábica — Mundo Novo — Bitters / Tincture,Café arábica — Mundo Novo,Primary,BOT-BR-0067,Café arábica — Mundo Novo,matched_source_id,BOT-BR-0067:Café arábica — Mundo Novo,False
+PROD-BR-00530,Café arábica — Mundo Novo — Dried Herb / Spice,Café arábica — Mundo Novo,Primary,BOT-BR-0067,Café arábica — Mundo Novo,matched_source_id,BOT-BR-0067:Café arábica — Mundo Novo,False
+PROD-BR-00531,Café arábica — Mundo Novo — Extract / Concentrate,Café arábica — Mundo Novo,Primary,BOT-BR-0067,Café arábica — Mundo Novo,matched_source_id,BOT-BR-0067:Café arábica — Mundo Novo,False
+PROD-BR-00532,Café arábica — Mundo Novo — Functional Beverage / RTD,Café arábica — Mundo Novo,Primary,BOT-BR-0067,Café arábica — Mundo Novo,matched_source_id,BOT-BR-0067:Café arábica — Mundo Novo,False
+PROD-BR-00533,Café arábica — Mundo Novo — Roasted Beverage,Café arábica — Mundo Novo,Primary,BOT-BR-0067,Café arábica — Mundo Novo,matched_source_id,BOT-BR-0067:Café arábica — Mundo Novo,False
+PROD-BR-00534,Café arábica — Obatã IAC 1669-20 — Bitters / Tincture,Café arábica — Obatã IAC 1669-20,Primary,BOT-BR-0068,Café arábica — Obatã IAC 1669-20,matched_source_id,BOT-BR-0068:Café arábica — Obatã IAC 1669-20,False
+PROD-BR-00535,Café arábica — Obatã IAC 1669-20 — Dried Herb / Spice,Café arábica — Obatã IAC 1669-20,Primary,BOT-BR-0068,Café arábica — Obatã IAC 1669-20,matched_source_id,BOT-BR-0068:Café arábica — Obatã IAC 1669-20,False
+PROD-BR-00536,Café arábica — Obatã IAC 1669-20 — Extract / Concentrate,Café arábica — Obatã IAC 1669-20,Primary,BOT-BR-0068,Café arábica — Obatã IAC 1669-20,matched_source_id,BOT-BR-0068:Café arábica — Obatã IAC 1669-20,False
+PROD-BR-00537,Café arábica — Obatã IAC 1669-20 — Functional Beverage / RTD,Café arábica — Obatã IAC 1669-20,Primary,BOT-BR-0068,Café arábica — Obatã IAC 1669-20,matched_source_id,BOT-BR-0068:Café arábica — Obatã IAC 1669-20,False
+PROD-BR-00538,Café arábica — Obatã IAC 1669-20 — Roasted Beverage,Café arábica — Obatã IAC 1669-20,Primary,BOT-BR-0068,Café arábica — Obatã IAC 1669-20,matched_source_id,BOT-BR-0068:Café arábica — Obatã IAC 1669-20,False
+PROD-BR-00539,Café arábica — Paraíso MG H419-1 — Bitters / Tincture,Café arábica — Paraíso MG H419-1,Primary,BOT-BR-0069,Café arábica — Paraíso MG H419-1,matched_source_id,BOT-BR-0069:Café arábica — Paraíso MG H419-1,False
+PROD-BR-00540,Café arábica — Paraíso MG H419-1 — Dried Herb / Spice,Café arábica — Paraíso MG H419-1,Primary,BOT-BR-0069,Café arábica — Paraíso MG H419-1,matched_source_id,BOT-BR-0069:Café arábica — Paraíso MG H419-1,False
+PROD-BR-00541,Café arábica — Paraíso MG H419-1 — Extract / Concentrate,Café arábica — Paraíso MG H419-1,Primary,BOT-BR-0069,Café arábica — Paraíso MG H419-1,matched_source_id,BOT-BR-0069:Café arábica — Paraíso MG H419-1,False
+PROD-BR-00542,Café arábica — Paraíso MG H419-1 — Functional Beverage / RTD,Café arábica — Paraíso MG H419-1,Primary,BOT-BR-0069,Café arábica — Paraíso MG H419-1,matched_source_id,BOT-BR-0069:Café arábica — Paraíso MG H419-1,False
+PROD-BR-00543,Café arábica — Paraíso MG H419-1 — Roasted Beverage,Café arábica — Paraíso MG H419-1,Primary,BOT-BR-0069,Café arábica — Paraíso MG H419-1,matched_source_id,BOT-BR-0069:Café arábica — Paraíso MG H419-1,False
+PROD-BR-00544,Café arábica — Rubi MG 1192 — Bitters / Tincture,Café arábica — Rubi MG 1192,Primary,BOT-BR-0070,Café arábica — Rubi MG 1192,matched_source_id,BOT-BR-0070:Café arábica — Rubi MG 1192,False
+PROD-BR-00545,Café arábica — Rubi MG 1192 — Dried Herb / Spice,Café arábica — Rubi MG 1192,Primary,BOT-BR-0070,Café arábica — Rubi MG 1192,matched_source_id,BOT-BR-0070:Café arábica — Rubi MG 1192,False
+PROD-BR-00546,Café arábica — Rubi MG 1192 — Extract / Concentrate,Café arábica — Rubi MG 1192,Primary,BOT-BR-0070,Café arábica — Rubi MG 1192,matched_source_id,BOT-BR-0070:Café arábica — Rubi MG 1192,False
+PROD-BR-00547,Café arábica — Rubi MG 1192 — Functional Beverage / RTD,Café arábica — Rubi MG 1192,Primary,BOT-BR-0070,Café arábica — Rubi MG 1192,matched_source_id,BOT-BR-0070:Café arábica — Rubi MG 1192,False
+PROD-BR-00548,Café arábica — Rubi MG 1192 — Roasted Beverage,Café arábica — Rubi MG 1192,Primary,BOT-BR-0070,Café arábica — Rubi MG 1192,matched_source_id,BOT-BR-0070:Café arábica — Rubi MG 1192,False
+PROD-BR-00549,Café arábica — Sabiá — Bitters / Tincture,Café arábica — Sabiá,Primary,BOT-BR-0071,Café arábica — Sabiá,matched_source_id,BOT-BR-0071:Café arábica — Sabiá,False
+PROD-BR-00550,Café arábica — Sabiá — Dried Herb / Spice,Café arábica — Sabiá,Primary,BOT-BR-0071,Café arábica — Sabiá,matched_source_id,BOT-BR-0071:Café arábica — Sabiá,False
+PROD-BR-00551,Café arábica — Sabiá — Extract / Concentrate,Café arábica — Sabiá,Primary,BOT-BR-0071,Café arábica — Sabiá,matched_source_id,BOT-BR-0071:Café arábica — Sabiá,False
+PROD-BR-00552,Café arábica — Sabiá — Functional Beverage / RTD,Café arábica — Sabiá,Primary,BOT-BR-0071,Café arábica — Sabiá,matched_source_id,BOT-BR-0071:Café arábica — Sabiá,False
+PROD-BR-00553,Café arábica — Sabiá — Roasted Beverage,Café arábica — Sabiá,Primary,BOT-BR-0071,Café arábica — Sabiá,matched_source_id,BOT-BR-0071:Café arábica — Sabiá,False
+PROD-BR-00554,Café arábica — Topázio MG 1190 — Bitters / Tincture,Café arábica — Topázio MG 1190,Primary,BOT-BR-0072,Café arábica — Topázio MG 1190,matched_source_id,BOT-BR-0072:Café arábica — Topázio MG 1190,False
+PROD-BR-00555,Café arábica — Topázio MG 1190 — Dried Herb / Spice,Café arábica — Topázio MG 1190,Primary,BOT-BR-0072,Café arábica — Topázio MG 1190,matched_source_id,BOT-BR-0072:Café arábica — Topázio MG 1190,False
+PROD-BR-00556,Café arábica — Topázio MG 1190 — Extract / Concentrate,Café arábica — Topázio MG 1190,Primary,BOT-BR-0072,Café arábica — Topázio MG 1190,matched_source_id,BOT-BR-0072:Café arábica — Topázio MG 1190,False
+PROD-BR-00557,Café arábica — Topázio MG 1190 — Functional Beverage / RTD,Café arábica — Topázio MG 1190,Primary,BOT-BR-0072,Café arábica — Topázio MG 1190,matched_source_id,BOT-BR-0072:Café arábica — Topázio MG 1190,False
+PROD-BR-00558,Café arábica — Topázio MG 1190 — Roasted Beverage,Café arábica — Topázio MG 1190,Primary,BOT-BR-0072,Café arábica — Topázio MG 1190,matched_source_id,BOT-BR-0072:Café arábica — Topázio MG 1190,False
+PROD-BR-00559,Café canéfora / conilon — Bitters / Tincture,Café canéfora / conilon,Primary,BOT-BR-0073,Café canéfora / conilon,matched_source_id,BOT-BR-0073:Café canéfora / conilon,False
+PROD-BR-00560,Café canéfora / conilon — Dried Herb / Spice,Café canéfora / conilon,Primary,BOT-BR-0073,Café canéfora / conilon,matched_source_id,BOT-BR-0073:Café canéfora / conilon,False
+PROD-BR-00561,Café canéfora / conilon — Extract / Concentrate,Café canéfora / conilon,Primary,BOT-BR-0073,Café canéfora / conilon,matched_source_id,BOT-BR-0073:Café canéfora / conilon,False
+PROD-BR-00562,Café canéfora / conilon — Functional Beverage / RTD,Café canéfora / conilon,Primary,BOT-BR-0073,Café canéfora / conilon,matched_source_id,BOT-BR-0073:Café canéfora / conilon,False
+PROD-BR-00563,Café canéfora / conilon — Roasted Beverage,Café canéfora / conilon,Primary,BOT-BR-0073,Café canéfora / conilon,matched_source_id,BOT-BR-0073:Café canéfora / conilon,False
+PROD-BR-00564,Cagaita — Cordial / Syrup,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00565,Cagaita — Extract / Concentrate,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00566,Cagaita — Fresh Produce,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00567,Cagaita — Frozen Pulp / Purée,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00568,Cagaita — Functional Beverage / RTD,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00569,Cagaita — Jam / Preserve,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00570,Cagaita — Juice / Nectar,Cagaita,Primary,BOT-BR-0074,Cagaita,matched_source_id,BOT-BR-0074:Cagaita,False
+PROD-BR-00573,Caju — Bitters / Tincture,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00574,Caju — Cordial / Syrup,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00575,Caju — Extract / Concentrate,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00576,Caju — Flour / Powder,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00577,Caju — Fresh Produce,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00578,Caju — Frozen Pulp / Purée,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00579,Caju — Functional Beverage / RTD,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00580,Caju — Jam / Preserve,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00581,Caju — Juice / Nectar,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00584,Caju — Snack / Nut,Caju,Primary,BOT-BR-0075,Caju,matched_source_id,BOT-BR-0075:Caju,False
+PROD-BR-00585,Cajá — Cordial / Syrup,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00586,Cajá — Extract / Concentrate,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00587,Cajá — Fresh Produce,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00588,Cajá — Frozen Pulp / Purée,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00589,Cajá — Functional Beverage / RTD,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00590,Cajá — Jam / Preserve,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00591,Cajá — Juice / Nectar,Cajá,Primary,BOT-BR-0076,Cajá,matched_source_id,BOT-BR-0076:Cajá,False
+PROD-BR-00594,Cambuci — Cordial / Syrup,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00595,Cambuci — Extract / Concentrate,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00596,Cambuci — Fresh Produce,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00597,Cambuci — Frozen Pulp / Purée,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00598,Cambuci — Functional Beverage / RTD,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00599,Cambuci — Jam / Preserve,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00600,Cambuci — Juice / Nectar,Cambuci,Primary,BOT-BR-0077,Cambuci,matched_source_id,BOT-BR-0077:Cambuci,False
+PROD-BR-00603,Cambucá — Cordial / Syrup,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00604,Cambucá — Extract / Concentrate,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00605,Cambucá — Fresh Produce,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00606,Cambucá — Frozen Pulp / Purée,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00607,Cambucá — Functional Beverage / RTD,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00608,Cambucá — Jam / Preserve,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00609,Cambucá — Juice / Nectar,Cambucá,Primary,BOT-BR-0078,Cambucá,matched_source_id,BOT-BR-0078:Cambucá,False
+PROD-BR-00612,Camu-camu — Cordial / Syrup,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00613,Camu-camu — Extract / Concentrate,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00614,Camu-camu — Fresh Produce,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00615,Camu-camu — Frozen Pulp / Purée,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00616,Camu-camu — Functional Beverage / RTD,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00617,Camu-camu — Jam / Preserve,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00618,Camu-camu — Juice / Nectar,Camu-camu,Primary,BOT-BR-0079,Camu-camu,matched_source_id,BOT-BR-0079:Camu-camu,False
+PROD-BR-00621,Capim-santo — Aromatic Extract / Hydrosol,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00622,Capim-santo — Bitters / Tincture,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00623,Capim-santo — Cordial / Syrup,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00624,Capim-santo — Culinary Seasoning / Herb,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00625,Capim-santo — Dried Herb / Spice,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00626,Capim-santo — Extract / Concentrate,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00627,Capim-santo — Functional Beverage / RTD,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00630,Capim-santo — Tea / Tisane,Capim-santo,Primary,BOT-BR-0080,Capim-santo,matched_source_id,BOT-BR-0080:Capim-santo,False
+PROD-BR-00631,Carqueja — Aromatic Extract / Hydrosol,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00632,Carqueja — Bitters / Tincture,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00633,Carqueja — Cordial / Syrup,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00634,Carqueja — Culinary Seasoning / Herb,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00635,Carqueja — Dried Herb / Spice,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00636,Carqueja — Extract / Concentrate,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00637,Carqueja — Functional Beverage / RTD,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00639,Carqueja — Tea / Tisane,Carqueja,Primary,BOT-BR-0081,Carqueja,matched_source_id,BOT-BR-0081:Carqueja,False
+PROD-BR-00640,Catuaba — Bitters / Tincture,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00641,Catuaba — Dried Herb / Spice,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00642,Catuaba — Extract / Concentrate,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00643,Catuaba — Functional Beverage / RTD,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00644,Catuaba — Oil / Cosmetic Ingredient,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00645,Catuaba — Tea / Tisane,Catuaba,Primary,BOT-BR-0082,Catuaba,matched_source_id,BOT-BR-0082:Catuaba,False
+PROD-BR-00646,Cereja-do-rio-grande — Cordial / Syrup,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00647,Cereja-do-rio-grande — Extract / Concentrate,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00648,Cereja-do-rio-grande — Fresh Produce,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00649,Cereja-do-rio-grande — Frozen Pulp / Purée,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00650,Cereja-do-rio-grande — Functional Beverage / RTD,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00651,Cereja-do-rio-grande — Jam / Preserve,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00652,Cereja-do-rio-grande — Juice / Nectar,Cereja-do-rio-grande,Primary,BOT-BR-0083,Cereja-do-rio-grande,matched_source_id,BOT-BR-0083:Cereja-do-rio-grande,False
+PROD-BR-00655,Copaíba — Bitters / Tincture,Copaíba,Primary,BOT-BR-0084,Copaíba,matched_source_id,BOT-BR-0084:Copaíba,False
+PROD-BR-00656,Copaíba — Dried Herb / Spice,Copaíba,Primary,BOT-BR-0084,Copaíba,matched_source_id,BOT-BR-0084:Copaíba,False
+PROD-BR-00657,Copaíba — Extract / Concentrate,Copaíba,Primary,BOT-BR-0084,Copaíba,matched_source_id,BOT-BR-0084:Copaíba,False
+PROD-BR-00658,Copaíba — Oil / Cosmetic Ingredient,Copaíba,Primary,BOT-BR-0084,Copaíba,matched_source_id,BOT-BR-0084:Copaíba,False
+PROD-BR-00659,Copaíba — Tea / Tisane,Copaíba,Primary,BOT-BR-0084,Copaíba,matched_source_id,BOT-BR-0084:Copaíba,False
+PROD-BR-00660,Cumaru — Aromatic Extract / Hydrosol,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00661,Cumaru — Bitters / Tincture,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00662,Cumaru — Cordial / Syrup,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00663,Cumaru — Culinary Seasoning / Herb,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00664,Cumaru — Dried Herb / Spice,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00665,Cumaru — Extract / Concentrate,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00667,Cumaru — Oil / Cosmetic Ingredient,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00668,Cumaru — Tea / Tisane,Cumaru,Primary,BOT-BR-0085,Cumaru,matched_source_id,BOT-BR-0085:Cumaru,False
+PROD-BR-00669,Cupuaçu — Cordial / Syrup,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00670,Cupuaçu — Extract / Concentrate,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00671,Cupuaçu — Fresh Produce,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00672,Cupuaçu — Frozen Pulp / Purée,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00673,Cupuaçu — Functional Beverage / RTD,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00674,Cupuaçu — Jam / Preserve,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00675,Cupuaçu — Juice / Nectar,Cupuaçu,Primary,BOT-BR-0086,Cupuaçu,matched_source_id,BOT-BR-0086:Cupuaçu,False
+PROD-BR-00678,Erva-baleeira — Bitters / Tincture,Erva-baleeira,Primary,BOT-BR-0087,Erva-baleeira,matched_source_id,BOT-BR-0087:Erva-baleeira,False
+PROD-BR-00679,Erva-baleeira — Dried Herb / Spice,Erva-baleeira,Primary,BOT-BR-0087,Erva-baleeira,matched_source_id,BOT-BR-0087:Erva-baleeira,False
+PROD-BR-00680,Erva-baleeira — Extract / Concentrate,Erva-baleeira,Primary,BOT-BR-0087,Erva-baleeira,matched_source_id,BOT-BR-0087:Erva-baleeira,False
+PROD-BR-00681,Erva-baleeira — Functional Beverage / RTD,Erva-baleeira,Primary,BOT-BR-0087,Erva-baleeira,matched_source_id,BOT-BR-0087:Erva-baleeira,False
+PROD-BR-00684,Erva-baleeira — Tea / Tisane,Erva-baleeira,Primary,BOT-BR-0087,Erva-baleeira,matched_source_id,BOT-BR-0087:Erva-baleeira,False
+PROD-BR-00685,Erva-mate — Bitters / Tincture,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00686,Erva-mate — Dried Herb / Spice,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00687,Erva-mate — Extract / Concentrate,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00688,Erva-mate — Functional Beverage / RTD,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00691,Erva-mate — Roasted Beverage,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00692,Erva-mate — Tea / Tisane,Erva-mate,Primary,BOT-BR-0088,Erva-mate,matched_source_id,BOT-BR-0088:Erva-mate,False
+PROD-BR-00693,Espinheira-santa — Bitters / Tincture,Espinheira-santa,Primary,BOT-BR-0089,Espinheira-santa,matched_source_id,BOT-BR-0089:Espinheira-santa,False
+PROD-BR-00694,Espinheira-santa — Dried Herb / Spice,Espinheira-santa,Primary,BOT-BR-0089,Espinheira-santa,matched_source_id,BOT-BR-0089:Espinheira-santa,False
+PROD-BR-00695,Espinheira-santa — Extract / Concentrate,Espinheira-santa,Primary,BOT-BR-0089,Espinheira-santa,matched_source_id,BOT-BR-0089:Espinheira-santa,False
+PROD-BR-00696,Espinheira-santa — Functional Beverage / RTD,Espinheira-santa,Primary,BOT-BR-0089,Espinheira-santa,matched_source_id,BOT-BR-0089:Espinheira-santa,False
+PROD-BR-00699,Espinheira-santa — Tea / Tisane,Espinheira-santa,Primary,BOT-BR-0089,Espinheira-santa,matched_source_id,BOT-BR-0089:Espinheira-santa,False
+PROD-BR-00700,Goiaba — Cordial / Syrup,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00701,Goiaba — Extract / Concentrate,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00702,Goiaba — Fresh Produce,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00703,Goiaba — Frozen Pulp / Purée,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00704,Goiaba — Functional Beverage / RTD,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00705,Goiaba — Jam / Preserve,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00706,Goiaba — Juice / Nectar,Goiaba,Primary,BOT-BR-0090,Goiaba,matched_source_id,BOT-BR-0090:Goiaba,False
+PROD-BR-00709,Goiaba — Kumagai — Cordial / Syrup,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00710,Goiaba — Kumagai — Extract / Concentrate,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00711,Goiaba — Kumagai — Fresh Produce,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00712,Goiaba — Kumagai — Frozen Pulp / Purée,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00713,Goiaba — Kumagai — Functional Beverage / RTD,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00714,Goiaba — Kumagai — Jam / Preserve,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00715,Goiaba — Kumagai — Juice / Nectar,Goiaba — Kumagai,Primary,BOT-BR-0091,Goiaba — Kumagai,matched_source_id,BOT-BR-0091:Goiaba — Kumagai,False
+PROD-BR-00718,Goiaba — Ogawa — Cordial / Syrup,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00719,Goiaba — Ogawa — Extract / Concentrate,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00720,Goiaba — Ogawa — Fresh Produce,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00721,Goiaba — Ogawa — Frozen Pulp / Purée,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00722,Goiaba — Ogawa — Functional Beverage / RTD,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00723,Goiaba — Ogawa — Jam / Preserve,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00724,Goiaba — Ogawa — Juice / Nectar,Goiaba — Ogawa,Primary,BOT-BR-0092,Goiaba — Ogawa,matched_source_id,BOT-BR-0092:Goiaba — Ogawa,False
+PROD-BR-00727,Goiaba — Paluma — Cordial / Syrup,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00728,Goiaba — Paluma — Extract / Concentrate,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00729,Goiaba — Paluma — Fresh Produce,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00730,Goiaba — Paluma — Frozen Pulp / Purée,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00731,Goiaba — Paluma — Functional Beverage / RTD,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00732,Goiaba — Paluma — Jam / Preserve,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00733,Goiaba — Paluma — Juice / Nectar,Goiaba — Paluma,Primary,BOT-BR-0093,Goiaba — Paluma,matched_source_id,BOT-BR-0093:Goiaba — Paluma,False
+PROD-BR-00736,Goiaba — Pedro Sato — Cordial / Syrup,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00737,Goiaba — Pedro Sato — Extract / Concentrate,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00738,Goiaba — Pedro Sato — Fresh Produce,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00739,Goiaba — Pedro Sato — Frozen Pulp / Purée,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00740,Goiaba — Pedro Sato — Functional Beverage / RTD,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00741,Goiaba — Pedro Sato — Jam / Preserve,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00742,Goiaba — Pedro Sato — Juice / Nectar,Goiaba — Pedro Sato,Primary,BOT-BR-0094,Goiaba — Pedro Sato,matched_source_id,BOT-BR-0094:Goiaba — Pedro Sato,False
+PROD-BR-00745,Goiaba — Rica — Cordial / Syrup,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00746,Goiaba — Rica — Extract / Concentrate,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00747,Goiaba — Rica — Fresh Produce,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00748,Goiaba — Rica — Frozen Pulp / Purée,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00749,Goiaba — Rica — Functional Beverage / RTD,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00750,Goiaba — Rica — Jam / Preserve,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00751,Goiaba — Rica — Juice / Nectar,Goiaba — Rica,Primary,BOT-BR-0095,Goiaba — Rica,matched_source_id,BOT-BR-0095:Goiaba — Rica,False
+PROD-BR-00754,Goiaba — Sassaoka — Cordial / Syrup,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00755,Goiaba — Sassaoka — Extract / Concentrate,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00756,Goiaba — Sassaoka — Fresh Produce,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00757,Goiaba — Sassaoka — Frozen Pulp / Purée,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00758,Goiaba — Sassaoka — Functional Beverage / RTD,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00759,Goiaba — Sassaoka — Jam / Preserve,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00760,Goiaba — Sassaoka — Juice / Nectar,Goiaba — Sassaoka,Primary,BOT-BR-0096,Goiaba — Sassaoka,matched_source_id,BOT-BR-0096:Goiaba — Sassaoka,False
+PROD-BR-00763,Goiaba — Século XXI — Cordial / Syrup,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00764,Goiaba — Século XXI — Extract / Concentrate,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00765,Goiaba — Século XXI — Fresh Produce,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00766,Goiaba — Século XXI — Frozen Pulp / Purée,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00767,Goiaba — Século XXI — Functional Beverage / RTD,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00768,Goiaba — Século XXI — Jam / Preserve,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00769,Goiaba — Século XXI — Juice / Nectar,Goiaba — Século XXI,Primary,BOT-BR-0097,Goiaba — Século XXI,matched_source_id,BOT-BR-0097:Goiaba — Século XXI,False
+PROD-BR-00772,Goiaba — Tailandesa — Cordial / Syrup,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00773,Goiaba — Tailandesa — Extract / Concentrate,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00774,Goiaba — Tailandesa — Fresh Produce,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00775,Goiaba — Tailandesa — Frozen Pulp / Purée,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00776,Goiaba — Tailandesa — Functional Beverage / RTD,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00777,Goiaba — Tailandesa — Jam / Preserve,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00778,Goiaba — Tailandesa — Juice / Nectar,Goiaba — Tailandesa,Primary,BOT-BR-0098,Goiaba — Tailandesa,matched_source_id,BOT-BR-0098:Goiaba — Tailandesa,False
+PROD-BR-00781,Goiaba-serrana / Feijoa — Cordial / Syrup,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00782,Goiaba-serrana / Feijoa — Extract / Concentrate,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00783,Goiaba-serrana / Feijoa — Fresh Produce,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00784,Goiaba-serrana / Feijoa — Frozen Pulp / Purée,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00785,Goiaba-serrana / Feijoa — Functional Beverage / RTD,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00786,Goiaba-serrana / Feijoa — Jam / Preserve,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00787,Goiaba-serrana / Feijoa — Juice / Nectar,Goiaba-serrana / Feijoa,Primary,BOT-BR-0099,Goiaba-serrana / Feijoa,matched_source_id,BOT-BR-0099:Goiaba-serrana / Feijoa,False
+PROD-BR-00790,Grumixama — Cordial / Syrup,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00791,Grumixama — Extract / Concentrate,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00792,Grumixama — Fresh Produce,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00793,Grumixama — Frozen Pulp / Purée,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00794,Grumixama — Functional Beverage / RTD,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00795,Grumixama — Jam / Preserve,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00796,Grumixama — Juice / Nectar,Grumixama,Primary,BOT-BR-0100,Grumixama,matched_source_id,BOT-BR-0100:Grumixama,False
+PROD-BR-00799,Guabiroba — Cordial / Syrup,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00800,Guabiroba — Extract / Concentrate,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00801,Guabiroba — Fresh Produce,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00802,Guabiroba — Frozen Pulp / Purée,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00803,Guabiroba — Functional Beverage / RTD,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00804,Guabiroba — Jam / Preserve,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00805,Guabiroba — Juice / Nectar,Guabiroba,Primary,BOT-BR-0101,Guabiroba,matched_source_id,BOT-BR-0101:Guabiroba,False
+PROD-BR-00808,Guaco — Bitters / Tincture,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00809,Guaco — Cordial / Syrup,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00810,Guaco — Dried Herb / Spice,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00811,Guaco — Extract / Concentrate,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00812,Guaco — Functional Beverage / RTD,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00815,Guaco — Tea / Tisane,Guaco,Primary,BOT-BR-0102,Guaco,matched_source_id,BOT-BR-0102:Guaco,False
+PROD-BR-00816,Guaco-do-mato — Bitters / Tincture,Guaco-do-mato,Primary,BOT-BR-0103,Guaco-do-mato,matched_source_id,BOT-BR-0103:Guaco-do-mato,False
+PROD-BR-00817,Guaco-do-mato — Dried Herb / Spice,Guaco-do-mato,Primary,BOT-BR-0103,Guaco-do-mato,matched_source_id,BOT-BR-0103:Guaco-do-mato,False
+PROD-BR-00818,Guaco-do-mato — Extract / Concentrate,Guaco-do-mato,Primary,BOT-BR-0103,Guaco-do-mato,matched_source_id,BOT-BR-0103:Guaco-do-mato,False
+PROD-BR-00819,Guaco-do-mato — Functional Beverage / RTD,Guaco-do-mato,Primary,BOT-BR-0103,Guaco-do-mato,matched_source_id,BOT-BR-0103:Guaco-do-mato,False
+PROD-BR-00822,Guaco-do-mato — Tea / Tisane,Guaco-do-mato,Primary,BOT-BR-0103,Guaco-do-mato,matched_source_id,BOT-BR-0103:Guaco-do-mato,False
+PROD-BR-00823,Guaraná — Bitters / Tincture,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00824,Guaraná — Dried Herb / Spice,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00825,Guaraná — Extract / Concentrate,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00826,Guaraná — Flour / Powder,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00827,Guaraná — Functional Beverage / RTD,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00828,Guaraná — Tea / Tisane,Guaraná,Primary,BOT-BR-0104,Guaraná,matched_source_id,BOT-BR-0104:Guaraná,False
+PROD-BR-00829,Guaraná — BRS Amazonas — Bitters / Tincture,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00830,Guaraná — BRS Amazonas — Dried Herb / Spice,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00831,Guaraná — BRS Amazonas — Extract / Concentrate,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00832,Guaraná — BRS Amazonas — Flour / Powder,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00833,Guaraná — BRS Amazonas — Functional Beverage / RTD,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00834,Guaraná — BRS Amazonas — Tea / Tisane,Guaraná — BRS Amazonas,Primary,BOT-BR-0105,Guaraná — BRS Amazonas,matched_source_id,BOT-BR-0105:Guaraná — BRS Amazonas,False
+PROD-BR-00835,Guaraná — BRS Maués — Bitters / Tincture,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00836,Guaraná — BRS Maués — Dried Herb / Spice,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00837,Guaraná — BRS Maués — Extract / Concentrate,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00838,Guaraná — BRS Maués — Flour / Powder,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00839,Guaraná — BRS Maués — Functional Beverage / RTD,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00840,Guaraná — BRS Maués — Tea / Tisane,Guaraná — BRS Maués,Primary,BOT-BR-0106,Guaraná — BRS Maués,matched_source_id,BOT-BR-0106:Guaraná — BRS Maués,False
+PROD-BR-00841,Ipê-roxo — Bitters / Tincture,Ipê-roxo,Primary,BOT-BR-0107,Ipê-roxo,matched_source_id,BOT-BR-0107:Ipê-roxo,False
+PROD-BR-00842,Ipê-roxo — Dried Herb / Spice,Ipê-roxo,Primary,BOT-BR-0107,Ipê-roxo,matched_source_id,BOT-BR-0107:Ipê-roxo,False
+PROD-BR-00843,Ipê-roxo — Extract / Concentrate,Ipê-roxo,Primary,BOT-BR-0107,Ipê-roxo,matched_source_id,BOT-BR-0107:Ipê-roxo,False
+PROD-BR-00844,Ipê-roxo — Oil / Cosmetic Ingredient,Ipê-roxo,Primary,BOT-BR-0107,Ipê-roxo,matched_source_id,BOT-BR-0107:Ipê-roxo,False
+PROD-BR-00845,Ipê-roxo — Tea / Tisane,Ipê-roxo,Primary,BOT-BR-0107,Ipê-roxo,matched_source_id,BOT-BR-0107:Ipê-roxo,False
+PROD-BR-00846,Jaborandi — Bitters / Tincture,Jaborandi,Primary,BOT-BR-0108,Jaborandi,matched_source_id,BOT-BR-0108:Jaborandi,False
+PROD-BR-00847,Jaborandi — Dried Herb / Spice,Jaborandi,Primary,BOT-BR-0108,Jaborandi,matched_source_id,BOT-BR-0108:Jaborandi,False
+PROD-BR-00848,Jaborandi — Extract / Concentrate,Jaborandi,Primary,BOT-BR-0108,Jaborandi,matched_source_id,BOT-BR-0108:Jaborandi,False
+PROD-BR-00849,Jaborandi — Oil / Cosmetic Ingredient,Jaborandi,Primary,BOT-BR-0108,Jaborandi,matched_source_id,BOT-BR-0108:Jaborandi,False
+PROD-BR-00850,Jaborandi — Tea / Tisane,Jaborandi,Primary,BOT-BR-0108,Jaborandi,matched_source_id,BOT-BR-0108:Jaborandi,False
+PROD-BR-00851,Jabuticaba — Cordial / Syrup,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00852,Jabuticaba — Extract / Concentrate,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00853,Jabuticaba — Fresh Produce,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00854,Jabuticaba — Frozen Pulp / Purée,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00855,Jabuticaba — Functional Beverage / RTD,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00856,Jabuticaba — Jam / Preserve,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00857,Jabuticaba — Juice / Nectar,Jabuticaba,Primary,BOT-BR-0109,Jabuticaba,matched_source_id,BOT-BR-0109:Jabuticaba,False
+PROD-BR-00860,Jambu — Aromatic Extract / Hydrosol,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00861,Jambu — Bitters / Tincture,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00862,Jambu — Cordial / Syrup,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00863,Jambu — Culinary Seasoning / Herb,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00864,Jambu — Dried Herb / Spice,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00865,Jambu — Extract / Concentrate,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00866,Jambu — Functional Beverage / RTD,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00868,Jambu — Tea / Tisane,Jambu,Primary,BOT-BR-0110,Jambu,matched_source_id,BOT-BR-0110:Jambu,False
+PROD-BR-00869,Jatobá — Bitters / Tincture,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00870,Jatobá — Cordial / Syrup,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00871,Jatobá — Extract / Concentrate,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00872,Jatobá — Fresh Produce,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00873,Jatobá — Frozen Pulp / Purée,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00874,Jatobá — Functional Beverage / RTD,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00875,Jatobá — Jam / Preserve,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00876,Jatobá — Juice / Nectar,Jatobá,Primary,BOT-BR-0111,Jatobá,matched_source_id,BOT-BR-0111:Jatobá,False
+PROD-BR-00878,Jenipapo — Cordial / Syrup,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00879,Jenipapo — Extract / Concentrate,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00880,Jenipapo — Fresh Produce,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00881,Jenipapo — Frozen Pulp / Purée,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00882,Jenipapo — Functional Beverage / RTD,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00883,Jenipapo — Jam / Preserve,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00884,Jenipapo — Juice / Nectar,Jenipapo,Primary,BOT-BR-0112,Jenipapo,matched_source_id,BOT-BR-0112:Jenipapo,False
+PROD-BR-00887,Juçara — Cordial / Syrup,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00888,Juçara — Extract / Concentrate,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00889,Juçara — Fresh Produce,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00890,Juçara — Frozen Pulp / Purée,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00891,Juçara — Functional Beverage / RTD,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00892,Juçara — Jam / Preserve,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00893,Juçara — Juice / Nectar,Juçara,Primary,BOT-BR-0113,Juçara,matched_source_id,BOT-BR-0113:Juçara,False
+PROD-BR-00896,Licuri — Bitters / Tincture,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00897,Licuri — Cordial / Syrup,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00898,Licuri — Extract / Concentrate,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00899,Licuri — Flour / Powder,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00900,Licuri — Fresh Produce,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00901,Licuri — Functional Beverage / RTD,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00902,Licuri — Jam / Preserve,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00903,Licuri — Juice / Nectar,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00904,Licuri — Oil / Cosmetic Ingredient,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00905,Licuri — Snack / Nut,Licuri,Primary,BOT-BR-0114,Licuri,matched_source_id,BOT-BR-0114:Licuri,False
+PROD-BR-00906,Mangaba — Cordial / Syrup,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00907,Mangaba — Extract / Concentrate,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00908,Mangaba — Fresh Produce,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00909,Mangaba — Frozen Pulp / Purée,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00910,Mangaba — Functional Beverage / RTD,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00911,Mangaba — Jam / Preserve,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00912,Mangaba — Juice / Nectar,Mangaba,Primary,BOT-BR-0115,Mangaba,matched_source_id,BOT-BR-0115:Mangaba,False
+PROD-BR-00915,Maracujá — BRS Gigante Amarelo — Cordial / Syrup,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00916,Maracujá — BRS Gigante Amarelo — Extract / Concentrate,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00917,Maracujá — BRS Gigante Amarelo — Fresh Produce,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00918,Maracujá — BRS Gigante Amarelo — Frozen Pulp / Purée,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00919,Maracujá — BRS Gigante Amarelo — Functional Beverage / RTD,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00920,Maracujá — BRS Gigante Amarelo — Jam / Preserve,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00921,Maracujá — BRS Gigante Amarelo — Juice / Nectar,Maracujá — BRS Gigante Amarelo,Primary,BOT-BR-0116,Maracujá — BRS Gigante Amarelo,matched_source_id,BOT-BR-0116:Maracujá — BRS Gigante Amarelo,False
+PROD-BR-00924,Maracujá — BRS Mel do Cerrado — Cordial / Syrup,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00925,Maracujá — BRS Mel do Cerrado — Extract / Concentrate,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00926,Maracujá — BRS Mel do Cerrado — Fresh Produce,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00927,Maracujá — BRS Mel do Cerrado — Frozen Pulp / Purée,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00928,Maracujá — BRS Mel do Cerrado — Functional Beverage / RTD,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00929,Maracujá — BRS Mel do Cerrado — Jam / Preserve,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00930,Maracujá — BRS Mel do Cerrado — Juice / Nectar,Maracujá — BRS Mel do Cerrado,Primary,BOT-BR-0117,Maracujá — BRS Mel do Cerrado,matched_source_id,BOT-BR-0117:Maracujá — BRS Mel do Cerrado,False
+PROD-BR-00933,Maracujá — BRS Rubi do Cerrado — Cordial / Syrup,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00934,Maracujá — BRS Rubi do Cerrado — Extract / Concentrate,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00935,Maracujá — BRS Rubi do Cerrado — Fresh Produce,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00936,Maracujá — BRS Rubi do Cerrado — Frozen Pulp / Purée,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00937,Maracujá — BRS Rubi do Cerrado — Functional Beverage / RTD,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00938,Maracujá — BRS Rubi do Cerrado — Jam / Preserve,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00939,Maracujá — BRS Rubi do Cerrado — Juice / Nectar,Maracujá — BRS Rubi do Cerrado,Primary,BOT-BR-0118,Maracujá — BRS Rubi do Cerrado,matched_source_id,BOT-BR-0118:Maracujá — BRS Rubi do Cerrado,False
+PROD-BR-00942,Maracujá — BRS Sol do Cerrado — Cordial / Syrup,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00943,Maracujá — BRS Sol do Cerrado — Extract / Concentrate,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00944,Maracujá — BRS Sol do Cerrado — Fresh Produce,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00945,Maracujá — BRS Sol do Cerrado — Frozen Pulp / Purée,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00946,Maracujá — BRS Sol do Cerrado — Functional Beverage / RTD,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00947,Maracujá — BRS Sol do Cerrado — Jam / Preserve,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00948,Maracujá — BRS Sol do Cerrado — Juice / Nectar,Maracujá — BRS Sol do Cerrado,Primary,BOT-BR-0119,Maracujá — BRS Sol do Cerrado,matched_source_id,BOT-BR-0119:Maracujá — BRS Sol do Cerrado,False
+PROD-BR-00951,Maracujá-azedo — Cordial / Syrup,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00952,Maracujá-azedo — Extract / Concentrate,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00953,Maracujá-azedo — Fresh Produce,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00954,Maracujá-azedo — Frozen Pulp / Purée,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00955,Maracujá-azedo — Functional Beverage / RTD,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00956,Maracujá-azedo — Jam / Preserve,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00957,Maracujá-azedo — Juice / Nectar,Maracujá-azedo,Primary,BOT-BR-0120,Maracujá-azedo,matched_source_id,BOT-BR-0120:Maracujá-azedo,False
+PROD-BR-00960,Maracujá-doce — Cordial / Syrup,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00961,Maracujá-doce — Extract / Concentrate,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00962,Maracujá-doce — Fresh Produce,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00963,Maracujá-doce — Frozen Pulp / Purée,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00964,Maracujá-doce — Functional Beverage / RTD,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00965,Maracujá-doce — Jam / Preserve,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00966,Maracujá-doce — Juice / Nectar,Maracujá-doce,Primary,BOT-BR-0121,Maracujá-doce,matched_source_id,BOT-BR-0121:Maracujá-doce,False
+PROD-BR-00969,Mastruz / Erva-de-santa-maria — Aromatic Extract / Hydrosol,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00970,Mastruz / Erva-de-santa-maria — Bitters / Tincture,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00971,Mastruz / Erva-de-santa-maria — Cordial / Syrup,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00972,Mastruz / Erva-de-santa-maria — Culinary Seasoning / Herb,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00973,Mastruz / Erva-de-santa-maria — Dried Herb / Spice,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00974,Mastruz / Erva-de-santa-maria — Extract / Concentrate,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00975,Mastruz / Erva-de-santa-maria — Functional Beverage / RTD,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00977,Mastruz / Erva-de-santa-maria — Tea / Tisane,Mastruz / Erva-de-santa-maria,Primary,BOT-BR-0122,Mastruz / Erva-de-santa-maria,matched_source_id,BOT-BR-0122:Mastruz / Erva-de-santa-maria,False
+PROD-BR-00978,Muira puama — Bitters / Tincture,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00979,Muira puama — Dried Herb / Spice,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00980,Muira puama — Extract / Concentrate,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00981,Muira puama — Functional Beverage / RTD,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00982,Muira puama — Oil / Cosmetic Ingredient,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00983,Muira puama — Tea / Tisane,Muira puama,Primary,BOT-BR-0123,Muira puama,matched_source_id,BOT-BR-0123:Muira puama,False
+PROD-BR-00984,Mulungu — Bitters / Tincture,Mulungu,Primary,BOT-BR-0124,Mulungu,matched_source_id,BOT-BR-0124:Mulungu,False
+PROD-BR-00985,Mulungu — Dried Herb / Spice,Mulungu,Primary,BOT-BR-0124,Mulungu,matched_source_id,BOT-BR-0124:Mulungu,False
+PROD-BR-00986,Mulungu — Extract / Concentrate,Mulungu,Primary,BOT-BR-0124,Mulungu,matched_source_id,BOT-BR-0124:Mulungu,False
+PROD-BR-00987,Mulungu — Functional Beverage / RTD,Mulungu,Primary,BOT-BR-0124,Mulungu,matched_source_id,BOT-BR-0124:Mulungu,False
+PROD-BR-00989,Mulungu — Tea / Tisane,Mulungu,Primary,BOT-BR-0124,Mulungu,matched_source_id,BOT-BR-0124:Mulungu,False
+PROD-BR-00990,Murici — Cordial / Syrup,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00991,Murici — Extract / Concentrate,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00992,Murici — Fresh Produce,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00993,Murici — Frozen Pulp / Purée,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00994,Murici — Functional Beverage / RTD,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00995,Murici — Jam / Preserve,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00996,Murici — Juice / Nectar,Murici,Primary,BOT-BR-0125,Murici,matched_source_id,BOT-BR-0125:Murici,False
+PROD-BR-00999,Ora-pro-nóbis — Bitters / Tincture,Ora-pro-nóbis,Primary,BOT-BR-0126,Ora-pro-nóbis,matched_source_id,BOT-BR-0126:Ora-pro-nóbis,False
+PROD-BR-01000,Ora-pro-nóbis — Dried Herb / Spice,Ora-pro-nóbis,Primary,BOT-BR-0126,Ora-pro-nóbis,matched_source_id,BOT-BR-0126:Ora-pro-nóbis,False
+PROD-BR-01001,Ora-pro-nóbis — Extract / Concentrate,Ora-pro-nóbis,Primary,BOT-BR-0126,Ora-pro-nóbis,matched_source_id,BOT-BR-0126:Ora-pro-nóbis,False
+PROD-BR-01002,Ora-pro-nóbis — Functional Beverage / RTD,Ora-pro-nóbis,Primary,BOT-BR-0126,Ora-pro-nóbis,matched_source_id,BOT-BR-0126:Ora-pro-nóbis,False
+PROD-BR-01005,Ora-pro-nóbis — Tea / Tisane,Ora-pro-nóbis,Primary,BOT-BR-0126,Ora-pro-nóbis,matched_source_id,BOT-BR-0126:Ora-pro-nóbis,False
+PROD-BR-01006,Pariparoba — Aromatic Extract / Hydrosol,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01007,Pariparoba — Bitters / Tincture,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01008,Pariparoba — Cordial / Syrup,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01009,Pariparoba — Culinary Seasoning / Herb,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01010,Pariparoba — Dried Herb / Spice,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01011,Pariparoba — Extract / Concentrate,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01012,Pariparoba — Functional Beverage / RTD,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01015,Pariparoba — Tea / Tisane,Pariparoba,Primary,BOT-BR-0127,Pariparoba,matched_source_id,BOT-BR-0127:Pariparoba,False
+PROD-BR-01016,Pata-de-vaca — Bitters / Tincture,Pata-de-vaca,Primary,BOT-BR-0128,Pata-de-vaca,matched_source_id,BOT-BR-0128:Pata-de-vaca,False
+PROD-BR-01017,Pata-de-vaca — Dried Herb / Spice,Pata-de-vaca,Primary,BOT-BR-0128,Pata-de-vaca,matched_source_id,BOT-BR-0128:Pata-de-vaca,False
+PROD-BR-01018,Pata-de-vaca — Extract / Concentrate,Pata-de-vaca,Primary,BOT-BR-0128,Pata-de-vaca,matched_source_id,BOT-BR-0128:Pata-de-vaca,False
+PROD-BR-01019,Pata-de-vaca — Functional Beverage / RTD,Pata-de-vaca,Primary,BOT-BR-0128,Pata-de-vaca,matched_source_id,BOT-BR-0128:Pata-de-vaca,False
+PROD-BR-01022,Pata-de-vaca — Tea / Tisane,Pata-de-vaca,Primary,BOT-BR-0128,Pata-de-vaca,matched_source_id,BOT-BR-0128:Pata-de-vaca,False
+PROD-BR-01023,Patauá — Cordial / Syrup,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01024,Patauá — Extract / Concentrate,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01025,Patauá — Fresh Produce,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01026,Patauá — Frozen Pulp / Purée,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01027,Patauá — Functional Beverage / RTD,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01028,Patauá — Jam / Preserve,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01029,Patauá — Juice / Nectar,Patauá,Primary,BOT-BR-0129,Patauá,matched_source_id,BOT-BR-0129:Patauá,False
+PROD-BR-01032,Pau-brasil — Bitters / Tincture,Pau-brasil,Primary,BOT-BR-0130,Pau-brasil,matched_source_id,BOT-BR-0130:Pau-brasil,False
+PROD-BR-01033,Pau-brasil — Dried Herb / Spice,Pau-brasil,Primary,BOT-BR-0130,Pau-brasil,matched_source_id,BOT-BR-0130:Pau-brasil,False
+PROD-BR-01034,Pau-brasil — Extract / Concentrate,Pau-brasil,Primary,BOT-BR-0130,Pau-brasil,matched_source_id,BOT-BR-0130:Pau-brasil,False
+PROD-BR-01035,Pau-brasil — Oil / Cosmetic Ingredient,Pau-brasil,Primary,BOT-BR-0130,Pau-brasil,matched_source_id,BOT-BR-0130:Pau-brasil,False
+PROD-BR-01036,Pau-brasil — Tea / Tisane,Pau-brasil,Primary,BOT-BR-0130,Pau-brasil,matched_source_id,BOT-BR-0130:Pau-brasil,False
+PROD-BR-01037,Pau-rosa — Aromatic Extract / Hydrosol,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01038,Pau-rosa — Bitters / Tincture,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01039,Pau-rosa — Cordial / Syrup,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01040,Pau-rosa — Dried Herb / Spice,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01041,Pau-rosa — Extract / Concentrate,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01042,Pau-rosa — Oil / Cosmetic Ingredient,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01043,Pau-rosa — Tea / Tisane,Pau-rosa,Primary,BOT-BR-0131,Pau-rosa,matched_source_id,BOT-BR-0131:Pau-rosa,False
+PROD-BR-01044,Pequi — Cordial / Syrup,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01045,Pequi — Extract / Concentrate,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01046,Pequi — Fresh Produce,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01047,Pequi — Frozen Pulp / Purée,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01048,Pequi — Functional Beverage / RTD,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01049,Pequi — Jam / Preserve,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01050,Pequi — Juice / Nectar,Pequi,Primary,BOT-BR-0132,Pequi,matched_source_id,BOT-BR-0132:Pequi,False
+PROD-BR-01053,Pimenta-rosa — Bitters / Tincture,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01054,Pimenta-rosa — Cordial / Syrup,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01055,Pimenta-rosa — Culinary Seasoning / Herb,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01056,Pimenta-rosa — Dried Herb / Spice,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01057,Pimenta-rosa — Extract / Concentrate,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01058,Pimenta-rosa — Fresh Produce,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01059,Pimenta-rosa — Functional Beverage / RTD,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01060,Pimenta-rosa — Jam / Preserve,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01061,Pimenta-rosa — Juice / Nectar,Pimenta-rosa,Primary,BOT-BR-0133,Pimenta-rosa,matched_source_id,BOT-BR-0133:Pimenta-rosa,False
+PROD-BR-01063,Piquiá — Cordial / Syrup,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01064,Piquiá — Extract / Concentrate,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01065,Piquiá — Fresh Produce,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01066,Piquiá — Frozen Pulp / Purée,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01067,Piquiá — Functional Beverage / RTD,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01068,Piquiá — Jam / Preserve,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01069,Piquiá — Juice / Nectar,Piquiá,Primary,BOT-BR-0134,Piquiá,matched_source_id,BOT-BR-0134:Piquiá,False
+PROD-BR-01072,Pitanga — Cordial / Syrup,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01073,Pitanga — Extract / Concentrate,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01074,Pitanga — Fresh Produce,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01075,Pitanga — Frozen Pulp / Purée,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01076,Pitanga — Functional Beverage / RTD,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01077,Pitanga — Jam / Preserve,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01078,Pitanga — Juice / Nectar,Pitanga,Primary,BOT-BR-0135,Pitanga,matched_source_id,BOT-BR-0135:Pitanga,False
+PROD-BR-01081,Pitomba — Cordial / Syrup,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01082,Pitomba — Extract / Concentrate,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01083,Pitomba — Fresh Produce,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01084,Pitomba — Frozen Pulp / Purée,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01085,Pitomba — Functional Beverage / RTD,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01086,Pitomba — Jam / Preserve,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01087,Pitomba — Juice / Nectar,Pitomba,Primary,BOT-BR-0136,Pitomba,matched_source_id,BOT-BR-0136:Pitomba,False
+PROD-BR-01090,Pupunha — Cordial / Syrup,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01091,Pupunha — Extract / Concentrate,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01092,Pupunha — Fresh Produce,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01093,Pupunha — Frozen Pulp / Purée,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01094,Pupunha — Functional Beverage / RTD,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01095,Pupunha — Jam / Preserve,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01096,Pupunha — Juice / Nectar,Pupunha,Primary,BOT-BR-0137,Pupunha,matched_source_id,BOT-BR-0137:Pupunha,False
+PROD-BR-01099,Quebra-pedra — Bitters / Tincture,Quebra-pedra,Primary,BOT-BR-0138,Quebra-pedra,matched_source_id,BOT-BR-0138:Quebra-pedra,False
+PROD-BR-01100,Quebra-pedra — Extract / Concentrate,Quebra-pedra,Primary,BOT-BR-0138,Quebra-pedra,matched_source_id,BOT-BR-0138:Quebra-pedra,False
+PROD-BR-01101,Quebra-pedra — Functional Beverage / RTD,Quebra-pedra,Primary,BOT-BR-0138,Quebra-pedra,matched_source_id,BOT-BR-0138:Quebra-pedra,False
+PROD-BR-01103,Quebra-pedra — Tea / Tisane,Quebra-pedra,Primary,BOT-BR-0138,Quebra-pedra,matched_source_id,BOT-BR-0138:Quebra-pedra,False
+PROD-BR-01104,Sucupira — Bitters / Tincture,Sucupira,Primary,BOT-BR-0139,Sucupira,matched_source_id,BOT-BR-0139:Sucupira,False
+PROD-BR-01105,Sucupira — Dried Herb / Spice,Sucupira,Primary,BOT-BR-0139,Sucupira,matched_source_id,BOT-BR-0139:Sucupira,False
+PROD-BR-01106,Sucupira — Extract / Concentrate,Sucupira,Primary,BOT-BR-0139,Sucupira,matched_source_id,BOT-BR-0139:Sucupira,False
+PROD-BR-01107,Sucupira — Functional Beverage / RTD,Sucupira,Primary,BOT-BR-0139,Sucupira,matched_source_id,BOT-BR-0139:Sucupira,False
+PROD-BR-01108,Sucupira — Tea / Tisane,Sucupira,Primary,BOT-BR-0139,Sucupira,matched_source_id,BOT-BR-0139:Sucupira,False
+PROD-BR-01109,Taioba — Aromatic Extract / Hydrosol,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01110,Taioba — Bitters / Tincture,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01111,Taioba — Cordial / Syrup,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01112,Taioba — Culinary Seasoning / Herb,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01113,Taioba — Dried Herb / Spice,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01114,Taioba — Extract / Concentrate,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01115,Taioba — Functional Beverage / RTD,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01118,Taioba — Tea / Tisane,Taioba,Primary,BOT-BR-0140,Taioba,matched_source_id,BOT-BR-0140:Taioba,False
+PROD-BR-01119,Tucumã — Cordial / Syrup,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01120,Tucumã — Extract / Concentrate,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01121,Tucumã — Fresh Produce,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01122,Tucumã — Frozen Pulp / Purée,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01123,Tucumã — Functional Beverage / RTD,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01124,Tucumã — Jam / Preserve,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01125,Tucumã — Juice / Nectar,Tucumã,Primary,BOT-BR-0141,Tucumã,matched_source_id,BOT-BR-0141:Tucumã,False
+PROD-BR-01128,Umbu — Cordial / Syrup,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01129,Umbu — Extract / Concentrate,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01130,Umbu — Fresh Produce,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01131,Umbu — Frozen Pulp / Purée,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01132,Umbu — Functional Beverage / RTD,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01133,Umbu — Jam / Preserve,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01134,Umbu — Juice / Nectar,Umbu,Primary,BOT-BR-0142,Umbu,matched_source_id,BOT-BR-0142:Umbu,False
+PROD-BR-01137,Urucum — Bitters / Tincture,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01138,Urucum — Cordial / Syrup,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01139,Urucum — Culinary Seasoning / Herb,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01140,Urucum — Dried Herb / Spice,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01141,Urucum — Extract / Concentrate,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01143,Urucum — Tea / Tisane,Urucum,Primary,BOT-BR-0143,Urucum,matched_source_id,BOT-BR-0143:Urucum,False
+PROD-BR-01144,Uvaia — Cordial / Syrup,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01145,Uvaia — Extract / Concentrate,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01146,Uvaia — Fresh Produce,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01147,Uvaia — Frozen Pulp / Purée,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01148,Uvaia — Functional Beverage / RTD,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01149,Uvaia — Jam / Preserve,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False
+PROD-BR-01150,Uvaia — Juice / Nectar,Uvaia,Primary,BOT-BR-0144,Uvaia,matched_source_id,BOT-BR-0144:Uvaia,False

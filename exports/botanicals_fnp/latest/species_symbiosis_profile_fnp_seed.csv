@@ -1,0 +1,145 @@
+symbiosis_profile_id,botanical_entry_id,symbiosis_type,symbiotic_partner_type,symbiotic_partner_botanical_id,mycorrhizal_association_type,nitrogen_fixing_flag,host_dependency_flag,nurse_plant_flag,rhizosphere_benefit_notes,symbiosis_strength,symbiosis_confidence,symbiotic_role_tags,notes,source_table,source_row
+SYM-BOT-BR-0001,BOT-BR-0001,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0002,BOT-BR-0002,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0003,BOT-BR-0003,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0004,BOT-BR-0004,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0005,BOT-BR-0005,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0006,BOT-BR-0006,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0007,BOT-BR-0007,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0008,BOT-BR-0008,mycorrhizal_association,soil_microbe,,limited,FALSE,,FALSE,Rosette architecture shelters small fauna; strong mulch response in hot sites.,limited,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,17
+SYM-BOT-BR-0009,BOT-BR-0009,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0010,BOT-BR-0010,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0011,BOT-BR-0011,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0012,BOT-BR-0012,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0013,BOT-BR-0013,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0014,BOT-BR-0014,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0015,BOT-BR-0015,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0016,BOT-BR-0016,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0017,BOT-BR-0017,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0018,BOT-BR-0018,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,148
+SYM-BOT-BR-0019,BOT-BR-0019,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,20
+SYM-BOT-BR-0020,BOT-BR-0020,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,257
+SYM-BOT-BR-0021,BOT-BR-0021,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,274
+SYM-BOT-BR-0022,BOT-BR-0022,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,260
+SYM-BOT-BR-0023,BOT-BR-0023,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,261
+SYM-BOT-BR-0024,BOT-BR-0024,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,25
+SYM-BOT-BR-0025,BOT-BR-0025,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,26
+SYM-BOT-BR-0026,BOT-BR-0026,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,27
+SYM-BOT-BR-0027,BOT-BR-0027,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,321
+SYM-BOT-BR-0028,BOT-BR-0028,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,303
+SYM-BOT-BR-0029,BOT-BR-0029,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,303
+SYM-BOT-BR-0030,BOT-BR-0030,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,303
+SYM-BOT-BR-0031,BOT-BR-0031,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,32
+SYM-BOT-BR-0032,BOT-BR-0032,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,264
+SYM-BOT-BR-0033,BOT-BR-0033,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,171
+SYM-BOT-BR-0034,BOT-BR-0034,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,334
+SYM-BOT-BR-0035,BOT-BR-0035,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,36
+SYM-BOT-BR-0036,BOT-BR-0036,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,37
+SYM-BOT-BR-0037,BOT-BR-0037,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,38
+SYM-BOT-BR-0038,BOT-BR-0038,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,39
+SYM-BOT-BR-0039,BOT-BR-0039,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,40
+SYM-BOT-BR-0040,BOT-BR-0040,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,41
+SYM-BOT-BR-0041,BOT-BR-0041,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,42
+SYM-BOT-BR-0042,BOT-BR-0042,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,43
+SYM-BOT-BR-0043,BOT-BR-0043,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,44
+SYM-BOT-BR-0044,BOT-BR-0044,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,45
+SYM-BOT-BR-0045,BOT-BR-0045,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,46
+SYM-BOT-BR-0046,BOT-BR-0046,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,47
+SYM-BOT-BR-0047,BOT-BR-0047,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,48
+SYM-BOT-BR-0048,BOT-BR-0048,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,49
+SYM-BOT-BR-0049,BOT-BR-0049,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,50
+SYM-BOT-BR-0050,BOT-BR-0050,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,290
+SYM-BOT-BR-0051,BOT-BR-0051,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,20
+SYM-BOT-BR-0052,BOT-BR-0052,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Useful medicinal shrub supporting insects and on-site biomass cycling.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,188
+SYM-BOT-BR-0053,BOT-BR-0053,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,316
+SYM-BOT-BR-0054,BOT-BR-0054,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Understory crop with strong litter and shade-structure response; midge pollination is important.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,234
+SYM-BOT-BR-0055,BOT-BR-0055,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0056,BOT-BR-0056,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0057,BOT-BR-0057,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0058,BOT-BR-0058,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0059,BOT-BR-0059,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0060,BOT-BR-0060,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0061,BOT-BR-0061,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0062,BOT-BR-0062,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0063,BOT-BR-0063,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0064,BOT-BR-0064,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0065,BOT-BR-0065,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0066,BOT-BR-0066,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0067,BOT-BR-0067,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0068,BOT-BR-0068,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0069,BOT-BR-0069,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0070,BOT-BR-0070,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0071,BOT-BR-0071,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0072,BOT-BR-0072,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,74
+SYM-BOT-BR-0073,BOT-BR-0073,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Flowering supports bees; performs well with shade modulation and litter-rich root zone.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,75
+SYM-BOT-BR-0074,BOT-BR-0074,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,298
+SYM-BOT-BR-0075,BOT-BR-0075,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,16
+SYM-BOT-BR-0076,BOT-BR-0076,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,221
+SYM-BOT-BR-0077,BOT-BR-0077,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,272
+SYM-BOT-BR-0078,BOT-BR-0078,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,79
+SYM-BOT-BR-0079,BOT-BR-0079,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,322
+SYM-BOT-BR-0080,BOT-BR-0080,mycorrhizal_association,soil_microbe,,limited to likely,FALSE,,FALSE,Dense herbaceous root zone supports soil cover and mulch cycling in mixed tropical plantings.,limited to likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,87
+SYM-BOT-BR-0081,BOT-BR-0081,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Useful medicinal shrub supporting insects and on-site biomass cycling.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,33
+SYM-BOT-BR-0082,BOT-BR-0082,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,83
+SYM-BOT-BR-0083,BOT-BR-0083,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,299
+SYM-BOT-BR-0084,BOT-BR-0084,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,284
+SYM-BOT-BR-0085,BOT-BR-0085,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,86
+SYM-BOT-BR-0086,BOT-BR-0086,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Understory crop with strong litter and shade-structure response; midge pollination is important.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,235
+SYM-BOT-BR-0087,BOT-BR-0087,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,88
+SYM-BOT-BR-0088,BOT-BR-0088,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,310
+SYM-BOT-BR-0089,BOT-BR-0089,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Useful medicinal shrub supporting insects and on-site biomass cycling.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,318
+SYM-BOT-BR-0090,BOT-BR-0090,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0091,BOT-BR-0091,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0092,BOT-BR-0092,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0093,BOT-BR-0093,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0094,BOT-BR-0094,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0095,BOT-BR-0095,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0096,BOT-BR-0096,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0097,BOT-BR-0097,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0098,BOT-BR-0098,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,199
+SYM-BOT-BR-0099,BOT-BR-0099,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,255
+SYM-BOT-BR-0100,BOT-BR-0100,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,297
+SYM-BOT-BR-0101,BOT-BR-0101,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,273
+SYM-BOT-BR-0102,BOT-BR-0102,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,320
+SYM-BOT-BR-0103,BOT-BR-0103,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,104
+SYM-BOT-BR-0104,BOT-BR-0104,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,329
+SYM-BOT-BR-0105,BOT-BR-0105,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,329
+SYM-BOT-BR-0106,BOT-BR-0106,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,329
+SYM-BOT-BR-0107,BOT-BR-0107,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Canopy and flowers support urban biodiversity and seasonal pollinators.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,120
+SYM-BOT-BR-0108,BOT-BR-0108,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,109
+SYM-BOT-BR-0109,BOT-BR-0109,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,190
+SYM-BOT-BR-0110,BOT-BR-0110,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,111
+SYM-BOT-BR-0111,BOT-BR-0111,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,309
+SYM-BOT-BR-0112,BOT-BR-0112,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,304
+SYM-BOT-BR-0113,BOT-BR-0113,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,302
+SYM-BOT-BR-0114,BOT-BR-0114,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,343
+SYM-BOT-BR-0115,BOT-BR-0115,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,306
+SYM-BOT-BR-0116,BOT-BR-0116,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,177
+SYM-BOT-BR-0117,BOT-BR-0117,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,176
+SYM-BOT-BR-0118,BOT-BR-0118,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,177
+SYM-BOT-BR-0119,BOT-BR-0119,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,177
+SYM-BOT-BR-0120,BOT-BR-0120,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,177
+SYM-BOT-BR-0121,BOT-BR-0121,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Pollinator-dependent vine that benefits from trellis airflow and floral habitat.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,176
+SYM-BOT-BR-0122,BOT-BR-0122,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,123
+SYM-BOT-BR-0123,BOT-BR-0123,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,124
+SYM-BOT-BR-0124,BOT-BR-0124,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,125
+SYM-BOT-BR-0125,BOT-BR-0125,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,43
+SYM-BOT-BR-0126,BOT-BR-0126,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,127
+SYM-BOT-BR-0127,BOT-BR-0127,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,128
+SYM-BOT-BR-0128,BOT-BR-0128,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,129
+SYM-BOT-BR-0129,BOT-BR-0129,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,325
+SYM-BOT-BR-0130,BOT-BR-0130,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native restoration tree supporting birds, mammals, pollinators and forest structure.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,328
+SYM-BOT-BR-0131,BOT-BR-0131,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,132
+SYM-BOT-BR-0132,BOT-BR-0132,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,276
+SYM-BOT-BR-0133,BOT-BR-0133,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,134
+SYM-BOT-BR-0134,BOT-BR-0134,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,135
+SYM-BOT-BR-0135,BOT-BR-0135,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,Supports pollinators and frugivores; responds well to organic mulch and soil-biota-rich systems.,likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,104
+SYM-BOT-BR-0136,BOT-BR-0136,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,137
+SYM-BOT-BR-0137,BOT-BR-0137,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,34
+SYM-BOT-BR-0138,BOT-BR-0138,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,139
+SYM-BOT-BR-0139,BOT-BR-0139,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,140
+SYM-BOT-BR-0140,BOT-BR-0140,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,141
+SYM-BOT-BR-0141,BOT-BR-0141,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Palm fruits and inflorescences support insects, birds and mammals; litter and mulch improve establishment.",likely,medium,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,30
+SYM-BOT-BR-0142,BOT-BR-0142,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,341
+SYM-BOT-BR-0143,BOT-BR-0143,unresolved,,,,,,,,unresolved,unresolved,unresolved,identity_workbook_unmatched,Botanicals_Master,144
+SYM-BOT-BR-0144,BOT-BR-0144,mycorrhizal_association,soil_microbe,,likely,FALSE,,FALSE,"Native fruit tree linked to birds, bats, insects and restoration food webs.",likely,high,mycorrhizae,,IDENTITY_BRAZIL_BLOCK1,301

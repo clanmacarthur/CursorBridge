@@ -1,0 +1,20 @@
+{
+  "brazil_source": "c:\\Users\\Lenovo\\Desktop\\OneDrive\\Work folder\\Modular gardens\\brazil_data_tables_only.xlsx",
+  "uk_source": "c:\\Users\\Lenovo\\Desktop\\OneDrive\\Work folder\\Modular gardens\\Botanical list_Kombucha_Friendly.zip",
+  "output_dir": "c:\\Code\\CursorBridge\\exports\\botanicals_master_union\\latest",
+  "row_counts": {
+    "raw_botanical_list_uk_additive": 88,
+    "botanical_entries_master_union_additive": 232,
+    "botanical_zone_profiles_brazil_additive": 388,
+    "product_catalogue_brazil_additive": 953,
+    "product_botanical_links_brazil_additive": 953,
+    "botanical_overlap_mapping": 0,
+    "duplicate_name_registry": 16
+  },
+  "notes": [
+    "Brazil workbook treated as primary source of truth.",
+    "UK kombucha-friendly export unioned into botanical master without replacing Brazil rows.",
+    "Overlap rows are flagged in botanical_overlap_mapping.csv rather than collapsed.",
+    "Existing Jun protocol and product seed bundle remains separate and should still be loaded."
+  ]
+}

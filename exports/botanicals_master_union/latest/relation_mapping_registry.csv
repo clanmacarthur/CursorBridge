@@ -1,0 +1,9 @@
+source_stack,source_table,source_key,relation_type,target_table,target_key,row_count,notes
+Brazil workbook,Botanicals_Master,Botanical_ID,primary_load,botanical_entries_master,botanical_entry_id,144,Primary botanical truth layer from Brazil source.
+Brazil workbook,Brazil_Working_Master,Working Master Record ID,many_to_one,botanical_zone_profiles,zone_profile_id,388,Join to botanical_entries_master on Botanical_ID. Multiple regional rows per botanical.
+Brazil workbook,Products,Product_ID,primary_load,product_catalogue,product_id,953,Primary Brazil product catalogue load.
+Brazil workbook,Products,Primary Botanical ID,many_to_one,botanical_entries_master,botanical_entry_id,953,Product primary botanical relation.
+Brazil workbook,Product_Botanical_Links,Link_ID,bridge_table,product_botanical_links,product_id + ingredient_label,953,Explicit product to botanical link layer.
+UK export,Botanical list (kombucha friendly),generated BOT-UK ids,secondary_union_load,botanical_entries_master,botanical_entry_id,88,Secondary botanical source unioned into master without replacing Brazil rows.
+Cross-source,Brazil + UK overlap scan,normalized botanical_name,soft_match_registry,botanical_overlap_mapping,uk_botanical_entry_id + brazil_botanical_entry_id,0,"Overlap is flagged, not collapsed."
+Output bundle,master union outputs,generated CSVs,ready_for_load,exports/botanicals_master_union/latest,file set,2630,"{""raw_botanical_list_uk_additive"": 88, ""botanical_entries_master_union_additive"": 232, ""botanical_zone_profiles_brazil_additive"": 388, ""product_catalogue_brazil_additive"": 953, ""product_botanical_links_brazil_additive"": 953, ""botanical_overlap_mapping"": 0, ""duplicate_name_registry"": 16}"
