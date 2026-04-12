@@ -1,6 +1,6 @@
 # Botanical Database Builder Handover V2
 
-Last updated: 2026-04-11
+Last updated: 2026-04-12
 
 ## Active Execution Rule
 
@@ -250,12 +250,16 @@ layer fields remain authoritative.
 ## Selection And Micro-Layer Rules
 
 - preferred curated cap = `2` rows per shared-name cluster per canonical layer
-- allow `3` only when rows are functionally distinct and source-backed
+- do not exceed `2` in the active Atlantic Forest cycle
 - lower layers may carry more variety than upper layers, but canopy and tree
   selections should stay tight
 - assign layer by the actual occupied size and habit of the stored row
 - compact or dwarf forms may sit below larger related forms when their mature
   size and footprint justify it
+- when same-name rows compete inside a layer, dwarf and smaller occupied forms
+  win first
+- after size, prefer small/common/practical rows ahead of obscure repeats
+  unless conservation, heritage, or ecological value clearly overrides
 - for vivariums, terraria, and small domes, do not add new schema layers
 - use `mature_height_m_min`, `mature_height_m_max`,
   `mature_spread_m_min`, `mature_spread_m_max`, `dwarf_flag`,

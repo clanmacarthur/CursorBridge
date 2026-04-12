@@ -24,6 +24,7 @@ COMPENDIUM_HTML = Path(
     r"C:\Users\Lenovo\Desktop\OneDrive\Work folder\Modular gardens\mata_atlantica_compendium.html"
 )
 OUT_DIR = ROOT / "exports" / "atlantic_forest_scaleup" / "latest"
+IDENTITY_TARGET_FLOOR = 3500
 
 
 ENTRY_FIELDS = [
@@ -1086,8 +1087,8 @@ def main() -> None:
             "mixed_layer_review_rows": mixed_layer_review,
         },
         "next_block_target": {
-            "identity_target_floor": 1000,
-            "identity_gap_after_this_pass": max(0, 1000 - updated_identity_count),
+            "identity_target_floor": IDENTITY_TARGET_FLOOR,
+            "identity_gap_after_this_pass": max(0, IDENTITY_TARGET_FLOOR - updated_identity_count),
             "safe_compendium_candidate_pool": next_block_compendium_candidates,
             "recommended_next_bulk_block": "close the remaining identity gap with additional Atlantic-only source extraction, starting from the compendium-only real-plant candidates that are not yet in the normalized Brazil baseline or this scale-up pack",
         },

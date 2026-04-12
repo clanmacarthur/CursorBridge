@@ -1,6 +1,6 @@
 # Botanical Brazil Thread Handover V2
 
-Last updated: 2026-04-11
+Last updated: 2026-04-12
 
 ## Active Execution Rule
 
@@ -44,12 +44,16 @@ Do not collapse cultivar rows into species-only rows.
 - duplicate caps apply to curated shortlist outputs, not deletion of genuine
   identity rows
 - preferred curated cap is `2` rows per shared-name cluster per canonical layer
-- allow `3` only when rows are functionally distinct and source-backed
+- do not exceed `2` in the active Atlantic Forest cycle
 - assign layer from actual occupied mature size and habit, not the largest
   related form elsewhere in the genus
 - smallest occupied form wins the layer it actually fits
 - compact or dwarf named lines may sit below larger related forms when source
   size data supports that
+- when same-name rows compete inside a layer, dwarf and smaller occupied forms
+  win first
+- after size, prefer small/common/practical rows ahead of obscure repeats
+  unless conservation, heritage, or ecological value clearly overrides
 - do not invent new canonical layers for micro builds; use the same layer
   fields plus size and `layer_stack_tags`
 

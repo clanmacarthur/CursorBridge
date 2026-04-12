@@ -1,6 +1,6 @@
 # BOTANICAL SYSTEM / BRAZIL / ATLANTIC FOREST - ACTIVE EXECUTION CONTRACT
 
-Last updated: 2026-04-11
+Last updated: 2026-04-12
 
 Use this as the sole active execution contract for botanical build work in this
 repo.
@@ -81,8 +81,12 @@ Operational layer:
 - Do not inflate row count using trivial compact/nano/micro variants unless
   the smaller occupied form is genuinely important and functionally distinct.
 - Same-name curation cap is:
-  - `2` preferred per canonical layer
-  - `3` only when functionally distinct and source-backed
+  - `2` maximum per canonical layer
+  - no active Atlantic Forest exception above `2`
+- When same-name rows compete inside the same canonical layer, dwarf and
+  smaller occupied forms win first.
+- After size, prefer small/common/practical rows ahead of obscure repeats
+  unless conservation, heritage, or ecological value clearly overrides.
 - If a compact form is only a size note and not a true distinct line, merge it
   later into the parent species and do not treat it as real breadth.
 
@@ -137,6 +141,14 @@ The top priority missing or underfilled areas still include:
 - The next work should expand beyond that base with real species diversity,
   then later re-prune again.
 
+## Atlantic Forest Minimum Floor
+
+- Active minimum floor = `3500` Atlantic Forest single varieties.
+- Headline progress counts same-name rows as `1`.
+- Internal source-backed identity rows are still preserved; the `3500` floor is
+  measured on the collapsed single-variety count, not on inflated duplicate
+  clusters.
+
 ## Keep / Merge / Remove Logic
 
 Keep:
@@ -158,7 +170,8 @@ Merge:
 - compact / nano / micro forms into real species rows where they are not true
   distinct lines
 - priority duplicates into one upgraded parent species row
-- same-name rows above curation cap into the strongest one or two rows
+- same-name rows above curation cap into the strongest one or two rows, with
+  dwarf/smaller rows preferred first
 
 Remove:
 
@@ -264,6 +277,10 @@ new species expansion.
 - Bias strongly toward underfilled canopy and upper-subcanopy,
   underfilled genera, real fruit-tree diversity, medicinal diversity, and
   underrepresented Atlantic species.
+- Keep same-name rows capped below `3` per canonical layer, with dwarf/smaller
+  rows trumping larger repeats.
+- Prefer small/common/practical rows first when the same-name cluster is
+  otherwise redundant.
 - Carry spacing/distance needs forward per accepted row where relevant.
 - Do not stop to explain.
 - Do not ask for confirmation.

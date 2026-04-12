@@ -1,6 +1,6 @@
 # Botanical System Source Of Truth V2
 
-Last updated: 2026-04-08
+Last updated: 2026-04-12
 
 ## Status
 
@@ -281,7 +281,11 @@ use it as a replacement for the canonical layer fields.
 - duplicate caps apply to curated launch selections and shortlist outputs, not
   deletion of real identity rows
 - preferred curated cap is `2` rows per shared-name cluster per canonical layer
-- allow `3` only when rows are functionally distinct and source-backed
+- do not exceed `2` in the active Atlantic Forest cycle
+- when same-name rows compete inside a layer, dwarf and smaller occupied forms
+  win first
+- after size, prefer small/common/practical rows ahead of obscure repeats
+  unless conservation, heritage, or ecological value clearly overrides
 - upper layers should stay tighter than lower layers
 
 ## Locked Micro-Enclosure Rule
