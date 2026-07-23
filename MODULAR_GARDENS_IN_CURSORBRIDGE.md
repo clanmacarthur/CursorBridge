@@ -58,6 +58,24 @@ UI edits remain delta-only:
 - no hero/title drift
 - no enlarged cards or unnecessary whitespace
 
+## HNOS MESHTASTIC TEST PATH
+Use:
+
+- `docs/HNOS_MESHTASTIC_TEST0_DASHBOARD_RUNBOOK.md`
+
+The locked sequence is:
+
+```text
+TEST 0A — mock packet to local Dashboard Manager payload
+DM setup — exact datapoints, packet group, and scoped API key
+TEST 0B — mock packet to Dashboard Manager
+TEST 0C — real packet captured over USB
+TEST 2 — real packet to Dashboard Manager
+TEST 1 — measured walking/range survey
+```
+
+Do not start the range survey before the short-range packet path passes.
+
 ## PUBLIC PITCHDECK / DEMO HANDOFF
 Use:
 
@@ -90,7 +108,8 @@ Do not expose private coordinates, channel keys, private messages, node-ownershi
 ## FUTURE REPO TRANSFER RULE
 When a dedicated Modular Gardens repo exists:
 - copy this file into that repo
-- copy the two Modular Gardens handoff briefs
+- copy the Modular Gardens plot/mesh and pitchdeck briefs
+- copy or link the current HNOS Meshtastic test runbook
 - keep `CANON_AGENT_SYSTEM.md` as the shared backbone
 - create Modular-Gardens-specific AGENTS / freeze / change-request files there
 - preserve links to the canonical botanical schema and exports
